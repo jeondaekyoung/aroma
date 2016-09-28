@@ -1,4 +1,0 @@
-@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
-
-*, *:after, *:before, *::after, *::before {font-family: 'Jeju Gothic'; font-weight: 400;}
-.fa,.fa:after,.fa:before, .fa::after, .fa::before{font-family:FontAwesome !important;}
