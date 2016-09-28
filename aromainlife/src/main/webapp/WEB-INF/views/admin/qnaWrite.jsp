@@ -154,9 +154,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label">첨부파일</label>
 								<div class="col-sm-9">
-									<input type="file" class="filestyle" name="file"
-										data-icon="false" data-classButton="btn btn-default"
-										data-classInput="form-control inline input-s">
+									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
 								</div>
 							</div>
 							<!--첨부파일 끝-->
