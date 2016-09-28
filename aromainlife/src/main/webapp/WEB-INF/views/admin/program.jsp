@@ -91,10 +91,10 @@
 				                            <div class="line line-dashed"></div>
 				                            <div class="row">
 				                            	<!-- 사진 목록 -->
-				                            	<div class="col-sm-3"><img src="" alt=""></div>
-				                            	<div class="col-sm-3"><img src="" alt=""></div>
-				                            	<div class="col-sm-3"><img src="" alt=""></div>
-				                            	<div class="col-sm-3"><img src="" alt=""></div>
+				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
+				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
+				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
+				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
 				                            </div>
 				                          </div>
 				                        </div>
