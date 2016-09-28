@@ -65,7 +65,7 @@
 									
 									<tr>
 										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-										<td><a href="<c:url value='/noti/view.do?notiNo=${list.notiNo}'/>">${list.title}</a></td>
+										<td><img src="<c:url value='/noti/view.do?notiNo=${list.notiNo}'/>" alt="사진" width="50%"></td>
 										<td>${list.createDate}</td>
 									</tr>
 								</tbody>
