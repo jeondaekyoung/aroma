@@ -14,7 +14,7 @@
 	</select>
 	
 	<insert id="qnaInsert" parameterType="QnA">
-		insert into QnA values(default,#{title},#{content},#{name},#{email},#{tel},default,default);
+		insert into QnA values(default,#{title},#{writer},#{tel},now(),#{content},default,#{pass},#{file_id},default);
 	</insert>	
 	
 	<update id="qnaUpdate" parameterType="QnA">
