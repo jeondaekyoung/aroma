@@ -63,7 +63,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<a href="<c:url value='/admin/write.do'/>" class="btn btn-primary" style="margin-top: 20px">
+							<a href="<c:url value='/qna/write.do'/>" class="btn btn-primary" style="margin-top: 20px">
 								<i class="fa fa-pencil"></i> 글쓰기
 							</a>
 						</form>

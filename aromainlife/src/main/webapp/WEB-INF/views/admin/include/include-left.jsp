@@ -19,12 +19,12 @@
               </a>
               <ul class="nav bg">
                 <li >
-                  <a href="" >
+                  <a href="<c:url value='/qna/list.do'/>" >
                     <i class="fa fa-angle-right"></i><span>QnA</span>
                   </a>
                 </li>
                 <li >
-                  <a href="" >
+                  <a href="<c:url value='/gal/list.do'/>" >
                     <i class="fa fa-angle-right"></i><span>갤러리</span>
                   </a>
                 </li>
@@ -32,7 +32,7 @@
             </li>
               
             <li class="menu-2">
-              <a href="<c:url value='/admin/pro/list.do'/>">
+              <a href="<c:url value='/pro/list.do'/>">
                 <i class="fa fa-download icon"><b class="bg-warning"></b></i><span>프로그램 목록</span>
               </a>
             </li>
