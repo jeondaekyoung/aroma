@@ -6,10 +6,13 @@
 
 	<typeAliases>
 		<typeAlias alias="Program" type="com.knowledge_seek.aromainlife.domain.Program"/>
+		<typeAlias alias="QnA" type="com.knowledge_seek.aromainlife.domain.QnA"/>
 	</typeAliases>
 	<mappers>
 	<mapper resource="mybatis/Login.xml"/> 
 	<mapper resource="mybatis/Program.xml"/>
+	<mapper resource="mybatis/QnA.xml"/>
+
 	<!-- 
 	<mapper resource="mybatis/Download.xml"/>
 	<mapper resource="mybatis/Notice.xml"/>
@@ -17,7 +20,7 @@
 	<mapper resource="mybatis/Video.xml"/>
 	<mapper resource="mybatis/Product.xml"/>
 	<mapper resource="mybatis/Licence.xml"/>
-	<mapper resource="mybatis/QnA.xml"/>
+	
 	 -->
 	
 	</mappers>
