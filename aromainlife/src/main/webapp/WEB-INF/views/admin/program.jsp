@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko-KR" class="app">
 <head>
@@ -14,7 +15,7 @@
      
 	});
 	function del() {
-		if (confirm("문의사항을 정말로 삭제하시겠습니까?")!=1) {
+		if (confirm("이 프로그램을 정말로 삭제하시겠습니까?")!=1) {
 			event.preventDefault();
 			return false;
 		}
@@ -66,15 +67,15 @@
 					                 <div class="panel panel-default">
 				                        <!--제목 영역-->
 				                        <div class="panel-heading pos-rlt">
-				                          <a class="accordion-toggle clearfix" data-toggle="collapse" data-parent="#accordion2" href="#collapse${list.qnaNo }">
+				                          <a class="accordion-toggle clearfix" data-toggle="collapse" data-parent="#accordion2" href="#collapse${list.proNo }">
 				                            <div class="col-sm-12">${list.title}<br><span class="text-md">${list.createDate}</span></div>
 				                          </a>
 				                          <div class="pos-abt">						                    
-					                        <a href="" class="btn btn-info">
+					                        <a href="<c:url value='/pro/editForm.do?proNo=${list.proNo}'/>" class="btn btn-info">
 						                      <p><i class="fa fa-edit"></i> 수정</p>
 						                    </a>
 
-					                        <a href="<c:url value='/qna/delete.do?qnaNo=${list.qnaNo}&nowPage=${nowPage}'/>" class="btn btn-danger">
+					                        <a href="<c:url value='/pro/delete.do?proNo=${list.proNo}&nowPage=${nowPage}'/>" class="btn btn-danger">
 						                      <p onclick="del()"><i class="fa fa-trash-o"></i> 삭제</p>
 						                    </a>
 				                          </div>
@@ -82,11 +83,10 @@
 				                        <!--끝: 제목 영역-->
 				                          
 				                        <!--시작: 내용 영역-->
-				                        <div id="collapse${list.qnaNo}" class="panel-collapse collapse">
+				                        <div id="collapse${list.proNo}" class="panel-collapse collapse">
 				                          <div class="panel-body">
-				                            <p class="text-md">내용: </p>
-				                            <p class="text-md">*프로그램: </p>
-				                            <p class="text-md m-b">시간: </p>
+				                            <p class="text-md">내용: ${list.content} </p>
+				                            <p class="text-md m-b">시간: ${list.proTime} </p>
 				                            
 				                            <div class="line line-dashed"></div>
 				                            <div class="row">
@@ -104,9 +104,14 @@
 									</c:forEach>
 			                      </c:otherwise>
 			                    </c:choose>
+			                <a href="<c:url value='/pro/writeForm.do'/>" class="btn btn-primary" style="margin-top: 20px">
+								<i class="fa fa-pencil"></i> 글쓰기
+							</a>
 							</div>	
-			                <!-- / .accordion -->	
+			                <!-- / .accordion -->
+				
 						</form>
+					
 					</section>
 
 					<footer class="panel-footer">

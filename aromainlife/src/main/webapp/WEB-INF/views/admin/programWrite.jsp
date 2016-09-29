@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko-KR" class="app">
 <head>
@@ -67,7 +68,7 @@
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="<c:url value='/pro/write.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
+						<form action="<c:url value='/pro/write.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal"> <!-- enctype="multipart/form-data" -->
 							<input type="hidden" name="content" id="editorContent" class="form-control"/>
 							
 							<!-- 작성자 -->
@@ -81,23 +82,13 @@
 								</div>
 							</div>
 							<!--제목 끝-->
-
-							<!--*프로그램-->
-							<div class="line line-dashed line-lg pull-in"></div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label">*프로그램</label>
-								<div class="col-sm-9">
-									<input type="text" name="title" class="form-control">
-								</div>
-							</div>
-							<!--*프로그램 끝-->
-							
+						
 							<!--시간-->
 							<div class="line line-dashed line-lg pull-in"></div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">시간</label>
 								<div class="col-sm-9">
-									<input type="text" name="title" class="form-control">
+									<input type="text" name="proTime" class="form-control">
 								</div>
 							</div>
 							<!--시간 끝-->

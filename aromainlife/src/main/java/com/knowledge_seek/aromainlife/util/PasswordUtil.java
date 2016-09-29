@@ -1,4 +1,4 @@
-package com.knowledge_seek.aromainlife;
+package com.knowledge_seek.aromainlife.util;
 
 import java.security.MessageDigest;
 import java.util.Base64;
