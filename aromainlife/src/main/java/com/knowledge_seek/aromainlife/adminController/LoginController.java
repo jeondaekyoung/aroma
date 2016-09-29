@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.knowledge_seek.aromainlife.PasswordUtil;
 import com.knowledge_seek.aromainlife.service.impl.LoginServiceImpl;
+import com.knowledge_seek.aromainlife.util.PasswordUtil;
 
 
 
@@ -49,8 +49,15 @@ public class LoginController {
 		}
 		*/
 		
+		return "forward:index.do";
+	}
+	
+	@RequestMapping(value = {"/","/index.do"})
+	public String index( Model model) {
+		
 		return "/admin/index";
 	}
+	
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) throws Exception {
 		session.invalidate();
