@@ -52,18 +52,27 @@
 								</thead>
 								<tbody>
 									<!--   한 페이지에 10개씩 보여준다    -->
+							<c:choose>
+								<c:when test="${empty lists }">
 									<tr bgcolor="white" align="center">
 										<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 									</tr>
-									<tr>
+								</c:when>
+								<c:otherwise>
+									<c:forEach items="${lists}" var="list" varStatus="status">
+									 <tr>
 										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-										<td><a href="<c:url value='/noti/view.do?notiNo=${list.notiNo}'/>">${list.title}</a></td>
+										<td><a href="<c:url value='/qna/view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 										<td>${list.createDate}</td>
 										<td>${list.hits}</td>
-									</tr>
+									 </tr>
+									</c:forEach>
+								</c:otherwise>
+								</c:choose>
+								
 								</tbody>
 							</table>
-							<a href="<c:url value='/qna/write.do'/>" class="btn btn-primary" style="margin-top: 20px">
+							<a href="<c:url value='/qna/writeForm.do'/>" class="btn btn-primary" style="margin-top: 20px">
 								<i class="fa fa-pencil"></i> 글쓰기
 							</a>
 						</form>
@@ -78,7 +87,7 @@
 
 							<!--검색-->
 							<div class="col-sm-3">
-								<form action='<c:url value="/noti/search.do"/>' method="post" >
+								<form action='<c:url value="/qna/search.do"/>' method="post" >
 									<select name="search_account" class="input-sm">
 										<option value="0">제목</option>
 										<option value="1">내용</option>

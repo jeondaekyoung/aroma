@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko-KR" class="app">
 <head>
@@ -67,11 +68,16 @@
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="<c:url value='/qna/write.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
+						<form action="<c:url value='/qna/write.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data" >
 							<input type="hidden" name="content" id="editorContent" class="form-control"/>
 							
 							<!-- 작성자 -->
 							<input type="hidden" name="writer" value="${sessionScope.USERID}" class="form-control" >
+							
+							<!-- 글비밀번호 -->
+							<input type="hidden" name="pass" value="Admin_Notice" class="form-control" >
+							<!-- 답변체크 -->
+							<input type="hidden" name="answerChk" value="3" class="form-control" >
 							
 							<!--제목-->
 							<div class="form-group">

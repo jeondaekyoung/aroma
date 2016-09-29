@@ -65,7 +65,7 @@
 									
 									<tr>
 										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-										<td><img src="<c:url value='/noti/view.do?notiNo=${list.notiNo}'/>" alt="사진" width="50%"></td>
+										<td><img src="<c:url value='/gal/view.do?galNo=${list.galNo}'/>" alt="사진" width="50%"></td>
 										<td>${list.createDate}</td>
 									</tr>
 								</tbody>
@@ -82,7 +82,7 @@
 
 							<!--검색-->
 							<div class="col-sm-3">
-								<form action='<c:url value="/noti/search.do"/>' method="post" >
+								<form action='<c:url value="/gal/search.do"/>' method="post" >
 									<select name="search_account" class="input-sm">
 										<option value="0">제목</option>
 										<option value="1">내용</option>
