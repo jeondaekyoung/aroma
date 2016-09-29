@@ -29,14 +29,14 @@ public class AdminController {
 		
 		return "/admin/index";
 	}
-	@RequestMapping(value = "pro/list.do")
+	@RequestMapping(value = "/pro/list.do")
 	public String prolist(Locale locale, Model model) {
 		
-		return "/admin/notice";
+		return "/admin/program";
 	}
 	@RequestMapping(value = "/write.do")
 	public String qna(Locale locale, Model model) {
 		
-		return "/admin/noticeWrite";
+		return "/admin/programWrite";
 	}
 }
