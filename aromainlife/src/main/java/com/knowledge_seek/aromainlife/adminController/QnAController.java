@@ -6,22 +6,28 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.QnAService;
 import com.knowledge_seek.aromainlife.service.impl.QnAServiceImpl;
+import com.knowledge_seek.aromainlife.userController.HomeController;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
 
 @Controller
 @RequestMapping("/qna")
 public class QnAController {
 
+	private static final Logger logger = LoggerFactory.getLogger(QnAController.class);
+	
 	@Value("${PAGESIZE}")
 	private int pageSize; 
 	@Value("${BLOCKPAGE}")
@@ -64,24 +70,41 @@ public class QnAController {
 		return "/admin/qnaWrite";
 	}
 	
-	@RequestMapping(value = "/write.do")
-	public String write( Model model) {
+	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
+	public String write(QnA qna, Model model) {
+		
+		
+		qnaService.insert(qna);
 		
 		return "forward:/qna/list.do";
 	}
+	
+	@RequestMapping(value="/view.do" )
+	public String view(QnA qna,Model model) {
+		qna=qnaService.selectOne(qna);
+		//띄워쓰기 jsp에 맞게 변환
+	/*			if(qna.getContent()!=null)
+					qna.setContent(qna.getContent().replace("\r\n","<br/>"));
+		*/
+		model.addAttribute("qna",qna);
+		
+		return "/admin/qnaView";
+	}
+
+	
 		
 	@RequestMapping("/editForm.do")
 	public String updateForm(QnA qna,Model model){
 		qna=qnaService.selectOne(qna);
-		model.addAttribute("QnA",qna);
+		model.addAttribute("qna",qna);
 
 		return "/admin/qnaEdit";
 	}
 	
 	@RequestMapping("/edit.do")
-	public String edit( Model model) {
-		
-		return "/admin/qnaView";
+	public String edit(QnA qna, Model model) {
+		qnaService.update(qna);
+		return "forward:/qna/view.do";
 	}
 	@RequestMapping("/delete.do")
 	public String delete(QnA QnA,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
@@ -93,7 +116,7 @@ public class QnAController {
 			
 		}*/
 		
-		return "redirect:/pro/list.do?nowPage="+nowPage;
+		return "redirect:/qna/list.do?nowPage="+nowPage;
 	}
 	
 }

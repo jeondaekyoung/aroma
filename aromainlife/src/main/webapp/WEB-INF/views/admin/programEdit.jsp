@@ -63,7 +63,7 @@
 
 					<section class="scrollable wrapper w-f">
 
-						<form action="<c:url value='/pro/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal"> <!-- enctype="multipart/form-data" -->
+						<form action="<c:url value='/pro/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
 							<!-- 작성자 -->
 							<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
 							<input type="hidden" name="proNo" value="${program.proNo}" class="form-control"> 
