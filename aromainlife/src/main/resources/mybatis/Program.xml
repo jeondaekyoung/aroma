@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+			PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.Program">
+	<select id="proSelectList" parameterType="java.util.Map" resultType="Program">
+		select * from (select Program.*,@rownum:=@rownum+1 as r from Program, (SELECT @rownum:=0) r order by proNo desc) a where r between  #{start} and #{end}
+	</select>
+	
+	<select id="proSelectOne" parameterType="Program" resultType="Program">
+		select * from Program where proNo=#{proNo}
+	</select>
+	
+	<insert id="proInsert" parameterType="Program">
+		insert into Program values(default,#{title},#{writer},#{proTime},#{content},default);
+	</insert>	
+	<!-- fileName=if(isnull(#{fileName}),fileName,#{fileName}),
+		file_id= if(isnull(#{file_id}),file_id,#{file_id}) -->
+	<update id="proUpdate" parameterType="Program">
+		update Program set title=#{title},content=#{content},proTime=#{proTime}
+		 where proNo=#{proNo}
+	</update>
+
+	<update id="proUpdate_hits" parameterType="java.lang.String">
+		update Program set hits=hits+1 where proNo=#{proNo}
+	</update>
+		
+	
+	<delete id="proDelete" parameterType="Program">
+		delete from Program where proNo=#{proNo}
+	</delete>
+		
+	<select id="proTotalCount" resultType="int" parameterType="java.util.Map">
+	SELECT COUNT(*) FROM Program
+	</select>	
+	
+	<select id="proSearch" parameterType="java.util.Map" resultType="Program">
+	select * from (select Program.*,@rownum:=@rownum+1 as r from Program, (SELECT @rownum:=0) r 
+		<choose>
+				<when test="search_account == 0 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%'
+				</when>
+				<when test="search_account == 1 and search_text != null and search_text !='' ">
+where content LIKE '%${search_text}%'	
+				</when>
+				<when test="search_account == 2 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
+				</when>
+	</choose>
+	  order by proNo desc) a where r between  #{start} and #{end}
+	</select>
+	
+	<select id="proGetTotalRecordCount_search" parameterType="java.util.Map" resultType="int">
+	select count(*) from (select Program.*,@rownum:=@rownum+1 as r from Program, (SELECT @rownum:=0) r 
+	<choose>
+				<when test="search_account == 0 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%'
+				</when>
+				<when test="search_account == 1 and search_text != null and search_text !='' ">
+where content LIKE '%${search_text}%'	
+				</when>
+				<when test="search_account == 2 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
+				</when>
+	</choose>
+	  order by proNo desc) a 
+	</select>
+	
+		
+</mapper>
