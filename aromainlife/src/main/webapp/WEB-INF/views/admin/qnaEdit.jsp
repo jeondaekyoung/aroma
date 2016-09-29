@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko-KR" class="app">
 <head>
@@ -62,17 +63,17 @@
 
 						<section class="scrollable wrapper w-f">
 
-							<form action="" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
+							<form action="<c:url value='/qna/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
 								<!-- 작성자 -->
 								<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
-								<input type="hidden" name="notiNo" value="${notice.notiNo}" class="form-control"> 
-								<input type="hidden" name="file_id" value="${notice.file_id}" class="form-control">
+								<input type="hidden" name="qnaNo" value="${qna.qnaNo}" class="form-control"> 
+								<input type="hidden" name="file_id" value="${qna.file_id}" class="form-control">
 								<input type="hidden" name="content" id="editorContent"class="form-control" />
 								<!--제목-->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">제목</label>
 									<div class="col-sm-9">
-										<input type="text" value="${notice.title}" name="title" class="form-control">
+										<input type="text" value="${qna.title}" name="title" class="form-control">
 									</div>
 								</div>
 								<!--제목 끝-->
@@ -138,7 +139,7 @@
 			                          <input type="text" class="form-control-trans pull-left" data-edit="inserttext"  id="voiceBtn" x-webkit-speech="" style="width:25px;height:28px;">
 			                        </div>
 			                        <div id="editor" class="form-control" style="overflow:scroll;height:450px;max-height:450px">
-			                          ${notice.content}
+			                          ${qna.content}
 			                        </div>
 			                      </div>
 			                    </div>
@@ -151,11 +152,11 @@
 									<div class="col-sm-9">
 										<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s"> 
 										이전파일 :
-										<c:if test="${empty notice.fileName}" var="result">
+										<c:if test="${empty qna.fileName}" var="result">
 											 -
 											</c:if>
 										<c:if test="${!result}">
-											<a href='<c:url value="/file/down/${notice.file_id}" />'	class="btn btn-info"><i class="fa fa-notice"></i>${notice.fileName} 다운로드</a>
+											<a href='<c:url value="/file/down/${qna.file_id}" />'	class="btn btn-info"><i class="fa fa-qna"></i>${qna.fileName} 다운로드</a>
 										</c:if>
 									</div>
 								</div>

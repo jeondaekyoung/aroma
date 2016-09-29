@@ -2,6 +2,8 @@ package com.knowledge_seek.aromainlife.domain;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class QnA {
 	
 	
@@ -13,7 +15,23 @@ public class QnA {
 	private String content;
 	private int hits;
 	private String pass;
+	//파일 관련
+	private String fileName;
+	private MultipartFile file;
 	private String file_id;
+	
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 	private int answerChk;
 	public String getQnaNo() {
 		return qnaNo;

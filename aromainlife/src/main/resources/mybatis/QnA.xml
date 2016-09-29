@@ -14,11 +14,11 @@
 	</select>
 	
 	<insert id="qnaInsert" parameterType="QnA">
-		insert into QnA values(default,#{title},#{writer},#{tel},now(),#{content},default,#{pass},#{file_id},default);
+		insert into QnA values(default,#{title},#{writer},#{tel},now(),#{content},default,#{pass},#{file_id},#{fileName},#{answerChk});
 	</insert>	
 	
 	<update id="qnaUpdate" parameterType="QnA">
-		update QnA set answerChk=#{answerChk}  where qnaNo=#{qnaNo}
+		update QnA set title=#{title},content=#{content}  where qnaNo=#{qnaNo}
 	</update>
 
 	<update id="qnaUpdate_hits" parameterType="java.lang.String">

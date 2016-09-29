@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ko-KR" class="app">
 <head>
@@ -50,7 +51,7 @@
 							<div class="clearfix form-group">
 								<label class="col-sm-2 control-label">조회수</label>
 								<div class="col-sm-10">
-									<p class="form-control-static">${notice.hits}</p>
+									<p class="form-control-static">${qna.hits}</p>
 								</div>
 							</div>
 							<!--조회수 끝-->
@@ -60,7 +61,7 @@
 							<div class="clearfix form-group">
 								<label class="col-sm-2 control-label">작성일자</label>
 								<div class="col-sm-10">
-									<p class="form-control-static">${notice.createDate}</p>
+									<p class="form-control-static">${qna.createDate}</p>
 								</div>
 							</div>
 							<!--작성일자 끝-->
@@ -70,7 +71,7 @@
 							<div class="clearfix form-group">
 								<label class="col-sm-2 control-label">제목</label>
 								<div class="col-sm-10">
-									<p class="form-control-static">${notice.title}</p>
+									<p class="form-control-static">${qna.title}</p>
 								</div>
 							</div>
 							<!--제목 끝-->
@@ -82,7 +83,7 @@
 								<div class="col-sm-10">
 									<div class="form-control"
 										style="overflow: scroll; height: 450px; max-height: 450px"
-										contenteditable="false">${notice.content}</div>
+										contenteditable="false">${qna.content}</div>
 								</div>
 							</div>
 							<!--내용 끝-->
@@ -92,11 +93,11 @@
 							<div class="clearfix form-group">
 								<label class="col-sm-2 control-label">첨부파일</label>
 								<div class="col-sm-10">
-									<c:if test="${empty notice.fileName}" var="result">
+									<c:if test="${empty qna.fileName}" var="result">
 										<p class="form-control-static">-</p>
 									</c:if>
 									<c:if test="${!result}">
-									<p class="form-control-static"><a href='<c:url value="/file/down/${notice.file_id}" />' class="btn btn-info"><i class="fa fa-download"></i>${notice.fileName} 다운로드</a></p>
+									<p class="form-control-static"><a href='<c:url value="/file/down/${qna.file_id}" />' class="btn btn-info"><i class="fa fa-download"></i>${qna.fileName} 다운로드</a></p>
 										
 									</c:if>
 								</div>
@@ -107,16 +108,16 @@
 							<div class="line line-dashed line-lg pull-in"></div>
 							<div class="clearfix form-group">
 								<div class="col-sm-4 col-sm-offset-2">
-									<form name="delForm" action="<c:url value='/noti/delete.do'/>" method="post">
-									<a href="<c:url value='/noti/list.do'/>"	class="btn btn-primary"><i class="fa fa-list-ul"></i> 목록</a>
-										<input type="hidden" name="notiNo" value="${notice.notiNo}" />
+									<form name="delForm" action="<c:url value='/qna/delete.do'/>" method="post">
+									<a href="<c:url value='/qna/list.do'/>"	class="btn btn-primary"><i class="fa fa-list-ul"></i> 목록</a>
+										<input type="hidden" name="qnaNo" value="${qna.qnaNo}" />
 										<button type="button"  onclick="del_click()" class="btn btn-danger">
 											<i class="fa fa-minus-circle"></i> 삭제
 										</button>
 										<a
-											href="<c:url value='/noti/editForm.do?notiNo=${notice.notiNo }'/>"
+											href="<c:url value='/qna/editForm.do?qnaNo=${qna.qnaNo}'/>"
 											class="btn btn-primary"><i class="fa fa-edit"></i> 수정</a>
-											<a href="<c:url value='/noti/writeForm.do'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 글쓰기</a>
+											<a href="<c:url value='/qna/writeForm.do'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 글쓰기</a>
 									</form>
 
 								</div>
