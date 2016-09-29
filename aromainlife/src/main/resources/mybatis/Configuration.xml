@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="Program" type="com.knowledge_seek.aromainlife.domain.Program"/>
+	</typeAliases>
+	<mappers>
+	<mapper resource="mybatis/Login.xml"/> 
+	<!-- <mapper resource="mybatis/Download.xml"/>
+	<mapper resource="mybatis/Notice.xml"/>
+	<mapper resource="mybatis/File.xml"/>
+	<mapper resource="mybatis/Video.xml"/>
+	<mapper resource="mybatis/Product.xml"/>
+	<mapper resource="mybatis/Licence.xml"/>
+	<mapper resource="mybatis/QnA.xml"/>
+	 -->
+	
+	</mappers>
+
+</configuration>
