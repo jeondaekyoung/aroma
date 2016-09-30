@@ -15,10 +15,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Gallery;
-
-
+import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
 
@@ -35,6 +36,9 @@ public class GalleryController {
 
 	@Resource(name="galService")
 	GalServiceImpl galService;
+	
+	@Resource(name="fileService")
+	FileServiceImpl fileServiceImpl;
 	
 	@RequestMapping(value = "/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
@@ -63,13 +67,20 @@ public class GalleryController {
 	}
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
 	public String write(Gallery gal,Model model) {
-		logger.info("{}",gal.getFile().getOriginalFilename());
-		//galService.insert(gal);
+		//logger.info("{}",gal.getFile().getOriginalFilename());
+		if(gal.getFile()!=null){
+			MultipartFile multpartfile = gal.getFile();
+			gal.setFileName(multpartfile.getOriginalFilename());
+			gal.setFile_id(fileServiceImpl.save(multpartfile));
+		
+		}
+		
+		galService.insert(gal);
 		
 		return "redirect:/gal/list.do";
 	}
-	@RequestMapping("/edit.do")
-	public String edit(Gallery gal, Model model) {
+	@RequestMapping("/update.do")
+	public String update(Gallery gal, Model model) {
 		
 		galService.update(gal);
 		
@@ -77,13 +88,14 @@ public class GalleryController {
 	}
 	@RequestMapping("/delete.do")
 	public String delete(Gallery gal,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
+		logger.debug("galNo: {}",gal.getGalNo());
 		gal=galService.selectOne(gal);
-		
-		/*if(Gallery.getFile_id()!=null){
+		galService.delete(gal);
+		if(gal.getFile_id()!=null){
 			//파일 삭제 
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(Gallery.getFile_id());
-			
-		}*/
+			FileDTO FileDto =fileServiceImpl.selectFileDetail(gal.getFile_id());
+			fileServiceImpl.delete(FileDto);
+		}
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
 	}

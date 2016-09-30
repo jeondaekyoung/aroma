@@ -52,7 +52,7 @@ public class GalDAO implements GalleryService {
 	@Override
 	public int delete(Gallery Gallery) {
 		
-		return sqlTemplate.delete("GalyDelete", Gallery);
+		return sqlTemplate.delete("GalDelete", Gallery);
 	}
 
 	

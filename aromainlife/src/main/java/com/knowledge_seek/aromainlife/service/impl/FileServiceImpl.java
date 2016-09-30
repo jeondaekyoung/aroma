@@ -161,7 +161,7 @@ public class FileServiceImpl implements FileService {
 	}
 
 	@Override
-	public String delete(MultipartFile file,FileDTO dto) {
+	public String delete(FileDTO dto) {
 		
 		File fileObj = new File(dto.getFile_path());
 		
