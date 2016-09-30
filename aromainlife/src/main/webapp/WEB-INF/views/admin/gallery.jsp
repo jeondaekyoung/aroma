@@ -34,7 +34,7 @@
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="" method="post" id="adForm" enctype="multipart/form-data">
+						<form action="<c:url value='/gal/write.do'/>" method="post" id="adForm" enctype="multipart/form-data">
 							<table class="admin">
 								<colgroup>
 									<col style="width: 10%">
@@ -49,25 +49,34 @@
 									</tr>
 								</thead>
 								<tbody>
-									<!--  한 페이지에 10개씩 보여준다    -->
-									<tr bgcolor="white" align="center">
-										<td colspan="3">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
-									</tr>
-									
 									<!-- 디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
-									<tr>
-										<td colspan="2">
-											<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
-										</td>
-										<td><button type="button" class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
-									</tr>
-									<!-- //디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
+							<tr>
+								<td colspan="2">
+									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+								</td>
+								<td><button type="submit" class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
+							</tr>
+							<c:choose>
+									<c:when test="${empty lists}">
+										<tr bgcolor="white" align="center">
+											<td colspan="3">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+										</tr>
+									</c:when>
+									<c:otherwise>
+										<c:forEach items="${lists}" var="list" varStatus="status">
 									
-									<tr>
-										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-										<td><img src="<c:url value='/gal/view.do?galNo=${list.galNo}'/>" alt="사진" width="50%"></td>
-										<td>${list.createDate}</td>
-									</tr>
+										<!-- //디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
+											
+											<tr>
+												<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
+												<td><img src="" alt="사진" width="50%"></td><%-- <c:url value='/gal/view.do?galNo=${list.galNo}'/> --%>
+												<td>${list.createDate}</td>
+											</tr>																				
+										</c:forEach>
+									</c:otherwise>
+								</c:choose>
+									
+									
 								</tbody>
 							</table>
 						</form>
