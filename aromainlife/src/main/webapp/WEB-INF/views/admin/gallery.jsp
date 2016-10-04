@@ -18,19 +18,19 @@
 			var f=document.adForm;
 			switch (pstr){	
 				case 'new':
-				var ext = f.file.value.slice(fileNm.lastIndexOf(".") + 1).toLowerCase();
+					
 					if(!f.file.value){
 					   alert("다운로드파일을 입력하세요");
 					   return false;
 					}
+					var ext = f.file.value.slice(f.file.value.lastIndexOf(".") + 1).toLowerCase();
 					if(!(ext == "gif" || ext == "jpg" || ext == "png")){
-						   alert("다운로드파일을 입력하세요");
 						   alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
 						   return false;
 						}
 				
-					//f.action="<c:url value='/gal/write.do'/>";
-					//f.submit();	
+					f.action="<c:url value='/gal/write.do'/>";
+					f.submit();	
 					break;
 				case 'mod':
 					f.action="<c:url value='/gal/updete.do?galNo="+No+"'/>";			
