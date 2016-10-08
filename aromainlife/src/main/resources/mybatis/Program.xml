@@ -13,8 +13,24 @@
 	</select>
 	
 	<insert id="proInsert" parameterType="Program">
-		insert into Program values(default,#{title},#{writer},#{proTime},#{content},default);
-	</insert>	
+		insert into Program values(default,#{title},#{writer},#{proTime},#{content},default,
+<foreach collection="file_id" item="item" index="index" separator=",">
+    #{item}
+</foreach>
+,
+<foreach collection="file_name" item="item" index="index" separator="," >
+    #{item}
+</foreach>
+		);
+	</insert>
+	<!-- #{file_id[0]},
+		#{file_id[1]},
+		#{file_id[2]},
+		#{file_id[3]},
+		#{file_name[0]},
+		#{file_name[1]},
+		#{file_name[2]},
+		#{file_name[3]} -->	
 	<!-- fileName=if(isnull(#{fileName}),fileName,#{fileName}),
 		file_id= if(isnull(#{file_id}),file_id,#{file_id}) -->
 	<update id="proUpdate" parameterType="Program">

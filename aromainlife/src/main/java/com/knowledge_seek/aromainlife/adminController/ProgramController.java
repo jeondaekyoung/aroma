@@ -2,24 +2,34 @@ package com.knowledge_seek.aromainlife.adminController;
 
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartRequest;
 
 import com.knowledge_seek.aromainlife.domain.Program;
+import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.ProServiceImpl;
+import com.knowledge_seek.aromainlife.userController.HomeController;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
 
 @Controller
 @RequestMapping("/pro")
 public class ProgramController {
 
+	
+	private static final Logger logger = LoggerFactory.getLogger(ProgramController.class);
+	
 	@Value("${PAGESIZE}")
 	private int pageSize; 
 	@Value("${BLOCKPAGE}")
@@ -27,6 +37,8 @@ public class ProgramController {
 	
 	@Resource(name="proService")
 	ProServiceImpl proService;
+	@Resource(name="fileService")
+	FileServiceImpl fileService;
 	
 	@RequestMapping(value = "/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
@@ -58,10 +70,28 @@ public class ProgramController {
 		return "/admin/programWrite";
 	}
 	@RequestMapping(value = "/write.do")
-	public String write( Model model,Program program) {
-		proService.insert(program);
+	public String write( Model model,Program program,MultipartRequest mhsq) {
 		
-		return "forward:list.do";
+		List<MultipartFile> mf =mhsq.getFiles("file");
+		
+		  if (mf.size() == 1 && mf.get(0).getOriginalFilename().equals("")) {
+	             
+	        } else {
+	        	logger.debug("파일 다중 업로드 mf.size():"+mf.size());
+	            for (int i = 0; i < mf.size(); i++) {
+	            	if(mf.get(i).getSize()!=0){
+	            	program.file_name.add(mf.get(i).getOriginalFilename());
+	            	program.file_id.add(fileService.save(mf.get(i)));
+	            	}
+	            	else{
+	            		program.file_name.add("null");
+		            	program.file_id.add(null);
+	            	}
+	            }
+	                 
+	        }
+		proService.insert(program);
+		return "redirect:list.do";
 	}
 	@RequestMapping("/editForm.do")
 	public String updateForm(Program program,Model model){
