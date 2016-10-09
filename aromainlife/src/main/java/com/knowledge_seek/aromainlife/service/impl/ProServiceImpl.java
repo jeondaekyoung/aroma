@@ -19,7 +19,23 @@ public class ProServiceImpl implements ProService {
 	@Override
 	public List<Program> selectList(Map map) {
 		
-		return dao.selectList(map);
+		List<Program> program_list =dao.selectList(map);
+		
+		for(Program p:program_list){
+			
+			p.getFile_id().add(p.getFile_id1());
+			p.getFile_id().add(p.getFile_id2());
+			p.getFile_id().add(p.getFile_id3());
+			p.getFile_id().add(p.getFile_id4());
+			p.getFile_name().add(p.getFile_name1());
+			p.getFile_name().add(p.getFile_name2());
+			p.getFile_name().add(p.getFile_name3());
+			p.getFile_name().add(p.getFile_name4());
+			
+		}
+		
+		
+		return program_list;
 	}
 
 	@Override
@@ -42,8 +58,18 @@ public class ProServiceImpl implements ProService {
 
 	@Override
 	public Program selectOne(Program Program) {
+		Program p=dao.selectOne(Program);
+		p.getFile_id().add(p.getFile_id1());
+		p.getFile_id().add(p.getFile_id2());
+		p.getFile_id().add(p.getFile_id3());
+		p.getFile_id().add(p.getFile_id4());
 		
-		return dao.selectOne(Program);
+		p.getFile_name().add(p.getFile_name1());
+		p.getFile_name().add(p.getFile_name2());
+		p.getFile_name().add(p.getFile_name3());
+		p.getFile_name().add(p.getFile_name4());
+		
+		return p;
 	}
 
 	@Override

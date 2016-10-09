@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+			PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.Gallery">
+	<select id="GalSelectList" parameterType="java.util.Map" resultType="Gallery">
+	
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a where r between  #{start} and #{end}
+	</select>
+	
+	<select id="GalSelectOne" parameterType="Gallery" resultType="Gallery">
+		select * from Gallery where GalNo=#{galNo}
+	</select>
+	
+	<insert id="GalInsert" parameterType="Gallery">
+		insert into Gallery values(default,now(),#{fileName},#{file_id});
+	</insert>	
+	
+	<update id="GalUpdate" parameterType="Gallery">
+		update Gallery set fileName=#{fileName},file_id=#{file_id}  where GalNo=#{galNo}
+	</update>
+
+	<update id="GalUpdate_hits" parameterType="java.lang.String">
+		update Gallery set hits=hits+1 where GalNo=#{galNo}
+	</update>
+		
+	
+	<delete id="GalDelete" parameterType="Gallery">
+		delete from Gallery where GalNo=#{galNo}
+	</delete>
+		
+	<select id="GalTotalCount" resultType="int" parameterType="java.util.Map">
+	SELECT COUNT(*) FROM Gallery
+	</select>	
+	
+	<select id="GalSearch" parameterType="java.util.Map" resultType="Gallery">
+	select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r 
+		<choose>
+				<when test="search_account == 0 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%'
+				</when>
+				<when test="search_account == 1 and search_text != null and search_text !='' ">
+where content LIKE '%${search_text}%'	
+				</when>
+				<when test="search_account == 2 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
+				</when>
+	</choose>
+	  order by GalNo desc) a where r between  #{start} and #{end}
+	</select>
+	
+	<select id="GalGetTotalRecordCount_search" parameterType="java.util.Map" resultType="int">
+	select count(*) from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r 
+	<choose>
+				<when test="search_account == 0 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%'
+				</when>
+				<when test="search_account == 1 and search_text != null and search_text !='' ">
+where content LIKE '%${search_text}%'	
+				</when>
+				<when test="search_account == 2 and search_text != null and search_text !='' ">
+where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
+				</when>
+	</choose>
+	  order by GalNo desc) a 
+	</select>
+	
+		
+</mapper>

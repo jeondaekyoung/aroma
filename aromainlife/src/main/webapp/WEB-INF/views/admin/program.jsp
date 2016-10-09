@@ -91,10 +91,16 @@
 				                            <div class="line line-dashed"></div>
 				                            <div class="row">
 				                            	<!-- 사진 목록 -->
-				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
-				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
-				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
-				                            	<div class="col-sm-3"><img src="" width="100%" alt="프로그램 이미지"></div>
+				                            	
+												<c:forEach items="${list.file_id}" varStatus="status">
+				                            	 <c:if test="${not empty list.file_id[status.index]}">
+				                            	<div class="col-sm-3"><img src="<c:url value='/file/down/image/${list.file_id[status.index]}'/>" width="50%" height="50%" >
+				                            	${list.file_name[status.index]}
+				                            	</div>
+				                            	</c:if> 
+				                            </c:forEach>
+				                            	
+				                            	
 				                            </div>
 				                          </div>
 				                        </div>

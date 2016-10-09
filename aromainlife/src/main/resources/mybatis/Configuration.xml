@@ -7,16 +7,20 @@
 	<typeAliases>
 		<typeAlias alias="Program" type="com.knowledge_seek.aromainlife.domain.Program"/>
 		<typeAlias alias="QnA" type="com.knowledge_seek.aromainlife.domain.QnA"/>
+		<typeAlias alias="FileDTO" type="com.knowledge_seek.aromainlife.domain.FileDTO"/>
+		<typeAlias alias="Gallery" type="com.knowledge_seek.aromainlife.domain.Gallery"/>
 	</typeAliases>
 	<mappers>
 	<mapper resource="mybatis/Login.xml"/> 
 	<mapper resource="mybatis/Program.xml"/>
 	<mapper resource="mybatis/QnA.xml"/>
 
+	<mapper resource="mybatis/File.xml"/>
+	<mapper resource="mybatis/Gallery.xml"/>
 	<!-- 
 	<mapper resource="mybatis/Download.xml"/>
 	<mapper resource="mybatis/Notice.xml"/>
-	<mapper resource="mybatis/File.xml"/>
+	
 	<mapper resource="mybatis/Video.xml"/>
 	<mapper resource="mybatis/Product.xml"/>
 	<mapper resource="mybatis/Licence.xml"/>

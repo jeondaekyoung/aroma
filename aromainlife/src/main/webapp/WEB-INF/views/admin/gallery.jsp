@@ -13,6 +13,37 @@
     $(document).ready(function(){
         $("li.menu-1").addClass("active");
 	});
+	
+	 function eclick(pstr,No){
+			var f=document.adForm;
+			switch (pstr){	
+				case 'new':
+					
+					if(!f.file.value){
+					   alert("다운로드파일을 입력하세요");
+					   return false;
+					}
+					var ext = f.file.value.slice(f.file.value.lastIndexOf(".") + 1).toLowerCase();
+					if(!(ext == "gif" || ext == "jpg" || ext == "png")){
+						   alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
+						   return false;
+						}
+				
+					f.action="<c:url value='/gal/write.do'/>";
+					f.submit();	
+					break;
+				case 'mod':
+					f.action="<c:url value='/gal/update.do?galNo="+No+"'/>";			
+					f.submit();	
+					break;
+				case 'del':
+					if (confirm("정말로 삭제하시겠습니까?")!=1) {return false;}
+					alert(No);
+					f.action="<c:url value='/gal/delete.do?galNo="+No+"'/>";
+					f.submit();
+					break;
+			}
+		  }
     </script>
 <!-- //head -->
 </head>
@@ -34,40 +65,56 @@
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="" method="post" id="adForm" enctype="multipart/form-data">
+						<form action="" method="post" name="adForm" enctype="multipart/form-data">
 							<table class="admin">
 								<colgroup>
 									<col style="width: 10%">
-									<col style="width: 60%">
+									<col style="width: 50%">
 									<col style="width: 30%">
+									<col style="width: 20%">
 								</colgroup>
 								<thead>
 									<tr>
 										<th>No.</th>
 										<th>사진</th>
 										<th>작성일</th>
+										<th>관리</th>
 									</tr>
 								</thead>
 								<tbody>
-									<!--  한 페이지에 10개씩 보여준다    -->
-									<tr bgcolor="white" align="center">
-										<td colspan="3">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
-									</tr>
-									
 									<!-- 디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
-									<tr>
-										<td colspan="2">
-											<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
-										</td>
-										<td><button type="button" class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
-									</tr>
-									<!-- //디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
+							<tr>
+								<td colspan="3">
+									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+								</td>
+								<td ><button type="button" onclick="eclick('new','')"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
+							</tr>
+							<c:choose>
+									<c:when test="${empty lists}">
+										<tr bgcolor="white" align="center">
+											<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+										</tr>
+									</c:when>
+									<c:otherwise>
+										<c:forEach items="${lists}" var="list" varStatus="status">
 									
-									<tr>
-										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-										<td><img src="<c:url value='/gal/view.do?galNo=${list.galNo}'/>" alt="사진" width="50%"></td>
-										<td>${list.createDate}</td>
-									</tr>
+										<!-- //디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
+											
+											<tr>
+												<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
+												<td><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" height="100px"></td>
+												
+												<td>${list.createDate}</td>
+												<td>
+												<button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>
+												<button type="button" onclick="eclick('del','${list.galNo}')" class="btn btn-danger"><i class="fa fa-minus-circle"></i> 삭제</button>
+												</td>
+											</tr>																				
+										</c:forEach>
+									</c:otherwise>
+								</c:choose>
+									
+									
 								</tbody>
 							</table>
 						</form>

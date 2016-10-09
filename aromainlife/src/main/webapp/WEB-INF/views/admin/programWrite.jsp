@@ -11,15 +11,22 @@
 <script>
     /* addClass : .active */
     $(document).ready(function(){
-        $("li.menu-1").addClass("active");
+        $("li.menu-2").addClass("active");
 	});
 		  function eclick(pstr){
 			var f=document.adForm;
 			switch (pstr){	
 				case 'new':
 					
+					
+					
 					if(!f.title.value){
 					   alert("제목을 입력하세요.");
+					
+					   return false;
+					}
+					if(!f.proTime.value){
+					   alert("시간을 입력하세요.");
 					
 					   return false;
 					}
@@ -33,9 +40,21 @@
 						
 					   return false;
 					}
+					/* if(f.file.length==0){
+						   alert("다운로드파일을 입력하세요");
+						   return false;
+						}
+						var ext = f.file.value.slice(f.file.value.lastIndexOf(".") + 1).toLowerCase();
+						if(!(ext == "gif" || ext == "jpg" || ext == "png")){
+							alert(ext);
+							   alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
+							   return false;
+							} */
 					
-					f.submit();	
-					break;
+						f.action="<c:url value='/pro/write.do'/>";
+						f.submit();	
+						break;
+					
 				case 'cancel':
 					history.back();
 					

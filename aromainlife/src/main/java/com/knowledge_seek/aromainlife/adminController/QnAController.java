@@ -16,10 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.knowledge_seek.aromainlife.domain.QnA;
-import com.knowledge_seek.aromainlife.domain.QnA;
-import com.knowledge_seek.aromainlife.service.QnAService;
 import com.knowledge_seek.aromainlife.service.impl.QnAServiceImpl;
-import com.knowledge_seek.aromainlife.userController.HomeController;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
 
 @Controller

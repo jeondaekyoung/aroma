@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace="mybatis.File">
+
+	<insert id="insertFile" parameterType="fileDTO" useGeneratedKeys="true" keyProperty="file_id">
+		INSERT INTO File (
+			FILE_ID, FILE_NAME, FILE_REAL_NAME, FILE_PATH, FILE_EXT, FILE_CONTENT_TYPE, FILE_SIZE, REG_DATE
+		) VALUES (
+			#{file_id}, #{file_name}, #{file_real_name}, #{file_path}, #{file_ext}, #{file_content_type}, #{file_size}, now()
+		)
+	</insert>
+
+	<update id="updateFile" parameterType="fileDTO">
+		UPDATE File 
+		SET FILE_NAME = #{file_name},
+			FILE_REAL_NAME = #{file_real_name},
+			FILE_PATH = #{file_path},
+			FILE_EXT = #{file_ext},
+			FILE_CONTENT_TYPE = #{file_content_type},
+			REG_DATE = now()
+		WHERE FILE_ID = #{file_id}
+	</update>
+	
+	<delete id="deleteFile" parameterType="fileDTO">
+		DELETE FROM File WHERE FILE_ID=#{file_id}
+		
+	</delete>
+	
+	
+	<select id="selectFile" parameterType="string" resultType="fileDTO">
+		SELECT
+			FILE_ID, FILE_NAME, FILE_REAL_NAME, FILE_PATH, 
+			FILE_EXT, FILE_CONTENT_TYPE, FILE_SIZE, REG_DATE
+		FROM File
+		WHERE FILE_ID = #{file_id}
+	</select>
+</mapper>
