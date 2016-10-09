@@ -1,5 +1,6 @@
 package com.knowledge_seek.aromainlife.adminController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
 
+import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Program;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.ProServiceImpl;
@@ -78,7 +80,7 @@ public class ProgramController {
 	             
 	        } else {
 	        	logger.debug("파일 다중 업로드 mf.size():"+mf.size());
-	            for (int i = 0; i < mf.size(); i++) {
+	        	for (int i = 0; i < mf.size(); i++) {
 	            	if(mf.get(i).getSize()!=0){
 	            	program.file_name.add(mf.get(i).getOriginalFilename());
 	            	program.file_id.add(fileService.save(mf.get(i)));
@@ -102,22 +104,71 @@ public class ProgramController {
 	}
 	
 	@RequestMapping(value = "/edit.do")
-	public String edit( Model model,Program program,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
+	public String edit( Model model,Program program,MultipartRequest mhsq,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
 		
+		program=proService.selectOne(program);
+		
+		List<MultipartFile> mf =mhsq.getFiles("file");
+		
+		for (int i = 0; i < mf.size(); i++) {
+        	if(mf.get(i).getSize()!=0){
+        		
+        	program.file_name.set(i,mf.get(i).getOriginalFilename());
+        	FileDTO FileDto =fileService.selectFileDetail(program.getFile_id().get(i));//fileId로 정보가지고오기
+			//객체가 존재할때 파일 업데이트
+			program.file_id.set(i,fileService.update(mf.get(i), FileDto));
+        	}
+        	program.setFile_name1(program.file_name.get(0));
+        	program.setFile_name2(program.file_name.get(1));
+        	program.setFile_name3(program.file_name.get(2));
+        	program.setFile_name4(program.file_name.get(3));
+        	
+        	program.setFile_id1(program.file_id.get(0));
+        	program.setFile_id2(program.file_id.get(1));
+        	program.setFile_id3(program.file_id.get(2));
+        	program.setFile_id4(program.file_id.get(3));
+        	
+        	
+		}
 		proService.update(program);
+        
+		/*for(String s:program.getFile_id()){
+			System.out.println(s);
+			if(s!=null){
+				
+				program.setFile_id(null);
+			}
+
+		}*/
+		
+		/*if(program.getFile().getSize()!=0){
+			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
+			MultipartFile multpartfile = program.getFile();
+			program.setFileName(multpartfile.getOriginalFilename());
+			FileDTO FileDto =fileServiceImpl.selectFileDetail(program.getFile_id());//fileId로 정보가지고오기
+			//객체가 존재할때 파일 업데이트
+			program.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
+		}
+		proService.update(program);*/
 		return "redirect:/pro/list.do?nowPage="+nowPage;
 	}
 	
 	@RequestMapping("/delete.do")
 	public String delete(Program program,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
-		//program=proService.selectOne(program);
+		program=proService.selectOne(program);
 		proService.delete(program);
-		/*if(program.getFile_id()!=null){
-			//파일 삭제 
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(program.getFile_id());
-			
-		}*/
 		
+		System.out.println(program.getFile_id());
+			//파일 삭제 
+			for(String s:program.getFile_id()){
+				System.out.println(s);
+				if(s!=null){
+					FileDTO FileDto =fileService.selectFileDetail(s);
+					System.out.println(fileService.delete(FileDto));
+				}
+	
+		}
+			
 		return "redirect:/pro/list.do?nowPage="+nowPage;
 	}
 	

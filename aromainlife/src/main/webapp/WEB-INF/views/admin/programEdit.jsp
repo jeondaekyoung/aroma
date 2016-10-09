@@ -164,15 +164,45 @@
 								<label class="col-sm-2 control-label">첨부파일</label>
 								<div class="col-sm-9">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+									이전파일:
+									<c:if test="${empty program.file_name1}" var="result">
+										 -
+									</c:if>
+									<c:if test="${!result}">
+										<a href='<c:url value="/file/down/${program.file_id1}" />' class="btn btn-info"><i class="fa fa-download"></i>${program.file_name1} 다운로드</a>
+									</c:if>
+									
 								</div>
 								<div class="col-sm-9 col-sm-push-2">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+									이전파일:
+									<c:if test="${empty program.file_name2 or program.file_name2 eq 'null' }" var="result">
+										  &nbsp;&nbsp;-
+									</c:if>
+									<c:if test="${!result}">
+										<a href='<c:url value="/file/down/${program.file_id2}" />' class="btn btn-info"><i class="fa fa-download"></i>${program.file_name2} 다운로드</a>
+									</c:if>
+									
 								</div>
 								<div class="col-sm-9 col-sm-push-2">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+									이전파일:
+									<c:if test="${empty program.file_name3 or program.file_name3 eq 'null'}" var="result">
+										 &nbsp;&nbsp;-
+									</c:if>
+									<c:if test="${!result}">
+										<a href='<c:url value="/file/down/${program.file_id3}" />' class="btn btn-info"><i class="fa fa-download"></i>${program.file_name3} 다운로드</a>
+									</c:if>
 								</div>
 								<div class="col-sm-9 col-sm-push-2">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+									이전파일:
+									<c:if test="${empty program.file_name4 or program.file_name4 eq 'null'}" var="result">
+										 &nbsp;&nbsp;-
+									</c:if>
+									<c:if test="${!result}">
+										<a href='<c:url value="/file/down/${program.file_id4}" />' class="btn btn-info"><i class="fa fa-download"></i>${program.file_name4} 다운로드</a>
+									</c:if>
 								</div>
 							</div>
 							<!--첨부파일 끝-->

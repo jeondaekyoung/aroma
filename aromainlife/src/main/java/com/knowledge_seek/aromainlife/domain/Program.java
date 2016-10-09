@@ -12,44 +12,65 @@ public class Program {
 	private String content;
 	private Date createDate;
 	
-	public ArrayList<String> file_name = new ArrayList<String>();
-	public ArrayList<String> file_id  = new ArrayList<String>();
+	public ArrayList<String> file_name;
+	public ArrayList<String> file_id;
 	//조회시 필요한 필드
-	private String fileName1;
-	private String fileName2;
-	private String fileName3;
-	private String fileName4;
+	private String file_name1;
+	private String file_name2;
+	private String file_name3;
+	private String file_name4;
 	
 	private String file_id1;
 	private String file_id2;
 	private String file_id3;
 	private String file_id4;
-	 
 	
-	public String getFileName1() {
-		return fileName1;
+	public Program(){
+		file_name =new ArrayList<String>();
+		file_id = new ArrayList<String>();
 	}
-	public void setFileName1(String fileName1) {
-		this.fileName1 = fileName1;
+	
+
+	public String getFile_name1() {
+		return file_name1;
 	}
-	public String getFileName2() {
-		return fileName2;
+
+
+	public void setFile_name1(String file_name1) {
+		this.file_name1 = file_name1;
 	}
-	public void setFileName2(String fileName2) {
-		this.fileName2 = fileName2;
+
+
+	public String getFile_name2() {
+		return file_name2;
 	}
-	public String getFileName3() {
-		return fileName3;
+
+
+	public void setFile_name2(String file_name2) {
+		this.file_name2 = file_name2;
 	}
-	public void setFileName3(String fileName3) {
-		this.fileName3 = fileName3;
+
+
+	public String getFile_name3() {
+		return file_name3;
 	}
-	public String getFileName4() {
-		return fileName4;
+
+
+	public void setFile_name3(String file_name3) {
+		this.file_name3 = file_name3;
 	}
-	public void setFileName4(String fileName4) {
-		this.fileName4 = fileName4;
+
+
+	public String getFile_name4() {
+		return file_name4;
 	}
+
+
+	public void setFile_name4(String file_name4) {
+		this.file_name4 = file_name4;
+	}
+
+
 	public String getFile_id1() {
 		return file_id1;
 	}

@@ -34,7 +34,16 @@
 	<!-- fileName=if(isnull(#{fileName}),fileName,#{fileName}),
 		file_id= if(isnull(#{file_id}),file_id,#{file_id}) -->
 	<update id="proUpdate" parameterType="Program">
-		update Program set title=#{title},content=#{content},proTime=#{proTime}
+		update Program set title=#{title},content=#{content},proTime=#{proTime},
+		file_name1=if(isnull(#{file_name1}),file_name1,#{file_name1}),
+		file_id1= if(isnull(#{file_id1}),file_id1,#{file_id1}),
+		file_name2=if(isnull(#{file_name2}),file_name2,#{file_name2}),
+		file_id2= if(isnull(#{file_id2}),file_id2,#{file_id2}),
+		file_name3=if(isnull(#{file_name3}),file_name3,#{file_name3}),
+		file_id3= if(isnull(#{file_id3}),file_id3,#{file_id3}),
+		file_name4=if(isnull(#{file_name4}),file_name4,#{file_name4}),
+		file_id4= if(isnull(#{file_id4}),file_id4,#{file_id4})
+		
 		 where proNo=#{proNo}
 	</update>
 

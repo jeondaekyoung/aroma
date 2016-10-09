@@ -11,7 +11,7 @@
 <script>
     /* addClass : .active */
     $(document).ready(function(){
-        $("li.menu-1").addClass("active");
+        $("li.menu-2").addClass("active");
 	});
 		  function eclick(pstr){
 			var f=document.adForm;

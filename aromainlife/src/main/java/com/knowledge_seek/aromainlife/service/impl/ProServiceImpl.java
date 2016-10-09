@@ -27,10 +27,10 @@ public class ProServiceImpl implements ProService {
 			p.getFile_id().add(p.getFile_id2());
 			p.getFile_id().add(p.getFile_id3());
 			p.getFile_id().add(p.getFile_id4());
-			p.getFile_name().add(p.getFileName1());
-			p.getFile_name().add(p.getFileName2());
-			p.getFile_name().add(p.getFileName3());
-			p.getFile_name().add(p.getFileName4());
+			p.getFile_name().add(p.getFile_name1());
+			p.getFile_name().add(p.getFile_name2());
+			p.getFile_name().add(p.getFile_name3());
+			p.getFile_name().add(p.getFile_name4());
 			
 		}
 		
@@ -58,8 +58,18 @@ public class ProServiceImpl implements ProService {
 
 	@Override
 	public Program selectOne(Program Program) {
+		Program p=dao.selectOne(Program);
+		p.getFile_id().add(p.getFile_id1());
+		p.getFile_id().add(p.getFile_id2());
+		p.getFile_id().add(p.getFile_id3());
+		p.getFile_id().add(p.getFile_id4());
 		
-		return dao.selectOne(Program);
+		p.getFile_name().add(p.getFile_name1());
+		p.getFile_name().add(p.getFile_name2());
+		p.getFile_name().add(p.getFile_name3());
+		p.getFile_name().add(p.getFile_name4());
+		
+		return p;
 	}
 
 	@Override
