@@ -79,23 +79,28 @@ public class GalleryController {
 		
 		return "redirect:/gal/list.do";
 	}
+	@RequestMapping(value = "/editForm.do")
+	public String editForm(Gallery gal, Model model){
+		
+		gal=galService.selectOne(gal);
+		model.addAttribute("gal", gal);
+		
+		return "/admin/galleryEdit";
+	}
+	
 	@RequestMapping("/update.do")
 	public String update(Gallery gal, Model model) {
-		/*gal=galService.selectOne(gal);
-		
-		if(gal.getFile_id().length()==0){
-
-			gal.setFile_id(null);
-		}
 
 		if(gal.getFile().getSize()!=0){
 			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
 			MultipartFile multpartfile = gal.getFile();
 			gal.setFileName(multpartfile.getOriginalFilename());
+			System.out.println("수정"+gal.getFileName()+gal.getGalNo());
 			FileDTO FileDto =fileServiceImpl.selectFileDetail(gal.getFile_id());//fileId로 정보가지고오기
+			System.out.println(FileDto.getFile_id());
 			//객체가 존재할때 파일 업데이트
 			gal.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
-		}*/
+		}
 		galService.update(gal);
 		
 		return "redirect:/gal/list.do";
@@ -113,10 +118,6 @@ public class GalleryController {
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
 	}
-	@RequestMapping(value = "/editForm.do")
-	public String editForm(){
-		
-		return "/admin/galleryEdit";
-	}
+
 	
 }

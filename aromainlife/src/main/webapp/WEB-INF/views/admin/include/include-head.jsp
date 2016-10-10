@@ -36,7 +36,7 @@
   *{font-size: 14px}
   .admin {width:100%}
   .admin th {background-color:#eee; height:40px;}
-  .admin td {background-color:#fff; height: 35px}
+  .admin td {background-color:#fff; min-height: 35px}
   .admin th, .admin td {text-align:center; border:1px solid #ccc;}
   .admin td>a {display: inline-block; width: 100%; line-height: 35px;}
   #accordion2 .accordion-toggle span {font-size: 12px; color: #bbb}

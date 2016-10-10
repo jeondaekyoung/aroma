@@ -19,6 +19,11 @@
     switch (pstr){  
       case 'new':
         
+    	 if(!f.title.value){
+    		 alert("제목을 입력하세요");
+             return false;
+    	 } 
+    	  
         if(!f.file.value){
            alert("다운로드파일을 입력하세요");
            return false;
@@ -33,7 +38,7 @@
         f.submit();  
         break;
       case 'mod':
-        f.action="<c:url value='/gal/editForm.do'/>";      
+        f.action="<c:url value='/gal/editForm.do?galNo="+No+"'/>";      
         f.submit();  
         break;
       case 'del':
@@ -110,11 +115,13 @@
                       
                       <tr>
                         <td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-                        <td></td>
+                        <td>${list.title}</td>
                         <td>
-                          <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" height="100px">                        
+                          <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" >
+                                                  
                         </td>
                         <td>${list.fileName}</td>
+                        
                         <td>${list.createDate}</td>
                         <td>
 	                        <button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>

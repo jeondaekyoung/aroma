@@ -8,9 +8,17 @@ public class Gallery {
 
 	private String galNo;
 	private Date createDate;
+	private String title;
 	private String fileName;
 	private MultipartFile file;
 	private String file_id;
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getGalNo() {
 		return galNo;
 	}
