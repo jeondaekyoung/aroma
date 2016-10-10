@@ -68,15 +68,19 @@
 						<form action="" method="post" name="adForm" enctype="multipart/form-data">
 							<table class="admin">
 								<colgroup>
-									<col style="width: 10%">
-									<col style="width: 50%">
-									<col style="width: 30%">
+									<col style="width: 5%">
+									<col style="width: 15%">
+									<col style="width: 20%">
+									<col style="width: 20%">
+									<col style="width: 20%">
 									<col style="width: 20%">
 								</colgroup>
 								<thead>
 									<tr>
 										<th>No.</th>
+										<th>제목</th>
 										<th>사진</th>
+										<th>파일이름</th>
 										<th>작성일</th>
 										<th>관리</th>
 									</tr>
@@ -84,15 +88,17 @@
 								<tbody>
 									<!-- 디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
 							<tr>
+								<td></td><!-- No. -->
+								<td><input type="text" name="title" class="form-control" > </td>
 								<td colspan="3">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
-								</td>
+								</td>								
 								<td ><button type="button" onclick="eclick('new','')"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
 							</tr>
 							<c:choose>
 									<c:when test="${empty lists}">
 										<tr bgcolor="white" align="center">
-											<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+											<td colspan="6">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 										</tr>
 									</c:when>
 									<c:otherwise>
@@ -102,8 +108,11 @@
 											
 											<tr>
 												<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-												<td><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" height="100px"></td>
+												<td colspan="2">
+												<img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" height="100px">
 												
+												</td>
+												<td>${list.fileName}</td>
 												<td>${list.createDate}</td>
 												<td>
 												<button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>
