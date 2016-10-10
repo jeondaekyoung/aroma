@@ -113,4 +113,10 @@ public class GalleryController {
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
 	}
+	@RequestMapping(value = "/editForm.do")
+	public String editForm(){
+		
+		return "/admin/galleryEdit";
+	}
+	
 }

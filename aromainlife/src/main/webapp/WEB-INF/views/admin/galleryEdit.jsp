@@ -64,43 +64,57 @@
             <p>갤러리</p>
           </header>
 
-          <section class="scrollable wrapper w-f">
-            <form action="" method="post" name="adForm" enctype="multipart/form-data">
-              <table class="admin">
-                <colgroup>
-                  <col style="width: 5%">
-                  <col style="width: 30%">
-                  <col style="width: 20%">
-                  <col style="width: 20%">
-                  <col style="width: 15%">
-                  <col style="width: 10%">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>No.</th>
-                    <th>제목</th>
-                    <th>사진</th>
-                    <th>파일이름</th>
-                    <th>작성일</th>
-                    <th>관리</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- 디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
-	              <tr>
-	                <td></td><!-- No. -->
-	                <td><input type="text" name="title" class="form-control" ></td>
-	                <td>
-	                  <input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
-	                </td>
-	                <td></td><!-- 파일이름 -->
-	                <td></td><!-- 작성일 -->
-	                <td><button type="button" onclick="eclick('new','')"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
-	              </tr>	                  
-                </tbody>
-              </table>
-            </form>
-          </section>
+          	<section class="scrollable wrapper w-f">
+				<form action="<c:url value='/pro/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
+
+					<!-- 작성자 -->
+					<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
+					<input type="hidden" name="proNo" value="${program.proNo}" class="form-control"> 
+					<%-- <input type="hidden" name="file_id" value="${program.file_id}" class="form-control"> --%>
+					<input type="hidden" name="content" id="editorContent"class="form-control" />
+					<!--제목-->
+					<div class="form-group">
+						<label class="col-sm-2 control-label">제목</label>
+						<div class="col-sm-9">
+							<input type="text" value="${program.title}" name="title" class="form-control">
+						</div>
+					</div>
+					<!--제목 끝-->
+
+					<!--첨부파일-->
+					<!-- 이미지 최대 4개 -->
+					<div class="line line-dashed line-lg pull-in"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">첨부파일</label>
+						<div class="col-sm-9">
+							<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
+							이전파일:
+							<c:if test="${empty program.file_name1}" var="result">
+								 -
+							</c:if>
+							<c:if test="${!result}">
+								<a href='<c:url value="/file/down/${program.file_id1}" />' class="btn btn-info"><i class="fa fa-download"></i>${program.file_name1} 다운로드</a>
+							</c:if>
+							
+						</div>
+					</div>
+					<!--첨부파일 끝-->
+
+					<!--버튼그룹-->
+					<div class="line line-dashed line-lg pull-in"></div>
+					<div class="form-group">
+						<div class="col-sm-4 col-sm-offset-2">
+							<button type="button" onclick="eclick('cancel')" class="btn btn-default">
+								<i class="fa fa-times"></i> 취소
+							</button>
+							<button type="button" onclick="eclick('mod')" class="btn btn-primary">
+								<i class="fa fa-pencil"></i> 등록
+							</button>
+						</div>
+					</div>
+					<!--버튼그룹 끝-->
+				</form>
+			</section>
 
         </section>
       </section>

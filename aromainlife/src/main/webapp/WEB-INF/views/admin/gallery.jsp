@@ -33,7 +33,7 @@
         f.submit();  
         break;
       case 'mod':
-        f.action="<c:url value='/gal/update.do?galNo="+No+"'/>";      
+        f.action="<c:url value='/gal/editForm.do'/>";      
         f.submit();  
         break;
       case 'del':
