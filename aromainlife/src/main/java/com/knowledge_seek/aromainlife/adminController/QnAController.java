@@ -14,8 +14,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.QnA;
+import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.QnAServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
 
@@ -32,6 +35,10 @@ public class QnAController {
 	
 	@Resource(name="qnaService")
 	QnAServiceImpl qnaService;
+	
+	@Resource(name="fileService")
+	FileServiceImpl fileService;
+	
 	
 	@RequestMapping("/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
@@ -70,6 +77,12 @@ public class QnAController {
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
 	public String write(QnA qna, Model model) {
 		
+		if(qna.getFile().getSize()!=0){
+			MultipartFile multpartfile = qna.getFile();
+			qna.setFileName(multpartfile.getOriginalFilename());
+			qna.setFile_id(fileService.save(multpartfile));
+		
+		}
 		
 		qnaService.insert(qna);
 		
@@ -100,18 +113,32 @@ public class QnAController {
 	
 	@RequestMapping("/edit.do")
 	public String edit(QnA qna, Model model) {
+		if(qna.getFile().getSize()!=0){
+			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
+			MultipartFile multpartfile = qna.getFile();
+			qna.setFileName(multpartfile.getOriginalFilename());
+			FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());//fileId로 정보가지고오기
+			//객체가 존재할때 파일 업데이트
+			qna.setFile_id(fileService.update(multpartfile, FileDto));	
+			
+		}
+		if(qna.getFile_id().length()==0){
+			
+			qna.setFile_id(null);
+		}
+		
 		qnaService.update(qna);
 		return "forward:/qna/view.do";
 	}
 	@RequestMapping("/delete.do")
-	public String delete(QnA QnA,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
+	public String delete(QnA qna,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		//QnA=qnaService.selectOne(QnA);
-		qnaService.delete(QnA);
-		/*if(QnA.getFile_id()!=null){
+		qnaService.delete(qna);
+		if(qna.getFile_id().length()!=0){
 			//파일 삭제 
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(QnA.getFile_id());
-			
-		}*/
+			FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());
+			fileService.delete(FileDto);
+		}
 		
 		return "redirect:/qna/list.do?nowPage="+nowPage;
 	}
