@@ -155,6 +155,7 @@ public class FileServiceImpl implements FileService {
 		dir.mkdirs();
 		
 		new_fileSet(file, dto, cal, dir, dto.getFile_id());
+		System.out.println("dto.getFile_size();"+dto.getFile_size());
 		fileDao.update(dto);
 		
 		return dto.getFile_id();
@@ -198,6 +199,7 @@ public class FileServiceImpl implements FileService {
 		String originalFileName = file.getOriginalFilename();
 		fileDTO.setFile_real_name(originalFileName);
 		fileDTO.setFile_content_type(file.getContentType());
+		System.out.println("file.getSize(): "+file.getSize());
 		fileDTO.setFile_size(file.getSize());
 		
 		String[] fileNameSplit = StringUtils.split(originalFileName, ".");

@@ -117,8 +117,11 @@
                         <td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
                         <td>${list.title}</td>
                         <td>
-                          <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" >
-                                                  
+                        <div>
+                        <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" >
+                        
+                        
+                        </div>
                         </td>
                         <td>${list.fileName}</td>
                         

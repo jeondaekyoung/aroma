@@ -100,6 +100,7 @@ public class GalleryController {
 			System.out.println(FileDto.getFile_id());
 			//객체가 존재할때 파일 업데이트
 			gal.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
+			System.out.println(gal.getFile_id());
 		}
 		galService.update(gal);
 		
