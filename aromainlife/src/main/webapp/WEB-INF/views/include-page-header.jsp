@@ -13,10 +13,17 @@
     <!-- 끝: 브랜드 영역 -->
     <!-- 내비게이션 영역 -->
     <nav class="page-gnb">
-      <ul class="clearfix">
+      <ul class="nav clearfix">
         <li><a href="<c:url value='/user/intro.do'/>">생활의 향기</a></li>
         <li><a href="<c:url value='/user/class.do'/>">향기체험학습</a></li>
-        <li><a href="<c:url value='/user/aroma-1.do'/>">아로마테라피</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">아로마테라피 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="<c:url value='/user/aroma-1.do'/>" data-toggle="tab">아로마 테라피</a></li>
+              <li><a href="<c:url value='/user/essencial.do'/>" data-toggle="tab">에센셜 오일</a></li>
+              <li><a href="<c:url value='/user/fragrance-1.do'/>" data-toggle="tab">생활속 아로마</a></li>
+            </ul>
+          </li>
         <li class=""><a href="<c:url value='qna-list.do'/>">커뮤니티</a></li>
       </ul>
     </nav>
