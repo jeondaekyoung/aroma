@@ -38,7 +38,8 @@ public class GalleryController {
 	GalServiceImpl galService;
 	
 	@Resource(name="fileService")
-	FileServiceImpl fileServiceImpl;
+	FileServiceImpl fileService;
+	
 	
 	@RequestMapping(value = "/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
@@ -68,10 +69,10 @@ public class GalleryController {
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
 	public String write(Gallery gal,Model model) {
 		//logger.info("{}",gal.getFile().getOriginalFilename());
-		if(gal.getFile()!=null){
+		if(gal.getFile().getSize()!=0){
 			MultipartFile multpartfile = gal.getFile();
 			gal.setFileName(multpartfile.getOriginalFilename());
-			gal.setFile_id(fileServiceImpl.save(multpartfile));
+			gal.setFile_id(fileService.save(multpartfile));
 		
 		}
 		
@@ -79,38 +80,43 @@ public class GalleryController {
 		
 		return "redirect:/gal/list.do";
 	}
+	@RequestMapping(value = "/editForm.do")
+	public String editForm(Gallery gal, Model model){
+		
+		gal=galService.selectOne(gal);
+		model.addAttribute("gal", gal);
+		
+		return "/admin/galleryEdit";
+	}
+	
 	@RequestMapping("/update.do")
 	public String update(Gallery gal, Model model) {
-		/*gal=galService.selectOne(gal);
-		
-		if(gal.getFile_id().length()==0){
-
-			gal.setFile_id(null);
-		}
 
 		if(gal.getFile().getSize()!=0){
 			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
 			MultipartFile multpartfile = gal.getFile();
 			gal.setFileName(multpartfile.getOriginalFilename());
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(gal.getFile_id());//fileId로 정보가지고오기
+			FileDTO FileDto =fileService.selectFileDetail(gal.getFile_id());//fileId로 정보가지고오기
 			//객체가 존재할때 파일 업데이트
-			gal.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
-		}*/
+			gal.setFile_id(fileService.update(multpartfile, FileDto));	
+			
+		}
 		galService.update(gal);
 		
 		return "redirect:/gal/list.do";
 	}
 	@RequestMapping("/delete.do")
 	public String delete(Gallery gal,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
-		logger.debug("galNo: {}",gal.getGalNo());
 		gal=galService.selectOne(gal);
 		galService.delete(gal);
-		if(gal.getFile_id()!=null){
+		if(gal.getFile_id().length()!=0){
 			//파일 삭제 
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(gal.getFile_id());
-			fileServiceImpl.delete(FileDto);
+			FileDTO FileDto =fileService.selectFileDetail(gal.getFile_id());
+			fileService.delete(FileDto);
 		}
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
 	}
+
+	
 }

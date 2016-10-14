@@ -111,6 +111,7 @@
 									<form name="delForm" action="<c:url value='/qna/delete.do'/>" method="post">
 									<a href="<c:url value='/qna/list.do'/>"	class="btn btn-primary"><i class="fa fa-list-ul"></i> 목록</a>
 										<input type="hidden" name="qnaNo" value="${qna.qnaNo}" />
+										<input type="hidden" name="file_id" value="${qna.file_id}" />
 										<button type="button"  onclick="del_click()" class="btn btn-danger">
 											<i class="fa fa-minus-circle"></i> 삭제
 										</button>

@@ -14,11 +14,11 @@
 	</select>
 	
 	<insert id="GalInsert" parameterType="Gallery">
-		insert into Gallery values(default,now(),#{fileName},#{file_id});
+		insert into Gallery values(default,now(),#{title},#{fileName},#{file_id});
 	</insert>	
 	
 	<update id="GalUpdate" parameterType="Gallery">
-		update Gallery set fileName=#{fileName},file_id=#{file_id}  where GalNo=#{galNo}
+		update Gallery set createDate=now(),title=#{title},fileName=#{fileName},file_id=#{file_id}  where GalNo=#{galNo}
 	</update>
 
 	<update id="GalUpdate_hits" parameterType="java.lang.String">
