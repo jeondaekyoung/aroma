@@ -1,1 +1,11 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);	
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+*, *:after, *:before, *::after, *::before {font-family: 'Jeju Gothic'; font-weight: 400;}
+.nanumpen {
+    font-family: 'nanum pen script', serif;
+}
+.cn {
+    font-family: 'dotum';
+    font-weight: 600;
+    display: inline !important;
+}
