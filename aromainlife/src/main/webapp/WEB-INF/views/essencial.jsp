@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,62 +74,62 @@
         <div class="col-12 prefix-2 suffix-2 aroma gallery essence">
           <h4 class="nanumpen">* 클릭하면 상세 설명을 볼 수 있습니다.</h4>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (1).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (1).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse01">Juniperberry</a></p>
           </div>          
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (2).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (2).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse02">Cypress</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (3).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (3).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse03">Pine</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (4).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (4).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse04">Geranium</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (5).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (5).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse05">Rose</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (6).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (6).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse06">Chamomile</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (7).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (7).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse07">Tea Tree</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (8).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (8).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse08">Rosemary</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (9).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (9).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse09">Citrus</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (10).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (10).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse10">Eucalyptus</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (11).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (11).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse11">Peppermint</a></p>
           </div>
           </div>
           <div class="col-4">
-            <div class="img-wrap"><img src="images/essence/essensial (12).jpg" width="100%" height="100%" alt="사진">
+            <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (12).jpg'/>" width="100%" height="100%" alt="사진">
             <p><a class="esse12">Lavendar</a></p>
           </div>
           </div>
@@ -138,7 +139,7 @@
           <div class="popup" id="esse01">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (1).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (1).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">쥬니퍼베리(Juniperberry) 독소 배출</span>
                 : 노간주나무<br><br>
                 + 학명 : Juniperus communis <br>
@@ -186,7 +187,7 @@
           <div class="popup" id="esse02">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (2).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (2).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">사이프러스(Cypress) 수렴작용</span><br>
                 + 학명 : Cupressus sempervirens<br>
                 + 과명: 측백나무과(Cupressaceae)<br>
@@ -240,7 +241,7 @@
           <div class="popup" id="esse03">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (3).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (3).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">파인(Pine) 정화</span><br>
                 + 학명 : Pinus sylvestris<br>
                 + 과명 : 소나무과(Pinaceae)<br>
@@ -274,7 +275,7 @@
           <div class="popup" id="esse04">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (4).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (4).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">제라늄(Geranium) 호르몬 균형</span><br>
                 + 학명 : Pelargonium graveolens<br>
                 + 과명: 쥐손이풀과(Geraniaceae)<br>
@@ -326,7 +327,7 @@
           <div class="popup" id="esse05">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (5).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (5).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">로즈(Rose) 여성호르몬 조절</span>
                 + 학명 : Rosa damascena/ Rosa centifolia<br>
                 + 과명: 장미과(Rosaceae)<br>
@@ -406,7 +407,7 @@
           <div class="popup" id="esse06">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (6).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (6).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">캐모마일(Chamomile) 이완, 진정</span>
                 + 학명 : 캐모마일 로만 Anthemis nobilis<br>
                 + 캐모마일 저먼(블루 캐모마일) Matricaria recutita<br>
@@ -476,7 +477,7 @@
           <div class="popup" id="esse07">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (7).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (7).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">티트리(Tea tree) 살균, 소독</span>
                 + 학명 : Melaleuca alternifolia<br>
                 + 과명 : 도금양과(Myrtaceae)<br>
@@ -531,7 +532,7 @@
           <div class="popup" id="esse08">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (8).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (8).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">로즈마리(Rosemary) 집중, 활력</span><br>
                 + 학 명 : Rosmarinus officinalis<br>
                 + 과 명 : 꿀풀과(Labiatae)<br>
@@ -593,7 +594,7 @@
           <div class="popup" id="esse09">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (9).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (9).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">시트러스(감귤) 계열(Citrus) 기분 전환</span><br>
                 + 과 명 : 운향과(Rutaceae)<br>
                 + 추출부위 : 과피<br>
@@ -678,7 +679,7 @@
           <div class="popup" id="esse10">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (10).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (10).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">유칼립투스(Eucalyptus) 상쾌</span><br>
                 + 학 명 : Eucalyptus globules, Eucalyptus radiata<br>
                 + 과 명 : 도금양과(Myrtaceae)<br>
@@ -722,7 +723,7 @@
           <div class="popup" id="esse11">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (11).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (11).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">페퍼민트(Peppermint) 리후레쉬</span><br>
                 + 학명 : Mentha piperita<br>
                 + 과명 : 꿀풀과(Labiatae)<br>
@@ -783,7 +784,7 @@
           <div class="popup" id="esse12">
             <div class="popup-content">
               <p>
-                <img src="images/essence/essensial (12).jpg" alt="사진" class="col-4">
+                <img src="<c:url value='/resources/images/essence/essensial (12).jpg'/>" alt="사진" class="col-4">
                   <span class="nanumpen">라벤더(Lavender) 릴렉싱</span><br>
                 + 학명 : Lavandula angustifolia(officinalis)<br>
                 + 과명: 꿀풀과(Labiatae)<br>

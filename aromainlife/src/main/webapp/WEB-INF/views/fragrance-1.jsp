@@ -33,6 +33,12 @@
           <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
           <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
           <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
+           <%-- <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab active">허브&amp;아로마테라피</a></div>
+          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
+          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
+          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
+          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
+           --%>
         </div>
       </div>
       <!-- 끝: tab-menu-->

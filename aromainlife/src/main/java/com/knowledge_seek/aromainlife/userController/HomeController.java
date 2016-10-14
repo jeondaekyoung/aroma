@@ -68,5 +68,21 @@ public class HomeController {
 		
 		return "aroma-5";
 	}
+	@RequestMapping(value = "/user/essencial.do", method = RequestMethod.GET)
+	public String essencial(Model model) {
+		
+		
+		
+		return "essencial";
+	}
+	@RequestMapping(value = "/user/fragrance-1.do", method = RequestMethod.GET)
+	public String fragrance_1(Model model) {
+		
+		
+		
+		return "fragrance-1";
+	}
+
+	
 	
 }
