@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab active">119 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab active">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -60,7 +62,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11901.gif" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/11901.gif'/>" alt="사진" width="100%">
           </div>
             
           <div class="col-9">
@@ -71,7 +73,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/beauty09.gif" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/beauty09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
           <div class="col-9">
@@ -83,7 +85,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11904.gif" alt="사진" width="100%" style="padding: 0 3em;">
+            <img src="<c:url value='/resources/images/fragra/11904.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
           </div>
             
           <div class="col-16">
@@ -102,7 +104,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11903.gif" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/11903.gif'/>" alt="사진" width="100%">
           </div>
             
           <div class="col-16">
@@ -128,7 +130,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11905.gif" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/11905.gif'/>" alt="사진" width="100%">
           </div>
             
           <div class="col-16">
@@ -175,7 +177,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/blend40.gif" alt="사진" width="100%" style="padding: 0;">
+            <img src="<c:url value='/resources/images/fragra/blend40.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
             
           <div class="col-9">
@@ -192,7 +194,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11909.gif" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/11909.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
           <div class="col-9">
@@ -213,7 +215,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11908.gif" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/11908.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
           <div class="col-9">
@@ -225,7 +227,7 @@
             </p>
           </div>
           <div class="col-3 suffix-4">
-            <img src="images/fragra/11910.gif" alt="사진" width="100%" style="padding: 0 1em;">
+            <img src="<c:url value='/resources/images/fragra/11910.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
           </div>
             
 	    </div>

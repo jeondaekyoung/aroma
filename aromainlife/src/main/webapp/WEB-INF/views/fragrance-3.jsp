@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab active">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab active">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -47,7 +49,7 @@
           </div>
         
             <div class="col-3">
-                <img src="images/fragra/beauty01.gif" alt="사진" width="100%"></div>
+                <img src="<c:url value='/resources/images/fragra/beauty01.gif'/>" alt="사진" width="100%"></div>
             <div class="col-13">
               <h3 class="nanumpen">얼굴에 각질이 많아요~</h3>
               <p>28일의 피부 재생주기가 규칙적이지 않고 모공속, 피부각질층에 노폐물이 잘 배출되지 않을 때 우리 피부에 각질이 쌓인다.<br>
@@ -61,7 +63,7 @@
             </div>
             
           <div class="col-3">
-                <img src="images/fragra/beauty03.gif" alt="사진" width="100%"></div>
+                <img src="<c:url value='/resources/images/fragra/beauty03.gif'/>" alt="사진" width="100%"></div>
           <div class="col-13">
             <h3 class="nanumpen">세안 후 무지 당기는 피부</h3>
             <p>평소 외부환경과 체내 순환 장애 등으로 인해 피부내 수분을 많이 잃으면 건조증이 생긴다.<br>
@@ -88,7 +90,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty02.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">조금이라도 기미 잡티를 없앨 수만 있다면...</h3>
@@ -100,7 +102,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty04.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty04.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">앗, 뾰루지다!</h3>
@@ -119,8 +121,8 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty05.gif" alt="사진" width="100%">
-                <img src="images/fragra/beauty06.gif" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/beauty05.gif'/>" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/beauty06.gif'/>" alt="사진" width="100%">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">생리장애가 있어요</h3>
@@ -139,7 +141,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty07.gif" alt="사진" width="100%" style="padding: 0 3em;">
+                <img src="<c:url value='/resources/images/fragra/beauty07.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">가슴 볼륨 업!</h3>
@@ -150,7 +152,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty08.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty08.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">변비가..</h3>
@@ -177,7 +179,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty09.gif" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/beauty09.gif'/>" alt="사진" width="100%">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">비듬, 탈모, 두피, 모발을 건강하게~</h3>
@@ -198,7 +200,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty12.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty12.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">피부에 탄력을</h3>
@@ -219,7 +221,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty15.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty15.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">예쁜손 가꾸기</h3>
@@ -232,7 +234,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty11.gif" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty11.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">손톱이 건조하고 갈라질 때</h3>
@@ -243,8 +245,8 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty14.gif" alt="사진" width="100%" style="padding: 0 2em;">
-                <img src="images/fragra/beauty13.gif" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty14.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/beauty13.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">발관리가 필요해요~</h3>
@@ -263,7 +265,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/beauty16.gif" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty16.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">예쁜 종아리 만들기</h3>

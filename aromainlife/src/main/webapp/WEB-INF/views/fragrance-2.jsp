@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab active">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab active">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -73,63 +75,63 @@
               </thead>
               <tbody>
                   <tr>
-                    <td><img src="images/fragra/lavender.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/lavender.gif'/>" alt="사진" height="100px"></td>
                     <td>라벤다(Lavender): 꽃</td>
                     <td>풍성하고 달콤하면서도 강한 꽃 향으로 긴장을 풀어주고, 현대인의 스트레스, 두통, 불안, 불면증에 도움을 주며 피로를 풀어준다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/rose.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/rose.gif'/>" alt="사진" height="100px"></td>
                     <td>로 즈(Rose): 꽃</td>
                     <td>우아하고 부드러운 장미향은 불안한 마음을 진정시키며, 생리 불순, 갱년기 장애등 여성 호르몬 밸런스를 맞춰주고 신경성 설사를 완화시켜준다. 또한 피부 미용에도 좋다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/jasmine.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/jasmine.gif'/>" alt="사진" height="100px"></td>
                     <td>쟈스민(Jasmine): 꽃</td>
                     <td>달콤하고 관능적인 향으로 생리 정상화, 모유 촉진, 냉증, 스트레스성 위통, 우울증, 목소리가 쉬었을 때 등에 효과가 있으며 심리적 진정, 행복감을 느낄 수 있는 향기이다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/thyme.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/thyme.gif'/>" alt="사진" height="100px"></td>
                     <td>타 임(Thyme): 잎</td>
                     <td>샤프하면서 톡쏘는 자극적인 향기를 내는 타임은 살균, 소독작용으로, 감기, 기침, 호흡기질환에 도움을 주고, 소화, 위장기능 강화, 피로회복에도 효과가 있다..</td>                    
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/lemonbalm.gif" alt="사진l" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/lemonbalm.gif'/>" alt="사진l" height="100px"></td>
                     <td>레몬밤(Lemon Balm):잎</td>
                     <td>'학자의 허브'로 잘 알려져 있으며, 머리를 맑게 해주고 기억력을 증진시켜 수험생에게 적합한 차이다. 레몬향이 나며, 신경성 두통, 소화불량 등에도 효과가 있다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/peppermint.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/peppermint.gif'/>" alt="사진" height="100px"></td>
                     <td>페퍼민트(Peppermint): 박하, 잎</td>
                     <td>상쾌하고 후레쉬한 향으로 향기와 맛이 뛰어나 인기가 있는 차다. 더부룩함과 입덧 해소등 소화에 효과가 있고 변비, 감기예방에도 도움을 준다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/camo.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/camo.gif'/>" alt="사진" height="100px"></td>
                     <td>캐모마일 저먼(Chamomile German): 꽃</td>
                     <td>은은한 사과향이 나는 차로 긴장을 풀어주고 심신을 안정시키며 불면증, 소화촉진에 효과가 있다. 또한 발한 작용이 있어 초기 감기에 물대신 음용하면 효과를 볼 수있다.<br>
                         *** 아이들이 한밤중에 잠을 자지않고 보채거나 울 때 캐모마일 티를 우유에 타서 주면 효과가 있다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/lemongrass.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/lemongrass.gif'/>" alt="사진" height="100px"></td>
                     <td>레몬그라스(Lemongrass): 잎</td>
                     <td>레몬과 비슷한 향기가 나며, 리후레쉬 효과가 있어서 소화촉진, 식욕부진, 빈혈에 효과가 있고 심신에 기운을 돋우는 차이다. 소화를 촉진하는 작용이 있어서 식후에 마시면 아주 좋다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/rosemary.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/rosemary.gif'/>" alt="사진" height="100px"></td>
                     <td>로즈마리(Rosemary): 잎</td>
                     <td>'젊음을 돌려주는 차'로 알려져있으며, 청량감이 있는 산뜻하고 강한 향은 뇌신경을 자극하여 머리를 맑게 해주고, 기억력을 높여준다. 또한 강한 살균력이 있으며 강장, 소화작용이 뛰어나다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/rosehip.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/rosehip.gif'/>" alt="사진" height="100px"></td>
                     <td>로즈힙(Rose hip): 야생장미 열매</td>
                     <td>상큼면서도 달콤한 향이나며 비타민 C가 풍부해서 '비타민의 보고'로 알려져 있다. 피부 미용에 좋고, 지친 심신에 편안함을 주며 기분을 고조시키는 효능이 있다. 또한 결석과 눈의 피로에도 효과가 있다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/hib.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/hib.gif'/>" alt="사진" height="100px"></td>
                     <td>히비스커스(Hibiscus): 꽃잎</td>
                     <td>시큼한 맛과 선명한 붉은 색이 인상적인 이 허브티는 비타민과 구연산이 풍부해서 피부 미용과 피로 회복에 효과가 크다. 또한 빈혈에 도움을 주고, 이뇨작용으로 몸의 신진대사를 좋게 해주며 변비, 감기에도 좋다.</td>
                   </tr>
                   <tr>
-                    <td><img src="images/fragra/fennel.gif" alt="사진" height="100px"></td>
+                    <td><img src="<c:url value='/resources/images/fragra/fennel.gif'/>" alt="사진" height="100px"></td>
                     <td>펜넬(Fennel): 종자</td>
                     <td>'생선의 허브'라고 알려져 있으며 생선요리와 궁합이 잘 맞는다. 또한 식욕을 억제하는 작용이 있어 고대 로마 여성들이 다이어트의 특효약으로 애용해 왔다고 한다. 이뇨작용과 해독작용이 뛰어나 비만, 위장 트러불, 소화 촉진에 도움을 주고, 변비, 모유 촉진에도 효과가 있다. 여성호르몬에 작용하므로 임신중 사용은 금물이다.</td>
                   </tr>
@@ -143,7 +145,7 @@
           </div>
             
             <div class="col-3">
-                <img src="images/fragra/food01.gif" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/food01.gif'/>" alt="사진" width="100%">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브샐러드</h4>
@@ -151,7 +153,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food02.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/food02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">굽는 요리를 할 때(삼겹살, 생선구이)</h4>
@@ -160,7 +162,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food03.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/food03.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">찜요리</h4>
@@ -176,7 +178,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food04.gif" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/food04.gif'/>" alt="사진" width="100%">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브피자</h4>
@@ -187,7 +189,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food05.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/food05.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브샌드위치</h4>
@@ -197,7 +199,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food06.gif" alt="사진" width="100%">
+                <img src="<c:url value='/resources/images/fragra/food06.gif'/>" alt="사진" width="100%">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브비빔밥</h4>
@@ -209,7 +211,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food07.gif" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/food07.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브식초</h4>
@@ -224,7 +226,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food08.gif" alt="사진" width="100%" style="padding: 0 3em;">
+                <img src="<c:url value='/resources/images/fragra/food08.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브술</h4>
@@ -234,7 +236,7 @@
             </div>
             
             <div class="col-3">
-                <img src="images/fragra/food09.gif" alt="사진" width="100%" style="padding: 0 2em;">
+                <img src="<c:url value='/resources/images/fragra/food09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브디저트</h4>

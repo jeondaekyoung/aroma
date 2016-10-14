@@ -4,12 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 	
@@ -32,42 +30,14 @@ public class HomeController {
 		
 		return "intro";
 	}
-
-	@RequestMapping(value = "/user/aroma-1.do", method = RequestMethod.GET)
-	public String aroma_1(Model model) {
+	@RequestMapping(value = "/user/aroma-{no}.do", method = RequestMethod.GET)
+	public String aroma_1(Model model,@PathVariable("no")String no) {
 		
 		
 		
-		return "aroma-1";
+		return "aroma-"+no;
 	}
-	@RequestMapping(value = "/user/aroma-2.do", method = RequestMethod.GET)
-	public String aroma_2(Model model) {
-		
-		
-		
-		return "aroma-2";
-	}
-	@RequestMapping(value = "/user/aroma-3.do", method = RequestMethod.GET)
-	public String aroma_3(Model model) {
-		
-		
-		
-		return "aroma-3";
-	}
-	@RequestMapping(value = "/user/aroma-4.do", method = RequestMethod.GET)
-	public String aroma_4(Model model) {
-		
-		
-		
-		return "aroma-4";
-	}
-	@RequestMapping(value = "/user/aroma-5.do", method = RequestMethod.GET)
-	public String aroma_5(Model model) {
-		
-		
-		
-		return "aroma-5";
-	}
+	
 	@RequestMapping(value = "/user/essencial.do", method = RequestMethod.GET)
 	public String essencial(Model model) {
 		
@@ -75,14 +45,12 @@ public class HomeController {
 		
 		return "essencial";
 	}
-	@RequestMapping(value = "/user/fragrance-1.do", method = RequestMethod.GET)
-	public String fragrance_1(Model model) {
+	@RequestMapping(value = "/user/fragrance-{no}.do", method = RequestMethod.GET)
+	public String fragrance_1(Model model,@PathVariable("no")String no) {
 		
 		
 		
-		return "fragrance-1";
+		return "fragrance-"+no;
 	}
-
-	
 	
 }

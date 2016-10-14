@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE htm>
 <html>
 <head>
@@ -27,18 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab active">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
-           <%-- <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab active">허브&amp;아로마테라피</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
-           --%>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab active">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -52,11 +48,11 @@
             <h4 class="nanumpen">① 탈취, 냄새제거</h4>  
           </div>        
           <div class="col-3">
-              <img src="images/fragra/blend25.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend22.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend30.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend31.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend32.gif" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend25.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend22.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend30.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend31.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend32.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-13">
             <p><span>옷장, 신발장 속에</span>
@@ -94,10 +90,10 @@
             <h4 class="nanumpen">② 청소</h4>
           </div>            
           <div class="col-3">              
-              <img src="images/fragra/blend21.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend20.gif" alt="사진" width="100%"><br><br><br>
-              <img src="images/fragra/blend33.gif" alt="사진" width="100%">
-              <img src="images/fragra/blend34.gif" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend21.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend20.gif'/>" alt="사진" width="100%"><br><br><br>
+              <img src="<c:url value='/resources/images/fragra/blend33.gif'/>" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend34.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-13">
              <p><span>청소기</span>
@@ -127,7 +123,7 @@
               <h4 class="nanumpen">③ 세탁 및 보관</h4>
           </div>            
           <div class="col-3"><br><br>
-              <img src="images/fragra/blend27.gif" alt="사진" width="100%">              
+              <img src="<c:url value='/resources/images/fragra/blend27.gif'/>" alt="사진" width="100%">              
           </div>
             <div class="col-13">
               <p><span>세탁할 때~</span>
@@ -144,7 +140,7 @@
               <h4 class="nanumpen">④ 애완동물</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend35.gif" alt="사진" width="100%">              
+              <img src="<c:url value='/resources/images/fragra/blend35.gif'/>" alt="사진" width="100%">              
           </div>
           <div class="col-13">
                 <p><span>사랑스런 나의 애완동물을 위해 쾌적한 환경과 예방을~</span>
@@ -160,7 +156,7 @@
               <h4 class="nanumpen">⑤ 공부방(집중력 향상)</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend36.gif" alt="사진" width="100%" style="padding: 0 2em;">        
+              <img src="<c:url value='/resources/images/fragra/blend36.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">        
           </div>
           <div class="col-13">
             <p>집중이 안되고 머리가 무거울 때 몇 방울의 천연 에센셜 오일을 손수건이나 티슈에 떨어뜨려 냄새를 맡거나, 스프레이 용기에 물과 섞어 사용, 또는 아로마램프를 활용해 보자.<br>
@@ -174,7 +170,7 @@
               <h4 class="nanumpen">⑥ 침실</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend37.gif" alt="사진" width="100%" style="padding: 0 2em;">              
+              <img src="<c:url value='/resources/images/fragra/blend37.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">              
           </div>
           <div class="col-13">
             <p><span>천연향유를 사용하여 당신의 침실을 달콤하고 편안한 꿈나라로 안내~</span>
@@ -187,7 +183,7 @@
               <h4 class="nanumpen">⑦ 부모님방에~</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend44.gif" alt="사진" width="100%" style="padding: 0 4em;">              
+              <img src="<c:url value='/resources/images/fragra/blend44.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">              
           </div>
           <div class="col-13">
             <p><span>상큼한 천연향을 이용해 방안에 머물러 있는 체취를 없애고 실내 공기를 살균, 정화 시켜 
@@ -202,7 +198,7 @@
               <h4 class="nanumpen">⑧ 거실에서</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend38.gif" alt="사진" width="100%">              
+              <img src="<c:url value='/resources/images/fragra/blend38.gif'/>" alt="사진" width="100%">              
           </div>
           <div class="col-13">
             <p>아로마테라피를 이용해 향기로운 거실을 만드는 방법은 다양하다.<br>
@@ -216,7 +212,7 @@
               <h4 class="nanumpen">⑨ 욕실에서</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend39.gif" alt="사진" width="100%">              
+              <img src="<c:url value='/resources/images/fragra/blend39.gif'/>" alt="사진" width="100%">              
           </div>
           <div class="col-13">
             <p><span>아로마테라피 목욕</span>
@@ -244,7 +240,7 @@
               <h4 class="nanumpen">⑩ 사무실</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend40.gif" alt="사진" width="100%">              
+              <img src="<c:url value='/resources/images/fragra/blend40.gif'/>" alt="사진" width="100%">              
           </div>
           <div class="col-13">
             <p>직장인들의 경우, 사무실내 여러 가지 환경적 요인에 의해 건강을 해칠 수 있다는 것은 이미 모두가 아는 사실이다. 이중 대부분의 경우가 에어컨이나 각종 난방기, 가습기 등에 의해서 발생되는 증상이다. 실제, 이러한 환경에 있는 직장인들의 경우 그렇지 않은 직장인들보다 기침, 감기증상과 인후염에 걸릴 확률이 2배로 높아진다는 연구결과가 있었다.<br>
@@ -263,7 +259,7 @@
               <h4 class="nanumpen">⑪ 휴식을 위한 명상</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend42.gif" alt="사진" width="100%" style="padding: 0 3em;">              
+              <img src="<c:url value='/resources/images/fragra/blend42.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
             <p>바쁘고 지친 생활 속에서 탈피, 5분이라도 나만의 공간을 만들어 향과 함께 휴식을 취해보자.<br><br>
@@ -286,7 +282,7 @@
               <h4 class="nanumpen">⑬ 독서할 때</h4>
           </div>
           <div class="col-3">
-              <img src="images/fragra/blend45.gif" alt="사진" width="100%" style="padding: 0 3em;">              
+              <img src="<c:url value='/resources/images/fragra/blend45.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
             <p>차분한 마음으로 편안하게 책을 읽을 수 있게 도와준다.<br>
@@ -313,7 +309,7 @@
               <h4 class="nanumpen">⑮ 식물</h4>
           </div>
           <div class="col-3">
-              <img src="images/fragra/blend43.gif" alt="사진" width="100%" style="padding: 0 3em;">              
+              <img src="<c:url value='/resources/images/fragra/blend43.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
               <p><span>1. 방충 종이 스틱</span>

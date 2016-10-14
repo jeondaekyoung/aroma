@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab active">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab active">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -56,11 +58,11 @@
               <tbody>
                 <tr>
                     <th>사용부위</th>
-                    <td><img src="images/fragra/massage01.gif" alt="사진" height="100px"><br>전신</td>
-                    <td><img src="images/fragra/massage02.gif" alt="사진" height="100px"><br>등</td>
-                    <td><img src="images/fragra/massage03.gif" alt="사진" height="100px"><br>팔+다리</td>
-                    <td><img src="images/fragra/massage04.gif" alt="사진" height="100px"><br>복부</td>
-                    <td><img src="images/fragra/massage05.gif" alt="사진" height="100px"><br>얼굴</td>
+                    <td><img src="<c:url value='/resources/images/fragra/massage01.gif'/>" alt="사진" height="100px"><br>전신</td>
+                    <td><img src="<c:url value='/resources/images/fragra/massage02.gif'/>" alt="사진" height="100px"><br>등</td>
+                    <td><img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="사진" height="100px"><br>팔+다리</td>
+                    <td><img src="<c:url value='/resources/images/fragra/massage04.gif'/>" alt="사진" height="100px"><br>복부</td>
+                    <td><img src="<c:url value='/resources/images/fragra/massage05.gif'/>" alt="사진" height="100px"><br>얼굴</td>
                   </tr>
                   <tr>
                     <th>캐리어 오일</th>
@@ -93,7 +95,7 @@
           </div>
             
           <div class="col-3 suffix-1 prefix-1">
-            <img src="images/fragra/massage06.gif" alt="사진" width="100%" style="padding: 0;">
+            <img src="<c:url value='/resources/images/fragra/massage06.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
           <div class="col-11">
             <h3 class="nanumpen">전신</h3>
@@ -105,7 +107,7 @@
           </div>
             
           <div class="col-3 suffix-1 prefix-1">
-            <img src="images/fragra/massage02.gif" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/massage02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
           <div class="col-11">
             <h3 class="nanumpen">등</h3>
@@ -119,7 +121,7 @@
           </div>
             
           <div class="col-3 suffix-1 prefix-1">
-            <img src="images/fragra/massage03.gif" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 2em;">
           </div>
           <div class="col-11">
             <h3 class="nanumpen">팔, 다리</h3>
@@ -130,7 +132,7 @@
           </div>
           
           <div class="col-5">
-            <img src="images/fragra/massage09.gif" alt="사진" width="100%" style="padding: 0 1em;">
+            <img src="<c:url value='/resources/images/fragra/massage09.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
           </div>
           <div class="col-9">
               <h3 class="nanumpen">손, 발</h3>
@@ -143,7 +145,7 @@
           </div>
           
           <div class="col-3 suffix-1 prefix-1">
-            <img src="images/fragra/beauty08.gif" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/beauty08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11">
               <h3 class="nanumpen">배</h3>
@@ -157,7 +159,7 @@
           </div>
           
           <div class="col-3 suffix-1 prefix-1">
-            <img src="images/fragra/massage08.gif" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/massage08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11">
               <h3 class="nanumpen">얼굴</h3>
