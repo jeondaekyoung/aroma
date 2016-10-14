@@ -15,7 +15,7 @@
     <nav class="page-gnb">
       <ul class="clearfix">
         <li><a href="<c:url value='/user/intro.do'/>">생활의 향기</a></li>
-        <li><a href="<c:url value='/user/class.do'/>">향기체험학습</a></li>
+        <li><a href="<c:url value='/user/program.do'/>">향기체험학습</a></li>
         <li><a href="<c:url value='/user/aroma-1.do'/>">아로마테라피</a></li>
         <li class=""><a href="<c:url value='qna-list.do'/>">커뮤니티</a></li>
       </ul>
