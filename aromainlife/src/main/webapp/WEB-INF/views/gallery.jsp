@@ -5,6 +5,17 @@
 <html>
 <head>
   <jsp:include page="include-head.jsp" flush="true"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".popup button").click(function(){
+        $(".popup").hide();
+      });
+      $("#pic01").click(function(){
+        $("#pic-view01").show();
+      });
+    });
+  </script>
 </head>
 <body class="container">
 
@@ -38,9 +49,20 @@
       <div class="col-12 prefix-2 suffix-2 gallery">
          <c:forEach items="${lists}" var="list" varStatus="status">
         	<div class="col-4">
-          <div class="img-wrap"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" ></div>
+          <div class="img-wrap" id="pic01"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100%" ></div>
           <p>${list.createDate}</p>
         </div> 
+       
+		  <!--팝업-->
+	      <div class="popup" id="pic-view01">
+	        <div class="popup-content">
+	          <p>
+	            <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" class="col-16">
+	          </p>
+	          <button>닫기</button>
+	        </div>            
+	      </div>
+	      <!--팝업-->
          </c:forEach>
         <%-- 
         
@@ -48,10 +70,12 @@
           <div class="img-wrap"><img src="<c:url value='/resources/images/test (2).png'/>" height="100%" alt="사진"></div>
           <p>2016-05-04</p>
         </div>
-       --%>
         </div>
+       --%>
+	        
 	  </div>
       <!-- 끝: 사진 목록-->
+
 
       <!-- 시작: paging -->      
       <div class="text-center">
