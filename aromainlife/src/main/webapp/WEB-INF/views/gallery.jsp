@@ -11,10 +11,17 @@
       $(".popup button").click(function(){
         $(".popup").hide();
       });
-      $("#pic01").click(function(){
-        $("#pic-view01").show();
-      });
+      
+      
+      /* 
+      $("#pic").click(function(){
+        $("#pic-view").show();
+      }); */
     });
+
+    function popup(no){
+  	  $("#pic-view"+no).show();
+    }
   </script>
 </head>
 <body class="container">
@@ -49,12 +56,12 @@
       <div class="col-12 prefix-2 suffix-2 gallery">
          <c:forEach items="${lists}" var="list" varStatus="status">
         	<div class="col-4">
-          <div class="img-wrap" id="pic01"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100%" ></div>
+          <div class="img-wrap" id="pic" onclick="popup(${status.count})"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100%" ></div>
           <p>${list.createDate}</p>
         </div> 
        
 		  <!--팝업-->
-	      <div class="popup" id="pic-view01">
+	      <div class="popup" id="pic-view${status.count}">
 	        <div class="popup-content">
 	          <p>
 	            <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" class="col-16">

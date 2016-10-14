@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +28,13 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab active">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 아로마</a></div>
+           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab active">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+           
         </div>
       </div>
       <!-- 끝: tab-menu-->
@@ -43,16 +45,16 @@
           <div class="col-16">
             <p>아이들이나 노인들은 일반 성인보다 면역력과 피부가 약하기 때문에 에센셜 오일 양을 줄여서 사용한다.</p>
             <p>사용 예)</p>
-              <div class="col-4 bns"><img src="images/fragra/bns01.gif" alt="사진" height="100px">
+              <div class="col-4 bns"><img src="<c:url value='/resources/images/fragra/bns01.gif'/>" alt="사진" height="100px">
                   <p>3세이하<br>성인기준 1/4</p>
               </div>
-              <div class="col-4 bns"><img src="images/fragra/bns02.gif" alt="사진" height="100px">
+              <div class="col-4 bns"><img src="<c:url value='/resources/images/fragra/bns02.gif'/>" alt="사진" height="100px">
                   <p>3~7세<br>성인기준 1/3</p>
               </div>
-              <div class="col-4 bns"><img src="images/fragra/bns03.gif" alt="사진" height="100px">
+              <div class="col-4 bns"><img src="<c:url value='/resources/images/fragra/bns03.gif'/>" alt="사진" height="100px">
                   <p>7~12세<br>성인기준 1/2</p>
               </div>
-              <div class="col-4 bns"><img src="images/fragra/bns04.gif" alt="사진" height="100px">
+              <div class="col-4 bns"><img src="<c:url value='/resources/images/fragra/bns04.gif'/>" alt="사진" height="100px">
                   <p>부모님<br>성인기준 1/2</p>
               </div>
           </div>
@@ -88,9 +90,9 @@
                 ■ 캐리어오일 10ml에 라벤더 2방울, 캐모마일 1방울을 희석하여 아기 등을 마사지하여준다.</p>
           </div>
           <div class="col-3 suffix-1">
-            <img src="images/fragra/bns05.gif" alt="사진" width="100%">
-            <img src="images/fragra/bns06.gif" alt="사진" width="100%" style="padding: 0 2em;">
-            <img src="images/fragra/blend44.gif" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/bns05.gif'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/fragra/bns06.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
+            <img src="<c:url value='/resources/images/fragra/blend44.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
         
             <div class="col-16">
@@ -107,7 +109,7 @@
               </p>
             </div>
             <div class="col-3 suffix-1">
-              <img src="images/fragra/bns07.gif" alt="사진" width="100%" style="padding: 0 2em;">
+              <img src="<c:url value='/resources/images/fragra/bns07.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             
             <div class="col-12">
@@ -119,7 +121,7 @@
                 </p>
             </div>
             <div class="col-3 suffix-1">
-              <img src="images/fragra/bns08.gif" alt="사진" width="100%" style="padding: 0 1em;">
+              <img src="<c:url value='/resources/images/fragra/bns08.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
             </div>
             
             <div class="col-12">
@@ -131,7 +133,7 @@
                 </p>
             </div>
             <div class="col-3 suffix-1">
-              <img src="images/fragra/blend30.gif" alt="사진" width="100%">
+              <img src="<c:url value='/resources/images/fragra/blend30.gif'/>" alt="사진" width="100%">
             </div>
             
             <div class="col-16">
@@ -168,7 +170,7 @@
                 </p>
             </div>
             <div class="col-3 suffix-1">
-              <img src="images/fragra/bns09.gif" alt="사진" width="100%" style="padding: 0 2em;">
+              <img src="<c:url value='/resources/images/fragra/bns09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             
           </div>
