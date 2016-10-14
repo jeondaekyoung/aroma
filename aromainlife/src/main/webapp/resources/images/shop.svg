@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="49.078px" height="56px" viewBox="0 0 49.078 56" enable-background="new 0 0 49.078 56" xml:space="preserve">
+<polyline id="side_view" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="
+	43,55 48,55 46,17 42,15 "/>
+<path id="back_handle" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M20.066,15
+	c0,0,1-14,7-14s7,14,7,14"/>
+<g id="bag_front">
+	<g>
+		<path fill="#FFFFFF" d="M41.938,14H30.215c-1.114-6.101-3.621-14-9.148-14s-8.034,7.899-9.148,14H2.129L0,56h44.066L41.938,14z
+			 M21.066,2c3.825,0,5.974,6.384,7.067,12H13.996C15.088,8.384,17.237,2,21.066,2z M12.066,24c-1.104,0-2-0.896-2-2s0.896-2,2-2
+			s2,0.896,2,2S13.171,24,12.066,24z M30.066,24c-1.104,0-2-0.896-2-2s0.896-2,2-2s2,0.896,2,2S31.171,24,30.066,24z"/>
+	</g>
+</g>
+</svg>
