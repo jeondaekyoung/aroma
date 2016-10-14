@@ -28,11 +28,11 @@
       <div class="row qna_view">
           <ul class="col-12 prefix-2 suffix-2">
             <li class="header">
-              <p class="title">안녕하세요? 문의합니다.</p>
-              <p class="date">2016-08-05</p>
+              <p class="title">${qna.title}</p>
+              <p class="date">${qna.createDate}</p>
             </li>
             <li class="content">
-              	여기 위치가 어디죠?
+              	${qna.content }
             </li>
             <li class="reply-list">
               <!-- 반복 -->
