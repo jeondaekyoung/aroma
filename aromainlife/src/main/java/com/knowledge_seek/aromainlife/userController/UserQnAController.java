@@ -58,7 +58,10 @@ public class UserQnAController {
 		return "qna-list";
 	}
 	@RequestMapping(value = "/user/qna-view.do", method = RequestMethod.GET)
-	public String view(){
+	public String view(QnA qna,Model model){
+		
+		qna=qnaService.selectOne(qna);
+		model.addAttribute("qna", qna);
 		
 		return "qna-view";
 	}
