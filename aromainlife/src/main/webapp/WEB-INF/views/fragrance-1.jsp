@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE htm>
 <html>
 <head>
@@ -7,330 +7,330 @@
 </head>
 <body class="container">
 
-  <!-- ½ÃÀÛ: .page-header -->
+  <!-- ì‹œìž‘: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ³¡: .page-header -->
+  <!-- ë: .page-header -->
 
-  <!-- ½ÃÀÛ: .page-container -->
+  <!-- ì‹œìž‘: .page-container -->
   <div class="page-container">
-    <!-- ½ÃÀÛ: .detail-01 -->
+    <!-- ì‹œìž‘: .detail-01 -->
     <div class="detail-01">
       <div class="top">
       	<div class="row">
 	      	<div class="col-12 prefix-2">
-	      		<h3>»ýÈ°¼Ó ¾Æ·Î¸¶</h3>
-	      		<h4>»ýÈ°¼Ó ¾Æ·Î¸¶ È°¿ë¹æ¹ýÀ» ¾Ë·Áµå¸³´Ï´Ù.</h4>
+	      		<h3>ìƒí™œì† ì•„ë¡œë§ˆ</h3>
+	      		<h4>ìƒí™œì† ì•„ë¡œë§ˆ í™œìš©ë°©ë²•ì„ ì•Œë ¤ë“œë¦½ë‹ˆë‹¤.</h4>
 	      	</div>
       	</div>
       </div>
       
-      <!-- ½ÃÀÛ: tab-menu -->
+      <!-- ì‹œìž‘: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w16"><a href="fragrance-1.jsp" class="tab active">»ýÈ°¼Ó ¾Æ·Î¸¶</a></div>
-          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">Çãºê ¸Ô°Å¸®</a></div>
-          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">¾Æ·Î¸¶ ÄÚ½º¸ÞÆ½</a></div>
-          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">º£ÀÌºñ &amp; ½Ç¹ö Å×¶óÇÇ</a></div>
-          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">¾Æ·Î¸¶ ¸¶»çÁö</a></div>
-          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 ¾Æ·Î¸¶</a></div>
+          <div class="fl w16"><a href="fragrance-1.jsp" class="tab active">ìƒí™œì† ì•„ë¡œë§ˆ</a></div>
+          <div class="fl w16"><a href="fragrance-2.jsp" class="tab">í—ˆë¸Œ ë¨¹ê±°ë¦¬</a></div>
+          <div class="fl w16"><a href="fragrance-3.jsp" class="tab">ì•„ë¡œë§ˆ ì½”ìŠ¤ë©”í‹±</a></div>
+          <div class="fl w16"><a href="fragrance-4.jsp" class="tab">ë² ì´ë¹„ &amp; ì‹¤ë²„ í…Œë¼í”¼</a></div>
+          <div class="fl w16"><a href="fragrance-5.jsp" class="tab">ì•„ë¡œë§ˆ ë§ˆì‚¬ì§€</a></div>
+          <div class="fl w16"><a href="fragrance-6.jsp" class="tab">119 ì•„ë¡œë§ˆ</a></div>
         </div>
       </div>
-      <!-- ³¡: tab-menu-->
+      <!-- ë: tab-menu-->
         
-      <!-- ½ÃÀÛ: ¾Æ·Î¸¶Å×¶óÇÇ-->
+      <!-- ì‹œìž‘: ì•„ë¡œë§ˆí…Œë¼í”¼-->
       <div class="row">
         <div class="col-12 prefix-2 suffix-2 aroma aroma-5">
           <div class="col-16">
-            <h3 class="nanumpen">¾Æ·Î¸¶¸¦ ÀÌ¿ëÇÑ »ýÈ° ¾Æ·Î¸¶(Aroma in life)</h3>
-            <p>³ª¿¡°Ô ¸Â´Â »ç¿ë ¹æ¹ýÀ» »ýÈ°ÀÇ ÁöÇý·Î ¸¸µå´Â ¼¾½º! ¿¡¼¾¼È ¿ÀÀÏÀº »ì±Õ, ¼Òµ¶, Å»ÃëÀÛ¿ëÀÌ ¶Ù¾î³ª Áý¾È¿¡¼­ ´Ù¾çÇÏ°Ô È°¿ëÇÒ ¼ö ÀÖ´Ù.</p>              
-            <h4 class="nanumpen">¨ç Å»Ãë, ³¿»õÁ¦°Å</h4>  
+            <h3 class="nanumpen">ì•„ë¡œë§ˆë¥¼ ì´ìš©í•œ ìƒí™œ ì•„ë¡œë§ˆ(Aroma in life)</h3>
+            <p>ë‚˜ì—ê²Œ ë§žëŠ” ì‚¬ìš© ë°©ë²•ì„ ìƒí™œì˜ ì§€í˜œë¡œ ë§Œë“œëŠ” ì„¼ìŠ¤! ì—ì„¼ì…œ ì˜¤ì¼ì€ ì‚´ê· , ì†Œë…, íƒˆì·¨ìž‘ìš©ì´ ë›°ì–´ë‚˜ ì§‘ì•ˆì—ì„œ ë‹¤ì–‘í•˜ê²Œ í™œìš©í•  ìˆ˜ ìžˆë‹¤.</p>              
+            <h4 class="nanumpen">â‘  íƒˆì·¨, ëƒ„ìƒˆì œê±°</h4>  
           </div>        
           <div class="col-3">
-              <img src="images/fragra/blend25.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend22.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend30.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend31.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend32.gif" alt="»çÁø" width="100%">
+              <img src="images/fragra/blend25.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend22.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend30.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend31.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend32.gif" alt="ì‚¬ì§„" width="100%">
           </div>
           <div class="col-13">
-            <p><span>¿ÊÀå, ½Å¹ßÀå ¼Ó¿¡</span>
-            °Ç°­ÇÑ Çãºêµé(¼¼ÀÌÁö. Å¸ÀÓ, ¶óº¥´õ, ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ® µî)À» ÀÌ¿ëÇØ ÀÛÀº Æ÷Çª¸®¸¦ ¸¸µé¾î ¿ÊÀåÀÌ³ª ½Å¹ß ¼Ó¿¡ ³Ö¾îµÎ¸é Çâ±ßÇÑ Çâ°ú »Ç¼Û»Ç¼ÛÇÑ ´À³¦À»~<br>
-            Æ÷Çª¸®¿¡ ¶óº¥´õ, ÆäÆÛ¹ÎÆ®, ·ÎÁî¸¶¸®, ·¹¸ó, Æ¼Æ®¸®, À¯Ä®¸³Åõ½º µîÀÇ ¿ÀÀÏ 3¹æ¿ï Á¤µµ¸¦ ¶³¾î¶ß¸°´Ù.<br><br>
-                <span>¹ß ¸ÅÆ®</span>
-            ±ÕµéÀÌ ¸¹ÀÌ »ý±æ ¼ö ÀÖ´Â ¹ß ¸ÅÆ®¿¡ ¿¡¼¾¼È ¿ÀÀÏÀ» ÇÏ·ç¿¡ 2~3¹æ¿ï ¶³¾î¶ß·Á ÁØ´Ù.<br>
-            »ì±Õ·ÂÀÌ ¶Ù¾î³­ Æ¼Æ®¸®, À¯Ä®¸³Åõ½º, ÆäÆÛ¹ÎÆ®, ·¹¸ó, Å¸ÀÓ µîÀ» ÀÌ¿ëÇÑ´Ù. ¶Ç´Â ½ºÇÁ·¹ÀÌ¸¦ ¸¸µé¾î ¼ö½Ã·Î »Ñ·ÁÁØ´Ù.<br><br>
-                <span>¿¡¾îÄÁ, ¿ÂÇ³±â</span>
-            ¿¡¾îÄÁ,¿ÂÇ³±â¸¦ ÅëÇØ ½Ç³» Ã»Á¤È¿°ú¸¦~<br>
-            À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸®, ·¹¸ó, Æ¼Æ®¸®, ÆÄÀÎ, ÆäÆÛ¹ÎÆ® µîÀÇ ¿¡¼¾¼È ¿ÀÀÏÀ» ÃµÀÌ³ª ¸®º»¿¡ 5¹æ¿ï Á¤µµ ¶³¾î¶ß·Á ¸Å´Þ¾Æ ³õ´Â´Ù.<br><br>
-                <span>½Ç³»¿ë ½ºÇÁ·¹ÀÌ(ºÐ¹«±â)</span>
-            ½Ç³» °ø±â Ã»Á¤ »Ó¸¸ ¾Æ´Ï¶ó »ì±Õ, ¼Òµ¶ Å»ÃëÈ¿°ú¸¦ ÁÙ ¼öÀÖ´Ù.<br><br>
-            ÁØºñ¹° : ºÐ¹«±â¿ë ºó¿ë±â(100ml), ÀÏ¹Ý ¾ËÄÝ(¿¡Åº¿Ã), ¿¡¼¾¼È ¿ÀÀÏ, ¹°(Á¤Á¦¼ö)<br>
-            ¸¸µå´Â ¹æ¹ý : <br>
-            ¨çºÐ¹«±â ºó¿ë±â¿¡ ¿¡Åº¿Ã 40ml¸¦ ³Ö´Â´Ù.<br>
-            ¨è ¾²´Ù ³²Àº ¿ÀÀÏµéÀ» ÀÌ¿ëÇÏ°Å³ª ÁÁ¾ÆÇÏ´Â ÇâÀ» ¼±ÅÃÇÏ¿© ¿¡¼¾¼È ¿ÀÀÏ 60¹æ¿ïÀ» ¶³¾î¶ß·Á ¿¡Åº¿Ã°ú Àß Èñ¼® ½ÃÅ²´Ù.<br>
-            ¨éÁ¤Á¦¼ö 60ml¸¦ Ã¤¿ì°í ¿ÏÀüÈ÷ Èñ¼® ½ÃÅ² ÈÄ ½Ç³», Ä§´ë, ÀÌºÒ, Ä¿Æ°, ¼îÆÄ µî¿¡ »Ñ·ÁÁÖ¾î »ç¿ëÇÑ´Ù.<br><br>
-            ¿¡¼¾¼È ¿ÀÀÏ: À¯Ä®¸³Åõ½º, ·¹¸ó, ¹ö°¡¸ø, ·ÎÁî¸¶¸®, ¶óº¥´õ, ÆÄÀÎ<br><br>
-                <span>´ã¹è³¿»õ Á¦°Å</span>
-            1. µå¶óÀÌ Çãºê(¶óº¥´õ, ·¹¸ó±×¶ó½º, ¼¼ÀÌÁö, ÆäÆÛ¹ÎÆ® µî)¸¦ Á¢½Ã³ª ±×¸©¿¡ ´ã°Å³ª, Æ÷Çª¸®¸¦ ¸¸µé¾î ¹æ¾È, »ç¹«½Ç ÀçÅÐÀÌ ¿·¿¡ ³õ´Â´Ù.<br>
-            2. µå¶óÀÌ Çãºê¿¡ ¿¡¼¾¼È ¿ÀÀÏ(ÆäÆÛ¹ÎÆ®, ·¹¸ó, ¹ö°¡¸ø, À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸® µî)À» 3~4¹æ¿ï ¶³¾î¶ß¸°´Ù.<br>
-            3. ¾Æ·Î¸¶·¥ÇÁ¿¡ À§ ¿¡¼¾¼È ¿ÀÀÏ 3~5¹æ¿ïÀ» ¶³¾î¶ß·Á ¹ßÇâÇÑ´Ù.<br><br>
-                  <span>¿ä¸®(»ï°ã»ì, »ý¼± ±¸ÀÌ) ÈÄ ³¿»õÁ¦°Å</span>
-            Á¦ÀÏ ¸ÕÀú´Â È¯±â°¡ Áß¿äÇÏ´Ù. È¯±â¸¦ ½ÃÅ² ÈÄ ½ºÇÁ·¹ÀÌ¸¦ ¸¸µé¾î Áý¾È ±¸¼® ±¸¼®À» ½ºÇÁ·¹ÀÌ ÇÏ°Å³ª ¾Æ·Î¸¶ ·¥ÇÁ¸¦ ¹ßÇâÇÑ´Ù.<br><br>
-            1. (½ºÇÁ·¹ÀÌ) ¿¡Åº¿Ã 40ml: ·¹¸ó 40¹æ¿ï : ¹ö°¡¸ø 40¹æ¿ï: À¯Ä®¸³Åõ½º 20¹æ¿ïÀ» Èñ¼®ÇÑ ÈÄ Á¤Á¦¼ö 60ml¸¦ ³Ö°í Àß Èçµé¾î ÁØ´Ù.<br>
-            * ÈÞ´ëÇÏ¸é¼­ ½Ä»ç ÈÄ ¿Ê¿¡ ½ºÇÁ·¹ÀÌÇÏ¸é ¿Ê¿¡ ¹èÀÎ °í±â³¿»õ°¡ ¾ø¾îÁø´Ù.<br>
-            2. ¾Æ·Î¸¶·¥ÇÁ¿¡ ·¹¸ó, ¹ö°¡¸ø, À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸® ¿¡¼¾¼È ¿ÀÀÏÀ» 10¹æ¿ï Á¤µµ ¶³¾î¶ß·Á ¹ßÇâÇÑ´Ù.<br><br>
-                <span>³ÃÀå°í ³¿»õ Å»Ãë¿¡~</span>
-            ³ÃÀå°í ¾ÈÀ» Ã»¼ÒÇÒ ¶§ ·ÎÁî¸¶¸®, ¿À·»Áö ½ºÀ­, ÆäÆÛ¹ÎÆ® µîÀ» 3¹æ¿ï Á¤µµ ¶³¾î¶ß·Á ±ú²ýÀÌ´Û¾ÆÁØ´Ù.<br>
-            *** ¼ÖÀÙÀÌ³ª ½Å°¥³ª¹«(Âü³ª¹«) ÀÙÀ» ³ÃÀå°í ¾È¿¡ ³Ö¾î µÎ¸é Å»Ãë È¿°ú°¡ ÀÖ´Ù.</p>
+            <p><span>ì˜·ìž¥, ì‹ ë°œìž¥ ì†ì—</span>
+            ê±´ê°•í•œ í—ˆë¸Œë“¤(ì„¸ì´ì§€. íƒ€ìž„, ë¼ë²¤ë”, ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸ ë“±)ì„ ì´ìš©í•´ ìž‘ì€ í¬í‘¸ë¦¬ë¥¼ ë§Œë“¤ì–´ ì˜·ìž¥ì´ë‚˜ ì‹ ë°œ ì†ì— ë„£ì–´ë‘ë©´ í–¥ê¸‹í•œ í–¥ê³¼ ë½€ì†¡ë½€ì†¡í•œ ëŠë‚Œì„~<br>
+            í¬í‘¸ë¦¬ì— ë¼ë²¤ë”, íŽ˜í¼ë¯¼íŠ¸, ë¡œì¦ˆë§ˆë¦¬, ë ˆëª¬, í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ë“±ì˜ ì˜¤ì¼ 3ë°©ìš¸ ì •ë„ë¥¼ ë–¨ì–´ëœ¨ë¦°ë‹¤.<br><br>
+                <span>ë°œ ë§¤íŠ¸</span>
+            ê· ë“¤ì´ ë§Žì´ ìƒê¸¸ ìˆ˜ ìžˆëŠ” ë°œ ë§¤íŠ¸ì— ì—ì„¼ì…œ ì˜¤ì¼ì„ í•˜ë£¨ì— 2~3ë°©ìš¸ ë–¨ì–´ëœ¨ë ¤ ì¤€ë‹¤.<br>
+            ì‚´ê· ë ¥ì´ ë›°ì–´ë‚œ í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, íŽ˜í¼ë¯¼íŠ¸, ë ˆëª¬, íƒ€ìž„ ë“±ì„ ì´ìš©í•œë‹¤. ë˜ëŠ” ìŠ¤í”„ë ˆì´ë¥¼ ë§Œë“¤ì–´ ìˆ˜ì‹œë¡œ ë¿Œë ¤ì¤€ë‹¤.<br><br>
+                <span>ì—ì–´ì»¨, ì˜¨í’ê¸°</span>
+            ì—ì–´ì»¨,ì˜¨í’ê¸°ë¥¼ í†µí•´ ì‹¤ë‚´ ì²­ì •íš¨ê³¼ë¥¼~<br>
+            ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬, ë ˆëª¬, í‹°íŠ¸ë¦¬, íŒŒì¸, íŽ˜í¼ë¯¼íŠ¸ ë“±ì˜ ì—ì„¼ì…œ ì˜¤ì¼ì„ ì²œì´ë‚˜ ë¦¬ë³¸ì— 5ë°©ìš¸ ì •ë„ ë–¨ì–´ëœ¨ë ¤ ë§¤ë‹¬ì•„ ë†“ëŠ”ë‹¤.<br><br>
+                <span>ì‹¤ë‚´ìš© ìŠ¤í”„ë ˆì´(ë¶„ë¬´ê¸°)</span>
+            ì‹¤ë‚´ ê³µê¸° ì²­ì • ë¿ë§Œ ì•„ë‹ˆë¼ ì‚´ê· , ì†Œë… íƒˆì·¨íš¨ê³¼ë¥¼ ì¤„ ìˆ˜ìžˆë‹¤.<br><br>
+            ì¤€ë¹„ë¬¼ : ë¶„ë¬´ê¸°ìš© ë¹ˆìš©ê¸°(100ml), ì¼ë°˜ ì•Œì½œ(ì—íƒ„ì˜¬), ì—ì„¼ì…œ ì˜¤ì¼, ë¬¼(ì •ì œìˆ˜)<br>
+            ë§Œë“œëŠ” ë°©ë²• : <br>
+            â‘ ë¶„ë¬´ê¸° ë¹ˆìš©ê¸°ì— ì—íƒ„ì˜¬ 40mlë¥¼ ë„£ëŠ”ë‹¤.<br>
+            â‘¡ ì“°ë‹¤ ë‚¨ì€ ì˜¤ì¼ë“¤ì„ ì´ìš©í•˜ê±°ë‚˜ ì¢‹ì•„í•˜ëŠ” í–¥ì„ ì„ íƒí•˜ì—¬ ì—ì„¼ì…œ ì˜¤ì¼ 60ë°©ìš¸ì„ ë–¨ì–´ëœ¨ë ¤ ì—íƒ„ì˜¬ê³¼ ìž˜ í¬ì„ ì‹œí‚¨ë‹¤.<br>
+            â‘¢ì •ì œìˆ˜ 60mlë¥¼ ì±„ìš°ê³  ì™„ì „ížˆ í¬ì„ ì‹œí‚¨ í›„ ì‹¤ë‚´, ì¹¨ëŒ€, ì´ë¶ˆ, ì»¤íŠ¼, ì‡¼íŒŒ ë“±ì— ë¿Œë ¤ì£¼ì–´ ì‚¬ìš©í•œë‹¤.<br><br>
+            ì—ì„¼ì…œ ì˜¤ì¼: ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë ˆëª¬, ë²„ê°€ëª», ë¡œì¦ˆë§ˆë¦¬, ë¼ë²¤ë”, íŒŒì¸<br><br>
+                <span>ë‹´ë°°ëƒ„ìƒˆ ì œê±°</span>
+            1. ë“œë¼ì´ í—ˆë¸Œ(ë¼ë²¤ë”, ë ˆëª¬ê·¸ë¼ìŠ¤, ì„¸ì´ì§€, íŽ˜í¼ë¯¼íŠ¸ ë“±)ë¥¼ ì ‘ì‹œë‚˜ ê·¸ë¦‡ì— ë‹´ê±°ë‚˜, í¬í‘¸ë¦¬ë¥¼ ë§Œë“¤ì–´ ë°©ì•ˆ, ì‚¬ë¬´ì‹¤ ìž¬í„¸ì´ ì˜†ì— ë†“ëŠ”ë‹¤.<br>
+            2. ë“œë¼ì´ í—ˆë¸Œì— ì—ì„¼ì…œ ì˜¤ì¼(íŽ˜í¼ë¯¼íŠ¸, ë ˆëª¬, ë²„ê°€ëª», ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬ ë“±)ì„ 3~4ë°©ìš¸ ë–¨ì–´ëœ¨ë¦°ë‹¤.<br>
+            3. ì•„ë¡œë§ˆëž¨í”„ì— ìœ„ ì—ì„¼ì…œ ì˜¤ì¼ 3~5ë°©ìš¸ì„ ë–¨ì–´ëœ¨ë ¤ ë°œí–¥í•œë‹¤.<br><br>
+                  <span>ìš”ë¦¬(ì‚¼ê²¹ì‚´, ìƒì„  êµ¬ì´) í›„ ëƒ„ìƒˆì œê±°</span>
+            ì œì¼ ë¨¼ì €ëŠ” í™˜ê¸°ê°€ ì¤‘ìš”í•˜ë‹¤. í™˜ê¸°ë¥¼ ì‹œí‚¨ í›„ ìŠ¤í”„ë ˆì´ë¥¼ ë§Œë“¤ì–´ ì§‘ì•ˆ êµ¬ì„ êµ¬ì„ì„ ìŠ¤í”„ë ˆì´ í•˜ê±°ë‚˜ ì•„ë¡œë§ˆ ëž¨í”„ë¥¼ ë°œí–¥í•œë‹¤.<br><br>
+            1. (ìŠ¤í”„ë ˆì´) ì—íƒ„ì˜¬ 40ml: ë ˆëª¬ 40ë°©ìš¸ : ë²„ê°€ëª» 40ë°©ìš¸: ìœ ì¹¼ë¦½íˆ¬ìŠ¤ 20ë°©ìš¸ì„ í¬ì„í•œ í›„ ì •ì œìˆ˜ 60mlë¥¼ ë„£ê³  ìž˜ í”ë“¤ì–´ ì¤€ë‹¤.<br>
+            * íœ´ëŒ€í•˜ë©´ì„œ ì‹ì‚¬ í›„ ì˜·ì— ìŠ¤í”„ë ˆì´í•˜ë©´ ì˜·ì— ë°°ì¸ ê³ ê¸°ëƒ„ìƒˆê°€ ì—†ì–´ì§„ë‹¤.<br>
+            2. ì•„ë¡œë§ˆëž¨í”„ì— ë ˆëª¬, ë²„ê°€ëª», ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬ ì—ì„¼ì…œ ì˜¤ì¼ì„ 10ë°©ìš¸ ì •ë„ ë–¨ì–´ëœ¨ë ¤ ë°œí–¥í•œë‹¤.<br><br>
+                <span>ëƒ‰ìž¥ê³  ëƒ„ìƒˆ íƒˆì·¨ì—~</span>
+            ëƒ‰ìž¥ê³  ì•ˆì„ ì²­ì†Œí•  ë•Œ ë¡œì¦ˆë§ˆë¦¬, ì˜¤ë Œì§€ ìŠ¤ìœ—, íŽ˜í¼ë¯¼íŠ¸ ë“±ì„ 3ë°©ìš¸ ì •ë„ ë–¨ì–´ëœ¨ë ¤ ê¹¨ë—ì´ë‹¦ì•„ì¤€ë‹¤.<br>
+            *** ì†”ìžŽì´ë‚˜ ì‹ ê°ˆë‚˜ë¬´(ì°¸ë‚˜ë¬´) ìžŽì„ ëƒ‰ìž¥ê³  ì•ˆì— ë„£ì–´ ë‘ë©´ íƒˆì·¨ íš¨ê³¼ê°€ ìžˆë‹¤.</p>
           </div>
             
           <div class="col-16">
-            <h4 class="nanumpen">¨è Ã»¼Ò</h4>
+            <h4 class="nanumpen">â‘¡ ì²­ì†Œ</h4>
           </div>            
           <div class="col-3">              
-              <img src="images/fragra/blend21.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend20.gif" alt="»çÁø" width="100%"><br><br><br>
-              <img src="images/fragra/blend33.gif" alt="»çÁø" width="100%">
-              <img src="images/fragra/blend34.gif" alt="»çÁø" width="100%">
+              <img src="images/fragra/blend21.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend20.gif" alt="ì‚¬ì§„" width="100%"><br><br><br>
+              <img src="images/fragra/blend33.gif" alt="ì‚¬ì§„" width="100%">
+              <img src="images/fragra/blend34.gif" alt="ì‚¬ì§„" width="100%">
           </div>
           <div class="col-13">
-             <p><span>Ã»¼Ò±â</span>
-                ÇÊÅÍ ¸ÕÁö ¶§¹®¿¡ ±ÕÀÌ »ý±æ °Å °°´Ù±¸¿ä? ¾Æ·Î¸¶ ÇâÀ» »ç¿ëÇØº¸¼¼¿ä.<br>
-                Ç×±ÕÀ» À§ÇÑ ¿ÀÀÏ Æ¼Æ®¸®, À¯Ä®¸³Åõ½º, ¶óº¥´õ, ·¹¸ó, ¿À·»Áö, ¹ö°¡¸ø, ½Ã´õ¿ìµå, Áê´ÏÆÛº£¸® µîÀ» ¸ÕÁö ÁÖ¸Ó´Ï¿¡ 1~2¹æ¿ï Á÷Á¢ ¶³¾î¶ß¸®°Å³ª, È­Àå¼Ø¿¡ 2~3¹æ¿ï Á¤µµ ¶³¾î¶ß·Á Ã»¼Ò±â ÇÊÅÍ ºÎ±Ù¿¡ ³Ö´Â´Ù.<br><br>
-                     <span>°É·¹Áú</span>
-                ÇÏ±â Èûµç °É·¹Áú.. ¾Æ·Î¸¶ÇâÀ» ¸ÃÀ¸¸ç Áñ°Å¿î ¸¶À½À¸·Î Ã»¼Ò¿¡ »ì±Õ, ¼Òµ¶ È¿°ú±îÁö 1¼®2Á¶!<br>
-                °É·¹¿¡ ½ÃÆ®·¯½º(°¨±Ö)°è ¿ÀÀÏÀÌ³ª ÆÄÀÎ, Æ¼Æ®¸®, À¯Ä®¸³Åõ½º, ¶óº¥´õ, ·ÎÁî¸¶¸® ¿ÀÀÏ µîÀ» 3¹æ¿ï Á¤µµ ¶³¾î¶ß¸° ÈÄ Áý¾È ±¸¼®±¸¼® ´Û¾ÆÁØ´Ù.<br><br>
-                    <span>ÇàÁÖ °ÇÁ¶ÇÒ ¶§~</span>
-                ¸ÅÀÏ »î±â Èûµç ÇàÁÖ °ÇÁ¶¸¦ Àß ÇØ¾ß°ÚÁÒ?<br>
-                °ÇÁ¶ÇÒ ¶§ ·¹¸ó, ¶óº¥´õ, Æ¼Æ®¸® µîÀÇ ¿ÀÀÏ ÇÑ ¹æÀ» ¶³¾î¶ß·Á °ÇÁ¶ ½ÃÅ²´Ù.<br>
-                ´õ¿í ÇÏ¾á ÇàÁÖ¿Í ÁÖ¹æ¾È¿¡ ½Ä¿åµ¸´Â Çâ±â¸¦ ´À²¸º¸¼¼¿ä.<br><br>
-                    <span>Á¤¼ö±â ¹°¹ÞÀÌÅë</span>
-                ¹°ÀÌ Ç×»ó °í¿©ÀÖ¾î ¼¼±Õ¹ø½ÄÀÇ ÃÖÀûÁöÀÌÁÒ. Æ¼Æ®¸®, ÆäÆÛ¹ÎÆ® ¿¡¼¾¼È ¿ÀÀÏ 1~2¹æ¿ïÀ» ¹°¹ÞÀÌÅë¿¡ ¶³¾î¶ß·Á ³õ°Å³ª ´Û¾ÆÁØ´Ù.<br><br>
-                    <span>ÁÖ¹æ °³¼ö´ë</span>
-                ¼³°ÅÁö ¸¶Áö¸·ÀÌ³ª ¼³°ÅÁö ÈÄ °³¼ö´ë¿¡ ³²¾ÆÀÖ´Â ³¿»õ Á¦°Å³ª »ì±ÕÈ¿°ú¸¦ À§ÇØ ·¹¸ó ÇÑ ¹æ¿ï ¶Ç´Â ½ºÇÁ·¹ÀÌ¸¦ È°¿ëÇØº¸ÀÚ.<br><br>
-                 <span>À½½Ä¹° ¾²·¹±âÅë</span>
-                À½½Ä¹° ¾²·¹±âÅëÀº ¶Ñ²±À» ¿­ ¶§¸¶´Ù ºÒÄèÇÑ ³¿»õ°¡ ³ª´Â µ¥ ÀÌ¶§ ¿À·»Áö, ·¹¸ó, ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ® µîÀÇ ¿¡¼¾¼È ¿ÀÀÏ 2~3¹æ¿ïÀ» Åë ¾È¿¡ ¶³¾î¶ß·Á ³õ°Å³ª ÆäÆÛ¹ÎÆ® ½ºÇÁ·¹ÀÌ¸¦ ¸¸µé¾î »Ñ·ÁÁÖ¸é »ì±Õ, Å»ÃëÈ¿°ú°¡ ÀÖ´Ù.<br><br>
-                    <span>°¡±¸³ª ÀüÈ­±â¸¦ ´ÛÀ» ¶§</span>
-                1. ¿©·¯ »ç¶÷µéÀÌ ¸¸Áö°í »ç¿ëÇÏ´Â °¡±¸³ª ¼öÈ­±â¸¦ ´ÛÀ» ¶§ Æ¼Æ®¸®, ·¹¸ó, ¿À·»Áö, À¯Ä®¸³Åõ½º, ¶óº¥´õ µîÀÇ ¿ÀÀÏÀ» ¼±ÅÃÇÏ¿© ÇÑ ¹æ¿ï ¶³¾î ¶ß¸°´Ù.<br>
-                2.¸ñÀç °¡±¸¸¦ ´ÛÀ» ¶§ :<br>
-                È£È£¹Ù ¿ÀÀÏ 50ml, ºñÁî¿Î½º 10gÀ» ÀüÀÚ·¹ÀÎÁö¿¡ ³Ö°í ³ì¿©¼­ ¿¡¼¾¼È ¿ÀÀÏ(¶óº¥´õ, ·ÎÁî¸¶¸®, ÆÄÀÎ, Áê´ÏÆÛº£¸® µî) 10¹æ¿ïÀ» ¶³¾î¶ß·Á ¿ë±â¿¡ ºÑ°í ±»Çô¼­ »ç¿ëÇÑ´Ù.
+             <p><span>ì²­ì†Œê¸°</span>
+                í•„í„° ë¨¼ì§€ ë•Œë¬¸ì— ê· ì´ ìƒê¸¸ ê±° ê°™ë‹¤êµ¬ìš”? ì•„ë¡œë§ˆ í–¥ì„ ì‚¬ìš©í•´ë³´ì„¸ìš”.<br>
+                í•­ê· ì„ ìœ„í•œ ì˜¤ì¼ í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¼ë²¤ë”, ë ˆëª¬, ì˜¤ë Œì§€, ë²„ê°€ëª», ì‹œë”ìš°ë“œ, ì¥¬ë‹ˆí¼ë² ë¦¬ ë“±ì„ ë¨¼ì§€ ì£¼ë¨¸ë‹ˆì— 1~2ë°©ìš¸ ì§ì ‘ ë–¨ì–´ëœ¨ë¦¬ê±°ë‚˜, í™”ìž¥ì†œì— 2~3ë°©ìš¸ ì •ë„ ë–¨ì–´ëœ¨ë ¤ ì²­ì†Œê¸° í•„í„° ë¶€ê·¼ì— ë„£ëŠ”ë‹¤.<br><br>
+                     <span>ê±¸ë ˆì§ˆ</span>
+                í•˜ê¸° íž˜ë“  ê±¸ë ˆì§ˆ.. ì•„ë¡œë§ˆí–¥ì„ ë§¡ìœ¼ë©° ì¦ê±°ìš´ ë§ˆìŒìœ¼ë¡œ ì²­ì†Œì— ì‚´ê· , ì†Œë… íš¨ê³¼ê¹Œì§€ 1ì„2ì¡°!<br>
+                ê±¸ë ˆì— ì‹œíŠ¸ëŸ¬ìŠ¤(ê°ê·¤)ê³„ ì˜¤ì¼ì´ë‚˜ íŒŒì¸, í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¼ë²¤ë”, ë¡œì¦ˆë§ˆë¦¬ ì˜¤ì¼ ë“±ì„ 3ë°©ìš¸ ì •ë„ ë–¨ì–´ëœ¨ë¦° í›„ ì§‘ì•ˆ êµ¬ì„êµ¬ì„ ë‹¦ì•„ì¤€ë‹¤.<br><br>
+                    <span>í–‰ì£¼ ê±´ì¡°í•  ë•Œ~</span>
+                ë§¤ì¼ ì‚¶ê¸° íž˜ë“  í–‰ì£¼ ê±´ì¡°ë¥¼ ìž˜ í•´ì•¼ê² ì£ ?<br>
+                ê±´ì¡°í•  ë•Œ ë ˆëª¬, ë¼ë²¤ë”, í‹°íŠ¸ë¦¬ ë“±ì˜ ì˜¤ì¼ í•œ ë°©ì„ ë–¨ì–´ëœ¨ë ¤ ê±´ì¡° ì‹œí‚¨ë‹¤.<br>
+                ë”ìš± í•˜ì–€ í–‰ì£¼ì™€ ì£¼ë°©ì•ˆì— ì‹ìš•ë‹ëŠ” í–¥ê¸°ë¥¼ ëŠê»´ë³´ì„¸ìš”.<br><br>
+                    <span>ì •ìˆ˜ê¸° ë¬¼ë°›ì´í†µ</span>
+                ë¬¼ì´ í•­ìƒ ê³ ì—¬ìžˆì–´ ì„¸ê· ë²ˆì‹ì˜ ìµœì ì§€ì´ì£ . í‹°íŠ¸ë¦¬, íŽ˜í¼ë¯¼íŠ¸ ì—ì„¼ì…œ ì˜¤ì¼ 1~2ë°©ìš¸ì„ ë¬¼ë°›ì´í†µì— ë–¨ì–´ëœ¨ë ¤ ë†“ê±°ë‚˜ ë‹¦ì•„ì¤€ë‹¤.<br><br>
+                    <span>ì£¼ë°© ê°œìˆ˜ëŒ€</span>
+                ì„¤ê±°ì§€ ë§ˆì§€ë§‰ì´ë‚˜ ì„¤ê±°ì§€ í›„ ê°œìˆ˜ëŒ€ì— ë‚¨ì•„ìžˆëŠ” ëƒ„ìƒˆ ì œê±°ë‚˜ ì‚´ê· íš¨ê³¼ë¥¼ ìœ„í•´ ë ˆëª¬ í•œ ë°©ìš¸ ë˜ëŠ” ìŠ¤í”„ë ˆì´ë¥¼ í™œìš©í•´ë³´ìž.<br><br>
+                 <span>ìŒì‹ë¬¼ ì“°ë ˆê¸°í†µ</span>
+                ìŒì‹ë¬¼ ì“°ë ˆê¸°í†µì€ ëšœê»‘ì„ ì—´ ë•Œë§ˆë‹¤ ë¶ˆì¾Œí•œ ëƒ„ìƒˆê°€ ë‚˜ëŠ” ë° ì´ë•Œ ì˜¤ë Œì§€, ë ˆëª¬, ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸ ë“±ì˜ ì—ì„¼ì…œ ì˜¤ì¼ 2~3ë°©ìš¸ì„ í†µ ì•ˆì— ë–¨ì–´ëœ¨ë ¤ ë†“ê±°ë‚˜ íŽ˜í¼ë¯¼íŠ¸ ìŠ¤í”„ë ˆì´ë¥¼ ë§Œë“¤ì–´ ë¿Œë ¤ì£¼ë©´ ì‚´ê· , íƒˆì·¨íš¨ê³¼ê°€ ìžˆë‹¤.<br><br>
+                    <span>ê°€êµ¬ë‚˜ ì „í™”ê¸°ë¥¼ ë‹¦ì„ ë•Œ</span>
+                1. ì—¬ëŸ¬ ì‚¬ëžŒë“¤ì´ ë§Œì§€ê³  ì‚¬ìš©í•˜ëŠ” ê°€êµ¬ë‚˜ ìˆ˜í™”ê¸°ë¥¼ ë‹¦ì„ ë•Œ í‹°íŠ¸ë¦¬, ë ˆëª¬, ì˜¤ë Œì§€, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¼ë²¤ë” ë“±ì˜ ì˜¤ì¼ì„ ì„ íƒí•˜ì—¬ í•œ ë°©ìš¸ ë–¨ì–´ ëœ¨ë¦°ë‹¤.<br>
+                2.ëª©ìž¬ ê°€êµ¬ë¥¼ ë‹¦ì„ ë•Œ :<br>
+                í˜¸í˜¸ë°” ì˜¤ì¼ 50ml, ë¹„ì¦ˆì™ìŠ¤ 10gì„ ì „ìžë ˆì¸ì§€ì— ë„£ê³  ë…¹ì—¬ì„œ ì—ì„¼ì…œ ì˜¤ì¼(ë¼ë²¤ë”, ë¡œì¦ˆë§ˆë¦¬, íŒŒì¸, ì¥¬ë‹ˆí¼ë² ë¦¬ ë“±) 10ë°©ìš¸ì„ ë–¨ì–´ëœ¨ë ¤ ìš©ê¸°ì— ë¶‡ê³  êµ³í˜€ì„œ ì‚¬ìš©í•œë‹¤.
               </p>
             </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨é ¼¼Å¹ ¹× º¸°ü</h4>
+              <h4 class="nanumpen">â‘¢ ì„¸íƒ ë° ë³´ê´€</h4>
           </div>            
           <div class="col-3"><br><br>
-              <img src="images/fragra/blend27.gif" alt="»çÁø" width="100%">              
+              <img src="images/fragra/blend27.gif" alt="ì‚¬ì§„" width="100%">              
           </div>
             <div class="col-13">
-              <p><span>¼¼Å¹ÇÒ ¶§~</span>
-                1. ¼¼Á¦¿Í ÇÔ²² À¯Ä®¸³Åõ½º 3~5¹æ¿ïÀ» ³Ö¾î ¼¼Å¹ÇÏ¸é ¶§°¡ ´õ Àß Áö¿öÁø´Ù.<br>
-                2. ¼¼Å¹ ½Ã ¸¶Áö¸· Çó±À¹°¿¡ ¶óº¥´õ³ª ·ÎÁî¸¶¸®, Á¦¶ó´½, À¯Ä®¸³Åõ½º µîÀÇ ¿ÀÀÏÀ» 2~3¹æ¿ï ¶³¾î¶ß·Á ÁØ´Ù.<br><br>
-                  <span>´Ù¸²Áú ÇÒ ¶§~</span>
-                1. ºÐ¹«±â¿¡ ¹°À» ³Ö°í ÁÁ¾ÆÇÏ´Â ¿¡¼¾¼È ¿ÀÀÏ 2~3¹æ¿ïÀ» ¶³¾î¶ß·Á ´Ù¸²ÁúÇÑ´Ù.<br>
-                2. ¿¡Åº¿Ã 1½ºÇ¬(5ml)¿¡ ¿¡¼¾¼È ¿ÀÀÏ 10¹æ¿ïÁ¤µµ Èñ¼®, ³ª¸ÓÁö ¹°°ú ÇÔ²² ´Ù¸²¿ë ºÐ¹«±â¸¦ ¸¸µé¾î »ç¿ëÇÑ´Ù.<br><br>
-                ¿ÊÀÇ »ì±Õ, ¼Òµ¶ »Ó¸¸ ¾Æ´Ï¶ó ÀºÀºÇÑ ÇâÀ¸·Î ±âºÐ±îÁö ¾÷! <br>
-                ÀÌ ¶§, ¿Ê¿¡ ¾ó·èÀÌ ³²À» ¼ö ÀÖ´Â ½ÃÆ®·¯½º³ª ¿ìµå°è¿­ÀÇ ¿ÀÀÏÀº ÇÇÇØÁØ´Ù. ÃëÇâ¿¡ µû¶ó Æí¾ÈÇÑ ÇâÀÇ ¶óº¥´õ³ª »óÄèÇÑ ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ®, À¯Ä®¸³Åõ½º µîÀ» ÀÌ¿ëÇØº¸ÀÚ.</p>
+              <p><span>ì„¸íƒí•  ë•Œ~</span>
+                1. ì„¸ì œì™€ í•¨ê»˜ ìœ ì¹¼ë¦½íˆ¬ìŠ¤ 3~5ë°©ìš¸ì„ ë„£ì–´ ì„¸íƒí•˜ë©´ ë•Œê°€ ë” ìž˜ ì§€ì›Œì§„ë‹¤.<br>
+                2. ì„¸íƒ ì‹œ ë§ˆì§€ë§‰ í—¹êµ¼ë¬¼ì— ë¼ë²¤ë”ë‚˜ ë¡œì¦ˆë§ˆë¦¬, ì œë¼ëŠ„, ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ë“±ì˜ ì˜¤ì¼ì„ 2~3ë°©ìš¸ ë–¨ì–´ëœ¨ë ¤ ì¤€ë‹¤.<br><br>
+                  <span>ë‹¤ë¦¼ì§ˆ í•  ë•Œ~</span>
+                1. ë¶„ë¬´ê¸°ì— ë¬¼ì„ ë„£ê³  ì¢‹ì•„í•˜ëŠ” ì—ì„¼ì…œ ì˜¤ì¼ 2~3ë°©ìš¸ì„ ë–¨ì–´ëœ¨ë ¤ ë‹¤ë¦¼ì§ˆí•œë‹¤.<br>
+                2. ì—íƒ„ì˜¬ 1ìŠ¤í‘¼(5ml)ì— ì—ì„¼ì…œ ì˜¤ì¼ 10ë°©ìš¸ì •ë„ í¬ì„, ë‚˜ë¨¸ì§€ ë¬¼ê³¼ í•¨ê»˜ ë‹¤ë¦¼ìš© ë¶„ë¬´ê¸°ë¥¼ ë§Œë“¤ì–´ ì‚¬ìš©í•œë‹¤.<br><br>
+                ì˜·ì˜ ì‚´ê· , ì†Œë… ë¿ë§Œ ì•„ë‹ˆë¼ ì€ì€í•œ í–¥ìœ¼ë¡œ ê¸°ë¶„ê¹Œì§€ ì—…! <br>
+                ì´ ë•Œ, ì˜·ì— ì–¼ë£©ì´ ë‚¨ì„ ìˆ˜ ìžˆëŠ” ì‹œíŠ¸ëŸ¬ìŠ¤ë‚˜ ìš°ë“œê³„ì—´ì˜ ì˜¤ì¼ì€ í”¼í•´ì¤€ë‹¤. ì·¨í–¥ì— ë”°ë¼ íŽ¸ì•ˆí•œ í–¥ì˜ ë¼ë²¤ë”ë‚˜ ìƒì¾Œí•œ ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸, ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ë“±ì„ ì´ìš©í•´ë³´ìž.</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ê ¾Ö¿Ïµ¿¹°</h4>
+              <h4 class="nanumpen">â‘£ ì• ì™„ë™ë¬¼</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend35.gif" alt="»çÁø" width="100%">              
+              <img src="images/fragra/blend35.gif" alt="ì‚¬ì§„" width="100%">              
           </div>
           <div class="col-13">
-                <p><span>»ç¶û½º·± ³ªÀÇ ¾Ö¿Ïµ¿¹°À» À§ÇØ ÄèÀûÇÑ È¯°æ°ú ¿¹¹æÀ»~</span>
-                ³¿»õÁ¦°Å¸¦ À§ÇÑ Å»Ãë¿ë ½ºÇÁ·¹ÀÌ(ºÐ¹«±â)¸¦ ¸¸µé¾î ½Ç³»³× ºÐ¹«ÇÏ°Å³ª ÅÐÀÌ ÀÖ´Â ¾Ö¿Ïµ¿¹° µéÀÇ ÇÇºÎ¿° ¿¹¹æÀ¸·Î ÅÐ¿¡ »Ñ·ÁÁØ´Ù<br><br>
-                1.¿¡Åº¿Ã 20ml , Æ¼Æ®¸® 5¹æ¿ï, ¶óº¥´õ 5¹æ¿ï, ±×·¹ÀÌÇÁÈÄ·í 10¹æ¿ï, Á¤Á¦¼ö 80ml <br>
-                2.Ä³¸®¾î¿ÀÀÏ 10ml, Æ¼Æ®¸® 2¹æ¿ï, ·¹¸ó 2¹æ¿ï, ¶óº¥´õ 2¹æ¿ï·Î ºê·£µù<br>
-                - ¸éºÀ¿¡ ÇÑ¹æ¿ï ¶³¾î¶ß·Á ±Ó¼ÓÀÌ³ª ÇÇºÎ¿°Áõ ºÎÀ§¸¦ ´Û¾ÆÁØ´Ù.<br><br>
-                * °³¿¡°Ô ÃßÃµÇÏ´Â Á¤À¯: ÆÈ¸¶·Î»ç, ·¹¸ó±×¶ó½º, Á¦¶ó´½, ÀÏ¶ûÀÏ¶û<br>
-                * °í¾çÀÌ¿¡°Ô ÃßÃµÇÏ´Â Á¤À¯: ÆÈ¸¶·Î»ç(¼¤ÇªÇÒ¶§ 1¹æ¿ï ¼¯¾î¼­ »ç¿ë)</p>
+                <p><span>ì‚¬ëž‘ìŠ¤ëŸ° ë‚˜ì˜ ì• ì™„ë™ë¬¼ì„ ìœ„í•´ ì¾Œì í•œ í™˜ê²½ê³¼ ì˜ˆë°©ì„~</span>
+                ëƒ„ìƒˆì œê±°ë¥¼ ìœ„í•œ íƒˆì·¨ìš© ìŠ¤í”„ë ˆì´(ë¶„ë¬´ê¸°)ë¥¼ ë§Œë“¤ì–´ ì‹¤ë‚´ë„¤ ë¶„ë¬´í•˜ê±°ë‚˜ í„¸ì´ ìžˆëŠ” ì• ì™„ë™ë¬¼ ë“¤ì˜ í”¼ë¶€ì—¼ ì˜ˆë°©ìœ¼ë¡œ í„¸ì— ë¿Œë ¤ì¤€ë‹¤<br><br>
+                1.ì—íƒ„ì˜¬ 20ml , í‹°íŠ¸ë¦¬ 5ë°©ìš¸, ë¼ë²¤ë” 5ë°©ìš¸, ê·¸ë ˆì´í”„í›„ë£» 10ë°©ìš¸, ì •ì œìˆ˜ 80ml <br>
+                2.ìºë¦¬ì–´ì˜¤ì¼ 10ml, í‹°íŠ¸ë¦¬ 2ë°©ìš¸, ë ˆëª¬ 2ë°©ìš¸, ë¼ë²¤ë” 2ë°©ìš¸ë¡œ ë¸Œëžœë”©<br>
+                - ë©´ë´‰ì— í•œë°©ìš¸ ë–¨ì–´ëœ¨ë ¤ ê·“ì†ì´ë‚˜ í”¼ë¶€ì—¼ì¦ ë¶€ìœ„ë¥¼ ë‹¦ì•„ì¤€ë‹¤.<br><br>
+                * ê°œì—ê²Œ ì¶”ì²œí•˜ëŠ” ì •ìœ : íŒ”ë§ˆë¡œì‚¬, ë ˆëª¬ê·¸ë¼ìŠ¤, ì œë¼ëŠ„, ì¼ëž‘ì¼ëž‘<br>
+                * ê³ ì–‘ì´ì—ê²Œ ì¶”ì²œí•˜ëŠ” ì •ìœ : íŒ”ë§ˆë¡œì‚¬(ìƒ´í‘¸í• ë•Œ 1ë°©ìš¸ ì„žì–´ì„œ ì‚¬ìš©)</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ë °øºÎ¹æ(ÁýÁß·Â Çâ»ó)</h4>
+              <h4 class="nanumpen">â‘¤ ê³µë¶€ë°©(ì§‘ì¤‘ë ¥ í–¥ìƒ)</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend36.gif" alt="»çÁø" width="100%" style="padding: 0 2em;">        
+              <img src="images/fragra/blend36.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 2em;">        
           </div>
           <div class="col-13">
-            <p>ÁýÁßÀÌ ¾ÈµÇ°í ¸Ó¸®°¡ ¹«°Å¿ï ¶§ ¸î ¹æ¿ïÀÇ Ãµ¿¬ ¿¡¼¾¼È ¿ÀÀÏÀ» ¼Õ¼ö°ÇÀÌ³ª Æ¼½´¿¡ ¶³¾î¶ß·Á ³¿»õ¸¦ ¸Ã°Å³ª, ½ºÇÁ·¹ÀÌ ¿ë±â¿¡ ¹°°ú ¼¯¾î »ç¿ë, ¶Ç´Â ¾Æ·Î¸¶·¥ÇÁ¸¦ È°¿ëÇØ º¸ÀÚ.<br>
-                µµ¿òÀÌ µÇ´Â ¿ÀÀÏ¿¡´Â ·¹¸ó, ¹ÙÁú, ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ®, Áê´ÏÆÛº£¸® µîÀÌ ÀÖ´Ù. <br>
-                ·¹¸óÀº ÇÐ½À´É·üÀ» ³ô¿©ÁÖ°í ¹ÙÁúÀº ÁöÄ£ µÎ³ú¸¦ È°¼ºÈ­½ÃÄÑÁÖ°í ·ÎÁî¸¶¸®´Â ÁýÁß·Â Çâ»ó¿¡ ÁÁ´Ù.<br>
-                ¶ÇÇÑ ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ®´Â µÎÅë¿¡ ÁÁ´Ù. ³Ê¹« ¹«¸®ÇÏ°Ô °øºÎ¸¦ Çß´Ù¸é Áê´ÏÆÛº£¸®³ª Å¬¶ó¸®¼¼ÀÌÁö¸¦ ½áº¸ÀÚ.<br>
-                ´Ü Áö³ªÄ¡°Ô ¸¹ÀÌ »ç¿ëÇÏ¸é ¿ÀÈ÷·Á ´õ Á¹¸± ¼ö°¡ ÀÖÀ¸´Ï Á¶½ÉÇÕ½Ã´Ù.</p>
+            <p>ì§‘ì¤‘ì´ ì•ˆë˜ê³  ë¨¸ë¦¬ê°€ ë¬´ê±°ìš¸ ë•Œ ëª‡ ë°©ìš¸ì˜ ì²œì—° ì—ì„¼ì…œ ì˜¤ì¼ì„ ì†ìˆ˜ê±´ì´ë‚˜ í‹°ìŠˆì— ë–¨ì–´ëœ¨ë ¤ ëƒ„ìƒˆë¥¼ ë§¡ê±°ë‚˜, ìŠ¤í”„ë ˆì´ ìš©ê¸°ì— ë¬¼ê³¼ ì„žì–´ ì‚¬ìš©, ë˜ëŠ” ì•„ë¡œë§ˆëž¨í”„ë¥¼ í™œìš©í•´ ë³´ìž.<br>
+                ë„ì›€ì´ ë˜ëŠ” ì˜¤ì¼ì—ëŠ” ë ˆëª¬, ë°”ì§ˆ, ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸, ì¥¬ë‹ˆí¼ë² ë¦¬ ë“±ì´ ìžˆë‹¤. <br>
+                ë ˆëª¬ì€ í•™ìŠµëŠ¥ë¥ ì„ ë†’ì—¬ì£¼ê³  ë°”ì§ˆì€ ì§€ì¹œ ë‘ë‡Œë¥¼ í™œì„±í™”ì‹œì¼œì£¼ê³  ë¡œì¦ˆë§ˆë¦¬ëŠ” ì§‘ì¤‘ë ¥ í–¥ìƒì— ì¢‹ë‹¤.<br>
+                ë˜í•œ ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸ëŠ” ë‘í†µì— ì¢‹ë‹¤. ë„ˆë¬´ ë¬´ë¦¬í•˜ê²Œ ê³µë¶€ë¥¼ í–ˆë‹¤ë©´ ì¥¬ë‹ˆí¼ë² ë¦¬ë‚˜ í´ë¼ë¦¬ì„¸ì´ì§€ë¥¼ ì¨ë³´ìž.<br>
+                ë‹¨ ì§€ë‚˜ì¹˜ê²Œ ë§Žì´ ì‚¬ìš©í•˜ë©´ ì˜¤ížˆë ¤ ë” ì¡¸ë¦´ ìˆ˜ê°€ ìžˆìœ¼ë‹ˆ ì¡°ì‹¬í•©ì‹œë‹¤.</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ì Ä§½Ç</h4>
+              <h4 class="nanumpen">â‘¥ ì¹¨ì‹¤</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend37.gif" alt="»çÁø" width="100%" style="padding: 0 2em;">              
+              <img src="images/fragra/blend37.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 2em;">              
           </div>
           <div class="col-13">
-            <p><span>Ãµ¿¬ÇâÀ¯¸¦ »ç¿ëÇÏ¿© ´ç½ÅÀÇ Ä§½ÇÀ» ´ÞÄÞÇÏ°í Æí¾ÈÇÑ ²Þ³ª¶ó·Î ¾È³»~</span>
-            ¾Æ´ÁÇÑ °ø°£À¸·Î ¶Ç´Â ·Î¸ÇÆ½ÇÑ ºÐÀ§±âÀÇ º¸±ÝÀÚ¸®·Î ¸¸µé ¼ö ÀÖ´Ù. ½Ç³» ¹ßÇâ ÇØ º¸ÀÚ.<br>
-            ·ÎÁî³ª ³×·Ñ¸®, ¶óº¥´õ, ÀÏ¶ûÀÏ¶ûÀº ·Î¸ÇÆ½ÇÏ°í ±â»ÝÀÌ ³ÑÄ¡´Â Ä§½Ç ºÐÀ§±â¸¦ Àß ¿¬ÃâÇØ³½´Ù.<br>
-            ¼Õ´Ô¹æ¿¡ ¶óº¥´õ, Á¦¶ó´½, ¿À·»Áö ½ºÀ­ ¿ÀÀÏÀ» »ç¿ëÇÏ¸é ¿ìÈ£ÀûÀÌ°í µû¶æÇÑ ºÐÀ§±â¸¦ ¸¸µé ¼ö ÀÖ´Ù.</p>
+            <p><span>ì²œì—°í–¥ìœ ë¥¼ ì‚¬ìš©í•˜ì—¬ ë‹¹ì‹ ì˜ ì¹¨ì‹¤ì„ ë‹¬ì½¤í•˜ê³  íŽ¸ì•ˆí•œ ê¿ˆë‚˜ë¼ë¡œ ì•ˆë‚´~</span>
+            ì•„ëŠ‘í•œ ê³µê°„ìœ¼ë¡œ ë˜ëŠ” ë¡œë§¨í‹±í•œ ë¶„ìœ„ê¸°ì˜ ë³´ê¸ˆìžë¦¬ë¡œ ë§Œë“¤ ìˆ˜ ìžˆë‹¤. ì‹¤ë‚´ ë°œí–¥ í•´ ë³´ìž.<br>
+            ë¡œì¦ˆë‚˜ ë„¤ë¡¤ë¦¬, ë¼ë²¤ë”, ì¼ëž‘ì¼ëž‘ì€ ë¡œë§¨í‹±í•˜ê³  ê¸°ì¨ì´ ë„˜ì¹˜ëŠ” ì¹¨ì‹¤ ë¶„ìœ„ê¸°ë¥¼ ìž˜ ì—°ì¶œí•´ë‚¸ë‹¤.<br>
+            ì†ë‹˜ë°©ì— ë¼ë²¤ë”, ì œë¼ëŠ„, ì˜¤ë Œì§€ ìŠ¤ìœ— ì˜¤ì¼ì„ ì‚¬ìš©í•˜ë©´ ìš°í˜¸ì ì´ê³  ë”°ëœ»í•œ ë¶„ìœ„ê¸°ë¥¼ ë§Œë“¤ ìˆ˜ ìžˆë‹¤.</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨í ºÎ¸ð´Ô¹æ¿¡~</h4>
+              <h4 class="nanumpen">â‘¦ ë¶€ëª¨ë‹˜ë°©ì—~</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend44.gif" alt="»çÁø" width="100%" style="padding: 0 4em;">              
+              <img src="images/fragra/blend44.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 4em;">              
           </div>
           <div class="col-13">
-            <p><span>»óÅ­ÇÑ Ãµ¿¬ÇâÀ» ÀÌ¿ëÇØ ¹æ¾È¿¡ ¸Ó¹°·¯ ÀÖ´Â Ã¼Ãë¸¦ ¾ø¾Ö°í ½Ç³» °ø±â¸¦ »ì±Õ, Á¤È­ ½ÃÄÑ 
-                ºÎ¸ð´ÔÀÇ °Ç°­°ú ÀþÀ½À» À¯Áö½ÃÄÑ µå¸®ÀÚ~</span>
-            À¯Ä®¸³Åõ½º, ¹ö°¡¸ø, ·ÎÁî¸¶¸®, ÆÄÀÎ, ·¹¸ó, ¿À·»Áö, ½Ã³ª¸ó, ÇÁ¶ûÅ²¼¾½º µîÀ» ÀÌ¿ëÇØ ½Ç³» ¹ßÇâÇÏ°Å³ª ·ë ½ºÇÁ·¹ÀÌ¸¦ ¸¸µé¾î ¼ö½Ã·Î »Ñ·ÁÁØ´Ù.<br>
-            ¶ÇÇÑ ºÎ¸ð´ÔÀÇ °üÀý¿°ÀÌ³ª ±ÙÀ°Åë¿¡ µµ¿òÀÌ µÇ´Â ÆäÆÛ¹ÎÆ® ¸¶»çÁö¿ÀÀÏ ÁØºñ´Â ÇÊ¼ö!<br><br>
-            ÃßÃµ·¹½ÃÇÇ (4%Èñ¼® ¸¶»çÁö¿ÀÀÏ)<br>
-            Ä³¸®¾î¿ÀÀÏ 30ml :ÆäÆÛ¹ÎÆ® 12¹æ¿ï : Áê´ÏÆÛº£¸® 5¹æ¿ï : ·ÎÁî¸¶¸® 3¹æ¿ï :¶óº¥´õ 4¹æ¿ï</p>
+            <p><span>ìƒí¼í•œ ì²œì—°í–¥ì„ ì´ìš©í•´ ë°©ì•ˆì— ë¨¸ë¬¼ëŸ¬ ìžˆëŠ” ì²´ì·¨ë¥¼ ì—†ì• ê³  ì‹¤ë‚´ ê³µê¸°ë¥¼ ì‚´ê· , ì •í™” ì‹œì¼œ 
+                ë¶€ëª¨ë‹˜ì˜ ê±´ê°•ê³¼ ì ŠìŒì„ ìœ ì§€ì‹œì¼œ ë“œë¦¬ìž~</span>
+            ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë²„ê°€ëª», ë¡œì¦ˆë§ˆë¦¬, íŒŒì¸, ë ˆëª¬, ì˜¤ë Œì§€, ì‹œë‚˜ëª¬, í”„ëž‘í‚¨ì„¼ìŠ¤ ë“±ì„ ì´ìš©í•´ ì‹¤ë‚´ ë°œí–¥í•˜ê±°ë‚˜ ë£¸ ìŠ¤í”„ë ˆì´ë¥¼ ë§Œë“¤ì–´ ìˆ˜ì‹œë¡œ ë¿Œë ¤ì¤€ë‹¤.<br>
+            ë˜í•œ ë¶€ëª¨ë‹˜ì˜ ê´€ì ˆì—¼ì´ë‚˜ ê·¼ìœ¡í†µì— ë„ì›€ì´ ë˜ëŠ” íŽ˜í¼ë¯¼íŠ¸ ë§ˆì‚¬ì§€ì˜¤ì¼ ì¤€ë¹„ëŠ” í•„ìˆ˜!<br><br>
+            ì¶”ì²œë ˆì‹œí”¼ (4%í¬ì„ ë§ˆì‚¬ì§€ì˜¤ì¼)<br>
+            ìºë¦¬ì–´ì˜¤ì¼ 30ml :íŽ˜í¼ë¯¼íŠ¸ 12ë°©ìš¸ : ì¥¬ë‹ˆí¼ë² ë¦¬ 5ë°©ìš¸ : ë¡œì¦ˆë§ˆë¦¬ 3ë°©ìš¸ :ë¼ë²¤ë” 4ë°©ìš¸</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨î °Å½Ç¿¡¼­</h4>
+              <h4 class="nanumpen">â‘§ ê±°ì‹¤ì—ì„œ</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend38.gif" alt="»çÁø" width="100%">              
+              <img src="images/fragra/blend38.gif" alt="ì‚¬ì§„" width="100%">              
           </div>
           <div class="col-13">
-            <p>¾Æ·Î¸¶Å×¶óÇÇ¸¦ ÀÌ¿ëÇØ Çâ±â·Î¿î °Å½ÇÀ» ¸¸µå´Â ¹æ¹ýÀº ´Ù¾çÇÏ´Ù.<br>
-                ¹ßÇâ±â, ¾Æ·Î¸¶ °¡½À±â¸¦ ÀÌ¿ëÇÏ°Å³ª ·ë ½ºÇÁ·¹ÀÌ¸¦ »ç¿ëÇÏ´Â ¹æ¹ýÀº °¨Á¤À» ¾ÈÁ¤½ÃÅ°°í ÄèÀûÇÑ °Ç°­ È¯°æÀ» Á¶¼ºÇÏ¸ç ´ã¹è ³¿»õ¿Í À½½Ä³¿»õ °°Àº ºÒÄèÇÑ ¾ÇÃëµéÀ» ¾ø¾ÖÁØ´Ù.<br>
-                ÀÌ·¯ÇÑ ¹æ¹ýµéÀº ³ÐÀº °ø°£¿¡¼­ È¿°úÀûÀ¸·Î ºü¸£°Ô Çâ±â¸¦ È®»ê½ÃÅ°°íÀÚ ÇÒ ¶§ ÁÁ´Ù. Á»´õ ºÎµå·¯¿î ÇâÀ» ¿øÇÑ´Ù¸é Æ÷Çª¸®¸¦ ÀÌ¿ëÇÑ´Ù.<br><br>
-                ·ÎÁî, Á¦¶ó´½, ¿À·»Áö, ¹ö°¡¸ø, ±×·¹ÀÌÇÁÈÄ·í µîÀº ±âºÐÀ» »ó½Â½ÃÅ°´Â Ãµ¿¬ ÇâÀ¯µéÀÌ´Ù.<br>
-                ÀÌ±¹ÀûÀÎ ºÐÀ§±â¸¦ ¿¬ÃâÇÏ°í ½Í´Ù¸é »÷´Þ¿ìµå³ª ÆÐÃÍ¸®, ÀÏ¶ûÀÏ¶û µîÀ» »ç¿ëÇÑ´Ù.</p>
+            <p>ì•„ë¡œë§ˆí…Œë¼í”¼ë¥¼ ì´ìš©í•´ í–¥ê¸°ë¡œìš´ ê±°ì‹¤ì„ ë§Œë“œëŠ” ë°©ë²•ì€ ë‹¤ì–‘í•˜ë‹¤.<br>
+                ë°œí–¥ê¸°, ì•„ë¡œë§ˆ ê°€ìŠµê¸°ë¥¼ ì´ìš©í•˜ê±°ë‚˜ ë£¸ ìŠ¤í”„ë ˆì´ë¥¼ ì‚¬ìš©í•˜ëŠ” ë°©ë²•ì€ ê°ì •ì„ ì•ˆì •ì‹œí‚¤ê³  ì¾Œì í•œ ê±´ê°• í™˜ê²½ì„ ì¡°ì„±í•˜ë©° ë‹´ë°° ëƒ„ìƒˆì™€ ìŒì‹ëƒ„ìƒˆ ê°™ì€ ë¶ˆì¾Œí•œ ì•…ì·¨ë“¤ì„ ì—†ì• ì¤€ë‹¤.<br>
+                ì´ëŸ¬í•œ ë°©ë²•ë“¤ì€ ë„“ì€ ê³µê°„ì—ì„œ íš¨ê³¼ì ìœ¼ë¡œ ë¹ ë¥´ê²Œ í–¥ê¸°ë¥¼ í™•ì‚°ì‹œí‚¤ê³ ìž í•  ë•Œ ì¢‹ë‹¤. ì¢€ë” ë¶€ë“œëŸ¬ìš´ í–¥ì„ ì›í•œë‹¤ë©´ í¬í‘¸ë¦¬ë¥¼ ì´ìš©í•œë‹¤.<br><br>
+                ë¡œì¦ˆ, ì œë¼ëŠ„, ì˜¤ë Œì§€, ë²„ê°€ëª», ê·¸ë ˆì´í”„í›„ë£» ë“±ì€ ê¸°ë¶„ì„ ìƒìŠ¹ì‹œí‚¤ëŠ” ì²œì—° í–¥ìœ ë“¤ì´ë‹¤.<br>
+                ì´êµ­ì ì¸ ë¶„ìœ„ê¸°ë¥¼ ì—°ì¶œí•˜ê³  ì‹¶ë‹¤ë©´ ìƒŒë‹¬ìš°ë“œë‚˜ íŒ¨ì´ë¦¬, ì¼ëž‘ì¼ëž‘ ë“±ì„ ì‚¬ìš©í•œë‹¤.</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ï ¿å½Ç¿¡¼­</h4>
+              <h4 class="nanumpen">â‘¨ ìš•ì‹¤ì—ì„œ</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend39.gif" alt="»çÁø" width="100%">              
+              <img src="images/fragra/blend39.gif" alt="ì‚¬ì§„" width="100%">              
           </div>
           <div class="col-13">
-            <p><span>¾Æ·Î¸¶Å×¶óÇÇ ¸ñ¿å</span>
-                °í´ë ±×¸®½º ·Î¸¶ »ç¶÷µéÀº º´ÀÇ ¿¹¹æÀÌ³ª °Ç°­¿¡ µµ¿òÀÌ µÇ´Â °ÍÀ¸·Î Ãµ¿¬ ÇâÀ¯¸¦ ÀÌ¿ëÇÑ ¸ñ¿åÀÌ³ª ¸¶»çÁö¸¦ ±ÇÀåÇß´Ù. Ãµ¿¬ ÇâÀ¯·Î ¸ñ¿åÀ» ÇÏ´Â °ÍÀº °¡Àå °£´ÜÇÏ¸é¼­µµ È¿°úÀûÀÎ ¾Æ·Î¸¶Å×¶óÇÇ Ä¡·á¹ýÁß ÇÏ³ªÀÌ´Ù. ¸ñ¿å¹°ÀÇ ¿Âµµ¿Í ¾î¶² Ãµ¿¬ ÇâÀ¯¸¦ »ç¿ëÇÏ´À³Ä¿¡ µû¶ó ¸±·¢½Ì, Ä¡À¯, ¾ÆÄ§ ¸ñ¿å µîÀ¸·Î ³ª´©¾î Áø´Ù. ¸ñ¿å½Ã Ãµ¿¬ ÇâÀ¯´Â ÇÇºÎ·Î Èí¼öµÇ¾î ÁøÇÇÃþÀ» ÃËÃËÇÏ°Ô ÇÏ°í ¼øÈ¯±â¿¡ ÀÛ¿ëÇÏ´Â µ¿½Ã¿¡, ÈÄ°¢À» ÅëÇØ °¨ÁöµÈ Çâ±â´Â ³ú¸¦ ÀÚ±ØÇÏ°í Çàº¹°¨À» ´õÇØÁØ´Ù. ¾Æ·Î¸¶Å×¶óÇÇ ¸ñ¿åÀº ÇØµ¶ÀÛ¿ëÀ» ÇÏ°í ¼¿·ê¶óÀÌÆ®, °üÀý¿°, ±ÙÀ°Åë°ú °¨±â, µÎÅë, ÇÇºÎ Æ®·¯ºí, ±äÀå ¿ÏÈ­, ¿ì¿ïÁõ µîÀÇ ¹®Á¦¿¡ µµ¿òÀ» ÁØ´Ù.<br><br>
-                <span>¸ñ¿å¹° ¿Âµµ¿Í ½Ã°£</span>
-                ¸ñ¿å¹°ÀÇ ¿Âµµ¿Í ¸ñ¿å½Ã°£Àº ¸Å¿ì Áß¿äÇÏ´Ù. Â÷°¡¿î ¸ñ¿åÀº ÀÚ±ØÀûÀÌ°í µû¶æÇÑ ¸ñ¿åÀº ¸±·º½Ì È¿°ú°¡ ÀÖ´Ù. ¾ÆÁÖ ¶ß°Å¿î ¹°·Î ÇÏ´Â ¸ñ¿åÀº ¿ÀÈ÷·Á ¸ö¿¡ ÇØ°¡ µÇ´Âµ¥, ÀÌ´Â Ç÷°üÀ» È®Àå½ÃÅ°°í ½ÉÀå °íµ¿À» ºü¸£°Ô ÇÏ±â ¶§¹®¿¡ ºÎÁ¤¸Æ, Ä¡Áú, °íÇ÷¾Ð È¯ÀÚ³ª ÀÓ»êºÎ´Â ÇÇÇØ¾ß ÇÑ´Ù. ¸ñ¿å½Ã°£Àº ÇÇºÎ ¼¼Æ÷°¡ °ú¼öÈ­(over-hydrate) µÇ¾î ¸öÀÌ º×±â Àü, ¾à 15-20ºÐ Á¤µµ°¡ Àû´çÇÏ´Ù. <br>
-                Ãµ¿¬ ÇâÀ¯´Â »¡¸® Áõ¹ß ÇÏ±â ¶§¹®¿¡ ¸ñ¿å¹°À» ´Ù ¹ÞÀº ÈÄ¿¡ ÇâÀ¯¸¦ ¶³¾î¶ß·Á¾ß ÇÑ´Ù. <br><br>
+            <p><span>ì•„ë¡œë§ˆí…Œë¼í”¼ ëª©ìš•</span>
+                ê³ ëŒ€ ê·¸ë¦¬ìŠ¤ ë¡œë§ˆ ì‚¬ëžŒë“¤ì€ ë³‘ì˜ ì˜ˆë°©ì´ë‚˜ ê±´ê°•ì— ë„ì›€ì´ ë˜ëŠ” ê²ƒìœ¼ë¡œ ì²œì—° í–¥ìœ ë¥¼ ì´ìš©í•œ ëª©ìš•ì´ë‚˜ ë§ˆì‚¬ì§€ë¥¼ ê¶Œìž¥í–ˆë‹¤. ì²œì—° í–¥ìœ ë¡œ ëª©ìš•ì„ í•˜ëŠ” ê²ƒì€ ê°€ìž¥ ê°„ë‹¨í•˜ë©´ì„œë„ íš¨ê³¼ì ì¸ ì•„ë¡œë§ˆí…Œë¼í”¼ ì¹˜ë£Œë²•ì¤‘ í•˜ë‚˜ì´ë‹¤. ëª©ìš•ë¬¼ì˜ ì˜¨ë„ì™€ ì–´ë–¤ ì²œì—° í–¥ìœ ë¥¼ ì‚¬ìš©í•˜ëŠëƒì— ë”°ë¼ ë¦´ëž™ì‹±, ì¹˜ìœ , ì•„ì¹¨ ëª©ìš• ë“±ìœ¼ë¡œ ë‚˜ëˆ„ì–´ ì§„ë‹¤. ëª©ìš•ì‹œ ì²œì—° í–¥ìœ ëŠ” í”¼ë¶€ë¡œ í¡ìˆ˜ë˜ì–´ ì§„í”¼ì¸µì„ ì´‰ì´‰í•˜ê²Œ í•˜ê³  ìˆœí™˜ê¸°ì— ìž‘ìš©í•˜ëŠ” ë™ì‹œì—, í›„ê°ì„ í†µí•´ ê°ì§€ëœ í–¥ê¸°ëŠ” ë‡Œë¥¼ ìžê·¹í•˜ê³  í–‰ë³µê°ì„ ë”í•´ì¤€ë‹¤. ì•„ë¡œë§ˆí…Œë¼í”¼ ëª©ìš•ì€ í•´ë…ìž‘ìš©ì„ í•˜ê³  ì…€ë£°ë¼ì´íŠ¸, ê´€ì ˆì—¼, ê·¼ìœ¡í†µê³¼ ê°ê¸°, ë‘í†µ, í”¼ë¶€ íŠ¸ëŸ¬ë¸”, ê¸´ìž¥ ì™„í™”, ìš°ìš¸ì¦ ë“±ì˜ ë¬¸ì œì— ë„ì›€ì„ ì¤€ë‹¤.<br><br>
+                <span>ëª©ìš•ë¬¼ ì˜¨ë„ì™€ ì‹œê°„</span>
+                ëª©ìš•ë¬¼ì˜ ì˜¨ë„ì™€ ëª©ìš•ì‹œê°„ì€ ë§¤ìš° ì¤‘ìš”í•˜ë‹¤. ì°¨ê°€ìš´ ëª©ìš•ì€ ìžê·¹ì ì´ê³  ë”°ëœ»í•œ ëª©ìš•ì€ ë¦´ë ‰ì‹± íš¨ê³¼ê°€ ìžˆë‹¤. ì•„ì£¼ ëœ¨ê±°ìš´ ë¬¼ë¡œ í•˜ëŠ” ëª©ìš•ì€ ì˜¤ížˆë ¤ ëª¸ì— í•´ê°€ ë˜ëŠ”ë°, ì´ëŠ” í˜ˆê´€ì„ í™•ìž¥ì‹œí‚¤ê³  ì‹¬ìž¥ ê³ ë™ì„ ë¹ ë¥´ê²Œ í•˜ê¸° ë•Œë¬¸ì— ë¶€ì •ë§¥, ì¹˜ì§ˆ, ê³ í˜ˆì•• í™˜ìžë‚˜ ìž„ì‚°ë¶€ëŠ” í”¼í•´ì•¼ í•œë‹¤. ëª©ìš•ì‹œê°„ì€ í”¼ë¶€ ì„¸í¬ê°€ ê³¼ìˆ˜í™”(over-hydrate) ë˜ì–´ ëª¸ì´ ë¶“ê¸° ì „, ì•½ 15-20ë¶„ ì •ë„ê°€ ì ë‹¹í•˜ë‹¤. <br>
+                ì²œì—° í–¥ìœ ëŠ” ë¹¨ë¦¬ ì¦ë°œ í•˜ê¸° ë•Œë¬¸ì— ëª©ìš•ë¬¼ì„ ë‹¤ ë°›ì€ í›„ì— í–¥ìœ ë¥¼ ë–¨ì–´ëœ¨ë ¤ì•¼ í•œë‹¤. <br><br>
 
-                <span>[¸±·º½Ì ¸ñ¿å]</span>¹Ù»Û ÇÏ·ç¸¦ ¸¶°¨ÇÏ¸é¼­ ½É½ÅÀÇ ¾ÈÁ¤À» ¿øÇÏ°Å³ª ÃæºÐÇÑ ÈÞ½ÄÀ» ¿øÇÑ´Ù¸é ¿å½ÇÀ» ´ç½Å¸¸ÀÇ ¼º¿ªÀ¸·Î ¸¸µé¾îº¸ÀÚ. °¡´ÉÇÏ´Ù¸é, Á¶¸íÀ» ºÎµå·´°Ô ¸¸µé°í ¾Æ·Î¸¶·¥ÇÁ¸¦ ¹ßÇâÇÏ´Â °Íµµ ÁÁ´Ù. ¿åÁ¶ ¾È¿¡¼­ Æí¾ÈÈ÷ ¸öÀ» ±â´ë°í ´«À» °¨°í ±í°Ô ¼ûÀ» µéÀÌ¸¶½ÃÀÚ. È£Èí¿¡ ÁýÁßÀ» ÇÏ¸ç ¸¶À½À» ºñ¿ö ½ºÆ®·¹½º¿Í ±äÀåÀ» ¿ÏÈ­½ÃÅ²´Ù.<br><br>
-                ¸±·º½ÌÀ» À§ÇÑ ¿¡¼¾¼È ¿ÀÀÏ<br>
-                ¹ÙÁú, ¹ö°¡¸ø, ½Ã´Ù¿ìµå, Ä³¸ð¸¶ÀÏ, ÇÁ¶õÅ²¼¾½º, ¶óº¥´õ, ¸¶Á¶¶÷, ¸á¸®»ç, ³×·Ñ¸®, ÆÐÃÍ¸®, ·ÎÁî, »÷´Þ¿ìµå, ÀÏ¶ûÀÏ¶û, ¿À·»Áö½ºÀ­, ±×·¹ÀÌÇÁÇÁ·í µî<br><br>
+                <span>[ë¦´ë ‰ì‹± ëª©ìš•]</span>ë°”ìœ í•˜ë£¨ë¥¼ ë§ˆê°í•˜ë©´ì„œ ì‹¬ì‹ ì˜ ì•ˆì •ì„ ì›í•˜ê±°ë‚˜ ì¶©ë¶„í•œ íœ´ì‹ì„ ì›í•œë‹¤ë©´ ìš•ì‹¤ì„ ë‹¹ì‹ ë§Œì˜ ì„±ì—­ìœ¼ë¡œ ë§Œë“¤ì–´ë³´ìž. ê°€ëŠ¥í•˜ë‹¤ë©´, ì¡°ëª…ì„ ë¶€ë“œëŸ½ê²Œ ë§Œë“¤ê³  ì•„ë¡œë§ˆëž¨í”„ë¥¼ ë°œí–¥í•˜ëŠ” ê²ƒë„ ì¢‹ë‹¤. ìš•ì¡° ì•ˆì—ì„œ íŽ¸ì•ˆížˆ ëª¸ì„ ê¸°ëŒ€ê³  ëˆˆì„ ê°ê³  ê¹Šê²Œ ìˆ¨ì„ ë“¤ì´ë§ˆì‹œìž. í˜¸í¡ì— ì§‘ì¤‘ì„ í•˜ë©° ë§ˆìŒì„ ë¹„ì›Œ ìŠ¤íŠ¸ë ˆìŠ¤ì™€ ê¸´ìž¥ì„ ì™„í™”ì‹œí‚¨ë‹¤.<br><br>
+                ë¦´ë ‰ì‹±ì„ ìœ„í•œ ì—ì„¼ì…œ ì˜¤ì¼<br>
+                ë°”ì§ˆ, ë²„ê°€ëª», ì‹œë‹¤ìš°ë“œ, ìºëª¨ë§ˆì¼, í”„ëž€í‚¨ì„¼ìŠ¤, ë¼ë²¤ë”, ë§ˆì¡°ëžŒ, ë©œë¦¬ì‚¬, ë„¤ë¡¤ë¦¬, íŒ¨ì´ë¦¬, ë¡œì¦ˆ, ìƒŒë‹¬ìš°ë“œ, ì¼ëž‘ì¼ëž‘, ì˜¤ë Œì§€ìŠ¤ìœ—, ê·¸ë ˆì´í”„í”„ë£» ë“±<br><br>
 
-                <span>[¾ÆÄ§ ¸ñ¿å]</span>¾ÆÄ§À» À§ÇÑ ¸ñ¿å¿¡´Â ¸ÕÀú µû¶æÇÑ ¹°·Î ÇÏ°í ¸¶¹«¸®¸¦ ¾à°£ Â÷°¡¿î ¹°À» »ç¿ëÇÑ´Ù. ¿øÈ°ÇÑ ¼øÈ¯À» À§ÇØ ¸ñ¿åÅ¸¿ùÀ» »ç¿ëÇØµµ ÁÁ´Ù.<br><br>
-                ¾ÆÄ§¸ñ¿åÀ» À§ÇÑ Ãµ¿¬ÇâÀ¯<br>
-                »çÀÌÇÁ·¯½º, ·ÎÁî¸¶¸®, Å¸ÀÓ, À¯Ä®¸³Åõ½º, Á¦¶ó´½, ¶óº¥´õ, ·¹¸ó, ·¹¸ó±×¶ó½º, ÆäÆÛ¹ÎÆ®, ÆÄÀÎ µî<br><br>
+                <span>[ì•„ì¹¨ ëª©ìš•]</span>ì•„ì¹¨ì„ ìœ„í•œ ëª©ìš•ì—ëŠ” ë¨¼ì € ë”°ëœ»í•œ ë¬¼ë¡œ í•˜ê³  ë§ˆë¬´ë¦¬ë¥¼ ì•½ê°„ ì°¨ê°€ìš´ ë¬¼ì„ ì‚¬ìš©í•œë‹¤. ì›í™œí•œ ìˆœí™˜ì„ ìœ„í•´ ëª©ìš•íƒ€ì›”ì„ ì‚¬ìš©í•´ë„ ì¢‹ë‹¤.<br><br>
+                ì•„ì¹¨ëª©ìš•ì„ ìœ„í•œ ì²œì—°í–¥ìœ <br>
+                ì‚¬ì´í”„ëŸ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬, íƒ€ìž„, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ì œë¼ëŠ„, ë¼ë²¤ë”, ë ˆëª¬, ë ˆëª¬ê·¸ë¼ìŠ¤, íŽ˜í¼ë¯¼íŠ¸, íŒŒì¸ ë“±<br><br>
 
-                <span>[Ä¡À¯ ¸ñÀûÀÇ ¸ñ¿å]</span>Ä¡À¯ ¸ñ¿åÀ» À§ÇÑ Ãµ¿¬ÇâÀ¯<br><br>
-                ÇÇºÎ¿°À» À§ÇÑ Ãµ¿¬ÇâÀ¯ : Ä³¸ð¸¶ÀÏ, Á¦¶ó´½, ¶óº¥´õ, ¸Ö<br>
-                ½ÀÁøÀ» À§ÇÑ Ãµ¿¬ÇâÀ¯ :Ä³¸ð¸¶ÀÏ, Á¦¶ó´½, ÇÁ¶ûÅ²¼¾½º, ¸Ö, »çÀÌÇÁ·¯½º<br>
-                °Ç¼±À» À§ÇÑ Ãµ¿¬ÇâÀ¯: Ä³¸ð¸¶ÀÏ, ¶óº¥´õ, ÇÁ¶ûÅ²¼¾½º, »÷´Þ¿ìµå<br>
-                °üÀý¿° & ·ù¸¶Æ¼ÁòÀ» À§ÇÑ Ãµ¿¬ÇâÀ¯: À¯Ä®¸³Åõ½º, Áê´ÏÆÛº£¸®, »çÀÌÇÁ·¯½º, ¶óº¥´õ, ·ÎÁî¸¶¸®, ÆäÆÛ¹ÎÆ®</p>
+                <span>[ì¹˜ìœ  ëª©ì ì˜ ëª©ìš•]</span>ì¹˜ìœ  ëª©ìš•ì„ ìœ„í•œ ì²œì—°í–¥ìœ <br><br>
+                í”¼ë¶€ì—¼ì„ ìœ„í•œ ì²œì—°í–¥ìœ  : ìºëª¨ë§ˆì¼, ì œë¼ëŠ„, ë¼ë²¤ë”, ë©€<br>
+                ìŠµì§„ì„ ìœ„í•œ ì²œì—°í–¥ìœ  :ìºëª¨ë§ˆì¼, ì œë¼ëŠ„, í”„ëž‘í‚¨ì„¼ìŠ¤, ë©€, ì‚¬ì´í”„ëŸ¬ìŠ¤<br>
+                ê±´ì„ ì„ ìœ„í•œ ì²œì—°í–¥ìœ : ìºëª¨ë§ˆì¼, ë¼ë²¤ë”, í”„ëž‘í‚¨ì„¼ìŠ¤, ìƒŒë‹¬ìš°ë“œ<br>
+                ê´€ì ˆì—¼ & ë¥˜ë§ˆí‹°ì¦˜ì„ ìœ„í•œ ì²œì—°í–¥ìœ : ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ì¥¬ë‹ˆí¼ë² ë¦¬, ì‚¬ì´í”„ëŸ¬ìŠ¤, ë¼ë²¤ë”, ë¡œì¦ˆë§ˆë¦¬, íŽ˜í¼ë¯¼íŠ¸</p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ð »ç¹«½Ç</h4>
+              <h4 class="nanumpen">â‘© ì‚¬ë¬´ì‹¤</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend40.gif" alt="»çÁø" width="100%">              
+              <img src="images/fragra/blend40.gif" alt="ì‚¬ì§„" width="100%">              
           </div>
           <div class="col-13">
-            <p>Á÷ÀåÀÎµéÀÇ °æ¿ì, »ç¹«½Ç³» ¿©·¯ °¡Áö È¯°æÀû ¿äÀÎ¿¡ ÀÇÇØ °Ç°­À» ÇØÄ¥ ¼ö ÀÖ´Ù´Â °ÍÀº ÀÌ¹Ì ¸ðµÎ°¡ ¾Æ´Â »ç½ÇÀÌ´Ù. ÀÌÁß ´ëºÎºÐÀÇ °æ¿ì°¡ ¿¡¾îÄÁÀÌ³ª °¢Á¾ ³­¹æ±â, °¡½À±â µî¿¡ ÀÇÇØ¼­ ¹ß»ýµÇ´Â Áõ»óÀÌ´Ù. ½ÇÁ¦, ÀÌ·¯ÇÑ È¯°æ¿¡ ÀÖ´Â Á÷ÀåÀÎµéÀÇ °æ¿ì ±×·¸Áö ¾ÊÀº Á÷ÀåÀÎµéº¸´Ù ±âÄ§, °¨±âÁõ»ó°ú ÀÎÈÄ¿°¿¡ °É¸± È®·üÀÌ 2¹è·Î ³ô¾ÆÁø´Ù´Â ¿¬±¸°á°ú°¡ ÀÖ¾ú´Ù.<br>
-                Ã¥»ó ¾Õ¿¡ ¹ßÇâ½ÃÅ°°Å³ª °üÀÚ³îÀÌ, ±Í µÚ, Äàµî À§¿¡ ÇÑ¹æ¿ï Âï¾îÁØ´Ù.<br><br>
+            <p>ì§ìž¥ì¸ë“¤ì˜ ê²½ìš°, ì‚¬ë¬´ì‹¤ë‚´ ì—¬ëŸ¬ ê°€ì§€ í™˜ê²½ì  ìš”ì¸ì— ì˜í•´ ê±´ê°•ì„ í•´ì¹  ìˆ˜ ìžˆë‹¤ëŠ” ê²ƒì€ ì´ë¯¸ ëª¨ë‘ê°€ ì•„ëŠ” ì‚¬ì‹¤ì´ë‹¤. ì´ì¤‘ ëŒ€ë¶€ë¶„ì˜ ê²½ìš°ê°€ ì—ì–´ì»¨ì´ë‚˜ ê°ì¢… ë‚œë°©ê¸°, ê°€ìŠµê¸° ë“±ì— ì˜í•´ì„œ ë°œìƒë˜ëŠ” ì¦ìƒì´ë‹¤. ì‹¤ì œ, ì´ëŸ¬í•œ í™˜ê²½ì— ìžˆëŠ” ì§ìž¥ì¸ë“¤ì˜ ê²½ìš° ê·¸ë ‡ì§€ ì•Šì€ ì§ìž¥ì¸ë“¤ë³´ë‹¤ ê¸°ì¹¨, ê°ê¸°ì¦ìƒê³¼ ì¸í›„ì—¼ì— ê±¸ë¦´ í™•ë¥ ì´ 2ë°°ë¡œ ë†’ì•„ì§„ë‹¤ëŠ” ì—°êµ¬ê²°ê³¼ê°€ ìžˆì—ˆë‹¤.<br>
+                ì±…ìƒ ì•žì— ë°œí–¥ì‹œí‚¤ê±°ë‚˜ ê´€ìžë†€ì´, ê·€ ë’¤, ì½§ë“± ìœ„ì— í•œë°©ìš¸ ì°ì–´ì¤€ë‹¤.<br><br>
 
-                -¹«±â·ÂÁõ : ±×·¹ÀÌÇÁÈÄ·í ,À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸®, ·¹¸ó <br>
-                -ÄÚ¸·Èû Áõ»ó : ÆäÆÛ¹ÎÆ®, Æ¼Æ®¸®, À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸®<br>
-                -¾È±¸°ÇÁ¶Áõ, °¡·Á¿òÁõ : Ä³¸ð¸¶ÀÏ, Æ¼Æ®¸®, ¶óº¥´õ, »÷´Þ¿ìµå<br>
-                -µÎÅë Áõ»ó : ¶óº¥´õ, ÆäÆÛ¹ÎÆ®<br>
-                -ÀÏ Áßµ¶Áõ¿¡ ÇÊ¿äÇÑ ¿ÀÀÏ : Á¦¶ó´½, ¹ÙÁú, ¶óº¥´õ, ³×·Ñ¸®, ¸¶Á¶¶÷, ¿À·»Áö½ºÀ­<br>
-                -»ç¹«¿ë Ã¥»ó, ÄÄÇ»ÅÍ ÀÚÆÇ ´ÛÀ» ¶§ : Æ¼Æ®¸®, À¯Ä®¸³Åõ½º, ·¹¸ó ÇÑ¹æ¿ï~<br>
-                -¿À·§µ¿¾È ¾É¾Æ ÀÖÀ» ¶§ : »çÀÌÇÁ·¯½º, ÆäÆÛ¹ÎÆ®, ·ÎÁî¸¶¸®, ·¹¸ó, Áê´ÏÆÛº£¸® µîÀÇ ¿ÀÀÏÀ» ¼Õ¼ö°ÇÀÌ³ª ¼ö°Ç µîÀ» ÀÌ¿ëÇØ ´Ù¸®ºÎÀ§¿¡ ½ÀÆ÷ÇØÁØ´Ù. </p>
+                -ë¬´ê¸°ë ¥ì¦ : ê·¸ë ˆì´í”„í›„ë£» ,ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬, ë ˆëª¬ <br>
+                -ì½”ë§‰íž˜ ì¦ìƒ : íŽ˜í¼ë¯¼íŠ¸, í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬<br>
+                -ì•ˆêµ¬ê±´ì¡°ì¦, ê°€ë ¤ì›€ì¦ : ìºëª¨ë§ˆì¼, í‹°íŠ¸ë¦¬, ë¼ë²¤ë”, ìƒŒë‹¬ìš°ë“œ<br>
+                -ë‘í†µ ì¦ìƒ : ë¼ë²¤ë”, íŽ˜í¼ë¯¼íŠ¸<br>
+                -ì¼ ì¤‘ë…ì¦ì— í•„ìš”í•œ ì˜¤ì¼ : ì œë¼ëŠ„, ë°”ì§ˆ, ë¼ë²¤ë”, ë„¤ë¡¤ë¦¬, ë§ˆì¡°ëžŒ, ì˜¤ë Œì§€ìŠ¤ìœ—<br>
+                -ì‚¬ë¬´ìš© ì±…ìƒ, ì»´í“¨í„° ìžíŒ ë‹¦ì„ ë•Œ : í‹°íŠ¸ë¦¬, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë ˆëª¬ í•œë°©ìš¸~<br>
+                -ì˜¤ëž«ë™ì•ˆ ì•‰ì•„ ìžˆì„ ë•Œ : ì‚¬ì´í”„ëŸ¬ìŠ¤, íŽ˜í¼ë¯¼íŠ¸, ë¡œì¦ˆë§ˆë¦¬, ë ˆëª¬, ì¥¬ë‹ˆí¼ë² ë¦¬ ë“±ì˜ ì˜¤ì¼ì„ ì†ìˆ˜ê±´ì´ë‚˜ ìˆ˜ê±´ ë“±ì„ ì´ìš©í•´ ë‹¤ë¦¬ë¶€ìœ„ì— ìŠµí¬í•´ì¤€ë‹¤. </p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ñ ÈÞ½ÄÀ» À§ÇÑ ¸í»ó</h4>
+              <h4 class="nanumpen">â‘ª íœ´ì‹ì„ ìœ„í•œ ëª…ìƒ</h4>
           </div>            
           <div class="col-3">
-              <img src="images/fragra/blend42.gif" alt="»çÁø" width="100%" style="padding: 0 3em;">              
+              <img src="images/fragra/blend42.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
-            <p>¹Ù»Ú°í ÁöÄ£ »ýÈ° ¼Ó¿¡¼­ Å»ÇÇ, 5ºÐÀÌ¶óµµ ³ª¸¸ÀÇ °ø°£À» ¸¸µé¾î Çâ°ú ÇÔ²² ÈÞ½ÄÀ» ÃëÇØº¸ÀÚ.<br><br>
-                ¸í»ó¿¡ µµ¿ò µÇ´Â Ãµ¿¬ÇâÀ¯ : ÇÁ¶ûÅ²¼¾½º, »÷´Þ¿ìµå, »çÀÌÇÁ·¯½º, Áê´ÏÆÛº£¸®, ÆÄÀÎ, ¹ö°¡¸ø, ·ÎÁî¿ìµå µî</p>
+            <p>ë°”ì˜ê³  ì§€ì¹œ ìƒí™œ ì†ì—ì„œ íƒˆí”¼, 5ë¶„ì´ë¼ë„ ë‚˜ë§Œì˜ ê³µê°„ì„ ë§Œë“¤ì–´ í–¥ê³¼ í•¨ê»˜ íœ´ì‹ì„ ì·¨í•´ë³´ìž.<br><br>
+                ëª…ìƒì— ë„ì›€ ë˜ëŠ” ì²œì—°í–¥ìœ  : í”„ëž‘í‚¨ì„¼ìŠ¤, ìƒŒë‹¬ìš°ë“œ, ì‚¬ì´í”„ëŸ¬ìŠ¤, ì¥¬ë‹ˆí¼ë² ë¦¬, íŒŒì¸, ë²„ê°€ëª», ë¡œì¦ˆìš°ë“œ ë“±</p>
           </div>
             
           <div class="col-16"><br><br>
-              <h4 class="nanumpen">¨ò ¿îµ¿ Àü, ÈÄ·Î</h4>
+              <h4 class="nanumpen">â‘« ìš´ë™ ì „, í›„ë¡œ</h4>
           </div>
           <div class="col-16">
-            <p>¿îµ¿ ÈÄÀÇ ±ÙÀ°ÀÌ¿Ïµµ Áß¿äÇÏÁö¸¸ ¿îµ¿ ÇÏ±â Àü ÃæºÐÇÑ ÀÌ¿Ïµµ ÀØÁö ¾Ê±â¸¦~<br>
-            ¿îµ¿ Àü ¸¶»çÁö ¿ÀÀÏÀ» µµÆ÷, Èí¼ö ½ÃÅ² ÈÄ ¿îµ¿À» ½ÃÀÛÇÑ´Ù. <br><br>
+            <p>ìš´ë™ í›„ì˜ ê·¼ìœ¡ì´ì™„ë„ ì¤‘ìš”í•˜ì§€ë§Œ ìš´ë™ í•˜ê¸° ì „ ì¶©ë¶„í•œ ì´ì™„ë„ ìžŠì§€ ì•Šê¸°ë¥¼~<br>
+            ìš´ë™ ì „ ë§ˆì‚¬ì§€ ì˜¤ì¼ì„ ë„í¬, í¡ìˆ˜ ì‹œí‚¨ í›„ ìš´ë™ì„ ì‹œìž‘í•œë‹¤. <br><br>
 
-            (¸¶»çÁö¿ÀÀÏ) Ä³¸®¾î¿ÀÀÏ 30ml: ·ÎÁî¸¶¸® 5(¹æ¿ï): Áê´ÏÆÛº£¸® 4: ·¹¸ó 4: ¶óº¥´õ 5 <br>
-            (½ºÇÁ·¹ÀÌ) ¿¡Åº¿Ã 40ml : ÆäÆÛ¹ÎÆ®10¹æ¿ï: ¶óº¥´õ8¹æ¿ï: ±×·¹ÀÌÇÁÇÁ·í10¹æ¿ï: ¹öÄ¡2¹æ¿ï : Á¤Á¦¼ö 60ml
+            (ë§ˆì‚¬ì§€ì˜¤ì¼) ìºë¦¬ì–´ì˜¤ì¼ 30ml: ë¡œì¦ˆë§ˆë¦¬ 5(ë°©ìš¸): ì¥¬ë‹ˆí¼ë² ë¦¬ 4: ë ˆëª¬ 4: ë¼ë²¤ë” 5 <br>
+            (ìŠ¤í”„ë ˆì´) ì—íƒ„ì˜¬ 40ml : íŽ˜í¼ë¯¼íŠ¸10ë°©ìš¸: ë¼ë²¤ë”8ë°©ìš¸: ê·¸ë ˆì´í”„í”„ë£»10ë°©ìš¸: ë²„ì¹˜2ë°©ìš¸ : ì •ì œìˆ˜ 60ml
             </p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ó µ¶¼­ÇÒ ¶§</h4>
+              <h4 class="nanumpen">â‘¬ ë…ì„œí•  ë•Œ</h4>
           </div>
           <div class="col-3">
-              <img src="images/fragra/blend45.gif" alt="»çÁø" width="100%" style="padding: 0 3em;">              
+              <img src="images/fragra/blend45.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
-            <p>Â÷ºÐÇÑ ¸¶À½À¸·Î Æí¾ÈÇÏ°Ô Ã¥À» ÀÐÀ» ¼ö ÀÖ°Ô µµ¿ÍÁØ´Ù.<br>
-                µµ¿òÀÌ µÇ´Â ¿ÀÀÏµé »çÀÌÇÁ·¹½º, Áê´ÏÆÛº£¸®, ÆÄÀÎ, ÇÁ¶ûÅ²¼¾½º, ¹ö°¡¸ø, ·ÎÁî¿ìµå µî<br><br>
-                - ¹ßÇâ±â¸¦ ÀÌ¿ëÇØ ½Ç³» ¹ßÇâÇÑ´Ù.<br>
-                Ã¥°¥ÇÇ¿¡ ¿ÀÀÏ 2¹æ¿ïÁ¤µµ ¶³¾î¶ß·Á Ã¥ »çÀÌ¿¡ ³¢¿ö³õ´Â´Ù.
+            <p>ì°¨ë¶„í•œ ë§ˆìŒìœ¼ë¡œ íŽ¸ì•ˆí•˜ê²Œ ì±…ì„ ì½ì„ ìˆ˜ ìžˆê²Œ ë„ì™€ì¤€ë‹¤.<br>
+                ë„ì›€ì´ ë˜ëŠ” ì˜¤ì¼ë“¤ ì‚¬ì´í”„ë ˆìŠ¤, ì¥¬ë‹ˆí¼ë² ë¦¬, íŒŒì¸, í”„ëž‘í‚¨ì„¼ìŠ¤, ë²„ê°€ëª», ë¡œì¦ˆìš°ë“œ ë“±<br><br>
+                - ë°œí–¥ê¸°ë¥¼ ì´ìš©í•´ ì‹¤ë‚´ ë°œí–¥í•œë‹¤.<br>
+                ì±…ê°ˆí”¼ì— ì˜¤ì¼ 2ë°©ìš¸ì •ë„ ë–¨ì–´ëœ¨ë ¤ ì±… ì‚¬ì´ì— ë¼ì›Œë†“ëŠ”ë‹¤.
             </p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨ô ¹æÃæÈ¿°ú</h4>
+              <h4 class="nanumpen">â‘­ ë°©ì¶©íš¨ê³¼</h4>
           </div>
           <div class="col-16">
-            <p>Áý¾È¿¡ ÇØÃæµéÀÌ³ª Æ¯È÷ ¿©¸§Ã¶ ¸ð±â³ª ÆÄ¸® µîÀ» ¸Ö¸®ÇÏ°í ½ÍÀ» ¶§, ¾ß¿Ü ³ªµéÀÌ³ª Ä·ÇÎ ÇÒ ¶§ ¹ú·¹, ¸ð±â¿¡ ¹°¸®Áö ¾Êµµ·Ï ¿¹¹æÇÏÀÚ.<br><br>
-                1. (¹ßÇâ) À¯Ä®¸³Åõ½º, ·¹¸ó, Á¦¶ó´½, ·¹¸ó±×¶ó½º, ¶óº¥´õ µîÀÇ ¿ÀÀÏÀ» ½Ç³» ¹ßÇâ½ÃÅ²´Ù.<br><br>
-                2. (¸¶»çÁö¿ÀÀÏ) ¾ß¿Ü ¿ÜÃâ Àü ¸ö¿¡ °ñ°í·ç ¿ÀÀÏÀ» ¹Ù¸¥ ÈÄ ¿ÜÃâÇÑ´Ù.<br>
-                Ä³¸®¾î¿ÀÀÏ 10ml : À¯Ä®¸³Åõ½º ·¹¸ó 2¹æ¿ï: ·¹¸ó±×¶ó½º 2¹æ¿ï : Á¦¶ó´½ 2¹æ¿ï<br><br>
-                3. (½ºÇÁ·¹ÀÌ) Ä·ÇÎÀÌ³ª ¾ß¿Ü¿¡¼­ 3~4½Ã°£ °£°ÝÀ¸·Î ÆÈ, ¸ñ, ´Ù¸® µî¿¡ »Ñ·ÁÁØ´Ù.<br>
-                ¿¡Åº¿Ã 40ml: À¯Ä®¸³Åõ½º ·¹¸ó 30¹æ¿ï: ·¹¸ó±×¶ó½º 20¹æ¿ï : Á¦¶ó´½ 10¹æ¿ïÀ» Èñ¼®ÇÑ ÈÄ Á¤Á¦¼ö 60ml¸¦ ³Ö°í Àß ¼¯¾î ÁØ´Ù.
+            <p>ì§‘ì•ˆì— í•´ì¶©ë“¤ì´ë‚˜ íŠ¹ížˆ ì—¬ë¦„ì²  ëª¨ê¸°ë‚˜ íŒŒë¦¬ ë“±ì„ ë©€ë¦¬í•˜ê³  ì‹¶ì„ ë•Œ, ì•¼ì™¸ ë‚˜ë“¤ì´ë‚˜ ìº í•‘ í•  ë•Œ ë²Œë ˆ, ëª¨ê¸°ì— ë¬¼ë¦¬ì§€ ì•Šë„ë¡ ì˜ˆë°©í•˜ìž.<br><br>
+                1. (ë°œí–¥) ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë ˆëª¬, ì œë¼ëŠ„, ë ˆëª¬ê·¸ë¼ìŠ¤, ë¼ë²¤ë” ë“±ì˜ ì˜¤ì¼ì„ ì‹¤ë‚´ ë°œí–¥ì‹œí‚¨ë‹¤.<br><br>
+                2. (ë§ˆì‚¬ì§€ì˜¤ì¼) ì•¼ì™¸ ì™¸ì¶œ ì „ ëª¸ì— ê³¨ê³ ë£¨ ì˜¤ì¼ì„ ë°”ë¥¸ í›„ ì™¸ì¶œí•œë‹¤.<br>
+                ìºë¦¬ì–´ì˜¤ì¼ 10ml : ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ë ˆëª¬ 2ë°©ìš¸: ë ˆëª¬ê·¸ë¼ìŠ¤ 2ë°©ìš¸ : ì œë¼ëŠ„ 2ë°©ìš¸<br><br>
+                3. (ìŠ¤í”„ë ˆì´) ìº í•‘ì´ë‚˜ ì•¼ì™¸ì—ì„œ 3~4ì‹œê°„ ê°„ê²©ìœ¼ë¡œ íŒ”, ëª©, ë‹¤ë¦¬ ë“±ì— ë¿Œë ¤ì¤€ë‹¤.<br>
+                ì—íƒ„ì˜¬ 40ml: ìœ ì¹¼ë¦½íˆ¬ìŠ¤ ë ˆëª¬ 30ë°©ìš¸: ë ˆëª¬ê·¸ë¼ìŠ¤ 20ë°©ìš¸ : ì œë¼ëŠ„ 10ë°©ìš¸ì„ í¬ì„í•œ í›„ ì •ì œìˆ˜ 60mlë¥¼ ë„£ê³  ìž˜ ì„žì–´ ì¤€ë‹¤.
             </p>
           </div>
             
           <div class="col-16">
-              <h4 class="nanumpen">¨õ ½Ä¹°</h4>
+              <h4 class="nanumpen">â‘® ì‹ë¬¼</h4>
           </div>
           <div class="col-3">
-              <img src="images/fragra/blend43.gif" alt="»çÁø" width="100%" style="padding: 0 3em;">              
+              <img src="images/fragra/blend43.gif" alt="ì‚¬ì§„" width="100%" style="padding: 0 3em;">              
           </div>
           <div class="col-13">
-              <p><span>1. ¹æÃæ Á¾ÀÌ ½ºÆ½</span>
-                Áý¾È¿¡¼­ Å°¿ì´Â ½Ä¹°¿¡ ¹æÃæ Á¾ÀÌ ½ºÆ½À» ¸¸µé¾î È­ºÐ¿¡ ³¢¿ö³õÀ¸¸é, ¹æÃæ È¿°ú »Ó ¾Æ´Ï¶ó ¿¡¼¾¼È ¿ÀÀÏÀÇ ¿¡³ÊÁö°¡ ½Ä¹°À» °Ç°­ÇÏ°Ô ÀÚ¶ö ¼ö ÀÖµµ·Ï µµ¿ÍÁØ´Ù.<br><br>
-                ¸¸µå´Â ¹æ¹ý: ³ª¹« Á£°¡¶ôÀ» »çÀÌÁî¿¡ ¸Â°Ô ÀÚ¸¥ ÈÄ µÎ²¨¿î Á¾ÀÌ¸¦ ¾Ë¸Â°Ô Àß¶ó ³ª¹« Á£°¡¶ô »çÀÌ¿¡ ³¢¿ö ³Ö´Â´Ù.<br>
-                ¶óº¥´õ, ÆäÆÛ¹ÎÆ®, À¯Ä®¸³Åõ½º, ·ÎÁî¸¶¸®, ·¹¸ó±×¶ó½º µîÀÇ ¿¡¼¾¼È ¿ÀÀÏÀ» 1ÁÖÀÏ¿¡ 1~2¹ø µÎ²¨¿î Á¾ÀÌ¿¡ 2~3¹æ¿ï ¶³¾î¶ß¸°´Ù.<br><br>
-                  <span>2. ¹æÃæ¿ë ½ºÇÁ·¹ÀÌ</span>
-                1) Á¤Á¦¼ö 50ml¿¡ ¶óº¥´õ ¿ÀÀÏ 5¹æ¿ï ¶Ç´Â Ä³¸ð¸¶ÀÏ 3¹æ¿ïÀ» ³Ö°í Àß Èçµé¾î¼­ ½Ä¹°¿¡ ¼ö½Ã·Î »Ñ·ÁÁÖ¸é ¹ú·¹ÀÇ Á¢±ÙÀ» ¸·À» ¼ö ÀÖ´Ù.<br>
-                2) Ä³¸ð¸¶ÀÏ Àú¸ÕÀÌ³ª ¹ÙÁúÀ» ²ú¿©¼­ ½Ä¹°¿¡ »Ñ·ÁÁàµµ ¿ª½Ã °°Àº È¿°ú°¡ ÀÖ´Ù.
+              <p><span>1. ë°©ì¶© ì¢…ì´ ìŠ¤í‹±</span>
+                ì§‘ì•ˆì—ì„œ í‚¤ìš°ëŠ” ì‹ë¬¼ì— ë°©ì¶© ì¢…ì´ ìŠ¤í‹±ì„ ë§Œë“¤ì–´ í™”ë¶„ì— ë¼ì›Œë†“ìœ¼ë©´, ë°©ì¶© íš¨ê³¼ ë¿ ì•„ë‹ˆë¼ ì—ì„¼ì…œ ì˜¤ì¼ì˜ ì—ë„ˆì§€ê°€ ì‹ë¬¼ì„ ê±´ê°•í•˜ê²Œ ìžëž„ ìˆ˜ ìžˆë„ë¡ ë„ì™€ì¤€ë‹¤.<br><br>
+                ë§Œë“œëŠ” ë°©ë²•: ë‚˜ë¬´ ì “ê°€ë½ì„ ì‚¬ì´ì¦ˆì— ë§žê²Œ ìžë¥¸ í›„ ë‘êº¼ìš´ ì¢…ì´ë¥¼ ì•Œë§žê²Œ ìž˜ë¼ ë‚˜ë¬´ ì “ê°€ë½ ì‚¬ì´ì— ë¼ì›Œ ë„£ëŠ”ë‹¤.<br>
+                ë¼ë²¤ë”, íŽ˜í¼ë¯¼íŠ¸, ìœ ì¹¼ë¦½íˆ¬ìŠ¤, ë¡œì¦ˆë§ˆë¦¬, ë ˆëª¬ê·¸ë¼ìŠ¤ ë“±ì˜ ì—ì„¼ì…œ ì˜¤ì¼ì„ 1ì£¼ì¼ì— 1~2ë²ˆ ë‘êº¼ìš´ ì¢…ì´ì— 2~3ë°©ìš¸ ë–¨ì–´ëœ¨ë¦°ë‹¤.<br><br>
+                  <span>2. ë°©ì¶©ìš© ìŠ¤í”„ë ˆì´</span>
+                1) ì •ì œìˆ˜ 50mlì— ë¼ë²¤ë” ì˜¤ì¼ 5ë°©ìš¸ ë˜ëŠ” ìºëª¨ë§ˆì¼ 3ë°©ìš¸ì„ ë„£ê³  ìž˜ í”ë“¤ì–´ì„œ ì‹ë¬¼ì— ìˆ˜ì‹œë¡œ ë¿Œë ¤ì£¼ë©´ ë²Œë ˆì˜ ì ‘ê·¼ì„ ë§‰ì„ ìˆ˜ ìžˆë‹¤.<br>
+                2) ìºëª¨ë§ˆì¼ ì €ë¨¼ì´ë‚˜ ë°”ì§ˆì„ ë“ì—¬ì„œ ì‹ë¬¼ì— ë¿Œë ¤ì¤˜ë„ ì—­ì‹œ ê°™ì€ íš¨ê³¼ê°€ ìžˆë‹¤.
             </p>
           </div>
             
 	    </div>
       </div>
-      <!-- ³¡: ¾Æ·Î¸¶Å×¶óÇÇ-->
+      <!-- ë: ì•„ë¡œë§ˆí…Œë¼í”¼-->
         
     </div>
-    <!-- ³¡: .detail-01 -->
+    <!-- ë: .detail-01 -->
   </div>
-  <!-- ³¡: .page-container -->
+  <!-- ë: .page-container -->
 
-  <!-- ½ÃÀÛ: .footer -->
+  <!-- ì‹œìž‘: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ³¡: .footer -->
+  <!-- ë: .footer -->
 </body>
 </html>

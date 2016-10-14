@@ -1,35 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="footer">
    <div class="row">    
      <div class="col-2 prefix-2 logo-name">
-       <p class="fz24">»ıÈ°ÀÇ Çâ±â</p>
+       <p class="fz24">ìƒí™œì˜ í–¥ê¸°</p>
        <p>Aroma-In-Life</p>
      </div>
      <div class="col-5">
-       <p>ÁÖ¼Ò : °æ±âµµ Æ÷Ãµ½Ã ¼ÒÈêÀ¾ Á×¿±»ê·Î 493 (°í¸ğ¸® 183)<br>ÀüÈ­ : 031) 544-7084<br>ÆÑ½º : 031) 544-7089<br>¸ŞÀÏ : aromainlife@aromainlife.com</p>
+       <p>ì£¼ì†Œ : ê²½ê¸°ë„ í¬ì²œì‹œ ì†Œí˜ì ì£½ì—½ì‚°ë¡œ 493 (ê³ ëª¨ë¦¬ 183)<br>ì „í™” : 031) 544-7084<br>íŒ©ìŠ¤ : 031) 544-7089<br>ë©”ì¼ : aromainlife@aromainlife.com</p>
      </div>
      <div class="col-5 suffix-2 fr">
        <div class="btn-group row">
            <a href="http://www.kas.or.kr" target="_blank" class="btn fr">
-               <span class="kas"><img src="images/kas.svg" width="28" alt="¼îÇÎ¸ô ¾ÆÀÌÄÜ"></span>´ëÇÑ¾Æ·Î¸¶Å×¶óÇÇÇĞÈ¸
+               <span class="kas"><img src="<c:url value='/resources/images/kas.svg'/>" width="28" alt="ì‡¼í•‘ëª° ì•„ì´ì½˜"></span>ëŒ€í•œì•„ë¡œë§ˆí…Œë¼í”¼í•™íšŒ
            </a>
            <a href="http://www.aromainlife.com" target="_blank" class="btn fr">
-               <span><img src="images/shop.svg" width="28" alt="¼îÇÎ¸ô ¾ÆÀÌÄÜ"></span> »ıÈ°ÀÇ Çâ±â ¼îÇÎ¸ô
+               <span><img src="<c:url value='/resources/images/shop.svg'/>" width="28" alt="ì‡¼í•‘ëª° ì•„ì´ì½˜"></span> ìƒí™œì˜ í–¥ê¸° ì‡¼í•‘ëª°
            </a>
        </div>       
-       <p class="copyright">copyright ©Ï 2016 AROMAINLIFE. all rights reserved.</p>
+       <p class="copyright">copyright â’ 2016 AROMAINLIFE. all rights reserved.</p>
      </div>
    </div>
 </div>
-<!-- ³¡: .footer -->
+<!-- ë: .footer -->
 
-<script src="js/jquery.min.js"></script>
+<script src="<c:url value='/resources/js/jquery.min.js'/>"></script>
 <!-- Bootstrap -->
-<script src="js/bootstrap.js"></script>
+
+<script src="<c:url value='/resources/js/bootstrap.js'/>"></script>
 <!-- App -->
-<script src="js/app.js"></script>
-<script src="js/app.plugin.js"></script>
+<script src="<c:url value='/resources/js/app.js'/>"></script>
+<script src="<c:url value='/resources/js/app.plugin.js'/>"></script>
+
 <script type="text/javascript">
   $(window).scroll(function(){
     if($(this).scrollTop()>=80){

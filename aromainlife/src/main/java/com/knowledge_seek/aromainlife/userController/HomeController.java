@@ -1,9 +1,5 @@
 package com.knowledge_seek.aromainlife.userController;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,17 +19,54 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String home(Model model) {
+		logger.info("Welcome home! The client locale is {}.");
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		String formattedDate = dateFormat.format(date);
+		return "index";
+	}
+	@RequestMapping(value = "/user/intro.do", method = RequestMethod.GET)
+	public String intro(Model model) {
+	
 		
-		model.addAttribute("serverTime", formattedDate +"branch test2" );
 		
-		return "home";
+		return "intro";
+	}
+
+	@RequestMapping(value = "/user/aroma-1.do", method = RequestMethod.GET)
+	public String aroma_1(Model model) {
+		
+		
+		
+		return "aroma-1";
+	}
+	@RequestMapping(value = "/user/aroma-2.do", method = RequestMethod.GET)
+	public String aroma_2(Model model) {
+		
+		
+		
+		return "aroma-2";
+	}
+	@RequestMapping(value = "/user/aroma-3.do", method = RequestMethod.GET)
+	public String aroma_3(Model model) {
+		
+		
+		
+		return "aroma-3";
+	}
+	@RequestMapping(value = "/user/aroma-4.do", method = RequestMethod.GET)
+	public String aroma_4(Model model) {
+		
+		
+		
+		return "aroma-4";
+	}
+	@RequestMapping(value = "/user/aroma-5.do", method = RequestMethod.GET)
+	public String aroma_5(Model model) {
+		
+		
+		
+		return "aroma-5";
 	}
 	
 }

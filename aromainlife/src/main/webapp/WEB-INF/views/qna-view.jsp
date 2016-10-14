@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,64 +7,64 @@
 </head>
 <body class="container">
 
-  <!-- ½ÃÀÛ: .page-header -->
+  <!-- ì‹œìž‘: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ³¡: .page-header -->
+  <!-- ë: .page-header -->
 
-  <!-- ½ÃÀÛ: .page-container -->
+  <!-- ì‹œìž‘: .page-container -->
   <div class="page-container">
-    <!-- ½ÃÀÛ: .detail-01 -->
+    <!-- ì‹œìž‘: .detail-01 -->
     <div class="detail-01">
       <div class="top">
       	<div class="row">
 	      <div class="col-12 prefix-2">
-      		<h3>Ä¿¹Â´ÏÆ¼</h3>
-      		<h4>Ç×»ó °í°´´ÔÀÇ ¼ÒÁßÇÑ ±Û¿¡ ±Í ±â¿ïÀÌ°Ú½À´Ï´Ù.</h4>
+      		<h3>ì»¤ë®¤ë‹ˆí‹°</h3>
+      		<h4>í•­ìƒ ê³ ê°ë‹˜ì˜ ì†Œì¤‘í•œ ê¸€ì— ê·€ ê¸°ìš¸ì´ê² ìŠµë‹ˆë‹¤.</h4>
 	      </div>
       	</div>
       </div>
               
-      <!-- ½ÃÀÛ: qna_view -->
+      <!-- ì‹œìž‘: qna_view -->
       <div class="row qna_view">
           <ul class="col-12 prefix-2 suffix-2">
             <li class="header">
-              <p class="title">¾È³çÇÏ¼¼¿ä? ¹®ÀÇÇÕ´Ï´Ù.</p>
+              <p class="title">ì•ˆë…•í•˜ì„¸ìš”? ë¬¸ì˜í•©ë‹ˆë‹¤.</p>
               <p class="date">2016-08-05</p>
             </li>
             <li class="content">
-              	¿©±â À§Ä¡°¡ ¾îµðÁÒ?
+              	ì—¬ê¸° ìœ„ì¹˜ê°€ ì–´ë””ì£ ?
             </li>
             <li class="reply-list">
-              <!-- ¹Ýº¹ -->
+              <!-- ë°˜ë³µ -->
               <ul class="row">
-                <li class="col-2">°ü¸®ÀÚ</li>
-                <li class="col-12">°æ±âµµ Æ÷Ãµ½Ã ¼ÒÈíÀ¾ °í¸ð¸® 183¹øÁö ÀÔ´Ï´Ù.</li>
+                <li class="col-2">ê´€ë¦¬ìž</li>
+                <li class="col-12">ê²½ê¸°ë„ í¬ì²œì‹œ ì†Œí¡ì ê³ ëª¨ë¦¬ 183ë²ˆì§€ ìž…ë‹ˆë‹¤.</li>
                 <li class="col-2">16:01</li>
               </ul>
               <ul class="row">
-                <li class="col-2">°ü¸®ÀÚ</li>
-                <li class="col-12">°æ±âµµ Æ÷Ãµ½Ã ¼ÒÈíÀ¾ °í¸ð¸® 183¹øÁö ÀÔ´Ï´Ù.</li>
+                <li class="col-2">ê´€ë¦¬ìž</li>
+                <li class="col-12">ê²½ê¸°ë„ í¬ì²œì‹œ ì†Œí¡ì ê³ ëª¨ë¦¬ 183ë²ˆì§€ ìž…ë‹ˆë‹¤.</li>
                 <li class="col-2">16:01</li>
               </ul>
-              <!-- ¹Ýº¹ -->
+              <!-- ë°˜ë³µ -->
             </li>
             <li class="reply">
               <div class="row">
                 <textarea class="col-14">reply</textarea>
-                <button type="button" class="col-2">µî·Ï</button>
+                <button type="button" class="col-2">ë“±ë¡</button>
               </div>
             </li>
           </ul>
 	  </div>
-      <!-- ³¡: qna_view -->
+      <!-- ë: qna_view -->
         
     </div>
-    <!-- ³¡: .detail-01 -->
+    <!-- ë: .detail-01 -->
   </div>
-  <!-- ³¡: .page-container -->
+  <!-- ë: .page-container -->
 
-  <!-- ½ÃÀÛ: .footer -->
+  <!-- ì‹œìž‘: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ³¡: .footer -->
+  <!-- ë: .footer -->
 </body>
 </html>

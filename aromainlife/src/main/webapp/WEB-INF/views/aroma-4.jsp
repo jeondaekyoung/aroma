@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,43 +7,43 @@
 </head>
 <body class="container">
 
-  <!-- ½ÃÀÛ: .page-header -->
+  <!-- ì‹œìž‘: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ³¡: .page-header -->
+  <!-- ë: .page-header -->
 
-  <!-- ½ÃÀÛ: .page-container -->
+  <!-- ì‹œìž‘: .page-container -->
   <div class="page-container">
-    <!-- ½ÃÀÛ: .detail-01 -->
+    <!-- ì‹œìž‘: .detail-01 -->
     <div class="detail-01">
       <div class="top">
       	<div class="row">
 	      	<div class="col-12 prefix-2">
-	      		<h3>¾Æ·Î¸¶Å×¶óÇÇ</h3>
-	      		<h4>Çãºê¿Í Çâ±â¿¡ °üÇÑ Áö½ÄÀ» ¾Ë·Áµå¸³´Ï´Ù.</h4>
+	      		<h3>ì•„ë¡œë§ˆí…Œë¼í”¼</h3>
+	      		<h4>í—ˆë¸Œì™€ í–¥ê¸°ì— ê´€í•œ ì§€ì‹ì„ ì•Œë ¤ë“œë¦½ë‹ˆë‹¤.</h4>
 	      	</div>
       	</div>
       </div>
       
-      <!-- ½ÃÀÛ: tab-menu -->
+      <!-- ì‹œìž‘: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 text-center">
-          <div class="fl w20"><a href="aroma-1.jsp" class="tab">Çãºê&amp;¾Æ·Î¸¶Å×¶óÇÇ</a></div>
-          <div class="fl w20"><a href="aroma-2.jsp" class="tab">¿¡¼¾¼È¿ÀÀÏ</a></div>
-          <div class="fl w20"><a href="aroma-3.jsp" class="tab">Ä³¸®¾î¿ÀÀÏ</a></div>
-          <div class="fl w20"><a href="aroma-4.jsp" class="tab active">ÇÃ·Î·²¿öÅÍ</a></div>
-          <div class="fl w20"><a href="aroma-5.jsp" class="tab">È°¿ë¹æ¹ý</a></div>
+          <div class="fl w20"><a href="aroma-1.jsp" class="tab">í—ˆë¸Œ&amp;ì•„ë¡œë§ˆí…Œë¼í”¼</a></div>
+          <div class="fl w20"><a href="aroma-2.jsp" class="tab">ì—ì„¼ì…œì˜¤ì¼</a></div>
+          <div class="fl w20"><a href="aroma-3.jsp" class="tab">ìºë¦¬ì–´ì˜¤ì¼</a></div>
+          <div class="fl w20"><a href="aroma-4.jsp" class="tab active">í”Œë¡œëŸ´ì›Œí„°</a></div>
+          <div class="fl w20"><a href="aroma-5.jsp" class="tab">í™œìš©ë°©ë²•</a></div>
         </div>
       </div>
-      <!-- ³¡: tab-menu-->
+      <!-- ë: tab-menu-->
         
-      <!-- ½ÃÀÛ: row-->
+      <!-- ì‹œìž‘: row-->
       <div class="row">
         <div class="col-12 prefix-2 suffix-2 aroma">
           <div class="col-16">
-            <h3 class="nanumpen">ÇÃ·Î·² ¿öÅÍ¶õ?</h3>
-            <p>ÇÃ·Î·² ¿öÅÍ´Â ¼öÁõ±â Áõ·ù¹ýÀ¸·Î Çãºê¿¡¼­ ¿¡¼¾¼È ¿ÀÀÏÀ» ÃßÃâÇÒ ¶§ ¾ò¾îÁö´Â Çãºê ÃßÃâ¹°(¼ö¿ë¼º)ÀÌ´Ù.<br>
-                ±Ù·¡¿¡ µé¾î¼­´Â ÇÏÀÌµå·Î¼Ö(Hydrosol)ÀÌ¶ó°íµµ ÇÑ´Ù. ÇÃ·Î·² ¿öÅÍÀÇ pH´Â 2.9~6.5¿¡ ÀÌ¸£´Â ¾à»ê¼ºÀ¸·Î ÇÇºÎ¿¡ ÀÚ±ØÀÌ Àû°í »ç¿ë°¨µµ ºÎµå·¯¿ö Ãµ¿¬ ½ºÅ², º¸½À¿ë ¹Ì½ºÆ® ¶Ç´Â ¾ÖÇÁÅÍ½¦ÀÌºù µîÀ¸·Î ³Î¸® »ç¿ëµÇ°í ÀÖ´Ù.<br>
-                ¶ÇÇÑ, 1L´ç ¿¡¼¾¼È ¿ÀÀÏ ¼ººÐÀÌ 0.002~0.005% Á¤µµ ÇÔÀ¯µÇ¾î ÀÖ¾î ÇÃ·Î·² ¿öÅÍ ÀÚÃ¼·Îµµ »ì±Õ, ¼Òµ¶, º¸½ÀÀÇ È¿°ú°¡ ÀÖ´Ù. ÇÑ°¡Áö ¿öÅÍ·Î »ç¿ë ÇÏÁö¸¸ 2~3°¡Áö ¿öÅÍ¸¦ ºí·£µù ÇÏ¿© »ç¿ëÇØµµ È¿°úÀûÀÌ´Ù.</p>
+            <h3 class="nanumpen">í”Œë¡œëŸ´ ì›Œí„°ëž€?</h3>
+            <p>í”Œë¡œëŸ´ ì›Œí„°ëŠ” ìˆ˜ì¦ê¸° ì¦ë¥˜ë²•ìœ¼ë¡œ í—ˆë¸Œì—ì„œ ì—ì„¼ì…œ ì˜¤ì¼ì„ ì¶”ì¶œí•  ë•Œ ì–»ì–´ì§€ëŠ” í—ˆë¸Œ ì¶”ì¶œë¬¼(ìˆ˜ìš©ì„±)ì´ë‹¤.<br>
+                ê·¼ëž˜ì— ë“¤ì–´ì„œëŠ” í•˜ì´ë“œë¡œì†”(Hydrosol)ì´ë¼ê³ ë„ í•œë‹¤. í”Œë¡œëŸ´ ì›Œí„°ì˜ pHëŠ” 2.9~6.5ì— ì´ë¥´ëŠ” ì•½ì‚°ì„±ìœ¼ë¡œ í”¼ë¶€ì— ìžê·¹ì´ ì ê³  ì‚¬ìš©ê°ë„ ë¶€ë“œëŸ¬ì›Œ ì²œì—° ìŠ¤í‚¨, ë³´ìŠµìš© ë¯¸ìŠ¤íŠ¸ ë˜ëŠ” ì• í”„í„°ì‰ì´ë¹™ ë“±ìœ¼ë¡œ ë„ë¦¬ ì‚¬ìš©ë˜ê³  ìžˆë‹¤.<br>
+                ë˜í•œ, 1Lë‹¹ ì—ì„¼ì…œ ì˜¤ì¼ ì„±ë¶„ì´ 0.002~0.005% ì •ë„ í•¨ìœ ë˜ì–´ ìžˆì–´ í”Œë¡œëŸ´ ì›Œí„° ìžì²´ë¡œë„ ì‚´ê· , ì†Œë…, ë³´ìŠµì˜ íš¨ê³¼ê°€ ìžˆë‹¤. í•œê°€ì§€ ì›Œí„°ë¡œ ì‚¬ìš© í•˜ì§€ë§Œ 2~3ê°€ì§€ ì›Œí„°ë¥¼ ë¸”ëžœë”© í•˜ì—¬ ì‚¬ìš©í•´ë„ íš¨ê³¼ì ì´ë‹¤.</p>
           </div>
             
           <div class="col-16">              
@@ -53,10 +53,10 @@
               </colgroup>
               <thead>
                   <tr>
-                    <th>¿öÅÍ¸í</th>
-                    <th>ÇÐ¸í</th>
+                    <th>ì›Œí„°ëª…</th>
+                    <th>í•™ëª…</th>
                     <th>pH</th>
-                    <th>È¿°ú</th>
+                    <th>íš¨ê³¼</th>
                   </tr>
               </thead>
               <tbody>
@@ -64,63 +64,63 @@
                     <td><img src="images/aroma/img23.gif" alt="Rose" width="100px"><br>Rose</td>
                     <td>Rosa damascena</td>
                     <td>4.1~4.4</td>
-                    <td>Á¤»ó, º¹ÇÕ¼º, ¿¹¹ÎÇÇºÎ µî ¸ðµç ÇÇºÎ¿¡ »ç¿ë °¡´ÉÇÏ¸ç ÇÇºÎÁ¤È­¿Í Ç÷°ü°­È­ È¿°ú¸¦ Áö´Ñ´Ù.<br>
-                        °¡½¿¼³·¹´Â ·ÎÁîÇâÀ¸·Î ¿©¼ºµéÀÌ °¡Àå ¼±È£ÇÏ´Â ¿öÅÍÀÌ´Ù.</td>
+                    <td>ì •ìƒ, ë³µí•©ì„±, ì˜ˆë¯¼í”¼ë¶€ ë“± ëª¨ë“  í”¼ë¶€ì— ì‚¬ìš© ê°€ëŠ¥í•˜ë©° í”¼ë¶€ì •í™”ì™€ í˜ˆê´€ê°•í™” íš¨ê³¼ë¥¼ ì§€ë‹Œë‹¤.<br>
+                        ê°€ìŠ´ì„¤ë ˆëŠ” ë¡œì¦ˆí–¥ìœ¼ë¡œ ì—¬ì„±ë“¤ì´ ê°€ìž¥ ì„ í˜¸í•˜ëŠ” ì›Œí„°ì´ë‹¤.</td>
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img24.gif" alt="Orange blossom (Neroli)" width="100px"><br>Orange blossom (Neroli)</td>
                     <td>Citrus aurantium var.amara</td>
                     <td>3.8~4.5</td>
-                    <td>°Ç¼º ÇÇºÎ, ³ëÈ­ ÇÇºÎ µî¿¡ Àû¿ëÇÏ¿© ÇÇºÎ¿¡ º¸½ÀÀ» ÃæºÐÈ÷ ÁÖ¾î ¼¼Æ÷ÀÇ ¼ºÀå, Àç»ýÀ» µ½´Â´Ù.<br>
-                        ¿À·»Áö ²ÉÀÇ ÀºÀºÇÏ°í ÁöÀûÀÎ ºÐÀ§±â°¡ ÇâÀ¸·Î Àü´ÞµÈ´Ù.</td>
+                    <td>ê±´ì„± í”¼ë¶€, ë…¸í™” í”¼ë¶€ ë“±ì— ì ìš©í•˜ì—¬ í”¼ë¶€ì— ë³´ìŠµì„ ì¶©ë¶„ížˆ ì£¼ì–´ ì„¸í¬ì˜ ì„±ìž¥, ìž¬ìƒì„ ë•ëŠ”ë‹¤.<br>
+                        ì˜¤ë Œì§€ ê½ƒì˜ ì€ì€í•˜ê³  ì§€ì ì¸ ë¶„ìœ„ê¸°ê°€ í–¥ìœ¼ë¡œ ì „ë‹¬ëœë‹¤.</td>
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img25.gif" alt="Chamomile" width="100px"><br>Lavender</td>
                     <td>Lavandula angustifolia</td>
                     <td>5.6~5.9</td>
-                    <td>Áö¼º, º¹ÇÕ¼º ÇÇºÎ, Æ®·¯ºíÀÌ ÀÖ´Â ÇÇºÎ¿¡ ÀûÇÕÇÏ¸ç °¡º­¿î È­»óÀÌ³ª »óÃ³µîÀÇ ¿°ÁõÀ» °¡¶ó¾ÉÈ÷°í µÎÇÇ,¸ð¹ß Á¤È­¿Í °­È­¿¡µµ µµ¿òÀ» ÁØ´Ù. Áõ·ùµÇ¾î ¼÷¼ºµÈ ÇâÀÌ Ã³À½¿¡´Â ÀÍ¼÷ÇÏÁö ¾ÊÀ¸³ª »ç¿ë°¨ÀÇ È¿°ú´Â ±â´ë ÀÌ»óÀÌ´Ù.</td>
+                    <td>ì§€ì„±, ë³µí•©ì„± í”¼ë¶€, íŠ¸ëŸ¬ë¸”ì´ ìžˆëŠ” í”¼ë¶€ì— ì í•©í•˜ë©° ê°€ë²¼ìš´ í™”ìƒì´ë‚˜ ìƒì²˜ë“±ì˜ ì—¼ì¦ì„ ê°€ë¼ì•‰ížˆê³  ë‘í”¼,ëª¨ë°œ ì •í™”ì™€ ê°•í™”ì—ë„ ë„ì›€ì„ ì¤€ë‹¤. ì¦ë¥˜ë˜ì–´ ìˆ™ì„±ëœ í–¥ì´ ì²˜ìŒì—ëŠ” ìµìˆ™í•˜ì§€ ì•Šìœ¼ë‚˜ ì‚¬ìš©ê°ì˜ íš¨ê³¼ëŠ” ê¸°ëŒ€ ì´ìƒì´ë‹¤.</td>
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img26.gif" alt="Lavender" width="100px"><br>Chamomile</td>
                     <td>Anthemis nobilis</td>
                     <td>3.0~3.3</td>
-                    <td>¹Î°¨¼º ÇÇºÎ, Æ®·¯ºíÀÌ ÀÖ´Â ÇÇºÎ¿¡ °¡·Á¿òÁõÀ» ¿ÏÈ­½ÃÅ°¸ç ÇÇºÎÁøÁ¤, ´«ÀÇ ÇÇ·Î¿¡ µµ¿òÀ» ÁØ´Ù.<br>
-                        ÀºÀºÇÏ°Ô ³ª´Â Ä³¸ð¸¶ÀÏ ÇâÀº ½Ã°£ÀÌ Áö³¯¼ö·Ï ¸Å·ÂÀ» ´À³¤´Ù.</td>                    
+                    <td>ë¯¼ê°ì„± í”¼ë¶€, íŠ¸ëŸ¬ë¸”ì´ ìžˆëŠ” í”¼ë¶€ì— ê°€ë ¤ì›€ì¦ì„ ì™„í™”ì‹œí‚¤ë©° í”¼ë¶€ì§„ì •, ëˆˆì˜ í”¼ë¡œì— ë„ì›€ì„ ì¤€ë‹¤.<br>
+                        ì€ì€í•˜ê²Œ ë‚˜ëŠ” ìºëª¨ë§ˆì¼ í–¥ì€ ì‹œê°„ì´ ì§€ë‚ ìˆ˜ë¡ ë§¤ë ¥ì„ ëŠë‚€ë‹¤.</td>                    
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img27.gif" alt="Witch hazel" width="100px"><br>Witch hazel</td>
                     <td>Hamanelis virginiana</td>
                     <td>4.0~4.2</td>
-                    <td>Áö¼º, ³ëÈ­ ÇÇºÎ, ¾ó±¼ÀÌ Àß º×´Â »ç¶÷µé¿¡°Ô ÀûÇÕÇÏ¸ç Ç×»êÈ­ ÀÛ¿ë°ú ¼ö·ÅÀÛ¿ëÀ¸·Î Á¤¸Æ·ù, Ä¡Áú, ºñ¸¸°ü¸®¿¡µµ µµ¿òÀ» ÁØ´Ù.<br>
-                        »ê¶æÇÑ Ç®³»À½ÇâÃ³·³ ÇÇºÎµµ Àþ¾îÁö´Â ´À³¦ÀÌ´Ù.</td>
+                    <td>ì§€ì„±, ë…¸í™” í”¼ë¶€, ì–¼êµ´ì´ ìž˜ ë¶“ëŠ” ì‚¬ëžŒë“¤ì—ê²Œ ì í•©í•˜ë©° í•­ì‚°í™” ìž‘ìš©ê³¼ ìˆ˜ë ´ìž‘ìš©ìœ¼ë¡œ ì •ë§¥ë¥˜, ì¹˜ì§ˆ, ë¹„ë§Œê´€ë¦¬ì—ë„ ë„ì›€ì„ ì¤€ë‹¤.<br>
+                        ì‚°ëœ»í•œ í’€ë‚´ìŒí–¥ì²˜ëŸ¼ í”¼ë¶€ë„ ì Šì–´ì§€ëŠ” ëŠë‚Œì´ë‹¤.</td>
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img28.gif" alt="Cornflower" width="100px"><br>Cornflower</td>
                     <td>Centaurea cyanus</td>
                     <td>4.7~5.0</td>
-                    <td>°ÇÁ¶, ¿¹¹ÎÇÇºÎ, ¸é¿ª·Â ¾àÇÑÇÇºÎ¿¡ ÀûÇÕÇÏ¸ç ÇÇ°ïÇÏ°í ÁöÄ£ ´«¿¡µµ º¸½ÀÈ¿°ú°¡ ÀÖ´Ù. (¿¹: ÄÜÅØÆ®·»Áî Âø¿ëÀÚ, ÄÄÇ»ÅÍ °ü·Ã Á¾»çÀÚµî)<br>
-                        ´Ù¼Ò °ÅÄ£µíÇÑ ´À³¦ÀÇ ÀÚ¿¬ÇâÀ¸·Î Àá½Ã ÈÞ½ÄÀ» ÃëÇÒ ¼ö ÀÖ´Â ÇâÀÌ´Ù.</td>
+                    <td>ê±´ì¡°, ì˜ˆë¯¼í”¼ë¶€, ë©´ì—­ë ¥ ì•½í•œí”¼ë¶€ì— ì í•©í•˜ë©° í”¼ê³¤í•˜ê³  ì§€ì¹œ ëˆˆì—ë„ ë³´ìŠµíš¨ê³¼ê°€ ìžˆë‹¤. (ì˜ˆ: ì½˜í…íŠ¸ë Œì¦ˆ ì°©ìš©ìž, ì»´í“¨í„° ê´€ë ¨ ì¢…ì‚¬ìžë“±)<br>
+                        ë‹¤ì†Œ ê±°ì¹œë“¯í•œ ëŠë‚Œì˜ ìžì—°í–¥ìœ¼ë¡œ ìž ì‹œ íœ´ì‹ì„ ì·¨í•  ìˆ˜ ìžˆëŠ” í–¥ì´ë‹¤.</td>
                   </tr>
                   <tr>
                     <td><img src="images/aroma/img29.gif" alt="Rosemary" width="100px"><br>Rosemary</td>
                     <td>Rosemarinus officonalis</td>
                     <td>4.2~4.7</td>
-                    <td>Áö¼ºÇÇºÎ³ª ³ëÈ­ÇÇºÎ¿¡ ÀûÇÕÇÏ¸ç Çì¾îÅä´ÐÀ¸·Îµµ ÁÁ´Ù. »ý±âÀÖ´Â ·ÎÁî¸¶¸®ÇâÀº ÇÇºÎÀþÀ½À» À¯Áö½ÃÄÑÁØ´Ù.</td>
+                    <td>ì§€ì„±í”¼ë¶€ë‚˜ ë…¸í™”í”¼ë¶€ì— ì í•©í•˜ë©° í—¤ì–´í† ë‹‰ìœ¼ë¡œë„ ì¢‹ë‹¤. ìƒê¸°ìžˆëŠ” ë¡œì¦ˆë§ˆë¦¬í–¥ì€ í”¼ë¶€ì ŠìŒì„ ìœ ì§€ì‹œì¼œì¤€ë‹¤.</td>
                   </tr>
               </tbody>
             </table>
           </div>
 	    </div>
       </div>
-      <!-- ³¡: row-->
+      <!-- ë: row-->
         
     </div>
-    <!-- ³¡: .detail-01 -->
+    <!-- ë: .detail-01 -->
   </div>
-  <!-- ³¡: .page-container -->
+  <!-- ë: .page-container -->
 
-  <!-- ½ÃÀÛ: .footer -->
+  <!-- ì‹œìž‘: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ³¡: .footer -->
+  <!-- ë: .footer -->
 </body>
 </html>

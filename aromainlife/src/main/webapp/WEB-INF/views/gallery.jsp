@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,86 +7,86 @@
 </head>
 <body class="container">
 
-  <!-- Ω√¿€: .page-header -->
+  <!-- ÏãúÏûë: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ≥°: .page-header -->
+  <!-- ÎÅù: .page-header -->
 
-  <!-- Ω√¿€: .page-container -->
+  <!-- ÏãúÏûë: .page-container -->
   <div class="page-container">
-    <!-- Ω√¿€: .detail-01 -->
+    <!-- ÏãúÏûë: .detail-01 -->
     <div class="detail-01">
       <div class="top">
       	<div class="row">
 	      <div class="col-12 prefix-2">
-      		<h3>ƒøπ¬¥œ∆º</h3>
-      		<h4>«◊ªÛ ∞Ì∞¥¥‘¿« º“¡ﬂ«— ±€ø° ±Õ ±‚øÔ¿Ã∞⁄Ω¿¥œ¥Ÿ.</h4>
+      		<h3>Ïª§ÎÆ§ÎãàÌã∞</h3>
+      		<h4>Ìï≠ÏÉÅ Í≥†Í∞ùÎãòÏùò ÏÜåÏ§ëÌïú Í∏ÄÏóê Í∑Ä Í∏∞Ïö∏Ïù¥Í≤†ÏäµÎãàÎã§.</h4>
 	      </div>
       	</div>
       </div>
       
-      <!-- Ω√¿€: tab-menu -->
+      <!-- ÏãúÏûë: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 text-center">
-          <div class="fl w50"><a href="qna-list.jsp" class="tab">πÆ¿««œ±‚</a></div>
-          <div class="fl w50"><a href="gallery.jsp" class="tab active">∞∂∑Ø∏Æ</a></div>
+          <div class="fl w50"><a href="qna-list.jsp" class="tab">Î¨∏ÏùòÌïòÍ∏∞</a></div>
+          <div class="fl w50"><a href="gallery.jsp" class="tab active">Í∞§Îü¨Î¶¨</a></div>
         </div>
       </div>
-      <!-- ≥°: tab-menu-->
+      <!-- ÎÅù: tab-menu-->
         
-      <!-- Ω√¿€: ªÁ¡¯ ∏Ò∑œ-->
+      <!-- ÏãúÏûë: ÏÇ¨ÏßÑ Î™©Î°ù-->
       <div class="col-12 prefix-2 suffix-2 gallery">
         <div class="col-4">
-          <div class="img-wrap"><img src="images/test (1).png" height="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="images/test (1).png" height="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="images/test (2).png" height="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="images/test (2).png" height="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="images/test (3).png" height="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="images/test (3).png" height="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="images/test (5).png" height="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="images/test (5).png" height="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="images/test (4).png" height="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="images/test (4).png" height="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
         <div class="col-4">
-          <div class="img-wrap"><img src="" width="100%" alt="ªÁ¡¯"></div>
+          <div class="img-wrap"><img src="" width="100%" alt="ÏÇ¨ÏßÑ"></div>
           <p>2016-05-04</p>
         </div>
 	  </div>
-      <!-- ≥°: ªÁ¡¯ ∏Ò∑œ-->
+      <!-- ÎÅù: ÏÇ¨ÏßÑ Î™©Î°ù-->
 
-      <!-- Ω√¿€: paging -->      
+      <!-- ÏãúÏûë: paging -->      
       <div class="text-center">
         <ul class="pagination pagination-sm">
           <li><a href="#"><i class="chevron-left"></i></a></li>
@@ -98,15 +98,15 @@
           <li><a href="#"><i class="chevron-right"></i></a></li>
         </ul>
       </div>
-      <!-- ≥°: paging -->
+      <!-- ÎÅù: paging -->
         
     </div>
-    <!-- ≥°: .detail-01 -->
+    <!-- ÎÅù: .detail-01 -->
   </div>
-  <!-- ≥°: .page-container -->
+  <!-- ÎÅù: .page-container -->
 
-  <!-- Ω√¿€: .footer -->
+  <!-- ÏãúÏûë: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ≥°: .footer -->
+  <!-- ÎÅù: .footer -->
 </body>
 </html>

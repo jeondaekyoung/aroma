@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,123 +8,124 @@
 </head>
 <body class="container">
 
-  <!-- ½ÃÀÛ: .page-header -->
+  <!-- ì‹œìž‘: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ³¡: .page-header -->
+  <!-- ë: .page-header -->
 
-  <!-- ½ÃÀÛ: .page-container -->
+  <!-- ì‹œìž‘: .page-container -->
   <div class="page-container">
-    <!-- ½ÃÀÛ: content-1 -->
+    <!-- ì‹œìž‘: content-1 -->
     <div class="content-1">
       <div class="row main">
         <div class="col-8 prefix-7 suffix-1">
-     	  <h3>±¹³» ÃÖÃÊÀÇ<br>Çãºê&amp;Ãµ¿¬ Çâ±â ±³À°Ã¼Çè¼¾ÅÍ<br>»ýÈ°ÀÇ Çâ±âÀÔ´Ï´Ù.</h3>
+     	  <h3>êµ­ë‚´ ìµœì´ˆì˜<br>í—ˆë¸Œ&amp;ì²œì—° í–¥ê¸° êµìœ¡ì²´í—˜ì„¼í„°<br>ìƒí™œì˜ í–¥ê¸°ìž…ë‹ˆë‹¤.</h3>
         </div>        
       </div>
       <div class="row notice">
         <div class="col-7 prefix-2">
-          <h4>¡¤ °øÁö»çÇ×</h4>
+          <h4>Â· ê³µì§€ì‚¬í•­</h4>
           <ul>
-            <li><a href="qna_list.jsp">±¹³»»ê Çãºê(´ç±Í) CO2 ÃßÃâ °ßÇÐ ¹× Àü³ª¹« ½£ Ã¼Çè</a></li>
-            <li><a href="qna_list.jsp">2016 Çâ±â¿ä¹ý ¿øµ¥ÀÌ Èú¸µ Ä·ÇÁ ¾È³» - 6/25(Åä)</a></li>
+            <li><a href="qna_list.jsp">êµ­ë‚´ì‚° í—ˆë¸Œ(ë‹¹ê·€) CO2 ì¶”ì¶œ ê²¬í•™ ë° ì „ë‚˜ë¬´ ìˆ² ì²´í—˜</a></li>
+            <li><a href="qna_list.jsp">2016 í–¥ê¸°ìš”ë²• ì›ë°ì´ ížë§ ìº í”„ ì•ˆë‚´ - 6/25(í† )</a></li>
           </ul>
         </div>
         <div class="col-2 prefix-3 suffix-2">
-          <a href="qna_list.jsp">¹®ÀÇÇÏ·¯ °¡±â</a>
+          <a href="qna_list.jsp">ë¬¸ì˜í•˜ëŸ¬ ê°€ê¸°</a>
         </div>
       </div>
     </div>
-    <!-- ³¡: content-1 -->
+    <!-- ë: content-1 -->
       
-    <!-- ½ÃÀÛ: content-2 -->
+    <!-- ì‹œìž‘: content-2 -->
     <div class="content-2">
       <div class="row">
         <div class="col-9 prefix-2">
           <div class="col-4 prefix-2 suffix-1 product-item">
-            <img src="images/test-c.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="ì‚¬ì§„" width="100%">
+            
             <div class="hover-focus-view">
-              <a href="class.jsp#class-1">Ãµ¿¬ È­ÀåÇ° ¸¸µé±â</a>
+              <a href="class.jsp#class-1">ì²œì—° í™”ìž¥í’ˆ ë§Œë“¤ê¸°</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="images/test-c.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-2">Ãµ¿¬ Á×¿°Ä¡¾à ¸¸µé±â</a>
+              <a href="class.jsp#class-2">ì²œì—° ì£½ì—¼ì¹˜ì•½ ë§Œë“¤ê¸°</a>
             </div>
           </div>
           <div class="col-4 product-item">
-            <img src="images/test-c.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-3">Ãµ¿¬ Çâ±âºñ´© Ã¼ÇèÇÏ±â</a>
+              <a href="class.jsp#class-3">ì²œì—° í–¥ê¸°ë¹„ëˆ„ ì²´í—˜í•˜ê¸°</a>
             </div>
           </div>
           <div class="col-4 prefix-2 suffix-1 product-item">
-            <img src="images/test-c.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-4">ÇâÃÊ Ã¼ÇèÇÏ±â</a>
+              <a href="class.jsp#class-4">í–¥ì´ˆ ì²´í—˜í•˜ê¸°</a>
             </div>
           </div>
           <div class="col-4 suffix-5 product-item">
-            <img src="images/test-c.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-5">Çâ±â ÁÖ¸Ó´Ï/Äí¼Ç ¸¸µé±â</a>
+              <a href="class.jsp#class-5">í–¥ê¸° ì£¼ë¨¸ë‹ˆ/ì¿ ì…˜ ë§Œë“¤ê¸°</a>
             </div>
           </div>
         </div>        
         <div class="col-3 suffix-2 title">
-          <h3>Çâ±âÃ¼ÇèÇÐ½À</h3>
-          <p>»ýÈ°ÀÇ Çâ±â ¼ÓÀ¸·Î<br>¿©·¯ºÐÀ» ÃÊ´ëÇÕ´Ï´Ù</p>
-          <a href="class.jsp">ÀÚ¼¼È÷ º¸±â ></a>
+          <h3>í–¥ê¸°ì²´í—˜í•™ìŠµ</h3>
+          <p>ìƒí™œì˜ í–¥ê¸° ì†ìœ¼ë¡œ<br>ì—¬ëŸ¬ë¶„ì„ ì´ˆëŒ€í•©ë‹ˆë‹¤</p>
+          <a href="class.jsp">ìžì„¸ížˆ ë³´ê¸° ></a>
         </div>        
       </div>
     </div>
-    <!-- ³¡: content-2 -->
+    <!-- ë: content-2 -->
       
-    <!-- ½ÃÀÛ: content-3 -->
+    <!-- ì‹œìž‘: content-3 -->
     <div class="content-2 content-3">
       <div class="row">
         <div class="col-3 prefix-2 title">
-          <h3>¾Æ·Î¸¶Å×¶óÇÇ</h3>
-          <p>»ýÈ°ÀÇ Çâ±â ¼ÓÀ¸·Î<br>¿©·¯ºÐÀ» ÃÊ´ëÇÕ´Ï´Ù</p>
-          <a href="armoa-1.jsp">ÀÚ¼¼È÷ º¸±â ></a>
+          <h3>ì•„ë¡œë§ˆí…Œë¼í”¼</h3>
+          <p>ìƒí™œì˜ í–¥ê¸° ì†ìœ¼ë¡œ<br>ì—¬ëŸ¬ë¶„ì„ ì´ˆëŒ€í•©ë‹ˆë‹¤</p>
+          <a href="armoa-1.jsp">ìžì„¸ížˆ ë³´ê¸° ></a>
         </div>        
         <div class="col-9 suffix-2">
           <div class="col-4 suffix-1 product-item">
-            <img src="images/theraphy-01.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-1.jsp">Çãºê&amp;¾Æ·Î¸¶Å×¶óÇÇ</a>
+              <a href="armoa-1.jsp">í—ˆë¸Œ&amp;ì•„ë¡œë§ˆí…Œë¼í”¼</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="images/theraphy-02.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-2.jsp">¿¡¼¾¼È ¿ÀÀÏÀÌ¶õ?</a>
+              <a href="armoa-2.jsp">ì—ì„¼ì…œ ì˜¤ì¼ì´ëž€?</a>
             </div>
           </div>
           <div class="col-4 suffix-2 product-item">
-            <img src="images/theraphy-03.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-3.jsp">Ä³¸®¾î ¿ÀÀÏÀÌ¶õ?</a>
+              <a href="armoa-3.jsp">ìºë¦¬ì–´ ì˜¤ì¼ì´ëž€?</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="images/theraphy-04.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-4.jsp">ÇÃ·Î·² ¿öÅÍ¶õ?</a>
+              <a href="armoa-4.jsp">í”Œë¡œëŸ´ ì›Œí„°ëž€?</a>
             </div>
           </div>
           <div class="col-4 suffix-7 product-item">
-            <img src="images/theraphy-05.png" alt="»çÁø" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="ì‚¬ì§„" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-5.jsp">È°¿ë¹æ¹ý</a>
+              <a href="armoa-5.jsp">í™œìš©ë°©ë²•</a>
             </div>
           </div>
         </div>        
       </div>
     </div>
-    <!-- ³¡: content-3 -->
+    <!-- ë: content-3 -->
       
-    <!-- ½ÃÀÛ: content-4 -->
+    <!-- ì‹œìž‘: content-4 -->
     <div class="content-2 content-4">
       <div class="row">
         <div class="col-9 prefix-2">
@@ -144,16 +146,16 @@
 
             <div class="slider">
              <ul class="clearfix carousel-inner">
-               <li class="slide slide-1 item active"><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="images/test.jpg" alt="" width="100%"></li>
+               <li class="slide slide-1 item active"><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
               </ul>
             </div>
 
@@ -164,19 +166,19 @@
           </div>
         </div>        
         <div class="col-3 suffix-2 title">
-          <h3>»ýÈ°ÀÇÇâ±â °¶·¯¸®</h3>
-          <p>»ýÈ°ÀÇ Çâ±â ¼ÓÀ¸·Î<br>¿©·¯ºÐÀ» ÃÊ´ëÇÕ´Ï´Ù</p>
-          <a href="gallery.jsp">ÀÚ¼¼È÷ º¸±â ></a>
+          <h3>ìƒí™œì˜í–¥ê¸° ê°¤ëŸ¬ë¦¬</h3>
+          <p>ìƒí™œì˜ í–¥ê¸° ì†ìœ¼ë¡œ<br>ì—¬ëŸ¬ë¶„ì„ ì´ˆëŒ€í•©ë‹ˆë‹¤</p>
+          <a href="gallery.jsp">ìžì„¸ížˆ ë³´ê¸° ></a>
         </div>        
       </div>
     </div>
-    <!-- ³¡: content-4 -->
+    <!-- ë: content-4 -->
      
-    <!-- ½ÃÀÛ: content-5 -->
+    <!-- ì‹œìž‘: content-5 -->
     <div class="content-5">
       <div class="map">
         <div class="row">
-          <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=KMkja8anYIKpHSNsHQyj"></script>
+          <!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=KMkja8anYIKpHSNsHQyj"></script> -->
           <div id="map" class="box-map" style="width:100%;height:650px;"></div>
           <script type="text/javascript">
             var mapOptions = {
@@ -192,18 +194,18 @@
               map: map
             });
             var map = new naver.maps.Map('map', mapOptions);
-            /* ÀÌ¹ÌÁö ¸¶Ä¿ Ãß°¡ ¿¹Á¤ */
+            /* ì´ë¯¸ì§€ ë§ˆì»¤ ì¶”ê°€ ì˜ˆì • */
           </script>
         </div>
       </div>
     </div>
-    <!-- ³¡: content-5 -->
+    <!-- ë: content-5 -->
       
   </div>
-  <!-- ³¡: .page-container -->    
+  <!-- ë: .page-container -->    
 
-  <!-- ½ÃÀÛ: .footer -->
+  <!-- ì‹œìž‘: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ³¡: .footer -->
+  <!-- ë: .footer -->
 </body>
 </html>

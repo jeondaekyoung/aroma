@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,33 +7,33 @@
 </head>
 <body class="container">
 
-  <!-- ����: .page-header -->
+  <!-- 시작: .page-header -->
   <jsp:include page="include-page-header.jsp" flush="true"/>
-  <!-- ��: .page-header -->
+  <!-- 끝: .page-header -->
 
-  <!-- ����: .page-container -->
+  <!-- 시작: .page-container -->
   <div class="page-container">
-    <!-- ����: .detail-01 -->
+    <!-- 시작: .detail-01 -->
     <div class="detail-01">
       <div class="top">
       	<div class="row">
 	      <div class="col-12 prefix-2">
-      		<h3>Ŀ�´�Ƽ</h3>
-      		<h4>�׻� �������� ������ �ۿ� �� ����̰ڽ��ϴ�.</h4>
+      		<h3>커뮤니티</h3>
+      		<h4>항상 고객님의 소중한 글에 귀 기울이겠습니다.</h4>
 	      </div>
       	</div>
       </div>
       
-      <!-- ����: tab-menu -->
+      <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 text-center">
-          <div class="fl w50"><a href="qna-list.jsp" class="tab active">�����ϱ�</a></div>
-          <div class="fl w50"><a href="gallery.jsp" class="tab">������</a></div>
+          <div class="fl w50"><a href="qna-list.jsp" class="tab active">문의하기</a></div>
+          <div class="fl w50"><a href="gallery.jsp" class="tab">갤러리</a></div>
         </div>
       </div>
-      <!-- ��: tab-menu-->
+      <!-- 끝: tab-menu-->
         
-      <!-- ����: ���̺�-->
+      <!-- 시작: 테이블-->
       <div class="col-12 prefix-2 suffix-2">
         <table class="qna">
           <colgroup>
@@ -41,106 +41,106 @@
           </colgroup>
           <thead>
               <tr>
-                  <th>��ȣ</th><th>����</th><th>�����</th><th>��ȸ��</th>
+                  <th>번호</th><th>제목</th><th>등록일</th><th>조회수</th>
               </tr>
           </thead>
-          <tbody> <!--15���� �����ش�-->
+          <tbody> <!--15개씩 보여준다-->
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
             <tr>
               <td>1</td>
-              <td><a href="">�ȳ��ϼ���? �����մϴ�.</a></td>
+              <td><a href="">안녕하세요? 문의합니다.</a></td>
               <td>2016-06-08</td>
               <td>154</td>
             </tr>
           </tbody>
         </table>
 	  </div>
-      <!-- ��: ���̺�-->
+      <!-- 끝: 테이블-->
 
-      <!-- ����: paging -->      
+      <!-- 시작: paging -->      
       <div class="text-center">
         <ul class="pagination pagination-sm">
           <li><a href="#"><i class="chevron-left"></i></a></li>
@@ -152,15 +152,15 @@
           <li><a href="#"><i class="chevron-right"></i></a></li>
         </ul>
       </div>
-      <!-- ��: paging -->
+      <!-- 끝: paging -->
         
     </div>
-    <!-- ��: .detail-01 -->
+    <!-- 끝: .detail-01 -->
   </div>
-  <!-- ��: .page-container -->
+  <!-- 끝: .page-container -->
 
-  <!-- ����: .footer -->
+  <!-- 시작: .footer -->
   <jsp:include page="include-footer.jsp"/>
-  <!-- ��: .footer -->
+  <!-- 끝: .footer -->
 </body>
 </html>
