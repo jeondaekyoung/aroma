@@ -71,7 +71,7 @@
           </tbody>
         </table>
         
-        <button type="button" class="col-16">문의하기</button>
+        <a class="col-16 btn">문의하기</a>
 	  </div>
       <!-- 끝: 테이블-->
 
