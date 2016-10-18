@@ -679,10 +679,17 @@ table.qna td a:hover {
 }
 .qna_write textarea {
     width: 100%;
-    height: 500px;
+    height: 300px;
 }
 .qna_write button {
     width: 100%;
+}
+.qna_write .header {
+    padding: 1em;
+}
+.qna_write .content {
+    min-height: auto;
+    padding: 1em;
 }
 
 
