@@ -353,7 +353,8 @@ button:active, button:focus { border:none; outline: none;}
 }
 .footer .btn span img {
     margin-top: 8px;
-}.footer .btn span.kas img {
+}
+.footer .btn span.kas img {
     margin-top: 12px;
 }
 .footer p.copyright {
@@ -605,6 +606,15 @@ table.qna td a {
 }
 table.qna td a:hover {
     text-decoration: underline
+}
+.qna-list button {
+	background: #A6C840;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+.qna-list button:hover {
+	background: #93B13A;
 }
 
 /* qna view */

@@ -36,7 +36,7 @@
       <!-- 끝: tab-menu-->
         
       <!-- 시작: 테이블-->
-      <div class="col-12 prefix-2 suffix-2">
+      <div class="col-12 prefix-2 suffix-2 qna-list">
         <table class="qna">
           <colgroup>
               <col style="width: 10%"><col style="width: 60%"><col style="width: 20%"><col style="width: 10%">
@@ -70,6 +70,8 @@
         
           </tbody>
         </table>
+        
+        <button type="button" class="col-16">문의하기</button>
 	  </div>
       <!-- 끝: 테이블-->
 
