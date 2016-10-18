@@ -607,13 +607,13 @@ table.qna td a {
 table.qna td a:hover {
     text-decoration: underline
 }
-.qna-list button {
+.qna-list a.btn {
 	background: #A6C840;
     color: #fff;
     border-radius: 5px;
     padding: 0.5em;
 }
-.qna-list button:hover {
+.qna-list a.btn:hover {
 	background: #93B13A;
 }
 
