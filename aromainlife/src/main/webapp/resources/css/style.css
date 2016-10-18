@@ -612,6 +612,7 @@ table.qna td a:hover {
     color: #fff;
     border-radius: 5px;
     padding: 0.5em;
+    text-align: center;
 }
 .qna-list a.btn:hover {
 	background: #93B13A;
