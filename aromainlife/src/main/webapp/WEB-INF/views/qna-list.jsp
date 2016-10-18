@@ -71,7 +71,7 @@
           </tbody>
         </table>
         
-        <a class="col-16 btn">문의하기</a>
+        <a href="<c:url value='/user/qna-writeForm.do'/>" class="col-16 btn">문의하기</a>
 	  </div>
       <!-- 끝: 테이블-->
 

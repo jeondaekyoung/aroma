@@ -65,6 +65,13 @@ public class UserQnAController {
 		
 		return "qna-view";
 	}
+	@RequestMapping(value = "/user/qna-writeForm.do", method = RequestMethod.GET)
+	public String writeFrom(){
+		
+		return "qna-write";
+	}
+	
+	
 	
 	
 	@RequestMapping(value = "/user/gallery.do", method = RequestMethod.GET)
