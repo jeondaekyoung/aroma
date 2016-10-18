@@ -24,7 +24,7 @@
               <li><a href="<c:url value='/user/fragrance-1.do'/>" >생활속 아로마</a></li>
             </ul>
           </li>
-        <li class=""><a href="<c:url value='qna-list.do'/>">커뮤니티</a></li>
+        <li class=""><a href="<c:url value='/user/qna-list.do'/>">커뮤니티</a></li>
       </ul>
     </nav>
     <!-- 끝: 내비게이션 영역 -->
