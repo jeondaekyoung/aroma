@@ -26,7 +26,7 @@
               
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
+     <!--    <div class="col-12 prefix-2 suffix-2 aroma">
           <div class="col-8"><img src="" alt="사진" width="100%"></div>
           <div class="col-8" id="class-1">
             <h3 class="nanumpen">나만의 천연 향기화장품 만들기</h3>
@@ -91,7 +91,7 @@
             <p>내가 좋아하는 드라이 허브를 이용해 주머니를 만들어 실내에 두거나 쿠션을 만들어 곁에 두면 머리가 맑아지고 숙면을 취할 수 있다.</p>
               <p>시간: 40분</p>
           </div>
-	    </div>
+	    </div> -->
       </div>
       <!-- 끝: 아로마테라피-->
         

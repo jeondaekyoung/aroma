@@ -60,7 +60,7 @@
 			                    	<c:otherwise>
 					                  <table class="admin">
 										<tr>
-											<th>문의 내용</th>
+											<th>프로그램 목록</th>
 										</tr>
 									  </table>
 									<c:forEach items="${lists}" var="list" varStatus="status">
