@@ -563,23 +563,30 @@ span[class*="col-"] {
 
 
 /* program */
-.program .col-16 {
-  background: #a6c840;
-  margin-bottom: 3em;
-  padding: 1em 0;
-}
 .program .program-intro {
-  background: url(../images/intro/bg-bizz.jpg) center / 100%;
+  background: url(../images/intro/bg-bizz.jpg) center / cover;
   background-attachment: fixed;
-  padding: 2em 0 1em;
+  margin-bottom: 3em;
+  padding-top: 2em;
 }
-.program .col-16 h3{
-  text-align: center;
-  color: #fff
-}
-.program .col-16 p{
+.program .program-intro p,
+.program .program-intro h3{
   text-align: center;
   color: #fff;
+}
+.program .col-8 {
+  margin-bottom: 3em;
+}
+.program .col-8 h4{
+  background: #EBEAD2;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: #444;
+}
+.program .col-8 p{
+  text-align: left;
+  color: #444;
   margin-bottom: 1.5em;
 }
 
