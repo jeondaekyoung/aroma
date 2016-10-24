@@ -33,14 +33,14 @@
             *프로그램: 향기스킨, 향기 로션, 향기 아이크림, 향기 에센스, 향기 림밤, 향기 립글로스, 호흡기에 좋은 향기 코크림, 향기 아토피 크림 등<br><br>시간: 40분~50분</p>
           </div>
             
-          <div class="col-8">
+          <div class="col-8" id="class-1">
             <h4 class="nanumpen">천연 죽염치약 만들기</h4>
 	        <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
 	          <p>영평사에서 직접 만든 3회 죽염과 드라이 허브를 곱게 갈아서 넣고 천연향기를 첨가하여 만드는 죽염치약 (허브소금으로 사용해도 좋습니다.)<br>시간: 40분</p>
 	        </div>
 		  </div>
-          <div class="col-8" id="class-3">
+          <div class="col-8" id="class-2">
             <h4 class="nanumpen">향기 모양 비누 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -56,7 +56,7 @@
 	        </div>
 		  </div>
 
-          <div class="col-8" id="class-3">
+          <div class="col-8" id="class-4">
             <h4 class="nanumpen">향기 비누 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -64,7 +64,7 @@
 	        </div>
 		  </div>              
             
-          <div class="col-8" id="class-4">
+          <div class="col-8" id="class-5">
             <h4 class="nanumpen">무지개 향기초 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -72,7 +72,7 @@
 	        </div>
 		  </div>             
             
-          <div class="col-8" id="class-4">
+          <div class="col-8" id="class-6">
             <h4 class="nanumpen">향기 향초 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -80,7 +80,7 @@
 	        </div>
 		  </div>            
             
-          <div class="col-8" id="class-4">
+          <div class="col-8" id="class-7">
             <h4 class="nanumpen">가루 향기초 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -88,7 +88,7 @@
 	        </div>
 		  </div>            
             
-          <div class="col-8" id="class-4">
+          <div class="col-8" id="class-8">
             <h4 class="nanumpen">향기 만지락 초 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -96,7 +96,7 @@
 	        </div>
 		  </div>         
             
-          <div class="col-8" id="class-5">
+          <div class="col-8" id="class-9">
             <h4 class="nanumpen">향기 주머니/쿠션 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
