@@ -44,31 +44,37 @@
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             
             <div class="hover-focus-view">
-              <a href="class.jsp#class-1">천연 화장품 만들기</a>
+              <a href="class.jsp#class-1">천연 죽염치약 만들기</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-2">천연 죽염치약 만들기</a>
+              <a href="class.jsp#class-2">향기 모양 비누 만들기</a>
             </div>
           </div>
           <div class="col-4 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-3">천연 향기비누 체험하기</a>
+              <a href="class.jsp#class-3">향기 주물럭 비누 만들기</a>
             </div>
           </div>
           <div class="col-4 prefix-2 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-4">향초 체험하기</a>
+              <a href="class.jsp#class-4">향기 비누 만들기</a>
             </div>
           </div>
-          <div class="col-4 suffix-5 product-item">
+          <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-5">향기 주머니/쿠션 만들기</a>
+              <a href="class.jsp#class-5">무지개 향초 만들기</a>
+            </div>
+          </div>
+          <div class="col-4 suffix-1 product-item">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
+            <div class="hover-focus-view">
+              <a href="class.jsp#class-6">향기 향초 만들기</a>
             </div>
           </div>
         </div>        
