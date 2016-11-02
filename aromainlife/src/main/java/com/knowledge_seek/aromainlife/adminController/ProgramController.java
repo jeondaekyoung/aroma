@@ -105,7 +105,7 @@ public class ProgramController {
 	
 	@RequestMapping(value = "/edit.do")
 	public String edit( Model model,Program program,MultipartRequest mhsq,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
-		
+		//수정한 제목,내용,시간
 		program=proService.selectOne(program);
 		
 		List<MultipartFile> mf =mhsq.getFiles("file");
@@ -132,24 +132,7 @@ public class ProgramController {
 		}
 		proService.update(program);
         
-		/*for(String s:program.getFile_id()){
-			System.out.println(s);
-			if(s!=null){
-				
-				program.setFile_id(null);
-			}
-
-		}*/
 		
-		/*if(program.getFile().getSize()!=0){
-			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
-			MultipartFile multpartfile = program.getFile();
-			program.setFileName(multpartfile.getOriginalFilename());
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(program.getFile_id());//fileId로 정보가지고오기
-			//객체가 존재할때 파일 업데이트
-			program.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
-		}
-		proService.update(program);*/
 		return "redirect:/pro/list.do?nowPage="+nowPage;
 	}
 	
