@@ -31,6 +31,18 @@
                 <input type="text" placeholder="제목">
             </li>
             <li class="content">
+                <input type="text" placeholder="작성자">
+            </li>
+            <li class="content">
+                <input type="text" placeholder="연락처">
+            </li>
+            <li class="content">
+                <input type="file">
+            </li>
+            <li class="content">
+                <input type="password" placeholder="비밀번호">
+            </li>
+            <li class="content">
                 <textarea placeholder="내용을 입력하세요"></textarea>
             </li>
             <li class="reply">
