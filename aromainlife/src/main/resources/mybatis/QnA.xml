@@ -5,8 +5,11 @@
 			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.QnA">
 	<select id="qnaSelectList" parameterType="java.util.Map" resultType="QnA">
-	
-			select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r order by qnaNo desc) a where r between  #{start} and #{end}
+		
+		select * from (select QnA.*,@rownum as r from QnA, (SELECT @rownum:=0) r order by qnaNo desc) a where writer='admin'  
+      UNION
+		select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r where writer!='admin' order by qnaNo desc) a 
+		where r between #{start} and #{end}
 	</select>
 	
 	<select id="qnaSelectOne" parameterType="QnA" resultType="QnA">

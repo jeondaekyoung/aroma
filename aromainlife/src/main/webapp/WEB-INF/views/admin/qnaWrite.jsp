@@ -72,7 +72,7 @@
 							<input type="hidden" name="content" id="editorContent" class="form-control"/>
 							
 							<!-- 작성자 -->
-							<input type="hidden" name="writer" value="${sessionScope.USERID}" class="form-control" >
+							<input type="hidden" name="writer" value="admin" class="form-control" >
 							
 							<!-- 글비밀번호 -->
 							<input type="hidden" name="pass" value="Admin_Notice" class="form-control" >

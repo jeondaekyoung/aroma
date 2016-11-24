@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,24 +35,33 @@
             <li class="content">
               	${qna.content }
             </li>
+            <li class="file">
+              	<p><a href='<c:url value="/file/down/${qna.file_id}" />' class="btn btn-info"><i class="fa fa-download"></i>${qna.fileName} 다운로드</a></p>
+            </li>
             <li class="reply-list">
               <!-- 반복 -->
               <ul class="row">
+			<c:choose>
+				
+              <c:when test="${false}">
+              	
+              </c:when>
+              <c:otherwise>
+              	<li class="col-2">답변 대기 중입니다.</li>
+              </c:otherwise>
+              </c:choose>
+              </ul>
+              <!-- <ul class="row">
                 <li class="col-2">관리자</li>
                 <li class="col-12">경기도 포천시 소흡읍 고모리 183번지 입니다.</li>
                 <li class="col-2">16:01</li>
-              </ul>
-              <ul class="row">
-                <li class="col-2">관리자</li>
-                <li class="col-12">경기도 포천시 소흡읍 고모리 183번지 입니다.</li>
-                <li class="col-2">16:01</li>
-              </ul>
+              </ul> -->
               <!-- 반복 -->
             </li>
             <li class="reply">
               <div class="row">
                 <textarea class="col-14">reply</textarea>
-                <button type="button" class="col-2">등록</button>
+                <button type="button" class="col-2">삭제</button>
               </div>
             </li>
           </ul>

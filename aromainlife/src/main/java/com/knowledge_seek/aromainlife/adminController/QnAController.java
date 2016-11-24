@@ -86,7 +86,7 @@ public class QnAController {
 		
 		qnaService.insert(qna);
 		
-		return "forward:/qna/list.do";
+		return "redirect:/qna/list.do";
 	}
 	
 	@RequestMapping(value="/view.do" )

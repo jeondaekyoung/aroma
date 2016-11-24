@@ -5,6 +5,10 @@
 <html>
 <head>
   <jsp:include page="include-head.jsp" flush="true"/>
+  <style type="text/css">
+	
+</style>
+  
 </head>
 <body class="container">
 
@@ -23,14 +27,31 @@
       </div>
       <div class="row notice">
         <div class="col-7 prefix-2">
-          <h4>· 공지사항</h4>
-          <ul>
-            <li><a href="qna_list.jsp">국내산 허브(당귀) CO2 추출 견학 및 전나무 숲 체험</a></li>
-            <li><a href="qna_list.jsp">2016 향기요법 원데이 힐링 캠프 안내 - 6/25(토)</a></li>
-          </ul>
-        </div>
+          <h4>· 공지사항</h4>	          
+	        <div id="notice5" class="news">
+				<div class="open-event ">
+					<ul class="notice-list">
+					 <c:forEach items="${notiLists }" var="list">
+			            <li><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo }'/>">${list.title}</a><span class="date">${list.createDate }</span></li>
+			            </c:forEach>
+					</ul>
+					
+				</div>
+				<!-- <div class="control fl">
+					<a href="#" class="play" title="재생">▷</a>
+					<a href="#" class="stop" title="정지">▣</a>
+				</div> -->
+				<script src="<c:url value='/resources/js/jquery.min.js'/>"></script>
+				<script src="<c:url value='/resources/js/fn_article.js'/>"></script>
+				<script type="text/javascript">
+				fn_article3('notice5','bt5',true);
+				</script>
+			</div>          
+        </div>      
+        
+        
         <div class="col-2 prefix-3 suffix-2">
-          <a href="qna_list.jsp">문의하러 가기</a>
+          <a href="<c:url value='/user/qna-list.do'/>">문의하러 가기</a>
         </div>
       </div>
     </div>

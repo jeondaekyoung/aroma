@@ -12,9 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.knowledge_seek.aromainlife.domain.Gallery;
 import com.knowledge_seek.aromainlife.domain.QnA;
+import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.QnAServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
@@ -32,6 +34,9 @@ public class UserQnAController {
 	
 	@Resource(name="qnaService")
 	QnAServiceImpl qnaService;
+	
+	@Resource(name="fileService")
+	FileServiceImpl fileService;
 	
 	@RequestMapping(value = "/user/qna-list.do", method = RequestMethod.GET)
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
@@ -67,10 +72,23 @@ public class UserQnAController {
 	}
 	@RequestMapping(value = "/user/qna-writeForm.do", method = RequestMethod.GET)
 	public String writeFrom(){
-		
 		return "qna-write";
 	}
-	
+	@RequestMapping(value = "/user/qna-write.do", method = RequestMethod.POST)
+	public String write(QnA qna, Model model){
+		
+
+		if(qna.getFile().getSize()!=0){
+			MultipartFile multpartfile = qna.getFile();
+			qna.setFileName(multpartfile.getOriginalFilename());
+			qna.setFile_id(fileService.save(multpartfile));
+		
+		}
+		
+		qnaService.insert(qna);
+		
+		return "redirect:/user/qna-list.do";
+	}
 	
 	
 	

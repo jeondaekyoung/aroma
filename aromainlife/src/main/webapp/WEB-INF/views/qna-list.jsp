@@ -46,27 +46,31 @@
                   <th>번호</th><th>제목</th><th>등록일</th><th>조회수</th>
               </tr>
           </thead>
-          <tbody> <!--15개씩 보여준다-->
+          <tbody> 
+          <c:set var="index" value="0"/>
           <c:forEach items="${lists}" var="list" varStatus="status">
 			 <tr>
-				<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
+			 <c:if test="${list.writer eq 'admin' and index<5 }" var="result">
+			 	<td style="color:orange">-</td>
+				<td style="color:orange">
+				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a>
+				</td>
+				<td style="color:orange">${list.createDate}</td>
+				<td style="color:orange">${list.hits}</td>
+				<c:set var="index" value="${index+1}"/>
+			 </c:if>
+			 <c:if test="${not result }">
+			 	<td>
+				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
+				</td>
 				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 				<td>${list.createDate}</td>
 				<td>${list.hits}</td>
-			 </tr>
+			 
+			 </c:if>
+			</tr>
 			</c:forEach>
-            <!-- <tr>
-              <td>1</td>
-              <td><a href="">안녕하세요? 문의합니다.</a></td>
-              <td>2016-06-08</td>
-              <td>154</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td><a href="">안녕하세요? 문의합니다.</a></td>
-              <td>2016-06-08</td>
-              <td>154</td>
-            </tr> -->
+           
         
           </tbody>
         </table>
@@ -78,15 +82,7 @@
       <!-- 시작: paging -->      
       <div class="text-center">
       ${pagingString}
-        <!-- <ul class="pagination pagination-sm">
-          <li><a href="#"><i class="chevron-left"></i></a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="chevron-right"></i></a></li>
-        </ul> -->
+       
       </div>
       <!-- 끝: paging -->
         

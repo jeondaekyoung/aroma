@@ -179,10 +179,27 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
    font-size: 2.25rem;
    padding: 3em;
 }
+/* main news */
 .content-1 .notice{
     padding: 1.5em 0;
    background: #82B436
 }
+.news {margin-top: 15px;}
+.news .open-event {height:40px; position:relative; overflow:hidden;}
+.news .open-event ul{position:absolute; top:0px;}
+.news .open-event ul#notice1 {left:0;}
+.news .open-event ul#notice2 {right:20px;}
+.news .open-event ul li {height:20px;}
+.news .open-event ul li a {display:inline-block; width: 310px;}
+.news .open-event ul li a:hover {text-decoration:underline;}
+.news .open-event ul li a strong {margin-right:10px;}
+.news .open-event ul li span.date {display:inline-block;}
+.news .open-event .prev{position:absolute; top:1px; right:2px; width:7px; height:4px; line-height:0; font-size:0;}
+.news .open-event .next{position:absolute; bottom:1px; right:2px; width:7px; height:4px; line-height:0; font-size:0;}
+.news .control {float:left; margin:0px 0 0 10px; }
+.news .control a.stop {font-size:12px;}
+.news .control a.on {color:red; font-size:12px;}
+
 .content-1 h4, .content-1 li a {
     color: #fff;
 }
