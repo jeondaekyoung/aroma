@@ -59,14 +59,15 @@
 				<td style="color:orange">${list.hits}</td>
 				<c:set var="index" value="${index+1}"/>
 			 </c:if>
-			 <c:if test="${not result }">
+			 <c:if test="${not result}">
+			  <c:if test="${!(list.writer eq 'admin') }"> 
 			 	<td>
 				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
 				</td>
 				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 				<td>${list.createDate}</td>
 				<td>${list.hits}</td>
-			 
+			 	</c:if>
 			 </c:if>
 			</tr>
 			</c:forEach>

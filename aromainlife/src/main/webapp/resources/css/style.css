@@ -594,6 +594,14 @@ span[class*="col-"] {
 .program .col-8 {
   margin-bottom: 3em;
 }
+.program .col-8 .col-16 {
+  min-height: 24em;
+  overflow: hidden;
+}
+.program .col-8 .col-16 img {
+	width: 100%;
+	height: auto;
+}
 .program .col-8 h4{
   background: #EBEAD2;
   padding: 0.5em 0;

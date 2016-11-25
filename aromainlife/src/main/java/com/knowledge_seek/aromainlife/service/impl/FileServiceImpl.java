@@ -155,9 +155,7 @@ public class FileServiceImpl implements FileService {
 		dir.mkdirs();
 		
 		new_fileSet(file, dto, cal, dir, dto.getFile_id());
-		System.out.println("dto.getFile_size();"+dto.getFile_size());
 		fileDao.update(dto);
-		
 		return dto.getFile_id();
 	}
 

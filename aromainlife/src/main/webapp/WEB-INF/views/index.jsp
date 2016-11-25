@@ -61,25 +61,38 @@
     <div class="content-2">
       <div class="row">
         <div class="col-9 prefix-2">
-          <div class="col-4 prefix-2 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
-            
+        <c:forEach items="${proLists}" var="list" varStatus="varStatus">
+	   <c:choose>
+        	<c:when test="${varStatus.count ==1 or varStatus.count ==4 }">
+        	<div class="col-4 prefix-2 suffix-1 product-item">
+        	</c:when>
+        	<c:when test="${varStatus.count ==2 or varStatus.count ==5 }">
+        	<div class="col-4 suffix-1 product-item">	
+        	</c:when>
+        	<c:otherwise>
+        	<div class="col-4 product-item">	
+        	</c:otherwise>
+        </c:choose>         
+        	<img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-1">천연 죽염치약 만들기</a>
+              <a href="<c:url value='/user/program.do'/>">${list.title}</a>
             </div>
           </div>
-          <div class="col-4 suffix-1 product-item">
+        </c:forEach>
+          
+          <%-- <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
               <a href="class.jsp#class-2">향기 모양 비누 만들기</a>
             </div>
           </div>
-          <div class="col-4 product-item">
+           <div class="col-4 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
               <a href="class.jsp#class-3">향기 주물럭 비누 만들기</a>
             </div>
           </div>
+
           <div class="col-4 prefix-2 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
@@ -91,18 +104,20 @@
             <div class="hover-focus-view">
               <a href="class.jsp#class-5">무지개 향초 만들기</a>
             </div>
-          </div>
-          <div class="col-4 suffix-1 product-item">
+          </div> --%>
+          
+                   <%-- 
+          <div class="col-4 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
               <a href="class.jsp#class-6">향기 향초 만들기</a>
             </div>
-          </div>
+          </div>  --%>
         </div>        
         <div class="col-3 suffix-2 title">
           <h3>향기체험학습</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="class.jsp">자세히 보기 ></a>
+          <a href='<c:url value="/user/program.do"/>'>자세히 보기 ></a>
         </div>        
       </div>
     </div>
