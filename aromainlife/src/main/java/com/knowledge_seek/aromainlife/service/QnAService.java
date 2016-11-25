@@ -10,6 +10,10 @@ public interface QnAService {
 
 	//목록용
 	List<QnA> selectList(Map map);
+
+	//목록용_공지
+	List<QnA> select_notiList(Map map);
+	
 			
 	//검색용
 	List<QnA> search(Map map);

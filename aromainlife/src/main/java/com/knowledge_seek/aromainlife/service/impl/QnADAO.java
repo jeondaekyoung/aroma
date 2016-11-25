@@ -73,4 +73,10 @@ public class QnADAO implements QnAService {
 		return 0;
 	}
 
+	@Override
+	public List<QnA> select_notiList(Map map) {
+		
+		return sqlTemplate.selectList("qnaSelect_notiList", map);
+	}
+
 }

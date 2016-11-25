@@ -43,27 +43,51 @@ public class QnAController {
 	@RequestMapping("/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
-		
-		int totalRecordCount =qnaService.getTotalRecordCount(map);
-		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
-		
-		//시작 및 끝 ROWNUM구하기]
-		int start= (nowPage-1)*pageSize+1;
-		int end = nowPage*pageSize;		
-		map.put("start", start);
-		map.put("end",end);
-		
-		List<QnA> lists=qnaService.selectList(map);
-		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
-		
-		model.addAttribute("lists",lists);
-		model.addAttribute("pagingString",pagingString);
-		model.addAttribute("totalPage",totalPage);
+
+		{//공지사항
+			
+			map.put("noti","noti");
+			int totalRecordCount1 =qnaService.getTotalRecordCount(map);
+			int totalPage1= (int)(Math.ceil(((double)totalRecordCount1/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> notiLists =qnaService.select_notiList(map);
+			
+			String pagingString1 = PagingUtil.pagingText(totalRecordCount1, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
+			
+			
+			model.addAttribute("notiLists",notiLists);
+			model.addAttribute("pagingString1",pagingString1);
+			model.addAttribute("totalPage1",totalPage1);
+			model.addAttribute("totalRecordCount1",totalRecordCount1);
+		}
+		{//문의 사항
+			map.clear();
+			int totalRecordCount2 =qnaService.getTotalRecordCount(map);
+			int totalPage2= (int)(Math.ceil(((double)totalRecordCount2/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> lists=qnaService.selectList(map);
+			
+			String pagingString2 = PagingUtil.pagingText(totalRecordCount2, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
+			
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString2",pagingString2);
+			model.addAttribute("totalPage2",totalPage2);
+			model.addAttribute("totalRecordCount2",totalRecordCount2);
+		}
 		model.addAttribute("nowPage",nowPage);
-		model.addAttribute("totalRecordCount",totalRecordCount);
 		model.addAttribute("pageSize",pageSize);
-		
-		
 		
 		return "/admin/qna";
 	}

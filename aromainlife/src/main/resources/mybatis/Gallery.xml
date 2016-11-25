@@ -6,7 +6,13 @@
 <mapper namespace="mybatis.Gallery">
 	<select id="GalSelectList" parameterType="java.util.Map" resultType="Gallery">
 	
-			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a where r between  #{start} and #{end}
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
+			<choose>
+				<when test="start != -1 and end != -1">
+				where r between  #{start} and #{end}
+				</when>
+			
+			</choose>
 	</select>
 	
 	<select id="GalSelectOne" parameterType="Gallery" resultType="Gallery">

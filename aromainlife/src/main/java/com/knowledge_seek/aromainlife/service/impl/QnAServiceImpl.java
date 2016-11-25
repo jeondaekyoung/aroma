@@ -70,4 +70,10 @@ public class QnAServiceImpl implements QnAService {
 		return 0;
 	}
 
+	@Override
+	public List<QnA> select_notiList(Map map) {
+		
+		return dao.select_notiList(map);
+	}
+
 }

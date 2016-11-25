@@ -6,11 +6,15 @@
 <mapper namespace="mybatis.QnA">
 	<select id="qnaSelectList" parameterType="java.util.Map" resultType="QnA">
 		
-		select * from (select QnA.*,@rownum as r from QnA, (SELECT @rownum:=0) r order by qnaNo desc) a where writer='admin'  
-      UNION
 		select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r where writer!='admin' order by qnaNo desc) a 
 		where r between #{start} and #{end}
 	</select>
+	
+	<select id="qnaSelect_notiList" parameterType="java.util.Map" resultType="QnA" >
+		select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r where writer='admin' order by qnaNo desc) a
+		where r between #{start} and #{end}
+	</select>
+	
 	
 	<select id="qnaSelectOne" parameterType="QnA" resultType="QnA">
 		select * from QnA where qnaNo=#{qnaNo}
@@ -36,11 +40,21 @@
 		
 	<select id="qnaTotalCount" resultType="int" parameterType="java.util.Map">
 	SELECT COUNT(*) FROM QnA
+		<choose>
+			<when test="noti != null">
+		where writer = 'admin'
+			</when>
+			<otherwise>
+		where writer != 'admin'
+			</otherwise>
+		</choose>
+	
+	
 	</select>	
 	
 	<select id="qnaSearch" parameterType="java.util.Map" resultType="QnA">
 	select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r 
-		<choose>
+	<choose>
 				<when test="search_account == 0 and search_text != null and search_text !='' ">
 where title LIKE '%${search_text}%'
 				</when>

@@ -45,6 +45,12 @@ public class UserQnAController {
 		int totalRecordCount =qnaService.getTotalRecordCount(map);
 		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
 
+		map.put("noti","noti");
+		map.put("start", 1);
+		map.put("end",5);
+		List<QnA> notiLists =qnaService.select_notiList(map);
+		
+		map.clear();
 		//시작 및 끝 ROWNUM구하기]
 		int start= (nowPage-1)*pageSize+1;
 		int end = nowPage*pageSize;		
@@ -53,7 +59,9 @@ public class UserQnAController {
 
 		List<QnA> lists=qnaService.selectList(map);
 		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/user/qna-list.do?");
-
+		
+		
+		model.addAttribute("notiLists",notiLists);
 		model.addAttribute("lists",lists);
 		model.addAttribute("pagingString",pagingString);
 		model.addAttribute("totalPage",totalPage);

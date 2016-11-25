@@ -48,7 +48,7 @@
           </thead>
           <tbody> 
           <c:set var="index" value="0"/>
-          <c:forEach items="${lists}" var="list" varStatus="status">
+         <%--  <c:forEach items="${lists}" var="list" varStatus="status">
 			 <tr>
 			 <c:if test="${list.writer eq 'admin' and index<5 }" var="result">
 			 	<td style="color:orange">-</td>
@@ -70,8 +70,29 @@
 			 	</c:if>
 			 </c:if>
 			</tr>
+			</c:forEach> --%>
+            <c:forEach items="${notiLists}" var="list" varStatus="status">
+			 <tr>
+			 	<td style="color:orange">-</td>
+				<td style="color:orange">
+				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a>
+				</td>
+				<td style="color:orange">${list.createDate}</td>
+				<td style="color:orange">${list.hits}</td>
+			 
+			</tr>
 			</c:forEach>
-           
+	       <c:forEach items="${lists}" var="list" varStatus="status">
+			 <tr>
+			 	<td>
+				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
+				</td>
+				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
+				<td>${list.createDate}</td>
+				<td>${list.hits}</td>
+			 
+			</tr>
+			</c:forEach>
         
           </tbody>
         </table>

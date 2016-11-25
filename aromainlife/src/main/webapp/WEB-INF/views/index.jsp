@@ -129,37 +129,37 @@
         <div class="col-3 prefix-2 title">
           <h3>아로마테라피</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="armoa-1.jsp">자세히 보기 ></a>
+          <a href="<c:url value='/user/aroma-1.do'/>">자세히 보기 ></a>
         </div>        
         <div class="col-9 suffix-2">
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-1.jsp">허브&amp;아로마테라피</a>
+              <a href="<c:url value='/user/aroma-1.do'/>">허브&amp;아로마테라피</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-2.jsp">에센셜 오일이란?</a>
+              <a href="<c:url value='/user/aroma-2.do'/>">에센셜 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-2 product-item">
             <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-3.jsp">캐리어 오일이란?</a>
+              <a href="<c:url value='/user/aroma-3.do'/>">캐리어 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-4.jsp">플로럴 워터란?</a>
+              <a href="<c:url value='/user/aroma-4.do'/>">플로럴 워터란?</a>
             </div>
           </div>
           <div class="col-4 suffix-7 product-item">
             <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="armoa-5.jsp">활용방법</a>
+              <a href="<c:url value='/user/aroma-5.do'/>">활용방법</a>
             </div>
           </div>
         </div>        
@@ -173,31 +173,21 @@
         <div class="col-9 prefix-2">
           <div class="carousel slide carousel-fade auto panel-body" id="c-fade">
             <ol class="carousel-indicators out">
-              <li data-target="#c-fade" data-slide-to="0" class="active"></li>
-              <li data-target="#c-fade" data-slide-to="1" class=""></li>
-              <li data-target="#c-fade" data-slide-to="2" class=""></li>
-              <li data-target="#c-fade" data-slide-to="3" class=""></li>
-              <li data-target="#c-fade" data-slide-to="4" class=""></li>
-              <li data-target="#c-fade" data-slide-to="5" class=""></li>
-              <li data-target="#c-fade" data-slide-to="6" class=""></li>
-              <li data-target="#c-fade" data-slide-to="7" class=""></li>
-              <li data-target="#c-fade" data-slide-to="8" class=""></li>
-              <li data-target="#c-fade" data-slide-to="9" class=""></li>
-              <li data-target="#c-fade" data-slide-to="10" class=""></li>
+             <c:forEach items="${galLists}" var="list" varStatus="loop">
+              <li data-target="#c-fade" data-slide-to="${loop.index}" class="active"></li>	
+               </c:forEach>
             </ol>
 
             <div class="slider">
              <ul class="clearfix carousel-inner">
-               <li class="slide slide-1 item active"><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <c:forEach items="${galLists}" var="list" varStatus="loop">
+               	<c:if test="${loop.index == 0 }" var="result">
+               <li class="slide slide-1 item active"><img src="<c:url value='file/down/image/${list.file_id}'/>" alt="" width="100%"></li>	
+               	</c:if>
+               	<c:if test="${not result}">
+               <li class="slide slide-1 item "><img src="<c:url value='file/down/image/${list.file_id}'/>>" alt="" width="100%"></li>
+               	</c:if>
+               </c:forEach>
               </ul>
             </div>
 
@@ -210,7 +200,7 @@
         <div class="col-3 suffix-2 title">
           <h3>생활의향기 갤러리</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="gallery.jsp">자세히 보기 ></a>
+          <a href="<c:url value='/user/gallery.do'/>">자세히 보기 ></a>
         </div>        
       </div>
     </div>
