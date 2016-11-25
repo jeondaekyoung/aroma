@@ -75,7 +75,7 @@
 			 <tr>
 			 	<td style="color:orange">-</td>
 				<td style="color:orange">
-				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a>
+				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}&nowPage=${nowPage}'/>">${list.title}</a>
 				</td>
 				<td style="color:orange">${list.createDate}</td>
 				<td style="color:orange">${list.hits}</td>
@@ -87,7 +87,7 @@
 			 	<td>
 				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
 				</td>
-				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
+				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}&nowPage=${nowPage}'/>">${list.title}</a></td>
 				<td>${list.createDate}</td>
 				<td>${list.hits}</td>
 			 

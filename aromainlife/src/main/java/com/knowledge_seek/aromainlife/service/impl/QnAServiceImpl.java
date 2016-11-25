@@ -67,7 +67,7 @@ public class QnAServiceImpl implements QnAService {
 	@Override
 	public int update_hits(String qnaNo) {
 		
-		return 0;
+		return dao.update_hits(qnaNo);
 	}
 
 	@Override

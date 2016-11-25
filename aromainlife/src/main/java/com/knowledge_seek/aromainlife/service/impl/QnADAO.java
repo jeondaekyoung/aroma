@@ -70,7 +70,7 @@ public class QnADAO implements QnAService {
 	@Override
 	public int update_hits(String qnaNo) {
 		
-		return 0;
+		return sqlTemplate.update("qnaUpdate_hits",qnaNo);
 	}
 
 	@Override

@@ -14,3 +14,13 @@
 <link rel="stylesheet" href="<c:url value='/resources/css/font.css'/>" type="text/css" />
 <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+<script src="<c:url value='/resources/js/jquery.min.js'/>"></script>
+
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Bootstrap -->
+
+<script src="<c:url value='/resources/js/bootstrap.js'/>"></script>
+<!-- App -->
+<script src="<c:url value='/resources/js/app.js'/>"></script>
+<script src="<c:url value='/resources/js/app.plugin.js'/>"></script>

@@ -121,7 +121,7 @@ public class QnAController {
 					qna.setContent(qna.getContent().replace("\r\n","<br/>"));
 		*/
 		model.addAttribute("qna",qna);
-		
+	
 		return "/admin/qnaView";
 	}
 
