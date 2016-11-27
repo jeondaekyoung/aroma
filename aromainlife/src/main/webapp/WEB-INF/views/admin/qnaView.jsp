@@ -42,7 +42,7 @@
 				<section id="content">
 					<section class="vbox">
 						<header class="header bg-white b-b b-light">
-							<p>QnA</p>
+							<p>QnA 상세보기</p>
 						</header>
 
 						<section class="scrollable wrapper w-f">
@@ -65,7 +65,8 @@
 								</div>
 							</div>
 							<!--작성일자 끝-->
-
+							
+										
 							<!--제목-->
 							<div class="line line-dashed line-lg pull-in"></div>
 							<div class="clearfix form-group">
@@ -82,7 +83,7 @@
 								<label class="col-sm-2 control-label">내용</label>
 								<div class="col-sm-10">
 									<div class="form-control"
-										style="overflow: scroll; height: 450px; max-height: 450px"
+										style="overflow: scroll; height: 350px; max-height: 350px"
 										contenteditable="false">${qna.content}</div>
 								</div>
 							</div>
@@ -103,6 +104,55 @@
 								</div>
 							</div>
 							<!--첨부파일 끝-->
+							
+							<!--답변상태-->
+							<div class="line line-dashed line-lg pull-in"></div>
+							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">답변상태</label>
+								<div class="col-sm-10">
+									<p class="form-control-static">	
+									<c:choose>
+											<c:when test="${qna.answerChk == 0 }">
+											 답변 대기										
+											</c:when>
+											<c:otherwise>
+											 답변 완료
+											</c:otherwise>
+									</c:choose>
+									</p>
+								</div>
+							</div>
+							<!--답변상태 끝-->							
+							<!--답변내용-->
+							<div class="line line-dashed line-lg pull-in"></div>
+							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">답변내용</label>
+								<div class="col-sm-10">
+									<c:if test="${empty ans}" var="result">
+										답변 대기 중 입니다.
+									</c:if>
+									<c:if test="${not result}">
+									<div class="form-control"
+										style="overflow: scroll; height: 250px; max-height: 250px"
+										contenteditable="false">${ans.content}</div>
+									<form name="delForm" action="<c:url value='/qna/ans_delete.do'/>" method="post">
+									
+										<input type="hidden" name="qnaNo" value="${qna.qnaNo}" />
+										<input type="hidden" name="file_id" value="${qna.file_id}" />
+										<a	href="<c:url value='/qna/editForm.do?qnaNo=${qna.qnaNo}'/>"
+											class="btn btn-primary"><i class="fa fa-edit"></i>답변 수정</a>
+										<button type="button"  onclick="del_click()" class="btn btn-danger">
+											<i class="fa fa-minus-circle"></i> 답변 삭제
+										</button>
+											
+											
+									</form>
+										
+									</c:if>
+								
+								</div>
+							</div>
+							<!--답변내용 끝-->
 
 							<!--버튼그룹-->
 							<div class="line line-dashed line-lg pull-in"></div>
@@ -119,6 +169,7 @@
 											href="<c:url value='/qna/editForm.do?qnaNo=${qna.qnaNo}'/>"
 											class="btn btn-primary"><i class="fa fa-edit"></i> 수정</a>
 											<a href="<c:url value='/qna/writeForm.do'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 글쓰기</a>
+									<a href="<c:url value='/qna/ansForm.do'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 답변하기</a>		
 									</form>
 
 								</div>

@@ -109,8 +109,8 @@ function modal_button(mod){
               <ul class="row">
 			<c:choose>
 				
-              <c:when test="${false}">
-              	
+              <c:when test="${qna.answerChk == 1}">
+              	<li class="col-2"></li>
               </c:when>
               <c:otherwise>
               	<li class="col-2">답변 대기 중입니다.</li>

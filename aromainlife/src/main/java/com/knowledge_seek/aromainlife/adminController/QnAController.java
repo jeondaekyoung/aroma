@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
@@ -116,19 +117,15 @@ public class QnAController {
 	@RequestMapping(value="/view.do" )
 	public String view(QnA qna,Model model) {
 		qna=qnaService.selectOne(qna);
-		//띄워쓰기 jsp에 맞게 변환
-	/*			if(qna.getContent()!=null)
-					qna.setContent(qna.getContent().replace("\r\n","<br/>"));
-		*/
 		model.addAttribute("qna",qna);
-	
+		//답변
+		//Answer ans = qnaService.ans_selectOne(ans);
+		//model.addAttribute("ans",ans);
 		return "/admin/qnaView";
 	}
 
-	
-		
 	@RequestMapping("/editForm.do")
-	public String updateForm(QnA qna,Model model){
+	public String updateForm(QnA qna,Model model){ 
 		qna=qnaService.selectOne(qna);
 		model.addAttribute("qna",qna);
 
@@ -154,6 +151,7 @@ public class QnAController {
 		qnaService.update(qna);
 		return "forward:/qna/view.do";
 	}
+	
 	@RequestMapping("/delete.do")
 	public String delete(QnA qna,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		//QnA=qnaService.selectOne(QnA);
@@ -229,6 +227,31 @@ public class QnAController {
 		return "/admin/qna";
 	}
 	
+	//답변 달기
 	
+	@RequestMapping("/ansForm.do")
+	public String ansForm(QnA qna, Model model) {
+		qna=qnaService.selectOne(qna);
+		model.addAttribute("qna", qna);
+		return "/admin/ansWrite";
+	}
+	
+	@RequestMapping(value = "/ansWrite.do" ,method =RequestMethod.POST)
+	public String answer(Answer ans) {
+		
+		qnaService.ans_insert(ans);
+		
+		return "redirect:/qna/list.do";
+	}
+	
+	@RequestMapping("/ans_updateForm.do")
+	public String ans_updateForm(QnA qna,Model model){ 
+		qna=qnaService.selectOne(qna);
+		model.addAttribute("qna",qna);
+
+		return "/admin/qnaEdit";
+	}
+	
+
 	
 }

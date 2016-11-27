@@ -9,6 +9,7 @@
 		<typeAlias alias="QnA" type="com.knowledge_seek.aromainlife.domain.QnA"/>
 		<typeAlias alias="FileDTO" type="com.knowledge_seek.aromainlife.domain.FileDTO"/>
 		<typeAlias alias="Gallery" type="com.knowledge_seek.aromainlife.domain.Gallery"/>
+		<typeAlias alias="Answer" type="com.knowledge_seek.aromainlife.domain.Answer"/>
 	</typeAliases>
 	<mappers>
 	<mapper resource="mybatis/Login.xml"/> 

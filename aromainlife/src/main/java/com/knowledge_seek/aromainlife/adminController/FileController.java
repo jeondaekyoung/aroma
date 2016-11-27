@@ -53,18 +53,6 @@ public class FileController {
 		
 	}
 	
-	/*@RequestMapping("/downNhit/{file_id}/{downNo}")
-	@ResponseBody
-	public ResponseEntity<FileSystemResource> DownNhit(@PathVariable("file_id") String fileId,
-			@PathVariable("downNo") String downNo,HttpServletRequest req){
-		down.update_hits(downNo);
-		FileDTO fileDto = fileService.selectFileDetail(fileId);
-		
-		File file = new File(fileDto.getFile_path());
-		
-		return downloadContent(fileDto, file, true,req);
-	}*/
-	
 	@RequestMapping("/down/image/{file_id}")
 	@ResponseBody
 	public ResponseEntity<FileSystemResource> image(@PathVariable("file_id") String fileId){

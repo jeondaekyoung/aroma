@@ -58,7 +58,7 @@
 				<section id="content">
 					<section class="vbox">
 						<header class="header bg-white b-b b-light">
-							<p>QnA</p>
+							<p>QnA 수정</p>
 						</header>
 
 						<section class="scrollable wrapper w-f">

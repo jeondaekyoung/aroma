@@ -102,6 +102,23 @@ where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
 	
 	order by qnaNo desc) a
 	</select>
+	<!-- 답변 달기 -->
 	
+	<insert id="ans_insert" parameterType="Answer">
+		insert into Answer values(default,#{writer},#{content},now(),#{qnaNo});
+	</insert>	
+	
+	<update id="ans_update" parameterType="Answer">
+		update Answer set content=#{content},createDate=now()
+		   where ansNo=#{ansNo}
+	</update>
+	
+	<delete id="ans_delete" parameterType="Answer">
+		delete from Answer where ansNo=#{ansNo}
+	</delete>
+	
+	<select id="ans_selectOne" parameterType="Answer" resultType="Answer">
+		select * from Answer where ansNo=#{ansNo}
+	</select>
 		
 </mapper>

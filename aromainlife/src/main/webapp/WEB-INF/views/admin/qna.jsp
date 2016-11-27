@@ -79,7 +79,8 @@
 							<table class="admin">
 								<colgroup>
 									<col style="width: 10%">
-									<col style="width: 60%">
+									<col style="width: 40%">
+									<col style="width: 20%">
 									<col style="width: 20%">
 									<col style="width: 10%">
 								</colgroup>
@@ -88,6 +89,7 @@
 										<th>No.</th>
 										<th>제목</th>
 										<th>작성일</th>
+										<th>답변상황</th>
 										<th>조회수</th>
 									</tr>
 								</thead>
@@ -96,7 +98,7 @@
 							<c:choose>
 								<c:when test="${empty lists }">
 									<tr bgcolor="white" align="center">
-										<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+										<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 									</tr>
 								</c:when>
 								<c:otherwise>
@@ -105,6 +107,17 @@
 										<td>${totalRecordCount2 - (((nowPage - 1) * pageSize) + status.index)}</td>
 										<td><a href="<c:url value='/qna/view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 										<td>${list.createDate}</td>
+										<td>
+										<c:choose>
+											<c:when test="${list.answerChk == 0 }">
+											 답변 대기										
+											</c:when>
+											<c:otherwise>
+											 답변 완료
+											</c:otherwise>
+										</c:choose>
+										
+										</td>
 										<td>${list.hits}</td>
 									 </tr>
 									</c:forEach>
@@ -117,6 +130,7 @@
 							<a href="<c:url value='/qna/writeForm.do'/>" class="btn btn-primary" style="margin-top: 20px">
 								<i class="fa fa-pencil"></i> 글쓰기
 							</a>
+							<!--검색-->
 							<div class="col-sm-3">
 								<form action='<c:url value="/qna/search.do"/>' method="post" >
 									<select name="search_account" class="input-sm">
@@ -134,9 +148,7 @@
 									</div>									
 								</form>
 							</div>
-						<!--검색-->
-							
-							 <!--검색 끝-->
+							<!--검색 끝-->
 					</section>
 					
 					<footer class="panel-footer">

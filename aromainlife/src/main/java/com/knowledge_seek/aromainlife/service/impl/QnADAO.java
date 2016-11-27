@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.QnA;
 
 import com.knowledge_seek.aromainlife.service.QnAService;
@@ -77,6 +78,30 @@ public class QnADAO implements QnAService {
 	public List<QnA> select_notiList(Map map) {
 		
 		return sqlTemplate.selectList("qnaSelect_notiList", map);
+	}
+
+	@Override
+	public int ans_insert(Answer ans) {
+
+		return sqlTemplate.insert("ans_insert",ans);
+	}
+
+	@Override
+	public int ans_update(Answer ans) {
+		// TODO Auto-generated method stub
+		return sqlTemplate.update("ans_update",ans);
+	}
+
+	@Override
+	public int ans_delete(Answer ans) {
+		// TODO Auto-generated method stub
+		return sqlTemplate.delete("ans_delete", ans);
+	}
+
+	@Override
+	public Answer ans_selectOne(Answer ans) {
+
+		return sqlTemplate.selectOne("ans_selectOne", ans);
 	}
 
 }

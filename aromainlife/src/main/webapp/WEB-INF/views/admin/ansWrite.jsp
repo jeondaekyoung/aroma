@@ -64,11 +64,11 @@
 			<section id="content">
 				<section class="vbox">
 					<header class="header bg-white b-b b-light">
-						<p>QnA 등록</p>
+						<p>QnA 답변</p>
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="<c:url value='/qna/write.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data" >
+						<form action="<c:url value='/qna/ansWrite.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data" >
 							<input type="hidden" name="content" id="editorContent" class="form-control"/>
 							
 							<!-- 작성자 -->

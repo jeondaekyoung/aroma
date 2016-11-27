@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.QnAService;
 
@@ -74,6 +75,30 @@ public class QnAServiceImpl implements QnAService {
 	public List<QnA> select_notiList(Map map) {
 		
 		return dao.select_notiList(map);
+	}
+
+	@Override
+	public int ans_insert(Answer ans) {
+
+		return dao.ans_insert(ans);
+	}
+
+	@Override
+	public int ans_update(Answer ans) {
+
+		return dao.ans_update(ans);
+	}
+
+	@Override
+	public int ans_delete(Answer ans) {
+
+		return dao.ans_delete(ans);
+	}
+
+	@Override
+	public Answer ans_selectOne(Answer ans) {
+
+		return dao.ans_selectOne(ans);
 	}
 
 }
