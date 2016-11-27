@@ -63,7 +63,8 @@
 										<col style="width: 10%">
 										<col style="width: 30%">
 										<col style="width: 30%">
-										<col style="width: 20%">
+										<col style="width: 10%">
+										<col style="width: 10%">
 										<col style="width: 10%">
 									</colgroup>
 									<thead>
@@ -71,6 +72,7 @@
 											<th>No.</th>
 											<th>제목</th>
 											<th>파일</th>
+											<th>답변상태</th>
 											<th>작성일</th>
 											<th>조회수</th>
 										</tr>
@@ -80,7 +82,7 @@
 										<c:choose>
 											<c:when test="${empty qnaLists }">
 												<tr bgcolor="white" align="center">
-													<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+													<td colspan="6">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 												</tr>
 											</c:when>
 											<c:otherwise>
@@ -93,6 +95,16 @@
 															-
 														</c:if>
 														<a href='<c:url value="/file/down/${list.file_id}"></c:url>'>${list.fileName}</a>
+														</td>
+														<td>
+													<c:choose>
+														<c:when test="${list.answerChk == 0 }">
+														 답변 대기										
+														</c:when>
+														<c:otherwise>
+														 답변 완료
+														</c:otherwise>
+													</c:choose>
 														</td>
 														<td>${list.createDate}</td>
 														<td>${list.hits }</td>

@@ -115,12 +115,12 @@ public class QnAController {
 	}
 	
 	@RequestMapping(value="/view.do" )
-	public String view(QnA qna,Model model) {
+	public String view(QnA qna,Model model,Answer ans) {
 		qna=qnaService.selectOne(qna);
 		model.addAttribute("qna",qna);
 		//답변
-		//Answer ans = qnaService.ans_selectOne(ans);
-		//model.addAttribute("ans",ans);
+		ans = qnaService.ans_selectOne(ans);
+		model.addAttribute("ans",ans);
 		return "/admin/qnaView";
 	}
 
@@ -149,7 +149,7 @@ public class QnAController {
 		}
 		
 		qnaService.update(qna);
-		return "forward:/qna/view.do";
+		return "forward:/qna/view.do?qnaNo="+qna.getQnaNo();
 	}
 	
 	@RequestMapping("/delete.do")
@@ -238,18 +238,37 @@ public class QnAController {
 	
 	@RequestMapping(value = "/ansWrite.do" ,method =RequestMethod.POST)
 	public String answer(Answer ans) {
-		
+		qnaService.anschk_update(ans);
 		qnaService.ans_insert(ans);
-		
-		return "redirect:/qna/list.do";
+		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
 	}
 	
-	@RequestMapping("/ans_updateForm.do")
-	public String ans_updateForm(QnA qna,Model model){ 
+	@RequestMapping("/ans_editForm.do")
+	public String ans_updateForm(QnA qna,Model model,Answer ans){ 
 		qna=qnaService.selectOne(qna);
 		model.addAttribute("qna",qna);
-
-		return "/admin/qnaEdit";
+		
+		//답변
+		ans = qnaService.ans_selectOne(ans);
+		model.addAttribute("ans",ans);
+		
+		return "/admin/ansEdit";
+	}
+	@RequestMapping("/ans_edit.do")
+	public String ans_edit(Answer ans, Model model) {
+		System.out.println("AnsNo:"+ans.getAnsNo()+",Content:"+ans.getContent()+",qnaNo:"+ans.getQnaNo()+",writer:"+ans.getWriter());
+		qnaService.ans_update(ans);
+		return "forward:/qna/view.do?qnaNo="+ans.getQnaNo();
+	}
+	
+	
+	@RequestMapping("/ans_delete.do")
+	public String ans_delete(Answer ans){
+		//QnA=qnaService.selectOne(QnA);
+		qnaService.ans_delete(ans);
+		
+		
+		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
 	}
 	
 

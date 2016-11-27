@@ -104,4 +104,10 @@ public class QnADAO implements QnAService {
 		return sqlTemplate.selectOne("ans_selectOne", ans);
 	}
 
+	@Override
+	public int anschk_update(Answer ans) {
+		
+		return sqlTemplate.update("anschk_update", ans);
+	}
+
 }

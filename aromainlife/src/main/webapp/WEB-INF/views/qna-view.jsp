@@ -110,7 +110,7 @@ function modal_button(mod){
 			<c:choose>
 				
               <c:when test="${qna.answerChk == 1}">
-              	<li class="col-2"></li>
+              	<li class="col-2">	${ans.createDate }<br>관리자 답변<br>${ans.content}</li>
               </c:when>
               <c:otherwise>
               	<li class="col-2">답변 대기 중입니다.</li>

@@ -37,6 +37,8 @@ public interface QnAService {
 	//답변 달기 등록,수정,삭제,상세보기
 	int ans_insert(Answer ans);
 	
+	int anschk_update(Answer ans);
+	
 	int ans_update(Answer ans);
 	
 	int ans_delete(Answer ans);

@@ -101,4 +101,10 @@ public class QnAServiceImpl implements QnAService {
 		return dao.ans_selectOne(ans);
 	}
 
+	@Override
+	public int anschk_update(Answer ans) {
+
+		return dao.anschk_update(ans);
+	}
+
 }

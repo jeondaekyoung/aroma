@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.Gallery;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
@@ -79,10 +80,12 @@ public class UserQnAController {
 		return "qna-list";
 	}
 	@RequestMapping(value = "/user/qna-view.do", method = RequestMethod.GET)
-	public String view(QnA qna,Model model){
+	public String view(QnA qna,Model model,Answer ans){
 		
 		qna=qnaService.selectOne(qna);
 		model.addAttribute("qna", qna);
+		ans = qnaService.ans_selectOne(ans);
+		model.addAttribute("ans", ans);
 		qnaService.update_hits(qna.getQnaNo());
 		return "qna-view";
 	}
