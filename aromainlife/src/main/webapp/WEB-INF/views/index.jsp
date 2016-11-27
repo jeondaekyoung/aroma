@@ -5,9 +5,6 @@
 <html>
 <head>
   <jsp:include page="include-head.jsp" flush="true"/>
-  <style type="text/css">
-	
-</style>
   
 </head>
 <body class="container">

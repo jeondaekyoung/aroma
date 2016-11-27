@@ -65,6 +65,16 @@ where content LIKE '%${search_text}%'
 where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
 				</when>
 	</choose>
+		<choose>
+		<when test="noti != null">
+		and writer = 'admin'
+		</when>
+		<otherwise>
+		and writer != 'admin'
+		</otherwise>
+	</choose>
+				
+	
 	  order by qnaNo desc) a where r between  #{start} and #{end}
 	</select>
 	
@@ -81,7 +91,16 @@ where content LIKE '%${search_text}%'
 where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
 				</when>
 	</choose>
-	  order by qnaNo desc) a 
+	<choose>
+		<when test="noti != null">
+		and writer = 'admin'
+		</when>
+		<otherwise>
+		and writer != 'admin'
+		</otherwise>
+	</choose>
+	
+	order by qnaNo desc) a
 	</select>
 	
 		

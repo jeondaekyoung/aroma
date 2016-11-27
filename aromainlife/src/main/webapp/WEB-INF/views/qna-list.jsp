@@ -47,31 +47,14 @@
               </tr>
           </thead>
           <tbody> 
-          <c:set var="index" value="0"/>
-         <%--  <c:forEach items="${lists}" var="list" varStatus="status">
-			 <tr>
-			 <c:if test="${list.writer eq 'admin' and index<5 }" var="result">
-			 	<td style="color:orange">-</td>
-				<td style="color:orange">
-				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a>
-				</td>
-				<td style="color:orange">${list.createDate}</td>
-				<td style="color:orange">${list.hits}</td>
-				<c:set var="index" value="${index+1}"/>
-			 </c:if>
-			 <c:if test="${not result}">
-			  <c:if test="${!(list.writer eq 'admin') }"> 
-			 	<td>
-				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
-				</td>
-				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
-				<td>${list.createDate}</td>
-				<td>${list.hits}</td>
-			 	</c:if>
-			 </c:if>
-			</tr>
-			</c:forEach> --%>
-            <c:forEach items="${notiLists}" var="list" varStatus="status">
+        <c:choose>
+        	<c:when test="${empty notiLists && empty lists}">
+        		<tr bgcolor="white" align="center">
+						<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+				</tr>
+        	</c:when>
+        	<c:otherwise>
+        		<c:forEach items="${notiLists}" var="list" varStatus="status">
 			 <tr>
 			 	<td style="color:orange">-</td>
 				<td style="color:orange">
@@ -94,6 +77,9 @@
 			</tr>
 			</c:forEach>
         
+        	</c:otherwise>
+        </c:choose>
+            
           </tbody>
         </table>
         
@@ -104,12 +90,30 @@
       <!-- 시작: paging -->      
       <div class="text-center">
       ${pagingString}
-       
+       	<form action='<c:url value="/user/qnaSearch.do"/>' method="post">
+				<div class="input-group">
+					<select class="input-sm">
+                        <option value="0">제목</option>
+                        <option value="1">작성자</option>
+                        <option value="2">내용</option>
+                        <option value="3">제목+내용</option>
+                      </select>
+					<input id="Search_input" type="text" name="search_text"
+						class="form-control" placeholder="Search"> <input
+						type="hidden" name="search_account" value="2"> <span
+						class="input-group-btn">
+						<button id="Search" class="btn btn-default" type="submit">검색</button>
+					</span>
+				</div>
+			</form>
       </div>
       <!-- 끝: paging -->
         
     </div>
-    <!-- 끝: .detail-01 -->
+		<!--검색-->
+		
+		<!--검색 끝-->
+		<!-- 끝: .detail-01 -->
   </div>
   <!-- 끝: .page-container -->
 

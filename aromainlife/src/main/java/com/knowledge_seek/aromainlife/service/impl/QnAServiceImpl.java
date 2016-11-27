@@ -31,7 +31,7 @@ public class QnAServiceImpl implements QnAService {
 	@Override
 	public int getTotalRecordCount_search(Map map) {
 		
-		return dao.getTotalRecordCount(map);
+		return dao.getTotalRecordCount_search(map);
 	}
 
 	@Override

@@ -166,5 +166,69 @@ public class QnAController {
 		
 		return "redirect:/qna/list.do?nowPage="+nowPage;
 	}
+
+	@RequestMapping("/search.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		
+		String search_account=map.get("search_account").toString();
+		String search_text=map.get("search_text").toString();
+		System.out.println(search_account+search_text);
+		{//공지사항
+			
+			map.put("noti","noti");
+			int totalRecordCount1 =qnaService.getTotalRecordCount_search(map);
+			System.out.println("totalRecordCount1:"+totalRecordCount1);
+			int totalPage1= (int)(Math.ceil(((double)totalRecordCount1/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> notiLists =qnaService.search(map);
+			
+			String pagingString1 = PagingUtil.pagingText(totalRecordCount1, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/qna/search.do?search_account="+search_account+"&search_text="+search_text+"&");
+			
+			
+			model.addAttribute("notiLists",notiLists);
+			model.addAttribute("pagingString1",pagingString1);
+			model.addAttribute("totalPage1",totalPage1);
+			model.addAttribute("totalRecordCount1",totalRecordCount1);
+		}
+		{//문의 사항
+			map.clear();
+			map.put("search_account",search_account);
+			map.put("search_text",search_text);
+			int totalRecordCount2 =qnaService.getTotalRecordCount_search(map);
+			System.out.println("totalRecordCount2:"+totalRecordCount2);
+			int totalPage2= (int)(Math.ceil(((double)totalRecordCount2/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> lists=qnaService.search(map);
+			
+			String pagingString2 = PagingUtil.pagingText(totalRecordCount2, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/qna/search.do?search_account="+map.get("search_account")+"&search_text="+map.get("search_text")+"&");
+			
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString2",pagingString2);
+			model.addAttribute("totalPage2",totalPage2);
+			model.addAttribute("totalRecordCount2",totalRecordCount2);
+		}
+		model.addAttribute("nowPage",nowPage);
+		model.addAttribute("pageSize",pageSize);
+		
+		return "/admin/qna";
+	}
+	
+	
 	
 }

@@ -113,20 +113,10 @@
 								
 								</tbody>
 							</table>
+							
 							<a href="<c:url value='/qna/writeForm.do'/>" class="btn btn-primary" style="margin-top: 20px">
 								<i class="fa fa-pencil"></i> 글쓰기
 							</a>
-						
-					</section>
-
-					<footer class="panel-footer">
-						<div class="row">
-							<!--페이징-->
-							<div class="col-sm-9 text-center text-center-xs">
-								${pagingString2}															
-							</div> <!--페이징 끝-->
-
-							<!--검색-->
 							<div class="col-sm-3">
 								<form action='<c:url value="/qna/search.do"/>' method="post" >
 									<select name="search_account" class="input-sm">
@@ -143,8 +133,22 @@
 										</span>
 									</div>									
 								</form>
-							</div> <!--검색 끝-->
+							</div>
+						<!--검색-->
+							
+							 <!--검색 끝-->
+					</section>
+					
+					<footer class="panel-footer">
+						<div class="row">
+							<!--페이징-->
+							<div class="col-sm-9 text-center text-center-xs">
+								${pagingString2}															
+							</div> <!--페이징 끝-->
+
+							
 						</div>
+						
 					</footer>
 
 				</section>

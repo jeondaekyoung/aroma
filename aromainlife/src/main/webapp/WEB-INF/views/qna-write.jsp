@@ -60,10 +60,7 @@
 		var f=document.adForm;
 			switch (mod) {
 			case "submit":
-				if (confirm("작성하신 내용은 수정 하실수 없습니다.  \n 이대로 관리자에게 전송하시겠습니까? ")!=1) {
-					event.preventDefault();
-					return false;
-					}
+			
 				if(!f.title.value){
 					alert("제목을 입력하세요.");
 					event.preventDefault();
@@ -98,7 +95,7 @@
 				}
 				
 				}
-				alert("문의 하신 내용은 2~3일 안에 입력하신 정보로 \n 이메일이나 전화를 통해 답변이 갈 예정 입니다.감사합니다.");
+				
 		
 					
 	} 

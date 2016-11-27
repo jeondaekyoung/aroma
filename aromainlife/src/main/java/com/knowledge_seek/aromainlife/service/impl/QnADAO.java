@@ -28,13 +28,13 @@ public class QnADAO implements QnAService {
 	@Override
 	public List<QnA> search(Map map) {
 		
-		return null;
+		return sqlTemplate.selectList("qnaSearch",map);
 	}
 
 	@Override
 	public int getTotalRecordCount_search(Map map) {
-		
-		return 0;
+			
+		return sqlTemplate.selectOne("qnaGetTotalRecordCount_search",map);
 	}
 
 	@Override

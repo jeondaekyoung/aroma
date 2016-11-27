@@ -141,6 +141,31 @@ public class UserQnAController {
 		return "redirect:/user/qna-list.do";
 	}
 	
+	@RequestMapping("/user/qnaSearch.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		int totalRecordCount =qnaService.getTotalRecordCount_search(map);
+		
+		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+		
+		//시작 및 끝 ROWNUM구하기]
+		int start= (nowPage-1)*pageSize+1;
+		int end = nowPage*pageSize;		
+		map.put("start", start);
+		map.put("end",end);
+		List<QnA> lists=qnaService.search(map);
+		
+		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
+				req.getContextPath()+"/user/qnaSearch.do?search_account="+map.get("search_account")+"&search_text="+map.get("search_text")+"&");
+		model.addAttribute("lists",lists);
+		model.addAttribute("pagingString",pagingString);
+		model.addAttribute("totalPage",totalPage);
+		model.addAttribute("nowPage",nowPage);
+		model.addAttribute("totalRecordCount",totalRecordCount);
+		model.addAttribute("pageSize",pageSize);
+		return "/qna-list";
+	}
 	
 	
 	
