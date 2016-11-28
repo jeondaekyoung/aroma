@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,14 +34,37 @@
             *프로그램: 향기스킨, 향기 로션, 향기 아이크림, 향기 에센스, 향기 림밤, 향기 립글로스, 호흡기에 좋은 향기 코크림, 향기 아토피 크림 등<br><br>시간: 40분~50분</p>
           </div>
             
-          <div class="col-8" id="class-1">
-            <h4 class="nanumpen">천연 죽염치약 만들기</h4>
-	        <div class="col-5"><img src="" alt="사진" width="100%"></div>
-	        <div class="col-11">
-	          <p>영평사에서 직접 만든 3회 죽염과 드라이 허브를 곱게 갈아서 넣고 천연향기를 첨가하여 만드는 죽염치약 (허브소금으로 사용해도 좋습니다.)<br>시간: 40분</p>
+          
+		  <c:forEach items="${lists}" var="list" varStatus="loop">
+		  	<div class="col-8" id="class-1">
+            <h4 class="nanumpen">${list.title}</h4>
+	        <div class="col-16">
+	          <p>${list.content }<br>시간:${list.proTime} </p>
+	          <div class="col-4">
+	          <c:if test="${not empty list.file_id1}">
+	          <img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진"  >
+	          </c:if>
+	          </div>
+	          <div class="col-4">
+	          <c:if test="${not empty list.file_id2}">
+	          <img src="<c:url value='/file/down/image/${list.file_id2}'/>" alt="사진"  >
+	          </c:if>
+	          </div>
+	          <div class="col-4">
+	          <c:if test="${not empty list.file_id3}">
+	          <img src="<c:url value='/file/down/image/${list.file_id3}'/>" alt="사진"  >
+	          </c:if>
+	          </div>
+	          <div class="col-4">
+	          <c:if test="${not empty list.file_id4}">
+	          <img src="<c:url value='/file/down/image/${list.file_id4}'/>" alt="사진"  >
+	          </c:if>
+	          </div>
 	        </div>
-		  </div>
-          <div class="col-8" id="class-2">
+		  </div>	
+		  </c:forEach>
+		  
+         <!--  <div class="col-8" id="class-2">
             <h4 class="nanumpen">향기 모양 비누 만들기</h4>
             <div class="col-5"><img src="" alt="사진" width="100%"></div>
 	        <div class="col-11">
@@ -102,7 +126,7 @@
 	        <div class="col-11">
 	          <p>내가 좋아하는 드라이 허브를 이용해 주머니를 만들어 실내에 두거나 쿠션을 만들어 곁에 두면 머리가 맑아지고 숙면을 취할 수 있다.<br>시간: 40분</p>
 	        </div>
-	      </div>
+	      </div> -->
 	    </div>
       </div>
       <!-- 끝: 아로마테라피-->

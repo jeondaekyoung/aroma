@@ -58,12 +58,13 @@
             </header>
        		 <section class="scrollable wrapper w-f">
 							<table class="admin" style="margin-bottom:20px">
-							<caption >자료실</caption>
+							<caption >문의사항</caption>
 									<colgroup>
 										<col style="width: 10%">
 										<col style="width: 30%">
 										<col style="width: 30%">
-										<col style="width: 20%">
+										<col style="width: 10%">
+										<col style="width: 10%">
 										<col style="width: 10%">
 									</colgroup>
 									<thead>
@@ -71,6 +72,7 @@
 											<th>No.</th>
 											<th>제목</th>
 											<th>파일</th>
+											<th>답변상태</th>
 											<th>작성일</th>
 											<th>조회수</th>
 										</tr>
@@ -78,21 +80,31 @@
 									<tbody>
 										<!--   한 페이지에 10개씩 보여준다    -->
 										<c:choose>
-											<c:when test="${empty downLists }">
+											<c:when test="${empty qnaLists }">
 												<tr bgcolor="white" align="center">
-													<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+													<td colspan="6">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 												</tr>
 											</c:when>
 											<c:otherwise>
-												<c:forEach items="${downLists }" begin="0" end="9" var="list" varStatus="status">
+												<c:forEach items="${qnaLists }" begin="0" end="9" var="list" varStatus="status">
 													<tr>
 														<td>${status.index+1}</td>
-														<td><a href="<c:url value='/down/view.do?downNo=${list.downNo}'/>">[${list.account}]${list.title}</a></td>
+														<td><a href="<c:url value='/qna/view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 														<td>
 														<c:if test="${empty list.file_id}">
 															-
 														</c:if>
 														<a href='<c:url value="/file/down/${list.file_id}"></c:url>'>${list.fileName}</a>
+														</td>
+														<td>
+													<c:choose>
+														<c:when test="${list.answerChk == 0 }">
+														 답변 대기										
+														</c:when>
+														<c:otherwise>
+														 답변 완료
+														</c:otherwise>
+													</c:choose>
 														</td>
 														<td>${list.createDate}</td>
 														<td>${list.hits }</td>
@@ -134,7 +146,7 @@
 													<tr>
 														<td>${status.index+1}</td>
 														<td><a
-															href="<c:url value='/noti/view.do?notiNo=${list.notiNo}'/>">${list.title}</a></td>
+															href="<c:url value='/qna/view.do?notiNo=${list.qnaNo}'/>">${list.title}</a></td>
 																<td>
 																	<c:if test="${empty list.file_id}">
 																		-
@@ -154,37 +166,34 @@
 									<caption>동영상</caption>
 									<colgroup>
 										<col style="width: 10%">
-										<col style="width: 10%">
-										<col style="width: 10%">
-										<col style="width: 15%">
-										<col style="width: 40%">
+										<col style="width: 30%">
+										<col style="width: 30%">
+										<col style="width: 30%">
+										
 									</colgroup>
 									<thead>
 										<tr>
 											<th>No.</th>
 											<th>제목</th>
 											<th>작성일</th>
-											<th>유튜브 URL</th>
-											<th>영상</th>
-											
+											<th>사진</th>
 										</tr>
 									</thead>
 									<tbody>
 										<!--   한 페이지에 10개씩 보여준다    -->
 										<c:choose>
-											<c:when test="${empty videoLists }">
+											<c:when test="${empty galLists }">
 												<tr bgcolor="white" align="center">
-													<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+													<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 												</tr>
 											</c:when>
 											<c:otherwise>
-												<c:forEach items="${videoLists}" begin="0" end="9" var="list" varStatus="status">
+												<c:forEach items="${galLists}" begin="0" end="9" var="list" varStatus="status">
 													<tr>
 														<td>${status.index+1}</td>
 														<td>${list.title}</td>
 														<td>${list.createDate}</td>
-														<td>${list.youtube_URL}</td>
-												<td><iframe width="450" height="150" src="${list.youtube_URL}" frameborder="0" allowfullscreen></iframe></td>
+														<td><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" ></td>
 													</tr>
 												</c:forEach>
 
@@ -198,18 +207,7 @@
   
             <footer class="panel-footer">
               <div class="row">
-                <!--페이징-->
-                <!-- <div class="col-sm-9 text-center text-center-xs">                
-                  <ul class="pagination pagination-sm m-t-none m-b-none">
-                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                  </ul>
-                </div> -->
+              
                 <!--페이징 끝-->
                 
          

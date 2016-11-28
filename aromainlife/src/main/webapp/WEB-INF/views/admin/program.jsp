@@ -117,21 +117,9 @@
 			                <!-- / .accordion -->
 				
 						</form>
-					
-					</section>
-
-					<footer class="panel-footer">
-						<div class="row">
-							<!--페이징-->
-							<div class="col-sm-9 text-center text-center-xs">
-								 ${pagingString}
-								 
-							</div>
-							<!--페이징 끝-->
-
-							<!--검색-->
+						<!--검색-->
 							<div class="col-sm-3">
-								<form action='<c:url value="/qna/search.do"/>' method="post" >
+								<form action='<c:url value="/pro/search.do"/>' method="post" >
 									<select name="search_account" class="input-sm">
 										<option value="0">제목</option>
 										<option value="1">내용</option>
@@ -148,6 +136,18 @@
 								</form>
 							</div>
 							<!--검색 끝-->
+					</section>
+
+					<footer class="panel-footer">
+						<div class="row">
+							<!--페이징-->
+							<div class="col-sm-9 text-center text-center-xs">
+								 ${pagingString}
+								 
+							</div>
+							<!--페이징 끝-->
+
+							
 						</div>
 					</footer>
 

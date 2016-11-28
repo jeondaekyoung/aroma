@@ -18,12 +18,6 @@
 			switch (pstr){	
 				case 'new':
 					
-					if(!f.title.value){
-					   alert("제목을 입력하세요.");
-					
-					   return false;
-					}
-				
 					if($("#editor").html()!=0){
 					$("#editorContent").val($("#editor").html());
 					}
@@ -64,34 +58,50 @@
 			<section id="content">
 				<section class="vbox">
 					<header class="header bg-white b-b b-light">
-						<p>QnA 등록</p>
+						<p>QnA 답변</p>
 					</header>
-
+					
 					<section class="scrollable wrapper w-f">
-						<form action="<c:url value='/qna/write.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data" >
+						<form action="<c:url value='/qna/ansWrite.do' />" method="post" id="adForm" name="adForm" class="form-horizontal" >
 							<input type="hidden" name="content" id="editorContent" class="form-control"/>
 							
 							<!-- 작성자 -->
 							<input type="hidden" name="writer" value="admin" class="form-control" >
 							
-							<!-- 글비밀번호 -->
-							<input type="hidden" name="pass" value="Admin_Notice" class="form-control" >
 							<!-- 답변체크 -->
-							<input type="hidden" name="answerChk" value="3" class="form-control" >
+							<input type="hidden" name="answerChk" value="1" class="form-control" >
+							<!-- 문의사항 번호 -->
+							<input type="hidden" name="qnaNo" value="${qna.qnaNo }" class="form-control" >
 							
 							<!--제목-->
-							<div class="form-group">
-								<label class="col-sm-2 control-label">제목</label>
-								<div class="col-sm-9">
-									<input type="text" name="title" class="form-control">
+							<!--질문 제목-->
+							<div class="line line-dashed line-lg pull-in"></div>
+							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">질문 제목</label>
+								<div class="col-sm-10">
+									<p class="form-control-static">${qna.title}</p>
 								</div>
 							</div>
-							<!--제목 끝-->
+							<!--질문 제목 끝-->
 
-							<!--내용-->
+							<!--질문 내용-->
+							<div class="line line-dashed line-lg pull-in"></div>
+							
+							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">질문 내용</label>
+								<div class="col-sm-9">
+									<div class="form-control"
+										style="overflow: scroll; height: 250px; max-height: 250px"
+										contenteditable="false">${qna.content}</div>
+								</div>
+							
+							</div>
+							<!-- 질문 내용 끝-->
+							
+							<!--답변 내용-->
 							<div class="line line-dashed line-lg pull-in"></div>
 							<div class="form-group">
-							 <label class="col-sm-2 control-label">내용</label>
+							 <label class="col-sm-2 control-label">답변 내용</label>
 		                     <div class="col-sm-9">
 		                       <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
 		                         <div class="btn-group">
@@ -156,13 +166,13 @@
 							<!--내용 끝-->
 
 							<!--첨부파일-->
-							<div class="line line-dashed line-lg pull-in"></div>
+						<!-- 	<div class="line line-dashed line-lg pull-in"></div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">첨부파일</label>
 								<div class="col-sm-9">
 									<input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
 								</div>
-							</div>
+							</div> -->
 							<!--첨부파일 끝-->
 
 							<!--버튼그룹-->

@@ -1,5 +1,7 @@
 package com.knowledge_seek.aromainlife.adminController;
 
+import static org.hamcrest.CoreMatchers.nullValue;
+
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -40,23 +42,16 @@ public class FileController {
 	public ResponseEntity<FileSystemResource> down(@PathVariable("file_id") String fileId,HttpServletRequest req){
 		
 		FileDTO fileDto = fileService.selectFileDetail(fileId);
-		
+		if(fileDto!=null){
 		File file = new File(fileDto.getFile_path());
-		
 		return downloadContent(fileDto, file, true,req);
+		}
+		else{
+		return null;
+		}
+		
+		
 	}
-	
-	/*@RequestMapping("/downNhit/{file_id}/{downNo}")
-	@ResponseBody
-	public ResponseEntity<FileSystemResource> DownNhit(@PathVariable("file_id") String fileId,
-			@PathVariable("downNo") String downNo,HttpServletRequest req){
-		down.update_hits(downNo);
-		FileDTO fileDto = fileService.selectFileDetail(fileId);
-		
-		File file = new File(fileDto.getFile_path());
-		
-		return downloadContent(fileDto, file, true,req);
-	}*/
 	
 	@RequestMapping("/down/image/{file_id}")
 	@ResponseBody

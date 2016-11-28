@@ -5,9 +5,16 @@
 			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.QnA">
 	<select id="qnaSelectList" parameterType="java.util.Map" resultType="QnA">
-	
-			select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r order by qnaNo desc) a where r between  #{start} and #{end}
+		
+		select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r where writer!='admin' order by qnaNo desc) a 
+		where r between #{start} and #{end}
 	</select>
+	
+	<select id="qnaSelect_notiList" parameterType="java.util.Map" resultType="QnA" >
+		select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r where writer='admin' order by qnaNo desc) a
+		where r between #{start} and #{end}
+	</select>
+	
 	
 	<select id="qnaSelectOne" parameterType="QnA" resultType="QnA">
 		select * from QnA where qnaNo=#{qnaNo}
@@ -33,11 +40,21 @@
 		
 	<select id="qnaTotalCount" resultType="int" parameterType="java.util.Map">
 	SELECT COUNT(*) FROM QnA
+		<choose>
+			<when test="noti != null">
+		where writer = 'admin'
+			</when>
+			<otherwise>
+		where writer != 'admin'
+			</otherwise>
+		</choose>
+	
+	
 	</select>	
 	
 	<select id="qnaSearch" parameterType="java.util.Map" resultType="QnA">
 	select * from (select QnA.*,@rownum:=@rownum+1 as r from QnA, (SELECT @rownum:=0) r 
-		<choose>
+	<choose>
 				<when test="search_account == 0 and search_text != null and search_text !='' ">
 where title LIKE '%${search_text}%'
 				</when>
@@ -48,6 +65,16 @@ where content LIKE '%${search_text}%'
 where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
 				</when>
 	</choose>
+		<choose>
+		<when test="noti != null">
+		and writer = 'admin'
+		</when>
+		<otherwise>
+		and writer != 'admin'
+		</otherwise>
+	</choose>
+				
+	
 	  order by qnaNo desc) a where r between  #{start} and #{end}
 	</select>
 	
@@ -64,8 +91,38 @@ where content LIKE '%${search_text}%'
 where title LIKE '%${search_text}%' or content LIKE '%${search_text}%'
 				</when>
 	</choose>
-	  order by qnaNo desc) a 
-	</select>
+	<choose>
+		<when test="noti != null">
+		and writer = 'admin'
+		</when>
+		<otherwise>
+		and writer != 'admin'
+		</otherwise>
+	</choose>
 	
+	order by qnaNo desc) a
+	</select>
+	<!-- 답변 달기 1대1 매칭임 -->
+	
+	<insert id="ans_insert" parameterType="Answer">
+		insert into Answer values(default,#{writer},#{content},now(),#{qnaNo});
+	</insert>
+	
+	<update id="anschk_update" parameterType="Answer">
+		update QnA set answerChk=1 where qnaNo=${qnaNo}
+	</update>	
+	
+	<update id="ans_update" parameterType="Answer">
+		update Answer set content=#{content},createDate=now()
+		   where qnaNo=#{qnaNo}
+	</update>
+	
+	<delete id="ans_delete" parameterType="Answer">
+		delete from Answer where qnaNo=#{qnaNo}
+	</delete>
+	
+	<select id="ans_selectOne" parameterType="Answer" resultType="Answer">
+		select * from Answer where qnaNo=#{qnaNo}
+	</select>
 		
 </mapper>

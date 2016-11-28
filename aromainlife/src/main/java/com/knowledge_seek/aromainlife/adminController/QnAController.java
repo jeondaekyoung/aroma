@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
@@ -43,27 +44,51 @@ public class QnAController {
 	@RequestMapping("/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
-		
-		int totalRecordCount =qnaService.getTotalRecordCount(map);
-		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
-		
-		//시작 및 끝 ROWNUM구하기]
-		int start= (nowPage-1)*pageSize+1;
-		int end = nowPage*pageSize;		
-		map.put("start", start);
-		map.put("end",end);
-		
-		List<QnA> lists=qnaService.selectList(map);
-		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
-		
-		model.addAttribute("lists",lists);
-		model.addAttribute("pagingString",pagingString);
-		model.addAttribute("totalPage",totalPage);
+
+		{//공지사항
+			
+			map.put("noti","noti");
+			int totalRecordCount1 =qnaService.getTotalRecordCount(map);
+			int totalPage1= (int)(Math.ceil(((double)totalRecordCount1/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> notiLists =qnaService.select_notiList(map);
+			
+			String pagingString1 = PagingUtil.pagingText(totalRecordCount1, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
+			
+			
+			model.addAttribute("notiLists",notiLists);
+			model.addAttribute("pagingString1",pagingString1);
+			model.addAttribute("totalPage1",totalPage1);
+			model.addAttribute("totalRecordCount1",totalRecordCount1);
+		}
+		{//문의 사항
+			map.clear();
+			int totalRecordCount2 =qnaService.getTotalRecordCount(map);
+			int totalPage2= (int)(Math.ceil(((double)totalRecordCount2/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> lists=qnaService.selectList(map);
+			
+			String pagingString2 = PagingUtil.pagingText(totalRecordCount2, pageSize, blockPage, nowPage, req.getContextPath()+"/qna/list.do?");
+			
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString2",pagingString2);
+			model.addAttribute("totalPage2",totalPage2);
+			model.addAttribute("totalRecordCount2",totalRecordCount2);
+		}
 		model.addAttribute("nowPage",nowPage);
-		model.addAttribute("totalRecordCount",totalRecordCount);
 		model.addAttribute("pageSize",pageSize);
-		
-		
 		
 		return "/admin/qna";
 	}
@@ -86,25 +111,21 @@ public class QnAController {
 		
 		qnaService.insert(qna);
 		
-		return "forward:/qna/list.do";
+		return "redirect:/qna/list.do";
 	}
 	
 	@RequestMapping(value="/view.do" )
-	public String view(QnA qna,Model model) {
+	public String view(QnA qna,Model model,Answer ans) {
 		qna=qnaService.selectOne(qna);
-		//띄워쓰기 jsp에 맞게 변환
-	/*			if(qna.getContent()!=null)
-					qna.setContent(qna.getContent().replace("\r\n","<br/>"));
-		*/
 		model.addAttribute("qna",qna);
-		
+		//답변
+		ans = qnaService.ans_selectOne(ans);
+		model.addAttribute("ans",ans);
 		return "/admin/qnaView";
 	}
 
-	
-		
 	@RequestMapping("/editForm.do")
-	public String updateForm(QnA qna,Model model){
+	public String updateForm(QnA qna,Model model){ 
 		qna=qnaService.selectOne(qna);
 		model.addAttribute("qna",qna);
 
@@ -128,8 +149,9 @@ public class QnAController {
 		}
 		
 		qnaService.update(qna);
-		return "forward:/qna/view.do";
+		return "forward:/qna/view.do?qnaNo="+qna.getQnaNo();
 	}
+	
 	@RequestMapping("/delete.do")
 	public String delete(QnA qna,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		//QnA=qnaService.selectOne(QnA);
@@ -142,5 +164,113 @@ public class QnAController {
 		
 		return "redirect:/qna/list.do?nowPage="+nowPage;
 	}
+
+	@RequestMapping("/search.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		
+		String search_account=map.get("search_account").toString();
+		String search_text=map.get("search_text").toString();
+		System.out.println(search_account+search_text);
+		{//공지사항
+			
+			map.put("noti","noti");
+			int totalRecordCount1 =qnaService.getTotalRecordCount_search(map);
+			System.out.println("totalRecordCount1:"+totalRecordCount1);
+			int totalPage1= (int)(Math.ceil(((double)totalRecordCount1/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> notiLists =qnaService.search(map);
+			
+			String pagingString1 = PagingUtil.pagingText(totalRecordCount1, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/qna/search.do?search_account="+search_account+"&search_text="+search_text+"&");
+			
+			
+			model.addAttribute("notiLists",notiLists);
+			model.addAttribute("pagingString1",pagingString1);
+			model.addAttribute("totalPage1",totalPage1);
+			model.addAttribute("totalRecordCount1",totalRecordCount1);
+		}
+		{//문의 사항
+			map.clear();
+			map.put("search_account",search_account);
+			map.put("search_text",search_text);
+			int totalRecordCount2 =qnaService.getTotalRecordCount_search(map);
+			System.out.println("totalRecordCount2:"+totalRecordCount2);
+			int totalPage2= (int)(Math.ceil(((double)totalRecordCount2/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<QnA> lists=qnaService.search(map);
+			
+			String pagingString2 = PagingUtil.pagingText(totalRecordCount2, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/qna/search.do?search_account="+map.get("search_account")+"&search_text="+map.get("search_text")+"&");
+			
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString2",pagingString2);
+			model.addAttribute("totalPage2",totalPage2);
+			model.addAttribute("totalRecordCount2",totalRecordCount2);
+		}
+		model.addAttribute("nowPage",nowPage);
+		model.addAttribute("pageSize",pageSize);
+		
+		return "/admin/qna";
+	}
+	
+	//답변 달기
+	
+	@RequestMapping("/ansForm.do")
+	public String ansForm(QnA qna, Model model) {
+		qna=qnaService.selectOne(qna);
+		model.addAttribute("qna", qna);
+		return "/admin/ansWrite";
+	}
+	
+	@RequestMapping(value = "/ansWrite.do" ,method =RequestMethod.POST)
+	public String answer(Answer ans) {
+		qnaService.anschk_update(ans);
+		qnaService.ans_insert(ans);
+		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
+	}
+	
+	@RequestMapping("/ans_editForm.do")
+	public String ans_updateForm(QnA qna,Model model,Answer ans){ 
+		qna=qnaService.selectOne(qna);
+		model.addAttribute("qna",qna);
+		
+		//답변
+		ans = qnaService.ans_selectOne(ans);
+		model.addAttribute("ans",ans);
+		
+		return "/admin/ansEdit";
+	}
+	@RequestMapping("/ans_edit.do")
+	public String ans_edit(Answer ans, Model model) {
+		System.out.println("AnsNo:"+ans.getAnsNo()+",Content:"+ans.getContent()+",qnaNo:"+ans.getQnaNo()+",writer:"+ans.getWriter());
+		qnaService.ans_update(ans);
+		return "forward:/qna/view.do?qnaNo="+ans.getQnaNo();
+	}
+	
+	
+	@RequestMapping("/ans_delete.do")
+	public String ans_delete(Answer ans){
+		//QnA=qnaService.selectOne(QnA);
+		qnaService.ans_delete(ans);
+		
+		
+		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
+	}
+	
+
 	
 }

@@ -34,7 +34,6 @@
 					</header>
 
 					<section class="scrollable wrapper w-f">
-						<form action="" method="post" id="adForm" enctype="multipart/form-data">
 							<table class="admin">
 								<colgroup>
 									<col style="width: 10%">
@@ -53,15 +52,15 @@
 								<tbody>
 									<!--   한 페이지에 10개씩 보여준다    -->
 							<c:choose>
-								<c:when test="${empty lists }">
+								<c:when test="${empty notiLists }">
 									<tr bgcolor="white" align="center">
 										<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 									</tr>
 								</c:when>
 								<c:otherwise>
-									<c:forEach items="${lists}" var="list" varStatus="status">
+									<c:forEach items="${notiLists}" var="list" varStatus="status">
 									 <tr>
-										<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
+										<td>${totalRecordCount1 - (((nowPage - 1) * pageSize) + status.index)}</td>
 										<td><a href="<c:url value='/qna/view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
 										<td>${list.createDate}</td>
 										<td>${list.hits}</td>
@@ -72,19 +71,65 @@
 								
 								</tbody>
 							</table>
+						
+							<div class="col-sm-9 text-center text-center-xs">
+								${pagingString1}															
+							</div>
+							
+							<table class="admin">
+								<colgroup>
+									<col style="width: 10%">
+									<col style="width: 40%">
+									<col style="width: 20%">
+									<col style="width: 20%">
+									<col style="width: 10%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>제목</th>
+										<th>작성일</th>
+										<th>답변상황</th>
+										<th>조회수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!--   한 페이지에 10개씩 보여준다    -->
+							<c:choose>
+								<c:when test="${empty lists }">
+									<tr bgcolor="white" align="center">
+										<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+									</tr>
+								</c:when>
+								<c:otherwise>
+									<c:forEach items="${lists}" var="list" varStatus="status">
+									 <tr>
+										<td>${totalRecordCount2 - (((nowPage - 1) * pageSize) + status.index)}</td>
+										<td><a href="<c:url value='/qna/view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
+										<td>${list.createDate}</td>
+										<td>
+										<c:choose>
+											<c:when test="${list.answerChk == 0 }">
+											 답변 대기										
+											</c:when>
+											<c:otherwise>
+											 답변 완료
+											</c:otherwise>
+										</c:choose>
+										
+										</td>
+										<td>${list.hits}</td>
+									 </tr>
+									</c:forEach>
+								</c:otherwise>
+								</c:choose>
+								
+								</tbody>
+							</table>
+							
 							<a href="<c:url value='/qna/writeForm.do'/>" class="btn btn-primary" style="margin-top: 20px">
 								<i class="fa fa-pencil"></i> 글쓰기
 							</a>
-						</form>
-					</section>
-
-					<footer class="panel-footer">
-						<div class="row">
-							<!--페이징-->
-							<div class="col-sm-9 text-center text-center-xs">
-								${pagingString}															
-							</div> <!--페이징 끝-->
-
 							<!--검색-->
 							<div class="col-sm-3">
 								<form action='<c:url value="/qna/search.do"/>' method="post" >
@@ -102,8 +147,20 @@
 										</span>
 									</div>									
 								</form>
-							</div> <!--검색 끝-->
+							</div>
+							<!--검색 끝-->
+					</section>
+					
+					<footer class="panel-footer">
+						<div class="row">
+							<!--페이징-->
+							<div class="col-sm-9 text-center text-center-xs">
+								${pagingString2}															
+							</div> <!--페이징 끝-->
+
+							
 						</div>
+						
 					</footer>
 
 				</section>

@@ -46,28 +46,40 @@
                   <th>번호</th><th>제목</th><th>등록일</th><th>조회수</th>
               </tr>
           </thead>
-          <tbody> <!--15개씩 보여준다-->
-          <c:forEach items="${lists}" var="list" varStatus="status">
+          <tbody> 
+        <c:choose>
+        	<c:when test="${empty notiLists && empty lists}">
+        		<tr bgcolor="white" align="center">
+						<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+				</tr>
+        	</c:when>
+        	<c:otherwise>
+        		<c:forEach items="${notiLists}" var="list" varStatus="status">
 			 <tr>
-				<td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}'/>">${list.title}</a></td>
+			 	<td style="color:orange">-</td>
+				<td style="color:orange">
+				<a style="color:orange" href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}&nowPage=${nowPage}'/>">${list.title}</a>
+				</td>
+				<td style="color:orange">${list.createDate}</td>
+				<td style="color:orange">${list.hits}</td>
+			 
+			</tr>
+			</c:forEach>
+	       <c:forEach items="${lists}" var="list" varStatus="status">
+			 <tr>
+			 	<td>
+				${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}	
+				</td>
+				<td><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo}&nowPage=${nowPage}'/>">${list.title}</a></td>
 				<td>${list.createDate}</td>
 				<td>${list.hits}</td>
-			 </tr>
+			 
+			</tr>
 			</c:forEach>
-            <!-- <tr>
-              <td>1</td>
-              <td><a href="">안녕하세요? 문의합니다.</a></td>
-              <td>2016-06-08</td>
-              <td>154</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td><a href="">안녕하세요? 문의합니다.</a></td>
-              <td>2016-06-08</td>
-              <td>154</td>
-            </tr> -->
         
+        	</c:otherwise>
+        </c:choose>
+            
           </tbody>
         </table>
         
@@ -78,20 +90,30 @@
       <!-- 시작: paging -->      
       <div class="text-center">
       ${pagingString}
-        <!-- <ul class="pagination pagination-sm">
-          <li><a href="#"><i class="chevron-left"></i></a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="chevron-right"></i></a></li>
-        </ul> -->
+       	<form action='<c:url value="/user/qnaSearch.do"/>' method="post">
+				<div class="input-group">
+					<select class="input-sm">
+                        <option value="0">제목</option>
+                        <option value="1">작성자</option>
+                        <option value="2">내용</option>
+                        <option value="3">제목+내용</option>
+                      </select>
+					<input id="Search_input" type="text" name="search_text"
+						class="form-control" placeholder="Search"> <input
+						type="hidden" name="search_account" value="2"> <span
+						class="input-group-btn">
+						<button id="Search" class="btn btn-default" type="submit">검색</button>
+					</span>
+				</div>
+			</form>
       </div>
       <!-- 끝: paging -->
         
     </div>
-    <!-- 끝: .detail-01 -->
+		<!--검색-->
+		
+		<!--검색 끝-->
+		<!-- 끝: .detail-01 -->
   </div>
   <!-- 끝: .page-container -->
 

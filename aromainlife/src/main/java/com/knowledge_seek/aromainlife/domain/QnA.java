@@ -20,6 +20,8 @@ public class QnA {
 	private MultipartFile file;
 	private String file_id;
 	
+	private int answerChk;
+	
 	public String getFileName() {
 		return fileName;
 	}
@@ -32,7 +34,7 @@ public class QnA {
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
-	private int answerChk;
+	
 	public String getQnaNo() {
 		return qnaNo;
 	}
