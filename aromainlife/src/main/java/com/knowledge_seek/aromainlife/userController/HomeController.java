@@ -62,9 +62,6 @@ public class HomeController {
 		model.addAttribute("proLists", proLists);
 		model.addAttribute("galLists", galLists);
 		
-		 
-		
-		
 		return "index";
 	}
 	@RequestMapping(value = "/user/intro.do", method = RequestMethod.GET)

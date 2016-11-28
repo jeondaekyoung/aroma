@@ -104,6 +104,7 @@ function modal_button(mod){
             <li class="file">
               	<p><a href='<c:url value="/file/down/${qna.file_id}" />' class="btn btn-info"><i class="fa fa-download"></i>${qna.fileName} 다운로드</a></p>
             </li>
+              <c:if test="${qna.writer != 'admin' }">
             <li class="reply-list">
               <!-- 반복 -->
               <ul class="row">
@@ -119,12 +120,14 @@ function modal_button(mod){
               </ul>
              
             </li>
+            </c:if>
             <li class="reply">
               <div class="row">
                   <a href="<c:url value='/user/qna-list.do?nowPage=${param.nowPage}'/>"><button type="button" class="col-2">목록</button></a>
-                  
+               <c:if test="${qna.writer != 'admin' }">   
                  <button type="button" class="col-2" onclick="eclick('edit')">수정</button>
                 <button type="button" class="col-2" onclick="eclick('del')">삭제</button>
+                </c:if>
               </div>
             </li>
           </ul>

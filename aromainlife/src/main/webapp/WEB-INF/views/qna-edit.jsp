@@ -25,49 +25,107 @@
       	</div>
       </div>
               
-      <!-- 시작: qna_view -->
-      <div class="row qna_view">
+      <!-- 시작: qna_write -->
+      <div class="row qna_view qna_write">
+          <form name="adForm" action="<c:url value='/user/qna-edit.do'/>" enctype="multipart/form-data" method="post">
+          	<input type="hidden" name="file_id" value="${qna.file_id}" >
+          	<input type="hidden" name="qnaNo" value="${qna.qnaNo}" >
           <ul class="col-12 prefix-2 suffix-2">
             <li class="header">
-              <p class="title">${qna.title}</p>
-              <p class="date">${qna.createDate}</p>
+                <input name="title" type="text" placeholder="제목" value="${qna.title }">
             </li>
             <li class="content">
-              	${qna.content }
+                <input name="writer" type="text" placeholder="작성자" value="${qna.writer }">
             </li>
-            <li class="file">
-              	<p><a href='<c:url value="/file/down/${qna.file_id}" />' class="btn btn-info"><i class="fa fa-download"></i>${qna.fileName} 다운로드</a></p>
+            <li class="content">
+                <input name="tel" type="text" onkeydown='return onlyNumber(event)' onkeyup='removeChar(event)' placeholder="연락처" value="${qna.tel }">
             </li>
-            <li class="reply-list">
-              <!-- 반복 -->
-              <ul class="row">
-			<c:choose>
-				
-              <c:when test="${false}">
-              	
-              </c:when>
-              <c:otherwise>
-              	<li class="col-2">답변 대기 중입니다.</li>
-              </c:otherwise>
-              </c:choose>
-              </ul>
-              <!-- <ul class="row">
-                <li class="col-2">관리자</li>
-                <li class="col-12">경기도 포천시 소흡읍 고모리 183번지 입니다.</li>
-                <li class="col-2">16:01</li>
-              </ul> -->
-              <!-- 반복 -->
+            <li class="content">
+                <input name="file" type="file" > 이전 파일: ${qna.fileName }
+            </li>
+            <li class="content">
+                <input name="pass" type="password" placeholder="비밀번호">
+            </li>
+            <li class="content">
+                <input name="passchk" type="password" placeholder="비밀번호 확인">
+            </li>
+            <li class="content">
+                <textarea name="content" placeholder="내용을 입력하세요">${qna.content }</textarea>
             </li>
             <li class="reply">
-              <div class="row">
-                  <button type="button" class="col-2">목록</button>
-                 <button type="button" class="col-2">수정</button>
-                <button type="button" class="col-2">삭제</button>
-              </div>
+            	<div class="row">
+                 <a href="<c:url value='/user/qna-list.do'/>"><button type="button" class="col-2">목록</button></a>
+                 <button  class="col-2" onclick="ecilck('submit')" type="submit">수정</button>
+                <button type="button" class="col-2" onclick="eclick('del')">삭제</button>
+                </div>
             </li>
           </ul>
+          </form>
+          <script type="text/javascript">
+	function ecilck(mod) {
+		var f=document.adForm;
+			switch (mod) {
+			case "submit":
+			
+				if(!f.title.value){
+					alert("제목을 입력하세요.");
+					event.preventDefault();
+					f.title.focus();
+					return false;
+				}
+				if(!f.writer.value){
+					alert("작성자를 입력하세요.");
+					event.preventDefault();
+					f.writer.focus();
+					return false;
+				}
+				if(!f.tel.value){
+					alert("연락처를 입력하세요.");
+					event.preventDefault();
+					f.tel.focus();
+					return false;
+				}
+				if(!f.pass.value){
+					alert("비밀번호를 입력하세요");
+					event.preventDefault();
+					f.pass.focus();
+					return false;
+				}
+				if(f.pass.value != f.passchk.value){
+					alert("비밀번호를 확인해주세요.");
+					event.preventDefault();
+					f.pass.value ="";
+					f.passchk.value="";
+					f.pass.focus();
+					return false;
+				}
+				
+				}
+				
+		
+					
+	} 
+	function onlyNumber(event){
+		event = event || window.event;
+		var keyID = (event.which) ? event.which : event.keyCode;
+		if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+			return;
+		else
+			alert("번호만 입력가능합니다.");
+			return false;
+	}
+	function removeChar(event) {
+		event = event || window.event;
+		var keyID = (event.which) ? event.which : event.keyCode;
+		if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+			return;
+		else
+			event.target.value = event.target.value.replace(/[^0-9]/g, "");
+	}
+	</script>
+          
 	  </div>
-      <!-- 끝: qna_view -->
+      <!-- 끝: qna_write -->
         
     </div>
     <!-- 끝: .detail-01 -->

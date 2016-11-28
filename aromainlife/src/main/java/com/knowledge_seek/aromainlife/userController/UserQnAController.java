@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.knowledge_seek.aromainlife.domain.Answer;
+import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Gallery;
 import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
@@ -126,13 +127,35 @@ public class UserQnAController {
 		return "forward:/user/qna-pass_fail.do";
 		
 	}
+	
 	@RequestMapping(value = "/user/qna-pass_fail.do", method = RequestMethod.POST  ,produces = "text/html; charset=utf8")
 	@ResponseBody
 	public String pass_fail(){
 		
 		return "<script>alert('비밀번호가 맞지 않습니다.');history.back();</script>";
-	}	
-
+	}
+	
+	
+	@RequestMapping(value = "/user/qna-edit.do", method = RequestMethod.POST)
+	public String edit(QnA qna){
+		System.out.println(qna.getQnaNo());
+		if(qna.getFile().getSize()!=0){
+			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
+			MultipartFile multpartfile = qna.getFile();
+			qna.setFileName(multpartfile.getOriginalFilename());
+			FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());//fileId로 정보가지고오기
+			//객체가 존재할때 파일 업데이트
+			qna.setFile_id(fileService.update(multpartfile, FileDto));	
+			
+		}
+		if(qna.getFile_id().length()==0){
+			
+			qna.setFile_id(null);
+		}
+		
+		qnaService.update(qna);
+		return "redirect:/user/qna-list.do";
+	}
 	
 	@RequestMapping(value = "/user/qna-delete.do", method = RequestMethod.POST)
 	public String delete(QnA qna){
@@ -140,6 +163,11 @@ public class UserQnAController {
 		qna=qnaService.selectOne(qna);
 		if(qna.getPass().equals(user_pass)){
 			qnaService.delete(qna);
+			if(qna.getFile_id().length()!=0){
+				//파일 삭제 
+				FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());
+				fileService.delete(FileDto);
+			}
 		}
 		return "redirect:/user/qna-list.do";
 	}

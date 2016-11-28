@@ -10,3 +10,6 @@
     font-weight: 600;
     display: inline !important;
 }
+input[type="password"] {
+	font-family: malgun gothic;
+}

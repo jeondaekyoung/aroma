@@ -25,7 +25,9 @@
 	</insert>	
 	
 	<update id="qnaUpdate" parameterType="QnA">
-		update QnA set title=#{title},content=#{content},fileName=if(isnull(#{fileName}),fileName,#{fileName}),
+		update QnA set title=#{title},content=#{content},writer=#{writer},
+		tel=if(isnull(#{tel}),tel,#{tel}),pass=if(pass!='Admin_notice',#{pass},pass),
+		fileName=if(isnull(#{fileName}),fileName,#{fileName}),
 		file_id= if(isnull(#{file_id}),file_id,#{file_id})   where qnaNo=#{qnaNo}
 	</update>
 
