@@ -70,7 +70,7 @@
         	<div class="col-4 product-item">	
         	</c:otherwise>
         </c:choose>         
-        	<img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진" width="100%">
+        	<img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/program.do'/>">${list.title}</a>
             </div>
@@ -130,31 +130,31 @@
         </div>        
         <div class="col-9 suffix-2">
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-1.do'/>">허브&amp;아로마테라피</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-2.do'/>">에센셜 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-2 product-item">
-            <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-3.do'/>">캐리어 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-4.do'/>">플로럴 워터란?</a>
             </div>
           </div>
           <div class="col-4 suffix-7 product-item">
-            <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-5.do'/>">활용방법</a>
             </div>
