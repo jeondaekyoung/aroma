@@ -221,8 +221,8 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
 }
 
 .content-2 {
-    background: url(../images/tileable_wood_texture.png);
-    background-attachment: fixed;
+    /* background: url(../images/tileable_wood_texture.png);
+    background-attachment: fixed; */
 }
 .content-2 .row {
     padding: 3em 0;
@@ -671,6 +671,27 @@ table.qna td a:hover {
 }
 .qna-list a.btn:hover {
 	background: #93B13A;
+}
+.search-form input,
+.search-form select {
+	border: 1px solid #ccc;
+	padding: 5px 10px
+}
+
+.btn-default{
+	color:#333;
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px 10px
+}
+.btn-default.active,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover{
+	color:#333;
+	background-color:#eee;
+	border-color:#adadad
 }
 
 /* qna view */
