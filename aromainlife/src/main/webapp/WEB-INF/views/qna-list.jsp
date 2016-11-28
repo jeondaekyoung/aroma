@@ -83,37 +83,36 @@
           </tbody>
         </table>
         
-        <a href="<c:url value='/user/qna-writeForm.do'/>" class="col-16 btn">문의하기</a>
+        <a href="<c:url value='/user/qna-writeForm.do'/>" class="fr btn">문의하기</a>
 	  </div>
       <!-- 끝: 테이블-->
 
-      <!-- 시작: paging -->      
       <div class="text-center">
-      ${pagingString}
-       	<form action='<c:url value="/user/qnaSearch.do"/>' method="post">
-				<div class="input-group">
-					<select class="input-sm">
-                        <option value="0">제목</option>
-                        <option value="1">작성자</option>
-                        <option value="2">내용</option>
-                        <option value="3">제목+내용</option>
-                      </select>
-					<input id="Search_input" type="text" name="search_text"
-						class="form-control" placeholder="Search"> <input
-						type="hidden" name="search_account" value="2"> <span
-						class="input-group-btn">
-						<button id="Search" class="btn btn-default" type="submit">검색</button>
-					</span>
-				</div>
-			</form>
-      </div>
-      <!-- 끝: paging -->
+        <!-- 시작: paging -->      
+        ${pagingString}
+        <!-- 끝: paging -->
         
-    </div>
 		<!--검색-->
-		
+       	<form action='<c:url value="/user/qnaSearch.do"/>' method="post">
+			<div class="input-group search-form">
+				<select class="input-sm">
+                  <option value="0">제목</option>
+                  <option value="1">작성자</option>
+                  <option value="2">내용</option>
+                  <option value="3">제목+내용</option>
+                </select>
+				<input id="Search_input" type="text" name="search_text" class="form-control" placeholder="Search">
+				<input type="hidden" name="search_account" value="2">
+				<span class="input-group-btn">
+					<button id="Search" class="btn btn-default" type="submit">검색</button>
+				</span>
+			</div>
+		</form>
 		<!--검색 끝-->
-		<!-- 끝: .detail-01 -->
+      </div>
+              
+    </div>
+	<!-- 끝: .detail-01 -->		
   </div>
   <!-- 끝: .page-container -->
 

@@ -221,8 +221,8 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
 }
 
 .content-2 {
-    background: url(../images/tileable_wood_texture.png);
-    background-attachment: fixed;
+    /* background: url(../images/tileable_wood_texture.png);
+    background-attachment: fixed; */
 }
 .content-2 .row {
     padding: 3em 0;
@@ -263,13 +263,19 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
+.product-item img {
+	width: 100%; height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
 .product-item .hover-focus-view {
   opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
-  background: url(../images/bg-content.png) no-repeat 0 0 /100%;
+  height: 240px;
+  background: url(../images/bg-content.png) no-repeat 0 0 /100% 100%;
     transition: 0.3s;
 }
 .product-item .hover-focus-view a {
@@ -672,6 +678,27 @@ table.qna td a:hover {
 .qna-list a.btn:hover {
 	background: #93B13A;
 }
+.search-form input,
+.search-form select {
+	border: 1px solid #ccc;
+	padding: 5px 10px
+}
+
+.btn-default{
+	color:#333;
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px 10px
+}
+.btn-default.active,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover{
+	color:#333;
+	background-color:#eee;
+	border-color:#adadad
+}
 
 /* qna view */
 .qna_view {}
@@ -731,13 +758,16 @@ table.qna td a:hover {
 /* qna-write */
 .qna_write input {
     width: 100%;
+    font-family: malgun gothic
 }
 .qna_write textarea {
     width: 100%;
     height: 300px;
+    font-family: malgun gothic
 }
 .qna_write button {
     width: 100%;
+    font-family: malgun gothic
 }
 .qna_write .header {
     padding: 1em;
