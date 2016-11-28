@@ -159,16 +159,17 @@ public class UserQnAController {
 	
 	@RequestMapping(value = "/user/qna-delete.do", method = RequestMethod.POST)
 	public String delete(QnA qna){
-		String user_pass= qna.getPass();
+		
 		qna=qnaService.selectOne(qna);
-		if(qna.getPass().equals(user_pass)){
 			qnaService.delete(qna);
-			if(qna.getFile_id().length()!=0){
-				//颇老 昏力 
-				FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());
-				fileService.delete(FileDto);
-			}
-		}
+			if(null!=qna.getFile_id())
+				if(qna.getFile_id().length()!=0){
+					//颇老 昏力 
+					FileDTO FileDto =fileService.selectFileDetail(qna.getFile_id());
+					fileService.delete(FileDto);
+				}
+		
+		
 		return "redirect:/user/qna-list.do";
 	}
 	

@@ -65,7 +65,7 @@
 
 							<form action="<c:url value='/qna/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
 								<!-- 작성자 -->
-								<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
+								<input type="hidden" name="writer"	value="admin" class="form-control"> 
 								<input type="hidden" name="qnaNo" value="${qna.qnaNo}" class="form-control"> 
 								<input type="hidden" name="file_id" value="${qna.file_id}" class="form-control">
 								<input type="hidden" name="content" id="editorContent"class="form-control" />

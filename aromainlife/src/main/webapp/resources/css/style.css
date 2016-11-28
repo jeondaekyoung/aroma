@@ -765,9 +765,11 @@ table.qna td a:hover {
     height: 300px;
     font-family: malgun gothic
 }
-.qna_write button {
-    width: 100%;
-    font-family: malgun gothic
+.qna_write button,
+.qna_write a.btn {
+	width: 200px;
+	height: 45px;
+	display: inline-block;
 }
 .qna_write .header {
     padding: 1em;

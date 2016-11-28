@@ -44,7 +44,7 @@
                 <input name="file" type="file" > 이전 파일: ${qna.fileName }
             </li>
             <li class="content">
-                <input name="pass" type="password" placeholder="비밀번호">
+                <input name="pass" type="password" placeholder="변경할 비밀번호">
             </li>
             <li class="content">
                 <input name="passchk" type="password" placeholder="비밀번호 확인">
@@ -55,8 +55,8 @@
             <li class="reply">
             	<div class="row">
                  <a href="<c:url value='/user/qna-list.do'/>"><button type="button" class="col-2">목록</button></a>
-                 <button  class="col-2" onclick="ecilck('submit')" type="submit">수정</button>
-                <button type="button" class="col-2" onclick="eclick('del')">삭제</button>
+                 <button type="submit" class="col-2" onclick="ecilck('submit')">수정</button>
+                 <button type="submit" class="col-2" onclick="ecilck('del')">삭제</button>
                 </div>
             </li>
           </ul>
@@ -99,8 +99,15 @@
 					f.pass.focus();
 					return false;
 				}
-				
+			case "del":
+				if (confirm("이 프로그램을 정말로 삭제하시겠습니까?")!=1) {
+					event.preventDefault();
+					return false;
 				}
+				f.action = "<c:url value='/user/qna-delete.do'/>";
+				
+			}
+			
 				
 		
 					

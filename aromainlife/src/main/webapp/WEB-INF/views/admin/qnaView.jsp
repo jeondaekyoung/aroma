@@ -176,7 +176,9 @@
 											href="<c:url value='/qna/editForm.do?qnaNo=${qna.qnaNo}'/>"
 											class="btn btn-primary"><i class="fa fa-edit"></i> 수정</a>
 											<a href="<c:url value='/qna/writeForm.do'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 글쓰기</a>
+									<c:if test="${qna.writer !='admin' }">
 									<a href="<c:url value='/qna/ansForm.do?qnaNo=${qna.qnaNo}'/>"	class="btn btn-primary" ><i class="fa fa-pencil"></i> 답변하기</a>		
+									</c:if>
 									</form>
 
 								</div>
