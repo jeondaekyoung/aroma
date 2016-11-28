@@ -54,24 +54,33 @@
 
 						<section class="scrollable wrapper w-f">
 
-							<!--조회수-->
-							<div class="clearfix form-group">
-								<label class="col-sm-2 control-label">조회수</label>
-								<div class="col-sm-10">
-									<p class="form-control-static">${qna.hits}</p>
-								</div>
-							</div>
-							<!--조회수 끝-->
-
-							<!--작성일자-->
+					
+						
+							
+							<!--작성자& 작성일자-->
 							<div class="line line-dashed line-lg pull-in"></div>
 							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">작성자</label>
+								<div class="col-sm-4">
+									<p class="form-control-static">${qna.writer}</p>
+								</div>
 								<label class="col-sm-2 control-label">작성일자</label>
-								<div class="col-sm-10">
+								<div class="col-sm-4">
 									<p class="form-control-static">${qna.createDate}</p>
 								</div>
 							</div>
-							<!--작성일자 끝-->
+							<!--작성자& 작성일자 끝-->
+							<c:if test="${qna.writer != 'admin' }">
+							<!--연락처-->
+							<div class="line line-dashed line-lg pull-in"></div>
+							<div class="clearfix form-group">
+								<label class="col-sm-2 control-label">연락처</label>
+								<div class="col-sm-10">
+									<p class="form-control-static">${qna.tel}</p>
+								</div>
+							</div>
+							</c:if>
+							<!-- 연락처 끝 -->
 							
 										
 							<!--제목-->

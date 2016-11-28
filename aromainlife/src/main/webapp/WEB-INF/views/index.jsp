@@ -72,7 +72,7 @@
         </c:choose>         
         	<img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="<c:url value='/user/program.do'/>">${list.title}</a>
+              <a href="<c:url value='/user/program.do#class-${varStatus.count}'/>">${list.title}</a>
             </div>
           </div>
         </c:forEach>
