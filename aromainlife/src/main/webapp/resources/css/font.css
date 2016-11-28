@@ -1,12 +1,10 @@
-@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);	
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-*, *:after, *:before, *::after, *::before {font-family: 'Jeju Gothic'; font-weight: 400;}
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+*, *:after, *:before, *::after, *::before{font-family: 'Spoqa Han Sans', sans-serif; font-weight: 400}
 .fa,.fa:after,.fa:before, .fa::after, .fa::before{font-family:FontAwesome !important;}
 .nanumpen {
     font-family: 'nanum pen script', serif;
 }
 .cn {
-    font-family: 'dotum';
-    font-weight: 600;
     display: inline !important;
 }
