@@ -105,7 +105,7 @@ public class ProgramController {
 	
 	@RequestMapping(value = "/edit.do")
 	public String edit( Model model,Program program,MultipartRequest mhsq,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
-		
+		//수정한 제목,내용,시간
 		program=proService.selectOne(program);
 		
 		List<MultipartFile> mf =mhsq.getFiles("file");
@@ -132,24 +132,7 @@ public class ProgramController {
 		}
 		proService.update(program);
         
-		/*for(String s:program.getFile_id()){
-			System.out.println(s);
-			if(s!=null){
-				
-				program.setFile_id(null);
-			}
-
-		}*/
 		
-		/*if(program.getFile().getSize()!=0){
-			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
-			MultipartFile multpartfile = program.getFile();
-			program.setFileName(multpartfile.getOriginalFilename());
-			FileDTO FileDto =fileServiceImpl.selectFileDetail(program.getFile_id());//fileId로 정보가지고오기
-			//객체가 존재할때 파일 업데이트
-			program.setFile_id(fileServiceImpl.update(multpartfile, FileDto));	
-		}
-		proService.update(program);*/
 		return "redirect:/pro/list.do?nowPage="+nowPage;
 	}
 	
@@ -170,6 +153,32 @@ public class ProgramController {
 		}
 			
 		return "redirect:/pro/list.do?nowPage="+nowPage;
+	}
+	
+	@RequestMapping("/search.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		int totalRecordCount =proService.getTotalRecordCount_search(map);
+		
+		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+		
+		//시작 및 끝 ROWNUM구하기]
+		int start= (nowPage-1)*pageSize+1;
+		int end = nowPage*pageSize;		
+		map.put("start", start);
+		map.put("end",end);
+		List<Program> lists=proService.search(map);
+		
+		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
+				req.getContextPath()+"/pro/search.do?search_account="+map.get("search_account")+"&search_text="+map.get("search_text")+"&");
+		model.addAttribute("lists",lists);
+		model.addAttribute("pagingString",pagingString);
+		model.addAttribute("totalPage",totalPage);
+		model.addAttribute("nowPage",nowPage);
+		model.addAttribute("totalRecordCount",totalRecordCount);
+		model.addAttribute("pageSize",pageSize);
+		return "/admin/program";
 	}
 	
 }

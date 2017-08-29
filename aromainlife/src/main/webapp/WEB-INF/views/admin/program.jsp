@@ -60,7 +60,7 @@
 			                    	<c:otherwise>
 					                  <table class="admin">
 										<tr>
-											<th>문의 내용</th>
+											<th>프로그램 목록</th>
 										</tr>
 									  </table>
 									<c:forEach items="${lists}" var="list" varStatus="status">
@@ -117,7 +117,6 @@
 			                <!-- / .accordion -->
 				
 						</form>
-					
 					</section>
 
 					<footer class="panel-footer">
@@ -130,24 +129,21 @@
 							<!--페이징 끝-->
 
 							<!--검색-->
-							<div class="col-sm-3">
-								<form action='<c:url value="/qna/search.do"/>' method="post" >
-									<select name="search_account" class="input-sm">
+							<div class="col-sm-3" style="padding-bottom: 3em;">
+								<form action='<c:url value="/pro/search.do"/>' method="post" class="form-inline" role="form" >
+									<select name="search_account" class="input-sm row-r">
 										<option value="0">제목</option>
 										<option value="1">내용</option>
 										<option value="2">제목+내용</option>
 									</select>
-									<div class="input-group">
-							
-										<input id="Search_input" type="text" name="search_text" class="input-sm form-control"
-											placeholder="Search"> <span class="input-group-btn">
-											<button id="Search" class="btn btn-sm btn-default" type="submit">검색</button>
-										</span>
-										
+									<div class="form-group">							
+										<input id="Search_input" type="text" name="search_text" class="input-sm form-control" placeholder="Search" style="width:auto;">
+										<button id="Search" class="btn btn-sm btn-default" type="submit">검색</button>
 									</div>
 								</form>
 							</div>
 							<!--검색 끝-->
+							
 						</div>
 					</footer>
 

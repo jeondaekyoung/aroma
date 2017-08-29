@@ -5,6 +5,7 @@
 <html>
 <head>
   <jsp:include page="include-head.jsp" flush="true"/>
+  
 </head>
 <body class="container">
 
@@ -23,14 +24,31 @@
       </div>
       <div class="row notice">
         <div class="col-7 prefix-2">
-          <h4>· 공지사항</h4>
-          <ul>
-            <li><a href="qna_list.jsp">국내산 허브(당귀) CO2 추출 견학 및 전나무 숲 체험</a></li>
-            <li><a href="qna_list.jsp">2016 향기요법 원데이 힐링 캠프 안내 - 6/25(토)</a></li>
-          </ul>
-        </div>
+          <h4>· 공지사항</h4>	          
+	        <div id="notice5" class="news">
+				<div class="open-event ">
+					<ul class="notice-list">
+					 <c:forEach items="${notiLists }" var="list">
+			            <li><a href="<c:url value='/user/qna-view.do?qnaNo=${list.qnaNo }'/>">${list.title}</a><span class="date">${list.createDate }</span></li>
+			            </c:forEach>
+					</ul>
+					
+				</div>
+				<!-- <div class="control fl">
+					<a href="#" class="play" title="재생">▷</a>
+					<a href="#" class="stop" title="정지">▣</a>
+				</div> -->
+				<script src="<c:url value='/resources/js/jquery.min.js'/>"></script>
+				<script src="<c:url value='/resources/js/fn_article.js'/>"></script>
+				<script type="text/javascript">
+				fn_article3('notice5','bt5',true);
+				</script>
+			</div>          
+        </div>      
+        
+        
         <div class="col-2 prefix-3 suffix-2">
-          <a href="qna_list.jsp">문의하러 가기</a>
+          <a href="<c:url value='/user/qna-list.do'/>">문의하러 가기</a>
         </div>
       </div>
     </div>
@@ -40,42 +58,63 @@
     <div class="content-2">
       <div class="row">
         <div class="col-9 prefix-2">
+        <c:forEach items="${proLists}" var="list" varStatus="varStatus">
+	   <c:choose>
+        	<c:when test="${varStatus.count ==1 or varStatus.count ==4 }">
+        	<div class="col-4 prefix-2 suffix-1 product-item">
+        	</c:when>
+        	<c:when test="${varStatus.count ==2 or varStatus.count ==5 }">
+        	<div class="col-4 suffix-1 product-item">	
+        	</c:when>
+        	<c:otherwise>
+        	<div class="col-4 product-item">	
+        	</c:otherwise>
+        </c:choose>         
+        	<img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진" class="img-responsive img-circle">
+            <div class="hover-focus-view">
+              <a href="<c:url value='/user/program.do#class-${varStatus.count}'/>">${list.title}</a>
+            </div>
+          </div>
+        </c:forEach>
+          
+          <%-- <div class="col-4 suffix-1 product-item">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
+            <div class="hover-focus-view">
+              <a href="class.jsp#class-2">향기 모양 비누 만들기</a>
+            </div>
+          </div>
+           <div class="col-4 product-item">
+            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
+            <div class="hover-focus-view">
+              <a href="class.jsp#class-3">향기 주물럭 비누 만들기</a>
+            </div>
+          </div>
+
           <div class="col-4 prefix-2 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
-            
             <div class="hover-focus-view">
-              <a href="class.jsp#class-1">천연 화장품 만들기</a>
+              <a href="class.jsp#class-4">향기 비누 만들기</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-2">천연 죽염치약 만들기</a>
+              <a href="class.jsp#class-5">무지개 향초 만들기</a>
             </div>
-          </div>
+          </div> --%>
+          
+                   <%-- 
           <div class="col-4 product-item">
             <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
             <div class="hover-focus-view">
-              <a href="class.jsp#class-3">천연 향기비누 체험하기</a>
+              <a href="class.jsp#class-6">향기 향초 만들기</a>
             </div>
-          </div>
-          <div class="col-4 prefix-2 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
-            <div class="hover-focus-view">
-              <a href="class.jsp#class-4">향초 체험하기</a>
-            </div>
-          </div>
-          <div class="col-4 suffix-5 product-item">
-            <img src="<c:url value='/resources/images/test-c.png'/>" alt="사진" width="100%">
-            <div class="hover-focus-view">
-              <a href="class.jsp#class-5">향기 주머니/쿠션 만들기</a>
-            </div>
-          </div>
+          </div>  --%>
         </div>        
         <div class="col-3 suffix-2 title">
           <h3>향기체험학습</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="class.jsp">자세히 보기 ></a>
+          <a href='<c:url value="/user/program.do"/>'>자세히 보기 ></a>
         </div>        
       </div>
     </div>
@@ -87,37 +126,37 @@
         <div class="col-3 prefix-2 title">
           <h3>아로마테라피</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="armoa-1.jsp">자세히 보기 ></a>
+          <a href="<c:url value='/user/aroma-1.do'/>">자세히 보기 ></a>
         </div>        
         <div class="col-9 suffix-2">
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="armoa-1.jsp">허브&amp;아로마테라피</a>
+              <a href="<c:url value='/user/aroma-1.do'/>">허브&amp;아로마테라피</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-02.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="armoa-2.jsp">에센셜 오일이란?</a>
+              <a href="<c:url value='/user/aroma-2.do'/>">에센셜 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-2 product-item">
-            <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-03.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="armoa-3.jsp">캐리어 오일이란?</a>
+              <a href="<c:url value='/user/aroma-3.do'/>">캐리어 오일이란?</a>
             </div>
           </div>
           <div class="col-4 suffix-1 product-item">
-            <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-04.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="armoa-4.jsp">플로럴 워터란?</a>
+              <a href="<c:url value='/user/aroma-4.do'/>">플로럴 워터란?</a>
             </div>
           </div>
           <div class="col-4 suffix-7 product-item">
-            <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="사진" width="100%">
+            <img src="<c:url value='/resources/images/theraphy-05.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
-              <a href="armoa-5.jsp">활용방법</a>
+              <a href="<c:url value='/user/aroma-5.do'/>">활용방법</a>
             </div>
           </div>
         </div>        
@@ -131,31 +170,21 @@
         <div class="col-9 prefix-2">
           <div class="carousel slide carousel-fade auto panel-body" id="c-fade">
             <ol class="carousel-indicators out">
-              <li data-target="#c-fade" data-slide-to="0" class="active"></li>
-              <li data-target="#c-fade" data-slide-to="1" class=""></li>
-              <li data-target="#c-fade" data-slide-to="2" class=""></li>
-              <li data-target="#c-fade" data-slide-to="3" class=""></li>
-              <li data-target="#c-fade" data-slide-to="4" class=""></li>
-              <li data-target="#c-fade" data-slide-to="5" class=""></li>
-              <li data-target="#c-fade" data-slide-to="6" class=""></li>
-              <li data-target="#c-fade" data-slide-to="7" class=""></li>
-              <li data-target="#c-fade" data-slide-to="8" class=""></li>
-              <li data-target="#c-fade" data-slide-to="9" class=""></li>
-              <li data-target="#c-fade" data-slide-to="10" class=""></li>
+             <c:forEach items="${galLists}" var="list" varStatus="loop">
+              <li data-target="#c-fade" data-slide-to="${loop.index}" class="active"></li>	
+               </c:forEach>
             </ol>
 
             <div class="slider">
              <ul class="clearfix carousel-inner">
-               <li class="slide slide-1 item active"><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
-               <li class="slide slide-1 item "><img src="<c:url value='/resources/images/test.jpg'/>" alt="" width="100%"></li>
+               <c:forEach items="${galLists}" var="list" varStatus="loop">
+               	<c:if test="${loop.index == 0 }" var="result">
+               <li class="slide slide-1 item active"><img src="<c:url value='file/down/image/${list.file_id}'/>" alt="" width="100%"></li>	
+               	</c:if>
+               	<c:if test="${not result}">
+               <li class="slide slide-1 item "><img src="<c:url value='file/down/image/${list.file_id}'/>>" alt="" width="100%"></li>
+               	</c:if>
+               </c:forEach>
               </ul>
             </div>
 
@@ -168,7 +197,7 @@
         <div class="col-3 suffix-2 title">
           <h3>생활의향기 갤러리</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
-          <a href="gallery.jsp">자세히 보기 ></a>
+          <a href="<c:url value='/user/gallery.do'/>">자세히 보기 ></a>
         </div>        
       </div>
     </div>

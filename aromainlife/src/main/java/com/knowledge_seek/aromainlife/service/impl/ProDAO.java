@@ -27,13 +27,13 @@ public class ProDAO implements ProService {
 	@Override
 	public List<Program> search(Map map) {
 		
-		return null;
+		return sqlTemplate.selectList("proSearch",map);
 	}
 
 	@Override
 	public int getTotalRecordCount_search(Map map) {
 		
-		return 0;
+		return sqlTemplate.selectOne("proGetTotalRecordCount_search",map);
 	}
 
 	@Override

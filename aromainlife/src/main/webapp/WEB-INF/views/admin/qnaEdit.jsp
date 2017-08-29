@@ -58,17 +58,49 @@
 				<section id="content">
 					<section class="vbox">
 						<header class="header bg-white b-b b-light">
-							<p>QnA</p>
+							<p>QnA 수정</p>
 						</header>
 
 						<section class="scrollable wrapper w-f">
 
 							<form action="<c:url value='/qna/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
-								<!-- 작성자 -->
-								<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
 								<input type="hidden" name="qnaNo" value="${qna.qnaNo}" class="form-control"> 
 								<input type="hidden" name="file_id" value="${qna.file_id}" class="form-control">
 								<input type="hidden" name="content" id="editorContent"class="form-control" />
+								
+								<c:if test="${qna.writer != 'admin' }">
+								<!--연락처-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">연락처</label>
+									<div class="col-sm-9">
+										<input type="text" value="${qna.tel}" name="tel" class="form-control">
+									</div>
+								</div>
+								
+								<!--연락처 끝-->
+								
+								<!--비밀번호-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">비밀번호</label>
+									<div class="col-sm-9">
+										<input type="password" value="${qna.pass}" name="pass" class="form-control">
+									</div>
+								</div>
+								<!--비밀번호 끝-->
+								</c:if>
+								
+								<!--작성자-->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">작성자</label>
+									<div class="col-sm-9">
+										<input type="text" value="${qna.writer}" name="writer" class="form-control" disabled="disabled">
+										<input type="hidden" name="writer"	value="${qna.writer}" class="form-control">
+										
+									</div>
+								</div>
+								 
+								
+								
 								<!--제목-->
 								<div class="form-group">
 									<label class="col-sm-2 control-label">제목</label>
