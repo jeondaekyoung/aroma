@@ -207,23 +207,26 @@
     <div class="content-5">
       <div class="map">
         <div class="row">
-          <!-- <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=KMkja8anYIKpHSNsHQyj"></script> -->
+          <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=KMkja8anYIKpHSNsHQyj"></script>
           <div id="map" class="box-map" style="width:100%;height:650px;"></div>
           <script type="text/javascript">
-            var mapOptions = {
-              center: new naver.maps.LatLng(37.7905108, 127.1655559),
-              zoom: 14,
-              scaleControl: false,
-              logoControl: false,
-              mapDataControl: false,
-              zoomControl: true
-            };
-            var marker = new naver.maps.Marker({
-              position: new naver.maps.LatLng(37.7905108, 127.1655559),
-              map: map
-            });
-            var map = new naver.maps.Map('map', mapOptions);
-            /* 이미지 마커 추가 예정 */
+              var position = new naver.maps.LatLng(37.7905108, 127.1655559);
+              var map = new naver.maps.Map('map', {
+                  center: position,
+                  scrollWheel : false,
+                  scaleControl: false,
+                  logoControl: false,
+                  mapDataControl: false,
+                  zoomControl: true,
+                  minZoom: 1,
+                  zoom: 9
+              });
+              var markerOptions = {
+                  position: position,
+                  map: map
+              };
+              var marker = new naver.maps.Marker(markerOptions);
+              map.refresh();
           </script>
         </div>
       </div>
