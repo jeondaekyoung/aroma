@@ -55,6 +55,16 @@ public class GalDAO implements GalleryService {
 		return sqlTemplate.delete("GalDelete", Gallery);
 	}
 
+	@Override
+	public List<Gallery> search(Map map) {
+		return sqlTemplate.selectList("GalSearch", map);
+	}
+
+	@Override
+	public int getTotalRecordCount_search() {
+		return sqlTemplate.selectOne("GalGetTotalRecordCount_search");
+	}
+
 	
 
 }

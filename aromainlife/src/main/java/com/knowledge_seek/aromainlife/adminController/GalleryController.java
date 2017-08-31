@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Gallery;
+import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
@@ -116,6 +117,42 @@ public class GalleryController {
 		}
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
+	}
+	
+
+	@RequestMapping("/search.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		
+		String search_account=map.get("search_account").toString();
+		String search_text=map.get("search_text").toString();
+		System.out.println(search_account+search_text);
+			
+			int totalRecordCount = galService.getTotalRecordCount_search();
+			System.out.println("totalRecordCount:"+totalRecordCount);
+			int totalPage1= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<Gallery> lists =galService.search(map);
+			
+			String pagingString1 = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/gal/search.do?search_account="+search_account+"&search_text="+search_text+"&");
+
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString1",pagingString1);
+			model.addAttribute("totalPage1",totalPage1);
+			model.addAttribute("totalRecordCount1",totalRecordCount);
+		
+		model.addAttribute("nowPage",nowPage);
+		model.addAttribute("pageSize",pageSize);
+		
+		return "/admin/gallery";
 	}
 
 	

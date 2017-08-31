@@ -11,11 +11,11 @@ public interface GalleryService {
 	//목록용
 	List<Gallery> selectList(Map map);
 
-	/*검색용
-		List<gal> search(Map map);
+	//검색용
+		List<Gallery> search(Map map);
 
-		int getTotalRecordCount_search(Map map);
-	*/		
+		int getTotalRecordCount_search();
+			
 	//전체 레코드 수
 	int getTotalRecordCount(Map map);
 	

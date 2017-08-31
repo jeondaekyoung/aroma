@@ -153,8 +153,8 @@
                 <form action='<c:url value="/gal/search.do"/>' method="post" class="form-inline" role="form">
                   <select name="search_account" class="input-sm row-r">
                     <option value="0">제목</option>
-                    <option value="1">내용</option>
-                    <option value="2">제목+내용</option>
+                    <option value="1">파일이름</option>
+                    <option value="2">제목+파일이름</option>
                   </select>
                   
                   <div class="form-group">
