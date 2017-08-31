@@ -219,6 +219,9 @@
                     더욱 깔끔한 요리와 음료로 만날 수 있어요~</p>
             </div>
             
+            <div class="col-3">
+                <img src="<c:url value='/resources/images/fragra/food08.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
+            </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브수</h4>
                 <p>상쾌하고 신선한 물을 즐기고 싶다고요? 물통에 로즈마리, 캐모마일, 라벤더, 로즈, 레몬밤,타임 등의 허브 가지와 꽃을 넣어보세요.<br>
@@ -226,7 +229,7 @@
             </div>
             
             <div class="col-3">
-                <img src="<c:url value='/resources/images/fragra/food08.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
+                <img src="<c:url value='/resources/images/fragra/food09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h4 class="nanumpen">허브술</h4>
@@ -235,10 +238,7 @@
                 술과 향을 함께 마시면서 혈액순환에도 도움이 됩니다.</p>
             </div>
             
-            <div class="col-3">
-                <img src="<c:url value='/resources/images/fragra/food09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
-            </div>
-            <div class="col-13">
+            <div class="col-13 prefix-3">
                 <h4 class="nanumpen">허브디저트</h4>
                 <p>맛있는 식사 후의 디저트 허브가 들어있어 소화를 부드럽게 도와줍니다~<br>
                 민트, 보리지, 바질, 콘플라워, 라벤더, 로즈마리, 카다멈, 레몬그라스, 제라늄 등<br>
