@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           
            <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
           <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: row-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-16">
             <h3 class="nanumpen">플로럴 워터란?</h3>
             <p>플로럴 워터는 수증기 증류법으로 허브에서 에센셜 오일을 추출할 때 얻어지는 허브 추출물(수용성)이다.<br>

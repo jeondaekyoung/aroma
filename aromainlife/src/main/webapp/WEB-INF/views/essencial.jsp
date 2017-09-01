@@ -62,7 +62,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>에센셜 오일</h3>
 	      		<h4>에센셜오일의 효능과 특징을 소개합니다.</h4>
 	      	</div>
@@ -71,7 +71,7 @@
         
       <div class="row">
         <!-- 시작: 사진 목록-->
-        <div class="col-12 prefix-2 suffix-2 aroma gallery essence">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma gallery essence">
           <h4 class="nanumpen">* 클릭하면 상세 설명을 볼 수 있습니다.</h4>
           <div class="col-4">
             <div class="img-wrap"><img src="<c:url value='/resources/images/essence/essensial (1).jpg'/>" width="100%" height="100%" alt="사진">

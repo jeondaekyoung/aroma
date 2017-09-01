@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab active">허브&amp;아로마테라피</a></div>
           <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
           <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
@@ -39,7 +39,7 @@
         
       <!-- 시작: row-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-13">
             <h3 class="nanumpen">허브란?</h3>
             <p>동서양을 막론하고 오래 전부터 인간은 식물을 먹거리나 치료 약 등에 다양하게 이용하여 왔는데, 점차 생활의 지혜를 얻으면서 인간에게 유용하고 특별한 식물을 구별하여 사용하기 시작하였다. 이러한 식물 가운데 가장 대표적인 것이 "Herb(허브)"라고 할 수 있다.<br><br>

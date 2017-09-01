@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab active">아로마 코스메틱</a></div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma aroma-5">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5">
           <div class="col-16">
             <h3 class="nanumpen">아로마 코스메틱</h3>
             <p>아로마테라피가 모두에게 도움이 되는 건강 요법이지만 혈액을 맑게 하여 혈색을 좋게 만들며 빠른 세포 재생성으로 인한 노화방지, 미백 등의 효과는 여성들의 미를 가꾸는데 더할 나위 없이 필수적인 요법이다.<br>
@@ -141,7 +141,7 @@
             </div>
             
             <div class="col-3">
-                <img src="<c:url value='/resources/images/fragra/beauty07.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
+                <img src="<c:url value='/resources/images/fragra/beauty07.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">가슴 볼륨 업!</h3>
@@ -234,7 +234,7 @@
             </div>
             
             <div class="col-3">
-                <img src="<c:url value='/resources/images/fragra/beauty11.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty11.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">손톱이 건조하고 갈라질 때</h3>
@@ -246,7 +246,7 @@
             
             <div class="col-3">
                 <img src="<c:url value='/resources/images/fragra/beauty14.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
-                <img src="<c:url value='/resources/images/fragra/beauty13.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty13.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">발관리가 필요해요~</h3>
@@ -265,7 +265,7 @@
             </div>
             
             <div class="col-3">
-                <img src="<c:url value='/resources/images/fragra/beauty16.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
+                <img src="<c:url value='/resources/images/fragra/beauty16.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             <div class="col-13">
                 <h3 class="nanumpen">예쁜 종아리 만들기</h3>

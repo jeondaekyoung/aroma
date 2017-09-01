@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      <div class="col-12 prefix-2">
+	      <div class="col-12 prefix-2 col-m-14 prefix-m-1">
       		<h3>생활의 향기</h3>
       		<h4>생활의 향기에 오신것을 환영합니다.</h4>
 	      </div>
@@ -27,7 +27,7 @@
         
       <!-- 시작: 인트로-->
       <div class="row intro">
-          <div class="col-9 prefix-2">
+          <div class="col-9 prefix-2 col-m-10 prefix-m-1">
             <h3>인사말</h3>
             <h3 class="nanumpen">허브와 향기치유를 전파하는<br>향기전도사, 윤정식 교수</h3>
             <p>식물은 저마다의 이름을 갖고 있고 생명력 또한 가지고 있습니다.<br>
@@ -36,11 +36,11 @@
 		                저희 ‘생활의향기’는 허브와 ‘향기요법’을 접하면서 얻어진 경험과 지식을 토대로 실생활에 꼭 필요한 부분에 ‘향기요법’을 적용하는 데 중점을 둘 것이며, 국내외 ‘향기’를 사랑하는 모든 이들과 ‘향기’의 올바른 사용과 보급에 최선을 다할 것입니다.<br>
 		                또한, 전문가 뿐만 아니라 일반인도 쉽게 허브의 ‘향기’를 즐길 수 있도록 노력할 것입니다.</p>
           </div>
-          <div class="col-3 suffix-2 ceo-img"><img src="<c:url value='/resources/images/intro/ceo.png'/>" width="100%" alt="사람"></div>
+          <div class="col-3 suffix-2 col-m-4 suffix-m-1 ceo-img"><img src="<c:url value='/resources/images/intro/ceo.png'/>" width="100%" alt="윤정식 교수"></div>
 
-          <div class="col-12 prefix-2 suffix-2 line"></div>
+          <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 line"></div>
 
-          <div class="col-12 prefix-2 suffix-2">
+          <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1">
             <h3 class="nanumpen">약력</h3>
             <p class="profile">현) 대한아로마테라피학회 회장<br>
 		                현) 원광디지털대학교 한방건강학과 <아로마테라피> 교수<br>
@@ -55,29 +55,29 @@
       </div>
                 
       <div class="row intro intro-2">
-        <h3 class="prefix-2">주요사업</h3>
+        <h3 class="prefix-2 prefix-m-1">주요사업</h3>
         <div class="row bizz">
-          <div class="col-2 prefix-3">
+          <div class="wd20">
             <img src="<c:url value='/resources/images/intro/bizz-01.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">교육사업</h4>
             <p>허브 &amp; 아로마 테라피<br>교육</p>
           </div>
-          <div class="col-2">
+          <div class="wd20">
             <img src="<c:url value='/resources/images/intro/bizz-02.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">DIY 체험교육</h4>
             <p>쉽게 배우는 생활<br>아로마 DIY</p>
           </div>
-          <div class="col-2">
+          <div class="wd20">
             <img src="<c:url value='/resources/images/intro/bizz-03.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">아로마 커뮤니티</h4>
             <p>아로마를 사랑하는<br>사람들의 모임</p>
           </div>
-          <div class="col-2">
+          <div class="wd20">
             <img src="<c:url value='/resources/images/intro/bizz-04.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">아로마 저서 편찬</h4>
             <p>올바른 아로마 사용과 보급을 위한 저서 편찬</p>
           </div>
-          <div class="col-2 suffix-2">
+          <div class="wd20">
             <img src="<c:url value='/resources/images/intro/bizz-05.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">생활의 향기 Shop</h4>
             <p>오갑을 만족하는 허브 &amp;<br>천연향기 체험 여행</p>
@@ -86,7 +86,7 @@
       </div>
                 
       <div class="row intro intro-3">
-        <div class="col-12 prefix-2 suffix-2">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1">
           <h3 class="">생활의 향기 연혁 <span class="since">(since 2006.11.01)</span></h3>
           <img src="<c:url value='/resources/images/intro/history.png'/>" alt="생활의 향기">
           <div class="col-16 timeline">

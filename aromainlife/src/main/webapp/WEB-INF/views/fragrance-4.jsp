@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
            <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma aroma-5 frag-4">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5 frag-4">
           <div class="col-16">
             <p>아이들이나 노인들은 일반 성인보다 면역력과 피부가 약하기 때문에 에센셜 오일 양을 줄여서 사용한다.</p>
             <p>사용 예)</p>

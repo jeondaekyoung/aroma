@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
@@ -42,7 +42,7 @@
       <!-- 시작: row-->
       <div class="row">
       	<!-- 시작: frag-4-->
-        <div class="col-12 prefix-2 suffix-2 aroma aroma-5 frag-4">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5 frag-4">
           <div class="col-16">
             <h3 class="nanumpen">마사지를 어떻게 하냐고요?</h3>
             <p>아로마 마사지라고 하면 모두들 어렵고 부담스러워 하시죠? 지금부터는 그러한 생각을 버리세요 <br>
@@ -94,7 +94,7 @@
               </p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1">
+          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage06.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
           <div class="col-11">
@@ -106,7 +106,7 @@
             </p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1">
+          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
           <div class="col-11">
@@ -120,8 +120,8 @@
 		                두통,불면,혈압이 오를 때 빠른 효과를 볼 수 있는 신체부위 - 목을 돌렸을때 보이는 근육 흉쇄유돌근과 어깨근육 승모근만 기억하세요.</p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1">
-            <img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 2em;">
+          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+            <img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 1em;">
           </div>
           <div class="col-11">
             <h3 class="nanumpen">팔, 다리</h3>
@@ -144,7 +144,7 @@
               </p>
           </div>
           
-          <div class="col-3 suffix-1 prefix-1">
+          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/beauty08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11">
@@ -158,7 +158,7 @@
               </p>
           </div>
           
-          <div class="col-3 suffix-1 prefix-1">
+          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11">

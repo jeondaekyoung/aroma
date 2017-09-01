@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma aroma-5 frag-4">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5 frag-4">
           <div class="col-16">
             <p>살다보면 병원에 실려갈 정도의 위급상황은 아니지만 간단한 응급조치를 해줘야 하는 사고들이 빈번하게 생기죠.<br>
 		                맛있는 식사 후 갑자기 배가 아프거나, 요리 중에 칼에 베이거나 가벼운 화상, 벌레에게 물려 빨갛게 부어 오른 피부 때문에 가려워 하는 아이들, 청소를 하다가 작은 멍이 생겼을 때, 밤에 열이 나는 아이, 기타등등...<br>
@@ -49,7 +49,7 @@
 		                이젠 무서운 약 상자가 아닌 향기로운 마법의 상자로 응급상황을 대처 해 보시는 건 어떨까요?</p>
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">이크! 칼에 베였어요</h3>
             <p>■ 베인 자리에 라벤더나 레몬 한 방울을 떨어뜨려 지혈 시킵니다.<br>
             ■ 라벤더 5방울, 티트리 2방울을 200ml정도의 물에 떨어뜨려 상처 부위를 살균, 소독한다.<br>
@@ -61,22 +61,22 @@
             ■ 라벤더 워터는 수시로 뿌려주세요.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11901.gif'/>" alt="사진" width="100%">
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">머리가 찌끈찌끈 아파요~</h3>
             <p>■ 정신적인 스트레스에 의한 두통은 라벤더 원액 1방울을 관자 놀이나 목 뒤쪽에 찍어 발라준다.<br>
             ■ 평상시 습관처럼 찾아오는 두통은 페퍼민트 한방울을 관자놀이나 목 뒤쪽에 찍어 발라준다.<br>
             ■ 호르몬에 의한 편두통은 캐리어 오일 1스푼에 마조람 스윗 3방울을 희석하여 목 뒤쪽에 마사지한다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/beauty09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">아이가 열이 심해요</h3>
             <p>■ 양 엄지발가락 발톱 윗부분에 유칼립투스나 페퍼민트 한 방울을 떨어뜨려 준다.<br>
             ■ 찬물에 라벤더나 캐모마일 로만 오일 3방울 떨어뜨려 수건을 적신 후 아이들의 발끝부터 상부쪽으로 닦아준다.<br>
@@ -84,7 +84,7 @@
             ■ 라벤더나 캐모마일 로만 오일을 찬 물에 떨어뜨려 손과 발을 감싸 냉습포 한다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11904.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
           </div>
             
@@ -95,7 +95,7 @@
             </p>
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">몸이 으실으실 춥고 감기 기운이 있어요.</h3>
             <p>■ 캐모마일 또는 히비스커스 차를 자주 마신다.<br>
             ■ 뜨거운 물에 유칼립투스 3방울, 라벤더 1방울을 떨어뜨려 스팀 흡입을 한다.<br>
@@ -103,7 +103,7 @@
             ■ 목걸이에 유칼립투스 오일을 넣고 휴대하고 다닌다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11903.gif'/>" alt="사진" width="100%">
           </div>
             
@@ -123,13 +123,13 @@
                 ** 캐모마일 로만 대신 라벤더를 적용해도 좋다.</p>
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">벌레, 모기에 물렸어요.</h3>
             <p>■ 물린 직 후 라벤더나 티트리 한 방울을 물린 자리에 찍어 발라주세요. 가려움이나 붓기를 진정시켜준답니다.<br>
                 ■ 캐리어 오일 1티스푼(2ml)에 라벤더 3방울, 티트리 2방울을 섞어 1일 2~3회 바른다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11905.gif'/>" alt="사진" width="100%">
           </div>
             
@@ -158,7 +158,7 @@
             </p>
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">스트레스로 폭발하기 직전~</h3>
             <p>■ 심호흡을 크게 3번하고 그레이프후룻 또는 라벤더 향을 직접 맡거나 티슈나 손수건 등에 1~2방울 떨어뜨려 흡입한다.<br>
                 ■ 라벤더 워터를 주변에 스프레이한다.</p>
@@ -176,11 +176,11 @@
                ■ 라벤더 차나 캐모마일 차를 마신다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/blend40.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">컴퓨터나 공부에 열중해 눈이 피로할 때~</h3>
             <p>1. 캐모마일 워터나 콘플라워 워터를 수시로 눈 주위에 뿌려주거나 화장솜에 적셔 눈 위에 5분정도 올려놓는다.<br>
             2. 라벤더 2방울 또는 캐모마일 1방울을 따뜻한 물에 떨어뜨려 수건에 적신 후 눈 위에 온습포한다.<br>
@@ -193,11 +193,11 @@
             3. 캐리어 오일 1스푼(5ml)에 버가못 3방울, 제라늄 1방울을 희석하여 목, 가슴, 명치 부위를 마사지한다.
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11909.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">근육통, 관절염에</h3>
             <p>1. 쥬니퍼베리 3방울, 사이프러스 2방울을 떨어뜨려 온습포한다.<br>
             *** 통증 완화를 위해서는 라벤더, 캐모마일 로만, 마조람 스윗 등을 추천한다.<br>
@@ -214,11 +214,11 @@
             3. 아로마 목걸이에 로즈마리 오일을 넣고 휴대하고 다닌다.(고혈압 환자는 주의!)
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11908.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
-          <div class="col-9">
+          <div class="col-9 col-m-12">
             <h3 class="nanumpen">입안에 염증, 잇몸이 부었을 때 </h3>
             <p>에센셜 오일의 뛰어난 항균작용으로 치아염증이나 통증완화를 빠르게~ <br>
             	라벤더, 티트리, 사이프러스, 페퍼민트, 레몬, 유칼립투스, 멀, 클로브 버드, 제라늄<br>
@@ -226,7 +226,7 @@
             (가글) 따뜻한 물을 컵에 받고 에센셜 오일 3방울을 떨어뜨려 가글링한다 (1일 2~3회)
             </p>
           </div>
-          <div class="col-3 suffix-4">
+          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11910.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
           </div>
             

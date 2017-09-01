@@ -18,7 +18,7 @@
     <!-- 시작: content-1 -->
     <div class="content-1">
       <div class="row main">
-        <div class="col-8 prefix-7 suffix-1">
+        <div class="col-8 col-m-14 prefix-7 prefix-m-1 suffix-1 ">
      	  <h3>국내 최초의<br>허브&amp;천연 향기 교육체험센터<br>생활의 향기입니다.</h3>
         </div>        
       </div>
@@ -47,7 +47,7 @@
         </div>      
         
         
-        <div class="col-2 prefix-3 suffix-2">
+        <div class="col-2 col-m-3 prefix-3 prefix-m-2 suffix-2">
           <a href="<c:url value='/user/qna-list.do'/>">문의하러 가기</a>
         </div>
       </div>
@@ -57,7 +57,7 @@
     <!-- 시작: content-2 -->
     <div class="content-2">
       <div class="row">
-        <div class="col-9 prefix-2">
+        <div class="col-9 col-m-10 prefix-2 prefix-m-1">
         <c:forEach items="${proLists}" var="list" varStatus="varStatus">
 	   <c:choose>
         	<c:when test="${varStatus.count ==1 or varStatus.count ==4 }">
@@ -111,7 +111,7 @@
             </div>
           </div>  --%>
         </div>        
-        <div class="col-3 suffix-2 title">
+        <div class="col-3 col-m-4 suffix-2 suffix-m-1 title">
           <h3>향기체험학습</h3>
           <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
           <a href='<c:url value="/user/program.do"/>'>자세히 보기 ></a>
@@ -123,12 +123,12 @@
     <!-- 시작: content-3 -->
     <div class="content-2 content-3">
       <div class="row">
-        <div class="col-3 prefix-2 title">
+        <div class="col-3 col-m-4 prefix-2 prefix-m-1 title">
           <h3>아로마테라피</h3>
-          <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
+          <p>다양하게 쓰이는<br>생활속 아로마테라피</p>
           <a href="<c:url value='/user/aroma-1.do'/>">자세히 보기 ></a>
         </div>        
-        <div class="col-9 suffix-2">
+        <div class="col-9 col-m-10 suffix-2 suffix-m-1">
           <div class="col-4 suffix-1 product-item">
             <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
@@ -167,7 +167,7 @@
     <!-- 시작: content-4 -->
     <div class="content-2 content-4">
       <div class="row">
-        <div class="col-9 prefix-2">
+        <div class="col-9 col-m-10 prefix-2 prefix-m-1">
           <div class="carousel slide carousel-fade auto panel-body" id="c-fade">
             <ol class="carousel-indicators out">
              <c:forEach items="${galLists}" var="list" varStatus="loop">
@@ -194,9 +194,9 @@
             </div>
           </div>
         </div>        
-        <div class="col-3 suffix-2 title">
-          <h3>생활의향기 갤러리</h3>
-          <p>생활의 향기 속으로<br>여러분을 초대합니다</p>
+        <div class="col-3 col-m-4 suffix-2 suffix-m-1 title">
+          <h3>갤러리</h3>
+          <p>생활의 향기<br>교육, 체험 현장 사진</p>
           <a href="<c:url value='/user/gallery.do'/>">자세히 보기 ></a>
         </div>        
       </div>
@@ -208,7 +208,7 @@
       <div class="map">
         <div class="row">
           <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=KMkja8anYIKpHSNsHQyj"></script>
-          <div id="map" class="box-map" style="width:100%;height:650px;"></div>
+          <div id="map" class="box-map" style="width:100%;height:60vh;"></div>
           <script type="text/javascript">
               var position = new naver.maps.LatLng(37.7905108, 127.1655559);
               var map = new naver.maps.Map('map', {

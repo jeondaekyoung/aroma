@@ -34,9 +34,10 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
   left: 0;
   right: 0;
   z-index: 10;
-  background: transparent;
+  background: #fff;
   padding-top: 14px;
   padding-bottom: 10px;
+  transition: 0.5s
 }
 .page-header * { margin-top: 0;}
 .page-header a { display: block;}
@@ -152,6 +153,10 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
 	margin-left: auto;
 	margin-right: auto;
 }
+.page-container {
+	
+}
+
 [class*="content-0"]{
   position: relative;
   overflow: hidden; 
@@ -164,7 +169,7 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
     background: url(../images/main.jpg) no-repeat 0/100% 100%;
     background-size: cover;
     background-attachment: fixed;
-    height: 730px
+    height: 80vh
 }
 .content-1 .main .col-8{
     background: url(../images/bg-maintxt.png) no-repeat 100%;
@@ -301,7 +306,7 @@ body { margin: 0; font-family: 'Jeju Gothic'; font-size: 1rem; line-height: 1.5;
 }
 .slider {
   width: 1000%;
-  height: 39em;
+  height: 36em;
 }
 .slider .slide {
   width: 10%;
@@ -364,7 +369,7 @@ button:active, button:focus { border:none; outline: none;}
     margin-left: 40px;
     margin-bottom: 2em;
 }
-.footer .btn span {
+.footer .btn .footer-icon {
     width: 4em;
     height: 4em;
     display: inline-block;
@@ -373,10 +378,10 @@ button:active, button:focus { border:none; outline: none;}
     text-align: center;
     vertical-align: middle;
 }
-.footer .btn:hover span {
+.footer .btn:hover .footer-icon {
     background: #93B13A;
 }
-.footer .btn span img {
+.footer .btn .footer-icon img {
     margin-top: 8px;
 }
 .footer .btn span.kas img {
@@ -451,13 +456,20 @@ span[class*="col-"] {
 .intro-2 {
     background: none;
 }
+.intro-2 .bizz {
+    background: url(../images/intro/bg-bizz.jpg) 0 / cover;
+    background-attachment: fixed;
+    padding: 0 13.392857142857142%
+}
 .intro-2 .bizz div {
     margin-top: 12em;
     margin-bottom: 10.5em;
 }
-.intro-2 .bizz {
-    background: url(../images/intro/bg-bizz.jpg) 0 / cover;
-    background-attachment: fixed;
+.intro-2 .bizz .wd20 {
+	width: 19%;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
 }
 .intro-2 .bizz h4 {
     font-size: 1.625rem;
@@ -499,7 +511,7 @@ span[class*="col-"] {
 .timeline:before {
     content: "";
     width: 10px;
-    margin-left: -18px;
+    margin-left: -15px;
     position: absolute;
     left: 50%;
     top: 0;
@@ -517,7 +529,7 @@ span[class*="col-"] {
 }
 .timeline .timeline-icon {
   position: absolute;
-  left: -22px;
+  left: -20px;
   top: 20%;
   margin-top: -5px;
 }
@@ -566,7 +578,7 @@ span[class*="col-"] {
 }
 .timeline-item.alt .timeline-icon {
   left: auto;
-  right: -23px;
+  right: -25px;
 }
 .timeline-caption {
   display: table-cell;
@@ -633,7 +645,7 @@ span[class*="col-"] {
 .tab-menu .tab {
     display: block;
     border: 1px solid #ebead2;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 3.6;
     color: #444;
 }
@@ -1074,5 +1086,24 @@ table.qna td a:hover {
 
 
 @media screen and (max-width: 768px) {
+  .container {min-width:100%}
+  .content-1 .main .col-8 {margin-top: 30em}
+  .content-1 .main .col-8 h3 {text-align: center}
+  .content-2 .title {margin-top: 3.5em}
+  .content-2 .title h3 {padding: 1em 0}
   
+  .product-item img {width: 14.1vw; height: 14.1vw}
+  .product-item .hover-focus-view {width: 14.1vw; height: 14.1vw}
+  .detail-01 .top>.row {padding: 5em 0}
+  .footer .btn .footer-txt {font-size: 0}
+  
+  .intro-2 .bizz {padding: 0 7.142857142857142%}
+  .timeline:before {margin-left: -11px}
+  .timeline .timeline-icon {left: -16px}
+  .timeline-item.alt .timeline-icon {right: -29px}
+
+  .tab-menu .tab {font-size: 0.875rem}
+  .aroma .compare>.col-16 {height: 300px}  
 }
+
+

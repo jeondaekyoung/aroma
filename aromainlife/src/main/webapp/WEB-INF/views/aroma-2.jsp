@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      	<div class="col-12 prefix-2">
+	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
 	      		<h3>아로마테라피</h3>
 	      		<h4>허브와 향기에 관한 지식을 알려드립니다.</h4>
 	      	</div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           
           <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
           <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab active">에센셜오일</a></div>
@@ -41,15 +41,15 @@
         
       <!-- 시작: row-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
-          <div class="col-3 prefix-3"><img src="<c:url value='/resources/images/aroma/img1.gif'/>" width="100%" alt="식물의 에너지"></div>
-          <div class="col-7 suffix-3">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
+          <div class="col-3 prefix-3 col-m-5 prefix-m-1"><img src="<c:url value='/resources/images/aroma/img1.gif'/>" width="100%" alt="식물의 에너지"></div>
+          <div class="col-7 suffix-3 col-m-9 suffix-m-1">
             <h3 class="nanumpen">1. 에센셜 오일(Essential Oil)이란?</h3>
             <p>에센셜 오일은 아로마테라피의 근본이 되는 물질로 향기나는 식물(Herb)의 꽃잎 줄기, 뿌리, 열매, 껍질, 수지 등에서 추출한 휘발성 정유(Volatile Oil)를 뜻한다.<br><br>달리 표현하면 에센셜 오일은 식물이 가지고 있는 <span class="cn">生命力(=氣)</span>를 그대로 간직한 살아있는 움직이는 생명력이 있는 물질이라고 할 수 있겠다.</p>
           </div>            
 	    </div>
 
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-8 compare">
             <p class="nanumpen">·사람과 식물 비교 (연관관계)</p>
             <div class="col-16">
@@ -65,7 +65,7 @@
           </div>
         </div>
           
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-11">
             <h3 class="nanumpen">2. 추출방법</h3>
             <h4 class="nanumpen">1) 수증기 증류법(Steam Distillation)</h4>
@@ -111,7 +111,7 @@
           <div class="col-4"><img src="<c:url value='/resources/images/aroma/img06.gif'/>" width="100%" alt="냉침법"></div>
 	    </div>
           
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <h3 class="nanumpen">3. 작용원리 (에센셜 오일의 인체 메커니즘)</h3>
           <div class="col-6"><img src="<c:url value='/resources/images/aroma/img07.gif'/>" width="100%" alt="후각을 통한 흡수"></div>
           <div class="col-10">
@@ -144,7 +144,7 @@
       </div>
         
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-16">
               <h3 class="nanumpen">4. 보관, 선택 방법</h3>
               <h4 class="nanumpen">1) 후각을 통한 흡수</h4>
@@ -178,7 +178,7 @@
       </div>
         
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <div class="col-16">
               <h3 class="nanumpen">5. 주의사항</h3>
               <h4 class="nanumpen">아로마 에센셜 오일 사용상 주의 사항</h4>

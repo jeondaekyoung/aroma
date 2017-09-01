@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 suffix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab active">생활속 아로마</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 aroma aroma-5">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5">
           <div class="col-16">
             <h3 class="nanumpen">아로마를 이용한 생활 아로마(Aroma in life)</h3>
             <p>나에게 맞는 사용 방법을 생활의 지혜로 만드는 센스! 에센셜 오일은 살균, 소독, 탈취작용이 뛰어나 집안에서 다양하게 활용할 수 있다.</p>              
