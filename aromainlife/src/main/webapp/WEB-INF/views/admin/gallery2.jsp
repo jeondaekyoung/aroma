@@ -34,7 +34,7 @@
              return false;
           }
       
-        f.action="<c:url value='/gal/write.do'/>";
+        f.action="<c:url value='/gal/write.do?divNum=2'/>";
         f.submit();  
         break;
       case 'mod':
@@ -52,7 +52,7 @@
 <!-- //head -->
 </head>
 
-<!-- <body> -->
+<body>
   <section class="vbox">
     <!-- top -->
     <jsp:include page="include/include-top.jsp" flush="false" />
@@ -65,12 +65,12 @@
       <section id="content">
         <section class="vbox">
           <header class="header bg-white b-b b-light">
-            <p>기업체험 갤러리</p>
+            <p>체험교육 갤러리</p>
           </header>
 
           <section class="scrollable wrapper w-f">
             <form action="" method="post" name="adForm" enctype="multipart/form-data">
-            <input type="hidden" name="division" value="1" class="form-control" >
+            <input type="hidden" name="division" value="2" class="form-control" >
               <table class="admin">
                 <colgroup>
                   <col style="width: 5%">

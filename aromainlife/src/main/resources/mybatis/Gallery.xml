@@ -9,7 +9,17 @@
 			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
 			<choose>
 				<when test="start != -1 and end != -1">
-				where r between  #{start} and #{end}
+				where r between  #{start} and #{end}  
+				</when>
+			</choose>
+	</select>
+	
+	<select id="GalSelectList2" parameterType="java.util.Map" resultType="Gallery">
+	
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
+			<choose>
+				<when test="start != -1 and end != -1">
+				where r between  #{start} and #{end} and division = #{divNum}  
 				</when>
 			
 			</choose>
@@ -20,11 +30,12 @@
 	</select>
 	
 	<insert id="GalInsert" parameterType="Gallery">
-		insert into Gallery values(default,now(),#{title},#{fileName},#{file_id});
+		insert into Gallery values(default,now(),#{title},#{fileName},#{file_id},#{division});
 	</insert>	
 	
 	<update id="GalUpdate" parameterType="Gallery">
-		update Gallery set createDate=now(),title=#{title},fileName=#{fileName},file_id=#{file_id}  where GalNo=#{galNo}
+		update Gallery set createDate=now(),title=#{title},fileName=#{fileName},file_id=#{file_id} , division =#{division}
+		  where GalNo=#{galNo}
 	</update>
 
 	<update id="GalUpdate_hits" parameterType="java.lang.String">

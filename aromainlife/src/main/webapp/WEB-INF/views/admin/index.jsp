@@ -166,8 +166,9 @@
 									<caption>동영상</caption>
 									<colgroup>
 										<col style="width: 10%">
-										<col style="width: 30%">
-										<col style="width: 30%">
+										<col style="width: 20%">
+										<col style="width: 20%">
+										<col style="width: 20%">
 										<col style="width: 30%">
 										
 									</colgroup>
@@ -176,6 +177,7 @@
 											<th>No.</th>
 											<th>제목</th>
 											<th>작성일</th>
+											<th>구분</th>
 											<th>사진</th>
 										</tr>
 									</thead>
@@ -193,6 +195,17 @@
 														<td>${status.index+1}</td>
 														<td>${list.title}</td>
 														<td>${list.createDate}</td>
+														<td>
+															<c:choose>
+															<c:when test="${list.division eq 1}">
+																기업체험
+															</c:when>
+															<c:otherwise>
+																체험교육
+															</c:otherwise>
+															</c:choose> 
+														</td>
+													
 														<td><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" ></td>
 													</tr>
 												</c:forEach>
