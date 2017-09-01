@@ -10,6 +10,13 @@
       </a>
     </h1>
     <!-- 끝: 브랜드 영역 -->
+    <button class="c-header-burger js-header-burger">
+      <span class="c-header-burger_lines">
+        <span class="c-header-burger_line"></span>
+        <span class="c-header-burger_line"></span>
+        <span class="c-header-burger_line"></span>
+      </span>
+    </button>
     <!-- 내비게이션 영역 -->
     <nav class="page-gnb">
       <ul class="nav clearfix">

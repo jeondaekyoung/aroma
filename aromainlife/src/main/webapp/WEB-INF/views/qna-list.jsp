@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      <div class="col-12 prefix-2">
+	      <div class="col-12 prefix-2 col-m-14 suffix-m-1">
       		<h3>커뮤니티</h3>
       		<h4>항상 고객님의 소중한 글에 귀 기울이겠습니다.</h4>
 	      </div>
@@ -27,7 +27,7 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 text-center">
+        <div class="col-12 prefix-2 col-m-14 prefix-m-1 text-center">
           <div class="fl w50"><a href="<c:url value='/user/qna-list.do'/>" class="tab active">문의하기</a></div>
           <div class="fl w50"><a href="<c:url value='/user/gallery.do'/>" class="tab">갤러리</a></div>
         
@@ -36,7 +36,7 @@
       <!-- 끝: tab-menu-->
         
       <!-- 시작: 테이블-->
-      <div class="col-12 prefix-2 suffix-2 qna-list">
+      <div class="col-12 prefix-2 suffix-2 col-m-14 suffix-m-1 prefix-m-1 qna-list">
         <table class="qna">
           <colgroup>
               <col style="width: 10%"><col style="width: 60%"><col style="width: 20%"><col style="width: 10%">

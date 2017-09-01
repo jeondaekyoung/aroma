@@ -22,10 +22,10 @@
 <link rel="icon" type="image/png" href="<%=application.getContextPath()%>/resources/images/logo.png" sizes="16x16">
 <link rel="icon" href="<%=application.getContextPath()%>/resources/images/favicon.ico">
 <link rel="mask-icon" href="<%=application.getContextPath()%>/resources/images/logo.png" color="#00AEFF">
-<link rel="stylesheet" href="<c:url value='/resources/css/ress.min.css'/>" type="text/css" />
-<link rel="stylesheet" href="<c:url value='/resources/css/wide-gs-16col.css?ver=0.0.2'/>" type="text/css" />
+<link rel="stylesheet" href="<c:url value='/resources/css/ress.min.css?ver=0.0.2'/>" type="text/css" />
+<link rel="stylesheet" href="<c:url value='/resources/css/wide-gs-16col.css?ver=0.0.4'/>" type="text/css" />
 <link rel="stylesheet" href="<c:url value='/resources/css/font.css'/>" type="text/css" />
-<link rel="stylesheet" href="<c:url value='/resources/css/style.css?ver=0.0.8'/>" type="text/css" />
+<link rel="stylesheet" href="<c:url value='/resources/css/style.css?ver=0.1.1'/>" type="text/css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 <script src="<c:url value='/resources/js/jquery.min.js'/>"></script>

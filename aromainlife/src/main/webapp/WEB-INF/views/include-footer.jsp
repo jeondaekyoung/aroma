@@ -36,4 +36,8 @@
       $('.page-header').removeClass('nav-up');
     }
   });
+  $('.c-header-burger').click(function(){
+		$('body').toggleClass('has-header-navigation-opened');
+		$('.page-gnb').toggle();
+  });
 </script>

@@ -53,19 +53,22 @@
       
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
-        <div class="col-12 prefix-2 text-center">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           <div class="fl w50"><a href="<c:url value='/user/qna-list.do'/>" class="tab">문의하기</a></div>
-          <div class="fl w50"><a href="<c:url value='/user/gallery.do'/>" class="tab  active">갤러리</a></div>
+          <div class="fl w50"><a href="<c:url value='/user/gallery.do'/>" class="tab  active">갤러리</a></div>          
         </div>
       </div>
       <!-- 끝: tab-menu-->
-         	<select id="divNum" class="input-sm row-r" onchange="location.href=this.value" >
-                    <option value='<c:url value="/user/gallery.do?divNum=1"/>'>기업 체험</option>
-                    <option value='<c:url value="/user/gallery.do?divNum=2"/>'>체험 교육</option>
-            </select>
       
+     	<div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 search-form">      		
+        	<select id="divNum" class="input-sm fr" onchange="location.href=this.value" >
+               <option value='<c:url value="/user/gallery.do?divNum=1"/>'>기업 체험</option>
+               <option value='<c:url value="/user/gallery.do?divNum=2"/>'>체험 교육</option>
+           </select>
+     	</div>
+     	
       <!-- 시작: 사진 목록-->
-      <div class="col-12 prefix-2 suffix-2 gallery">
+      <div class="col-12 prefix-2 suffix-2 col-m-14 suffix-m-1 prefix-m-1 gallery">
          <c:forEach items="${lists}" var="list" varStatus="status">
         	<div class="col-4">
           <div class="img-wrap" id="pic" onclick="popup(${status.count})"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100%" ></div>

@@ -72,7 +72,7 @@
             ■ 호르몬에 의한 편두통은 캐리어 오일 1스푼에 마조람 스윗 3방울을 희석하여 목 뒤쪽에 마사지한다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/beauty09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
@@ -84,7 +84,7 @@
             ■ 라벤더나 캐모마일 로만 오일을 찬 물에 떨어뜨려 손과 발을 감싸 냉습포 한다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11904.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
           </div>
             
@@ -103,7 +103,7 @@
             ■ 목걸이에 유칼립투스 오일을 넣고 휴대하고 다닌다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11903.gif'/>" alt="사진" width="100%">
           </div>
             
@@ -129,7 +129,7 @@
                 ■ 캐리어 오일 1티스푼(2ml)에 라벤더 3방울, 티트리 2방울을 섞어 1일 2~3회 바른다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11905.gif'/>" alt="사진" width="100%">
           </div>
             
@@ -176,7 +176,7 @@
                ■ 라벤더 차나 캐모마일 차를 마신다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/blend40.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
             
@@ -193,7 +193,7 @@
             3. 캐리어 오일 1스푼(5ml)에 버가못 3방울, 제라늄 1방울을 희석하여 목, 가슴, 명치 부위를 마사지한다.
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11909.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
@@ -214,7 +214,7 @@
             3. 아로마 목걸이에 로즈마리 오일을 넣고 휴대하고 다닌다.(고혈압 환자는 주의!)
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11908.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
             
@@ -226,7 +226,7 @@
             (가글) 따뜻한 물을 컵에 받고 에센셜 오일 3방울을 떨어뜨려 가글링한다 (1일 2~3회)
             </p>
           </div>
-          <div class="col-3 suffix-4 suffix-4 col-m-4 suffix-m-0">
+          <div class="col-3 suffix-4 col-m-4 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/11910.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
           </div>
             

@@ -43,7 +43,6 @@
  [type=reset], [type=submit], button, html [type=button]{-webkit-appearance:button}
  button, select{text-transform:none}
  button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}
- select{-moz-appearance:none;-webkit-appearance:none}
  select::-ms-expand{display:none}
  select::-ms-value{color:currentColor}
  legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}
