@@ -131,7 +131,7 @@ public class GalleryController {
 			
 			int totalRecordCount = galService.getTotalRecordCount_search();
 			System.out.println("totalRecordCount:"+totalRecordCount);
-			int totalPage1= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+			int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
 			
 			//시작 및 끝 ROWNUM구하기]
 			int start= (nowPage-1)*pageSize+1;
@@ -141,16 +141,15 @@ public class GalleryController {
 			
 			List<Gallery> lists =galService.search(map);
 			
-			String pagingString1 = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
+			String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
 					req.getContextPath()+"/gal/search.do?search_account="+search_account+"&search_text="+search_text+"&");
 
 			model.addAttribute("lists",lists);
-			model.addAttribute("pagingString1",pagingString1);
-			model.addAttribute("totalPage1",totalPage1);
-			model.addAttribute("totalRecordCount1",totalRecordCount);
-		
-		model.addAttribute("nowPage",nowPage);
-		model.addAttribute("pageSize",pageSize);
+			model.addAttribute("pagingString",pagingString);
+			model.addAttribute("totalPage",totalPage);
+			model.addAttribute("totalRecordCount",totalRecordCount);
+			model.addAttribute("nowPage",nowPage);
+			model.addAttribute("pageSize",pageSize);
 		
 		return "/admin/gallery";
 	}
