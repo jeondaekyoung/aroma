@@ -12,7 +12,14 @@ public class Gallery {
 	private String fileName;
 	private MultipartFile file;
 	private String file_id;
+	private String division;
 	
+	public String getDivision() {
+		return division;
+	}
+	public void setDivision(String division) {
+		this.division = division;
+	}
 	public String getTitle() {
 		return title;
 	}

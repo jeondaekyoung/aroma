@@ -38,10 +38,13 @@
         break;
       case 'del':
         if (confirm("정말로 삭제하시겠습니까?")!=1) {return false;}
-        alert(No);
         f.action="<c:url value='/gal/delete.do?galNo="+No+"'/>";
         f.submit();
         break;
+        
+      case 'cancel':
+    	  history.back();
+    	  break;
     }
   }
 </script>
@@ -68,7 +71,8 @@
 				<form action="<c:url value='/pro/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
 
 					<!-- 작성자 -->
-					<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control"> 
+					<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control">
+					<input type="hidden" name="division" value="${gal.division}" class="form-control">  
 					<input type="hidden" name="galNo" value="${gal.galNo}" class="form-control"> 
 					<input type="hidden" name="file_id" value="${gal.file_id}" class="form-control">
 					<input type="hidden" name="content" id="editorContent"class="form-control" />

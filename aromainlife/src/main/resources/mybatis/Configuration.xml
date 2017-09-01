@@ -15,6 +15,7 @@
 	<mapper resource="mybatis/Login.xml"/> 
 	<mapper resource="mybatis/Program.xml"/>
 	<mapper resource="mybatis/QnA.xml"/>
+
 	<mapper resource="mybatis/File.xml"/>
 	<mapper resource="mybatis/Gallery.xml"/>
 	<!-- 
