@@ -22,6 +22,9 @@ public class GalDAO implements GalleryService {
 	@Override
 	public List<Gallery> selectList(Map map) {
 		
+		if(map.get("divNum")!=null){
+			return sqlTemplate.selectList("GalSelectList2",map);	
+		}
 		return sqlTemplate.selectList("GalSelectList",map);
 	}
 
@@ -53,6 +56,16 @@ public class GalDAO implements GalleryService {
 	public int delete(Gallery Gallery) {
 		
 		return sqlTemplate.delete("GalDelete", Gallery);
+	}
+
+	@Override
+	public List<Gallery> search(Map map) {
+		return sqlTemplate.selectList("GalSearch", map);
+	}
+
+	@Override
+	public int getTotalRecordCount_search() {
+		return sqlTemplate.selectOne("GalGetTotalRecordCount_search");
 	}
 
 	

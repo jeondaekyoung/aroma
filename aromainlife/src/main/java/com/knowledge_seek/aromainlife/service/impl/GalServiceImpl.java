@@ -21,6 +21,18 @@ public class GalServiceImpl implements GalleryService {
 		
 		return dao.selectList(map);
 	}
+	
+	@Override
+	public List<Gallery> search(Map map) {
+		
+		return dao.search(map);
+	}
+
+	@Override
+	public int getTotalRecordCount_search() {
+		
+		return dao.getTotalRecordCount_search();
+	}
 
 	@Override
 	public int getTotalRecordCount(Map map) {

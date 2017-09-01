@@ -24,8 +24,13 @@
                   </a>
                 </li>
                 <li >
-                  <a href="<c:url value='/gal/list.do'/>" >
-                    <i class="fa fa-angle-right"></i><span>갤러리</span>
+                  <a href="<c:url value='/gal/list.do?divNum=1'/>" >
+                    <i class="fa fa-angle-right"></i><span>기업체험 갤러리</span>
+                  </a>
+                </li>
+                <li >
+                  <a href="<c:url value='/gal/list.do?divNum=2'/>" >
+                    <i class="fa fa-angle-right"></i><span>체험교육 갤러리</span>
                   </a>
                 </li>
               </ul>

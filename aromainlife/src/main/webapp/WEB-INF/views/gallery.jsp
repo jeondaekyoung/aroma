@@ -8,6 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
+    	if("${param.divNum}" == "1"){
+    		$("#divNum option:eq(0)").attr("selected","selected");
+    	}
+    	if("${param.divNum}" == "2"){
+    		$("#divNum option:eq(1)").attr("selected","selected");
+    	}
+  		
+
       $(".popup button").click(function(){
         $(".popup").hide();
       });
@@ -51,7 +59,11 @@
         </div>
       </div>
       <!-- 끝: tab-menu-->
-        
+         	<select id="divNum" class="input-sm row-r" onchange="location.href=this.value" >
+                    <option value='<c:url value="/user/gallery.do?divNum=1"/>'>기업 체험</option>
+                    <option value='<c:url value="/user/gallery.do?divNum=2"/>'>체험 교육</option>
+            </select>
+      
       <!-- 시작: 사진 목록-->
       <div class="col-12 prefix-2 suffix-2 gallery">
          <c:forEach items="${lists}" var="list" varStatus="status">

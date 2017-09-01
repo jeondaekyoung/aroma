@@ -20,17 +20,12 @@
 <link rel="stylesheet" href="<c:url value='/resources/js/datepicker/datepicker.css'/>" type="text/css" />
 <link rel="stylesheet" href="<c:url value='/resources/css/app.css'/>" type="text/css" />
 
-<%-- <c:if test="${sessionScope.USERID != 'admin'}" >
+<c:if test="${sessionScope.USERID != 'admin'}" >
 	<script>
 		alert("관리자용 페이지 입니다. ");
 		location.href="<c:url value='/admin/loginForm.do'/>";
 	</script>
-</c:if> --%>
-<script>
-
-
-
-</script>
+</c:if>
 
 <style>
   *{font-size: 14px}

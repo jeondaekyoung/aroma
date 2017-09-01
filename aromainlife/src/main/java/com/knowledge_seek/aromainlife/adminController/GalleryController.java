@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Gallery;
+import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
@@ -40,9 +41,9 @@ public class GalleryController {
 	@Resource(name="fileService")
 	FileServiceImpl fileService;
 	
-	
 	@RequestMapping(value = "/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
+			@RequestParam(defaultValue="1",required=false,value="divNum") int divNum,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
 		int totalRecordCount =galService.getTotalRecordCount(map);
 		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
@@ -52,6 +53,8 @@ public class GalleryController {
 		int end = nowPage*pageSize;		
 		map.put("start", start);
 		map.put("end",end);
+		//갤러리 카테고리별 체크
+		map.put("divNum", divNum);
 		
 		List<Gallery> lists=galService.selectList(map);
 		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/pro/list.do?");
@@ -63,8 +66,12 @@ public class GalleryController {
 		model.addAttribute("totalRecordCount",totalRecordCount);
 		model.addAttribute("pageSize",pageSize);
 		
-		
+		if(divNum == 2){
+			
+			return "/admin/gallery2";
+		}
 		return "/admin/gallery";
+		
 	}
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
 	public String write(Gallery gal,Model model) {
@@ -73,11 +80,12 @@ public class GalleryController {
 			MultipartFile multpartfile = gal.getFile();
 			gal.setFileName(multpartfile.getOriginalFilename());
 			gal.setFile_id(fileService.save(multpartfile));
-		
 		}
 		
 		galService.insert(gal);
-		
+		if(gal.getDivision().equals("2")){
+			return "redirect:/gal/list.do?divNum=2";
+		}
 		return "redirect:/gal/list.do";
 	}
 	@RequestMapping(value = "/editForm.do")
@@ -90,7 +98,7 @@ public class GalleryController {
 	}
 	
 	@RequestMapping("/update.do")
-	public String update(Gallery gal, Model model) {
+	public String update(Gallery gal, Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
 
 		if(gal.getFile().getSize()!=0){
 			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
@@ -103,7 +111,11 @@ public class GalleryController {
 		}
 		galService.update(gal);
 		
-		return "redirect:/gal/list.do";
+		if(gal.getDivision().equals("2")){
+			return "redirect:/gal/list.do?divNum=2&nowPage="+nowPage;
+		}
+		
+		return "redirect:/gal/list.do?nowPage="+nowPage;
 	}
 	@RequestMapping("/delete.do")
 	public String delete(Gallery gal,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
@@ -114,8 +126,46 @@ public class GalleryController {
 			FileDTO FileDto =fileService.selectFileDetail(gal.getFile_id());
 			fileService.delete(FileDto);
 		}
+		if(gal.getDivision().equals("2")){
+			return "redirect:/gal/list.do?divNum=2&nowPage="+nowPage;
+		}
 		
 		return "redirect:/gal/list.do?nowPage="+nowPage;
+	}
+	
+
+	@RequestMapping("/search.do")
+	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
+			,HttpServletRequest req){
+		
+		
+		String search_account=map.get("search_account").toString();
+		String search_text=map.get("search_text").toString();
+		System.out.println(search_account+search_text);
+			
+			int totalRecordCount = galService.getTotalRecordCount_search();
+			System.out.println("totalRecordCount:"+totalRecordCount);
+			int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+			
+			//시작 및 끝 ROWNUM구하기]
+			int start= (nowPage-1)*pageSize+1;
+			int end = nowPage*pageSize;		
+			map.put("start", start);
+			map.put("end",end);
+			
+			List<Gallery> lists =galService.search(map);
+			
+			String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, 
+					req.getContextPath()+"/gal/search.do?search_account="+search_account+"&search_text="+search_text+"&");
+
+			model.addAttribute("lists",lists);
+			model.addAttribute("pagingString",pagingString);
+			model.addAttribute("totalPage",totalPage);
+			model.addAttribute("totalRecordCount",totalRecordCount);
+			model.addAttribute("nowPage",nowPage);
+			model.addAttribute("pageSize",pageSize);
+		
+		return "/admin/gallery";
 	}
 
 	
