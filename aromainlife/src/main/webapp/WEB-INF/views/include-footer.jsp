@@ -19,7 +19,7 @@
                <span><img src="<c:url value='/resources/images/shop.svg'/>" width="28" alt="쇼핑몰 아이콘"></span> 생활의 향기 쇼핑몰
            </a>
        </div>       
-       <p class="copyright">copyright ⒞ 2016 AROMAINLIFE. all rights reserved.</p>
+       <p class="copyright">ⓒ 2016 AROMAINLIFE. All rights reserved.</p>
      </div>
    </div>
 </div>
