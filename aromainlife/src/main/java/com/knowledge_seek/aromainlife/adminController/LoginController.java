@@ -20,6 +20,7 @@ import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.LoginServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.QnAServiceImpl;
+import com.knowledge_seek.aromainlife.util.PasswordUtil;
 
 
 
@@ -53,7 +54,7 @@ public class LoginController {
 	@RequestMapping(value = "/login.do")
 	public String index( @RequestParam Map map,HttpSession session,Model model) throws Exception {
 		
-	/*	map.put("adminPwd", PasswordUtil.encryptPassword(map.get("adminPwd").toString()));
+		map.put("adminPwd", PasswordUtil.encryptPassword(map.get("adminPwd").toString()));
 		System.out.println(map.get("adminPwd"));
 		boolean bFlag=login.isAdmin(map);
 		
@@ -65,7 +66,6 @@ public class LoginController {
 			model.addAttribute("loginError", "아이디와 비번이 불일치");
 			return "/admin/login";
 		}
-		*/
 		
 		return "forward:index.do";
 	}
