@@ -35,9 +35,9 @@
           </div>
           
 		  <c:forEach items="${lists}" var="list" varStatus="loop">
-		  	<div class="col-8" id="class-${loop.count }">
+		  	<div class="col-8 col-sm-16" id="class-${loop.count }">
             <h4 class="nanumpen">${list.title}</h4>
-	        <div class="col-16">
+	        <div class="row">
 	          <p>${list.content }<br>시간:${list.proTime} </p>
 	          <div class="col-4">
 	          <c:if test="${not empty list.file_id1}">

@@ -28,12 +28,12 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab active">생활속 아로마</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab active">생활속 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
         </div>
       </div>
@@ -41,7 +41,7 @@
         
       <!-- 시작: 아로마테라피-->
       <div class="row">
-        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5">
+        <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma aroma-5 frag-1">
           <div class="col-16">
             <h3 class="nanumpen">아로마를 이용한 생활 아로마(Aroma in life)</h3>
             <p>나에게 맞는 사용 방법을 생활의 지혜로 만드는 센스! 에센셜 오일은 살균, 소독, 탈취작용이 뛰어나 집안에서 다양하게 활용할 수 있다.</p>              
@@ -54,7 +54,7 @@
               <img src="<c:url value='/resources/images/fragra/blend31.gif'/>" alt="사진" width="100%">
               <img src="<c:url value='/resources/images/fragra/blend32.gif'/>" alt="사진" width="100%">
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p><span>옷장, 신발장 속에</span>
             건강한 허브들(세이지. 타임, 라벤더, 로즈마리, 페퍼민트 등)을 이용해 작은 포푸리를 만들어 옷장이나 신발 속에 넣어두면 향긋한 향과 뽀송뽀송한 느낌을~<br>
             포푸리에 라벤더, 페퍼민트, 로즈마리, 레몬, 티트리, 유칼립투스 등의 오일 3방울 정도를 떨어뜨린다.<br><br>
@@ -95,7 +95,7 @@
               <img src="<c:url value='/resources/images/fragra/blend33.gif'/>" alt="사진" width="100%">
               <img src="<c:url value='/resources/images/fragra/blend34.gif'/>" alt="사진" width="100%">
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
              <p><span>청소기</span>
                 필터 먼지 때문에 균이 생길 거 같다구요? 아로마 향을 사용해보세요.<br>
                 항균을 위한 오일 티트리, 유칼립투스, 라벤더, 레몬, 오렌지, 버가못, 시더우드, 쥬니퍼베리 등을 먼지 주머니에 1~2방울 직접 떨어뜨리거나, 화장솜에 2~3방울 정도 떨어뜨려 청소기 필터 부근에 넣는다.<br><br>
@@ -125,7 +125,7 @@
           <div class="col-3"><br><br>
               <img src="<c:url value='/resources/images/fragra/blend27.gif'/>" alt="사진" width="100%">              
           </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
               <p><span>세탁할 때~</span>
                 1. 세제와 함께 유칼립투스 3~5방울을 넣어 세탁하면 때가 더 잘 지워진다.<br>
                 2. 세탁 시 마지막 헹굼물에 라벤더나 로즈마리, 제라늄, 유칼립투스 등의 오일을 2~3방울 떨어뜨려 준다.<br><br>
@@ -142,7 +142,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend35.gif'/>" alt="사진" width="100%">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
                 <p><span>사랑스런 나의 애완동물을 위해 쾌적한 환경과 예방을~</span>
                 냄새제거를 위한 탈취용 스프레이(분무기)를 만들어 실내네 분무하거나 털이 있는 애완동물 들의 피부염 예방으로 털에 뿌려준다<br><br>
                 1.에탄올 20ml , 티트리 5방울, 라벤더 5방울, 그레이프후룻 10방울, 정제수 80ml <br>
@@ -158,7 +158,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend36.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">        
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p>집중이 안되고 머리가 무거울 때 몇 방울의 천연 에센셜 오일을 손수건이나 티슈에 떨어뜨려 냄새를 맡거나, 스프레이 용기에 물과 섞어 사용, 또는 아로마램프를 활용해 보자.<br>
                 도움이 되는 오일에는 레몬, 바질, 로즈마리, 페퍼민트, 쥬니퍼베리 등이 있다. <br>
                 레몬은 학습능률을 높여주고 바질은 지친 두뇌를 활성화시켜주고 로즈마리는 집중력 향상에 좋다.<br>
@@ -172,7 +172,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend37.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p><span>천연향유를 사용하여 당신의 침실을 달콤하고 편안한 꿈나라로 안내~</span>
             아늑한 공간으로 또는 로맨틱한 분위기의 보금자리로 만들 수 있다. 실내 발향 해 보자.<br>
             로즈나 네롤리, 라벤더, 일랑일랑은 로맨틱하고 기쁨이 넘치는 침실 분위기를 잘 연출해낸다.<br>
@@ -185,7 +185,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend44.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p><span>상큼한 천연향을 이용해 방안에 머물러 있는 체취를 없애고 실내 공기를 살균, 정화 시켜 
                 부모님의 건강과 젊음을 유지시켜 드리자~</span>
             유칼립투스, 버가못, 로즈마리, 파인, 레몬, 오렌지, 시나몬, 프랑킨센스 등을 이용해 실내 발향하거나 룸 스프레이를 만들어 수시로 뿌려준다.<br>
@@ -200,7 +200,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend38.gif'/>" alt="사진" width="100%">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p>아로마테라피를 이용해 향기로운 거실을 만드는 방법은 다양하다.<br>
                 발향기, 아로마 가습기를 이용하거나 룸 스프레이를 사용하는 방법은 감정을 안정시키고 쾌적한 건강 환경을 조성하며 담배 냄새와 음식냄새 같은 불쾌한 악취들을 없애준다.<br>
                 이러한 방법들은 넓은 공간에서 효과적으로 빠르게 향기를 확산시키고자 할 때 좋다. 좀더 부드러운 향을 원한다면 포푸리를 이용한다.<br><br>
@@ -214,7 +214,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend39.gif'/>" alt="사진" width="100%">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p><span>아로마테라피 목욕</span>
                 고대 그리스 로마 사람들은 병의 예방이나 건강에 도움이 되는 것으로 천연 향유를 이용한 목욕이나 마사지를 권장했다. 천연 향유로 목욕을 하는 것은 가장 간단하면서도 효과적인 아로마테라피 치료법중 하나이다. 목욕물의 온도와 어떤 천연 향유를 사용하느냐에 따라 릴랙싱, 치유, 아침 목욕 등으로 나누어 진다. 목욕시 천연 향유는 피부로 흡수되어 진피층을 촉촉하게 하고 순환기에 작용하는 동시에, 후각을 통해 감지된 향기는 뇌를 자극하고 행복감을 더해준다. 아로마테라피 목욕은 해독작용을 하고 셀룰라이트, 관절염, 근육통과 감기, 두통, 피부 트러블, 긴장 완화, 우울증 등의 문제에 도움을 준다.<br><br>
                 <span>목욕물 온도와 시간</span>
@@ -242,7 +242,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend40.gif'/>" alt="사진" width="100%">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p>직장인들의 경우, 사무실내 여러 가지 환경적 요인에 의해 건강을 해칠 수 있다는 것은 이미 모두가 아는 사실이다. 이중 대부분의 경우가 에어컨이나 각종 난방기, 가습기 등에 의해서 발생되는 증상이다. 실제, 이러한 환경에 있는 직장인들의 경우 그렇지 않은 직장인들보다 기침, 감기증상과 인후염에 걸릴 확률이 2배로 높아진다는 연구결과가 있었다.<br>
                 책상 앞에 발향시키거나 관자놀이, 귀 뒤, 콧등 위에 한방울 찍어준다.<br><br>
 
@@ -261,7 +261,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend42.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p>바쁘고 지친 생활 속에서 탈피, 5분이라도 나만의 공간을 만들어 향과 함께 휴식을 취해보자.<br><br>
                 명상에 도움 되는 천연향유 : 프랑킨센스, 샌달우드, 사이프러스, 쥬니퍼베리, 파인, 버가못, 로즈우드 등</p>
           </div>
@@ -269,7 +269,7 @@
           <div class="col-16"><br><br>
               <h4 class="nanumpen">⑫ 운동 전, 후로</h4>
           </div>
-          <div class="col-13 prefix-3">
+          <div class="col-13 prefix-3 col-sm-16 prefix-sm-0">
             <p>운동 후의 근육이완도 중요하지만 운동 하기 전 충분한 이완도 잊지 않기를~<br>
             운동 전 마사지 오일을 도포, 흡수 시킨 후 운동을 시작한다. <br><br>
 
@@ -284,7 +284,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend45.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
             <p>차분한 마음으로 편안하게 책을 읽을 수 있게 도와준다.<br>
                 도움이 되는 오일들 사이프레스, 쥬니퍼베리, 파인, 프랑킨센스, 버가못, 로즈우드 등<br><br>
                 - 발향기를 이용해 실내 발향한다.<br>
@@ -295,7 +295,7 @@
           <div class="col-16">
               <h4 class="nanumpen">⑭ 방충효과</h4>
           </div>
-          <div class="col-13 prefix-3">
+          <div class="col-13 prefix-3 col-sm-16 prefix-sm-0">
             <p>집안에 해충들이나 특히 여름철 모기나 파리 등을 멀리하고 싶을 때, 야외 나들이나 캠핑 할 때 벌레, 모기에 물리지 않도록 예방하자.<br><br>
                 1. (발향) 유칼립투스, 레몬, 제라늄, 레몬그라스, 라벤더 등의 오일을 실내 발향시킨다.<br><br>
                 2. (마사지오일) 야외 외출 전 몸에 골고루 오일을 바른 후 외출한다.<br>
@@ -311,7 +311,7 @@
           <div class="col-3">
               <img src="<c:url value='/resources/images/fragra/blend43.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">              
           </div>
-          <div class="col-13">
+          <div class="col-13 col-sm-16">
               <p><span>1. 방충 종이 스틱</span>
                 집안에서 키우는 식물에 방충 종이 스틱을 만들어 화분에 끼워놓으면, 방충 효과 뿐 아니라 에센셜 오일의 에너지가 식물을 건강하게 자랄 수 있도록 도와준다.<br><br>
                 만드는 방법: 나무 젓가락을 사이즈에 맞게 자른 후 두꺼운 종이를 알맞게 잘라 나무 젓가락 사이에 끼워 넣는다.<br>

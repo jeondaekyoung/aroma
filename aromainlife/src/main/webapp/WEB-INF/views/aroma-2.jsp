@@ -29,11 +29,11 @@
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           
-          <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab active">에센셜오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-2.do'/>" class="tab active">에센셜오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
           
         </div>
       </div>
@@ -50,14 +50,14 @@
 	    </div>
 
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
-          <div class="col-8 compare">
+          <div class="col-8 col-sm-16 compare">
             <p class="nanumpen">·사람과 식물 비교 (연관관계)</p>
             <div class="col-16">
               <img src="<c:url value='/resources/images/aroma/img02.gif'/>" alt="신경계-뿌리, 생식기·소화기-꽃, 호흡기=잎, 순환기-줄기">
             </div>            
             <p class="pt-1">* 참고: "Human being and Plants" by Rudolph Steiner(1861~1925)</p>
           </div>
-          <div class="col-8 compare">
+          <div class="col-8 col-sm-16 compare">
             <p class="nanumpen">·식물과 에센셜 오일의 연관관계</p>
             <div class="col-16">
               <img src="<c:url value='/resources/images/aroma/img03.gif'/>" alt="열매: 해독, 잎: 호흡기 강화, 껍질: 기분전환, 수지줄기: 상처 치유, 꽃: 호르몬 조절, 나무줄기: 근골격 강화, 뿌리: 원기 회복" style="height: 100%">
@@ -66,7 +66,7 @@
         </div>
           
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
             <h3 class="nanumpen">2. 추출방법</h3>
             <h4 class="nanumpen">1) 수증기 증류법(Steam Distillation)</h4>
             <p>라벤더, 페퍼민트, 유칼립투스, 로즈마리, 티트리, 캐모마일 등 전체 에센셜 오일 중 80% 이상.<br>
@@ -83,7 +83,7 @@
             <p>감귤류: 버가못, 레몬, 오렌지, 그레이프푸릇, 만다린 등<br><br>시트러스계열(감귤계)의 오일을 얻는 데 많이 사용하는 방법으로, 예전에는 과일의 껍질을 손으로 짜서 스펀지에 모아 오일을 얻었지만, 오늘날에는 대부분 이 작업이 기계에 의해 이루어 진다.</p>
           </div>
             
-          <div class="col-10">
+          <div class="col-10 col-sm-16">
             <h4 class="nanumpen">3) 용매추출법(Solvent Extraction)</h4>
             <p>로즈 에솔루트, 쟈스민 엡솔루트<br><br>
                 식물의 꽃 등을 헥산과 석유에테르 같은 휘발성 용매를 사용하여 얻어내는 방법이다.<br>
@@ -100,7 +100,7 @@
 이 방법은 모든 공정을 저온에서 할 수 있으므로 열에 매우 약한 에센스 성분을 파괴시키지 않고 그대로 추출할 수 있는 장점이 있다. 또한 기존의 용매 대신 쉽게 기체로 변하는 초임계 이산화탄소를 사용하기 때문에 잔류 용매를 거의 남기지 않으며 짧은 시간안에 추출할 수 있어 오일의 질은 매우 우수하다. 하지만 고압이 필요하기 때문에 이에맞는 고가의 장비가 있어야 한다.</p>
           </div>
             
-          <div class="col-12">
+          <div class="col-12 col-sm-16">
             <h4 class="nanumpen">5) 냉침법(Enfleurage)</h4>
             <p>장미, 쟈스민<br><br>
                 과거부터 많이 사용되어진 전통적인 방법으로 가장 오래된 추출 방법이긴 하나 최근에는 거의 사용되지 않고 있다.<br>
@@ -114,7 +114,7 @@
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <h3 class="nanumpen">3. 작용원리 (에센셜 오일의 인체 메커니즘)</h3>
           <div class="col-6"><img src="<c:url value='/resources/images/aroma/img07.gif'/>" width="100%" alt="후각을 통한 흡수"></div>
-          <div class="col-10">
+          <div class="col-10 col-sm-16">
             <h4 class="nanumpen">1) 후각을 통한 흡수</h4>
             <p class="nose">향기분자 흡입 → 점액(mucus)에 닿아 용해됨 → 섬모(Cilia)에 향기분자가 결합 → 후각세포(Olfactory cells)에 전달 → 엑손 신경돌기(Axon) → 향기분자가 전기적 신호로 바뀜 → 후구(Olfactory bulb)에 전달 → 후삭(Olfactory tract) → 변연계(Limbic system): 감정, 성욕, 식욕, 기억, 학습기능<br><br>
                 <span>편도(Amygdala)</span>: 감정 반응(공격, 질투, 두려움), 호르몬 분비, 기억력<br>
@@ -124,7 +124,7 @@
           </div>            
             
           <div class="col-4 prefix-1 suffix-1" style="margin-top: 3em"><img src="<c:url value='/resources/images/aroma/img08.gif'/>" width="100%" style="padding: 1em 3em" alt="폐를 통한 흡수"></div>
-          <div class="col-10" style="margin-top: 3em">
+          <div class="col-10 col-sm-16" style="margin-top: 3em">
             <h4 class="nanumpen">2) 폐를 통한 흡수</h4>
             <p class="nose">향기 분자 → 코 → 인두(Pharynx) → 후두(Larynx) → 기관(Trachea) → 기관지(Bronchi) → 세기관지(Bronchioles) → 폐포: 가스교환(산소 흡수, 이산화탄소 방출)<br><br>
                 ① 외호흡(폐 → 혈관)<br>
@@ -135,7 +135,7 @@
           </div>
             
           <div class="col-4 prefix-1 suffix-1"><img src="<c:url value='/resources/images/aroma/img09.gif'/>" width="100%" alt="피부를 통한 흡수"></div>
-          <div class="col-10"><br><br><br>
+          <div class="col-10 col-sm-16"><br><br><br>
             <h4 class="nanumpen">3) 피부를 통한 흡수</h4>
             <p>① 향기 분자 → 모공, 땀샘 → 혈관 → 전신<br><br>
                 ② 향기 분자 → 정유의 지방에 녹는 성질(지용성)로 인해 지방질 속에 용해 → 피부 세포 사이로 침투 → 피부의 진피층 → 모세혈관, 림프 순환 → 전신 순환</p>
@@ -157,7 +157,7 @@
                 7. 캐리어 오일은 특히 산화, 부패하기 쉬우므로 차고 어두운 곳에 보관한다.<br>
                 8. 직접 블렌딩한 마사지 오일(에센셜 오일+캐리어오일)은 가능한 한 6~9개월 이내에 사용하는 것이 바람직하다.</p>
           </div>
-          <div class="col-8">
+          <div class="col-8 col-sm-16">
             <h4 class="nanumpen">2) 좋은 에센션 오일 선택 방법</h4>
             <p>1. 차광색 병에 드롭퍼가 있는 지?<br>
                 2. 순도 100%의 천연 에센셜 오일인지?<br>
@@ -165,7 +165,7 @@
                 4. 제조년월일 또는 유통기한이 표시되어 있는지?<br>
                 5. 유기농 인증을 받았는 지?</p>
           </div>
-          <div class="col-8">
+          <div class="col-8 col-sm-16">
             <h4 class="nanumpen">3) **안좋은 오일</h4>
             <p>1. 모든 오일을 같은 가격으로 판매하고 있는 경우<br>
                 2. 섞음질하거나 합성성분을 섞어 만든 오일<br>

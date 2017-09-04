@@ -29,11 +29,11 @@
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           
-           <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab active">캐리어오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab active">캐리어오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
           
         </div>
       </div>
@@ -42,13 +42,13 @@
       <!-- 시작: row-->
       <div class="row">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
-          <div class="col-12">
+          <div class="col-12 col-sm-16">
             <h3 class="nanumpen">캐리어 오일은?</h3>
             <p>캐리어 오일은 말 그대로 에센셜 오일을 피부 속으로 운반해 주는 역할을 하는 100% 천연식물성 오일을 말한다. 에센셜 오일을 피부에 적용할 때는 반드시 캐리어 오일에 희석해서 사용해야 하며 희석 비율은 얼굴: 1~2%, 바디: 3~4% 정도가 적당하다.<br><br>
                 캐리어 오일은 에센셜 오일을 고르게 분산시켜서 약리성분 들을 피부에 효과적으로 침투하게 하고, 에센셜 오일의 증발을 억제하며 피부에 고루 퍼지게 한다. 또한 많은 불포화지방산의 함유로 피부에 풍부한 영양을 공급한다. 모든 캐리어 오일은 가공하지 않은 식물성 재료(씨, 견과, 속)를 냉압착시켜 오일을 추출한다. 그러므로 식물의 열매가 가지고 있는 천연 성분들을 그대로 함유하고 있다. 반면에 슈퍼마켓에서 판매하는 식물성 오일은 식용으로 이용하기 위해 정제되는 과정에서 발생하는 열로 인해 영양소가 파괴되어 있기 때문에 아로마테라피용으로는 적합하지 않다.<br>
                 아로마테라피 초보 단계에서는 거의 하나의 오일만 사용하지만, 시간이 지날수록 식물성 오일의 특성을 손으로 체험하고 나의 피부에 맞게 2~3가지를 브랜딩 하여 사용하면 피부에 더욱 효과적이다.</p>
           </div>
-          <div class="col-4"><img src="<c:url value='/resources/images/aroma/img10.gif'/>" width="100%" alt="오일 마사지"></div>
+          <div class="col-4 col-sm-8"><img src="<c:url value='/resources/images/aroma/img10.gif'/>" width="100%" alt="오일 마사지"></div>
             
           <div class="col-16">
             <ul class="legend">

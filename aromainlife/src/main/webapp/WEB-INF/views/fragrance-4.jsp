@@ -28,12 +28,12 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
-           <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab active">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab active">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
         </div>
       </div>
@@ -70,7 +70,7 @@
               </p>
             </div>
             
-          <div class="col-12">
+          <div class="col-12 col-sm-16">
             <h4 class="nanumpen">아이의 적, 아토피</h4>
             <p>1. 캐모마일 워터를 수시로 뿌려주고 캐모마일 워터를 거즈나 타올에 적셔 상온습포한다.<br>
                 2. 호호바 오일 30ml, 이브닝프림로즈 10ml, 칼렌듈라 오일 10ml에 라벤더 6방울, 캐모마일 로만(or 저먼) 2방울, 샌달우드 2방울을 희석하여 수시로 마사지한다.<br>
@@ -89,7 +89,7 @@
                 ■ 캐모마일 1방울 : 그레이프후룻 1방울<br>
                 ■ 캐리어오일 10ml에 라벤더 2방울, 캐모마일 1방울을 희석하여 아기 등을 마사지하여준다.</p>
           </div>
-          <div class="col-3 suffix-1">
+          <div class="col-3 suffix-1 col-sm-6 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/bns05.gif'/>" alt="사진" width="100%">
             <img src="<c:url value='/resources/images/fragra/bns06.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             <img src="<c:url value='/resources/images/fragra/blend44.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
@@ -99,7 +99,7 @@
               <h3 class="nanumpen">2. 부모님을 위한 아로마</h3>
             </div>
             
-            <div class="col-12">
+            <div class="col-12 col-sm-16">
               <h4 class="nanumpen">관절통증</h4>
               <p>부모님들의 관절통증.. 아로마 향으로 마음까지 편하게 해드리세요~ <br>
                 (사용 에센셜오일) 캐모마일, 라벤더, 로즈마리, 페퍼민트, 티트리, 쥬니퍼베리,사이프러스, 시나몬, 진저 (5%정도 희석 가능)<br><br>
@@ -108,11 +108,11 @@
                 ■ 캐리어오일 20ml에 페퍼민트 10방울, 쥬니퍼베리 4방울, 라벤더 6방울을 희석하여 관절부위에 마사지하여 준다.
               </p>
             </div>
-            <div class="col-3 suffix-1">
+            <div class="col-3 suffix-1 col-sm-6 suffix-m-0">
               <img src="<c:url value='/resources/images/fragra/bns07.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             
-            <div class="col-12">
+            <div class="col-12 col-sm-16">
                 <h4 class="nanumpen">피부건조</h4>
                 <p>나이가 들어갈수록 피부 내 수분 보유가 약해져 피부가 건조해지죠. 특히 환절기 가려움증으로 고생하시지 마시고 플로럴 워터를 사용해보세요.<br><br>
                     (사용 에센셜 오일) 로즈, 제라늄, 라벤더, 캐모마일, 샌달우드, 로즈우드, 프랑킨센스<br>
@@ -120,11 +120,11 @@
                     ■ 사용하고 있는 크림을 바를 때 팥알크기만큼의 캐리어오일과 선택한 에센셜 오일 1방울을 섞어 바른다.
                 </p>
             </div>
-            <div class="col-3 suffix-1">
+            <div class="col-3 suffix-1 col-sm-6 suffix-m-0">
               <img src="<c:url value='/resources/images/fragra/bns08.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
             </div>
             
-            <div class="col-12">
+            <div class="col-12 col-sm-16">
                 <h4 class="nanumpen">냄새제거</h4>
                 <p>■ 에센셜 오일: 버가못, 레몬, 유칼립투스, 로즈마리, 시나몬, 페퍼민트<br>
                     ■ 방안에 레몬 3방울, 버가못 3방울을 아로마램프에 떨어뜨려 발향한다.<br>
@@ -132,7 +132,7 @@
                     ■ 아로마 스프레이를 만들어 방안이나 몸에 수기로 뿌려준다.
                 </p>
             </div>
-            <div class="col-3 suffix-1">
+            <div class="col-3 suffix-1 col-sm-6 suffix-m-0">
               <img src="<c:url value='/resources/images/fragra/blend30.gif'/>" alt="사진" width="100%">
             </div>
             
@@ -147,7 +147,7 @@
                     ■ 라벤더 4방울, 캐모마일 2방울, 그레이프후룻 2방울을 떨어드려 반신욕한다.</p>
             </div>
             
-            <div class="col-12">
+            <div class="col-12 col-sm-16">
                 <h4 class="nanumpen">노인성 치매</h4>
                 <p>■ 로즈마리, 페퍼민트, 사이프러스, 유칼립투스 등의 오일을 아로마 목걸이를 이용하여 항상 흡입하게 한다.<br>
                     두뇌활동을 활발하게 하여 기억력이나 신체리듬을 잃지않게 하여준다.<br>
@@ -169,7 +169,7 @@
                     ■ 사이프러스 3방울, 페퍼민트(or 로즈마리) 2방울로 1일 1회 족욕하여 준다.
                 </p>
             </div>
-            <div class="col-3 suffix-1">
+            <div class="col-3 suffix-1 col-sm-6 suffix-m-0">
               <img src="<c:url value='/resources/images/fragra/bns09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
             

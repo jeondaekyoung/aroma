@@ -70,7 +70,7 @@
       <!-- 시작: 사진 목록-->
       <div class="col-12 prefix-2 suffix-2 col-m-14 suffix-m-1 prefix-m-1 gallery">
          <c:forEach items="${lists}" var="list" varStatus="status">
-        	<div class="col-4">
+        	<div class="col-4 col-sm-8">
           <div class="img-wrap" id="pic" onclick="popup(${status.count})"><img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100%" ></div>
           <p>${list.createDate}</p>
         </div> 

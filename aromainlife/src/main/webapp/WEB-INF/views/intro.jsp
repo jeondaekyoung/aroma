@@ -57,27 +57,27 @@
       <div class="row intro intro-2">
         <h3 class="prefix-2 prefix-m-1">주요사업</h3>
         <div class="row bizz">
-          <div class="wd20">
+          <div class="wd20 col-sm-8">
             <img src="<c:url value='/resources/images/intro/bizz-01.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">교육사업</h4>
             <p>허브 &amp; 아로마 테라피<br>교육</p>
           </div>
-          <div class="wd20">
+          <div class="wd20 col-sm-8">
             <img src="<c:url value='/resources/images/intro/bizz-02.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">DIY 체험교육</h4>
             <p>쉽게 배우는 생활<br>아로마 DIY</p>
           </div>
-          <div class="wd20">
+          <div class="wd20 col-sm-8">
             <img src="<c:url value='/resources/images/intro/bizz-03.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">아로마 커뮤니티</h4>
             <p>아로마를 사랑하는<br>사람들의 모임</p>
           </div>
-          <div class="wd20">
+          <div class="wd20 col-sm-8">
             <img src="<c:url value='/resources/images/intro/bizz-04.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">아로마 저서 편찬</h4>
             <p>올바른 아로마 사용과 보급을 위한 저서 편찬</p>
           </div>
-          <div class="wd20">
+          <div class="wd20 col-sm-8">
             <img src="<c:url value='/resources/images/intro/bizz-05.png'/>" alt="사진" width="100%">
             <h4 class="nanumpen">생활의 향기 Shop</h4>
             <p>오갑을 만족하는 허브 &amp;<br>천연향기 체험 여행</p>

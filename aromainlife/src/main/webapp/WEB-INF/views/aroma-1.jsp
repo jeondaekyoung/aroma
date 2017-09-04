@@ -28,11 +28,11 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
-          <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab active">허브&amp;아로마테라피</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
+          <div class="fl w20 wd33"><a href="<c:url value='/user/aroma-1.do'/>" class="tab active">허브&amp;아로마테라피</a></div>
+          <div class="fl w20 wd33"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
+          <div class="fl w20 wd33"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
+          <div class="fl w20 wd33"><a href="<c:url value='/user/aroma-4.do'/>" class="tab">플로럴워터</a></div>
+          <div class="fl w20 wd33"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
         </div>
       </div>
       <!-- 끝: tab-menu-->

@@ -29,11 +29,11 @@
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
           
-           <div class="fl w20"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-4.do'/>" class="tab active">플로럴워터</a></div>
-          <div class="fl w20"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-1.do'/>" class="tab">허브&amp;아로마테라피</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-2.do'/>" class="tab">에센셜오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-3.do'/>"  class="tab">캐리어오일</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-4.do'/>" class="tab active">플로럴워터</a></div>
+          <div class="fl w20 w33"><a href="<c:url value='/user/aroma-5.do'/>" class="tab">활용방법</a></div>
           
         </div>
       </div>
@@ -49,7 +49,7 @@
                 또한, 1L당 에센셜 오일 성분이 0.002~0.005% 정도 함유되어 있어 플로럴 워터 자체로도 살균, 소독, 보습의 효과가 있다. 한가지 워터로 사용 하지만 2~3가지 워터를 블랜딩 하여 사용해도 효과적이다.</p>
           </div>
             
-          <div class="col-16">              
+          <div class="col-16">
             <table>
               <colgroup>
                   <col style="width: 15%;"/><col style="width: 20%;"/><col style="width: 15%;"/><col style="width: 50%;"/>

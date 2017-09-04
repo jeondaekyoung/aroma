@@ -28,12 +28,12 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab active">허브 먹거리</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab active">허브 먹거리</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
         </div>
       </div>
@@ -49,8 +49,8 @@
                 허브티를 마시면 허브가 갖고 있는 유효 성분에 의한 천연 허브의 에너지를 느낄 수 있다. 부담 없이 즐겨보자</p>
           </div>
         
-            <div class="col-3"></div>
-            <div class="col-13">
+            <div class="col-3 col-sm-6"></div>
+            <div class="col-13 col-sm-16 col-sm-16">
               <h4 class="nanumpen">허브티 마시는 방법</h4>
               <p>1. 따뜻한 허브 티포트에 허브를 넣는다.(1티스푼: 1인분량)<br>
                 2. 허브를 넣은 티포트에 뜨거운 물을 붓는다.(1인분 허브에 150ml 정도가 적당)<br>
@@ -144,43 +144,43 @@
             <p>집에서 쉽게 키울 수 있는 로즈마리, 레몬밤, 페퍼민트, 바질, 코리안더, 챠이브 등의 허브를 요리에 이용하여 허브향을 맘껏 느껴보자</p>
           </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food01.gif'/>" alt="사진" width="100%">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브샐러드</h4>
                 <p>나스터츔, 팬지, 제비꽃, 보리지, 바질, 블렉페퍼, 파슬리, 아니스, 오레가노, 갈릭, 코리안더, 샤프란, 마조람, 챠이브, 스피아민트, 페넬, 베이 등의 식용 허브를 취향에 따라 선택하여 신선한 허브샐러드를 만든다.</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">굽는 요리를 할 때(삼겹살, 생선구이)</h4>
                 <p>고기나 생선 닭, 오리 등을 구워서 먹을 때 로즈마리, 펜넬, 바질, 페퍼민트 허브를 살짝 뿌려준다.<br>
                 고기, 생선 등에서 날 수 있는 냄새를 없애주며 소화를 촉진시켜준다.</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food03.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">찜요리</h4>
                 <p>찜 요리 위에 허브(로즈마리, 갈릭, 바질, 페퍼민트 등) 뿌려주기<br><br>
                 스프 끓일 때<br>
                 스프를 끓여 보기 좋게 담은 후 바질, 애플민트, 페퍼민트 잎 하나를 띄우면 맛과 영양을 더해준다. </p>
             </div>
             
-            <div class="col-13 prefix-3">
+            <div class="col-13 col-sm-16 prefix-3">
                 <h4 class="nanumpen">허브쿠키 & 허브빵</h4>
                 <p>엄마가 정성스럽게 만들어주시는 쿠키 간식과 빵에 허브 향으로 사랑을 더하세요~<br>
                 반죽할 때 1티스푼 정도의 허브(로즈마리, 시나몬, 라벤더 등)를 넣어준다.</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food04.gif'/>" alt="사진" width="100%">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브피자</h4>
                 <p>이태리 정통피자 마르게리따 <br>
                 이태리 마르게리따 여왕에게 바칠 피자를 만들면서 이태리국기를 상징하는 세가지 색을 내기위해 토마토소스, 모짜렐라치즈, 그리고 바질 잎이 들어갔다죠? <br>
@@ -188,20 +188,20 @@
                 피자를 만들거나 즐길 때 허브와 함께 해보세요~</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food05.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브샌드위치</h4>
                 <p>영국에서 먹은 샌드위치엔 항상 바질이나 코리안더가 들어 있었던 기억이 납니다. <br>
                 쌀국수 특유향으로도 잘 알려진 코리안더의 독특한 향은 입맛을 새롭게 돋울 뿐 아니라 아주 부드럽게 소화를 시켜준답니다.<br>
                 파슬리나 오레가노, 애플민트, 로즈마리 등도 많이 사용.</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food06.gif'/>" alt="사진" width="100%">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브비빔밥</h4>
                 <p>이젠 대중적인 음식이 될 정도로 많이 찾는 깔끔한 허브비빔밥<br>
                 식용허브로 사용하고 있는 나스타츔, 바질, 페퍼민트, 챠이브, 파슬리, 코리안더 등의 허브와 허브고추장을 넣어 젓가락으로 재미있게 비벼보자. 꽃을 보며 향과 함께 밥을 먹으니 입가에는 저절로 미소가~ <br><br>
@@ -210,35 +210,35 @@
                 이번엔 로즈마리를 넣어 만들어 보시는 건 어떨지? 맛이 끝내줘요~</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food07.gif'/>" alt="사진" width="100%" style="padding: 0 4em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브식초</h4>
                 <p>약으로도 이용하는 감식초, 요리에 사용하는 식초에 로즈마리, 티트리, 마조람, 레몬밤, 페퍼민트, 타임 등의 허브를 넣어 숙성시켜보자.<br>
                     더욱 깔끔한 요리와 음료로 만날 수 있어요~</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food08.gif'/>" alt="사진" width="100%" style="padding: 0 3em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브수</h4>
                 <p>상쾌하고 신선한 물을 즐기고 싶다고요? 물통에 로즈마리, 캐모마일, 라벤더, 로즈, 레몬밤,타임 등의 허브 가지와 꽃을 넣어보세요.<br>
                     물을 마시면서 은은한 허브향기와 함께 머리가 맑아지는 기분을 느끼실 거예요.</p>
             </div>
             
-            <div class="col-3">
+            <div class="col-3 col-sm-6">
                 <img src="<c:url value='/resources/images/fragra/food09.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
             </div>
-            <div class="col-13">
+            <div class="col-13 col-sm-16">
                 <h4 class="nanumpen">허브술</h4>
                 <p>술을 너무 사랑 하신다구요? 음주 후 머리가 무거우시다구요? 고민을 덜어드리지요.<br>
                 즐기는 술이나 포도주 과일주에 로즈마리 허브를 넣어 1~2주 숙성 시켜 조금씩 즐겨보세요. <br>
                 술과 향을 함께 마시면서 혈액순환에도 도움이 됩니다.</p>
             </div>
             
-            <div class="col-13 prefix-3">
+            <div class="col-13 col-sm-16 prefix-3 prefix-sm-0">
                 <h4 class="nanumpen">허브디저트</h4>
                 <p>맛있는 식사 후의 디저트 허브가 들어있어 소화를 부드럽게 도와줍니다~<br>
                 민트, 보리지, 바질, 콘플라워, 라벤더, 로즈마리, 카다멈, 레몬그라스, 제라늄 등<br>

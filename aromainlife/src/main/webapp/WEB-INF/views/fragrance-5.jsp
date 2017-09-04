@@ -28,12 +28,12 @@
       <!-- 시작: tab-menu -->
       <div class="row tab-menu">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 text-center">
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab active">아로마 마사지</a></div>
-          <div class="fl w16"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab active">아로마 마사지</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
         </div>
       </div>
@@ -97,7 +97,7 @@
           <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage06.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
             <h3 class="nanumpen">전신</h3>
             <p>우선 아로마 오일을 몸에 잘 흡수시킨다는 생각으로 오일을 바르세요. 그게 바로 마사지입니다~
 		                이때, 자연스럽게 신체 흐름방향대로 바른다면 더욱 효과적이겠죠<br>
@@ -109,7 +109,7 @@
           <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
             <h3 class="nanumpen">등</h3>
             <p>마사지는 골격이 아니라 근육을 이완시키는 겁니다.<br>
 		                등을 한번 보세요 척추가 있죠? 우리몸에서 척추는 몸을 지지하는 중요한 역할을 하며 목뒤 경추부터 꼬리뼈 미추까지 전신의 신경계가 연결되어 있는 부위입니다.<br>
@@ -123,7 +123,7 @@
           <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 1em;">
           </div>
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
             <h3 class="nanumpen">팔, 다리</h3>
             <p>팔과 다리는 하루 중에 가장 많은 활동을 하는 신체 부위이므로 자연히 노폐물도 많이 쌓여 붓거나 경직됩니다.<br><br>
                 아로마 오일로 순환을 도와 원활한 흐름을~<br>
@@ -147,7 +147,7 @@
           <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/beauty08.gif'/>" alt="사진" width="100%">
           </div>
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
               <h3 class="nanumpen">배</h3>
               <p>사촌이 땅을 사면 배가 아프죠? 그만큼 복부는 생각과 마음이 직접적으로 연결되어 있습니다.<br>
                     불안해 하거나 스트레스가 많은 사람, 예민한 체질 일수록 위나 장이 약합니다.<br>
@@ -161,7 +161,7 @@
           <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage08.gif'/>" alt="사진" width="100%">
           </div>
-          <div class="col-11">
+          <div class="col-11 col-sm-16">
               <h3 class="nanumpen">얼굴</h3>
               <p>얼굴부위는 다른 신체부위보다 골격과 피부사이 근육이 적습니다. 그래서 더 예민하고 자극적일 수 있죠<br>
                     에센셜 오일의 양만 잘 지켜서 사용하신다면 아로마의 순환촉진과 노폐물물 배출의 효과로 맑은 안색의 피부를 가질 수 있습니다.<br>
