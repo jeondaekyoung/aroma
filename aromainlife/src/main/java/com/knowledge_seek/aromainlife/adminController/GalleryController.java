@@ -6,7 +6,6 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +18,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.knowledge_seek.aromainlife.domain.FileDTO;
 import com.knowledge_seek.aromainlife.domain.Gallery;
-import com.knowledge_seek.aromainlife.domain.QnA;
 import com.knowledge_seek.aromainlife.service.impl.FileServiceImpl;
 import com.knowledge_seek.aromainlife.service.impl.GalServiceImpl;
 import com.knowledge_seek.aromainlife.util.PagingUtil;
@@ -74,20 +72,21 @@ public class GalleryController {
 		
 	}
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
-	public String write(Gallery gal,Model model) {
+	public String write(Gallery gal,Model model,HttpServletRequest req) throws Exception {
 		//logger.info("{}",gal.getFile().getOriginalFilename());
 		if(gal.getFile().getSize()!=0){
 			MultipartFile multpartfile = gal.getFile();
 			gal.setFileName(multpartfile.getOriginalFilename());
 			gal.setFile_id(fileService.save(multpartfile));
 		}
-		
+		String host = req.getHeader("HOST");
 		galService.insert(gal);
 		if(gal.getDivision().equals("2")){
-			return "redirect:/gal/list.do?divNum=2";
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2";
 		}
-		return "redirect:/gal/list.do";
+		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=1";
 	}
+	
 	@RequestMapping(value = "/editForm.do")
 	public String editForm(Gallery gal, Model model){
 		
@@ -98,7 +97,8 @@ public class GalleryController {
 	}
 	
 	@RequestMapping("/update.do")
-	public String update(Gallery gal, Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
+	public String update(Gallery gal, Model model,HttpServletRequest req
+			,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
 
 		if(gal.getFile().getSize()!=0){
 			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
@@ -110,15 +110,15 @@ public class GalleryController {
 			
 		}
 		galService.update(gal);
-		
+		String host = req.getHeader("HOST");
 		if(gal.getDivision().equals("2")){
-			return "redirect:/gal/list.do?divNum=2&nowPage="+nowPage;
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2&nowPage="+nowPage;
 		}
-		
-		return "redirect:/gal/list.do?nowPage="+nowPage;
+		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?nowPage="+nowPage;
 	}
 	@RequestMapping("/delete.do")
-	public String delete(Gallery gal,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
+	public String delete(Gallery gal,HttpServletRequest req
+			,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		gal=galService.selectOne(gal);
 		galService.delete(gal);
 		if(gal.getFile_id().length()!=0){
@@ -126,19 +126,17 @@ public class GalleryController {
 			FileDTO FileDto =fileService.selectFileDetail(gal.getFile_id());
 			fileService.delete(FileDto);
 		}
+		String host = req.getHeader("HOST");
 		if(gal.getDivision().equals("2")){
-			return "redirect:/gal/list.do?divNum=2&nowPage="+nowPage;
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2&nowPage="+nowPage;
 		}
-		
-		return "redirect:/gal/list.do?nowPage="+nowPage;
+		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?nowPage="+nowPage;
 	}
 	
 
 	@RequestMapping("/search.do")
 	public String search(@RequestParam Map map,Model model,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage
 			,HttpServletRequest req){
-		
-		
 		String search_account=map.get("search_account").toString();
 		String search_text=map.get("search_text").toString();
 		System.out.println(search_account+search_text);

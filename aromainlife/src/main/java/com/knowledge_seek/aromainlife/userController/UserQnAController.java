@@ -3,7 +3,6 @@ package com.knowledge_seek.aromainlife.userController;
 import java.util.List;
 import java.util.Map;
 
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,13 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.knowledge_seek.aromainlife.domain.Answer;
 import com.knowledge_seek.aromainlife.domain.FileDTO;
@@ -69,8 +66,6 @@ public class UserQnAController {
 
 		List<QnA> lists=qnaService.selectList(map);
 		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/user/qna-list.do?");
-		
-		
 		model.addAttribute("notiLists",notiLists);
 		model.addAttribute("lists",lists);
 		model.addAttribute("pagingString",pagingString);
@@ -95,19 +90,15 @@ public class UserQnAController {
 		return "qna-write";
 	}
 	@RequestMapping(value = "/user/qna-write.do", method = RequestMethod.POST)
-	public String write(QnA qna, Model model){
-		
-
+	public String write(QnA qna, Model model,HttpServletRequest req){
 		if(qna.getFile().getSize()!=0){
 			MultipartFile multpartfile = qna.getFile();
 			qna.setFileName(multpartfile.getOriginalFilename());
 			qna.setFile_id(fileService.save(multpartfile));
-		
 		}
-		
 		qnaService.insert(qna);
-		
-		return "redirect:/user/qna-list.do";
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/user/qna-list.do";
 	}
 	
 	@RequestMapping(value = "/user/qna-editForm.do", method = RequestMethod.POST)
@@ -137,7 +128,7 @@ public class UserQnAController {
 	
 	
 	@RequestMapping(value = "/user/qna-edit.do", method = RequestMethod.POST)
-	public String edit(QnA qna){
+	public String edit(QnA qna,HttpServletRequest req){
 		System.out.println(qna.getQnaNo());
 		if(qna.getFile().getSize()!=0){
 			//올린파일 mutipartFile 객체에 저장, 파일 이름 저장
@@ -152,13 +143,13 @@ public class UserQnAController {
 			
 			qna.setFile_id(null);
 		}
-		
+		String host = req.getHeader("HOST");
 		qnaService.update(qna);
-		return "redirect:/user/qna-list.do";
+		return "redirect:http://"+host+req.getContextPath()+"/user/qna-list.do";
 	}
 	
 	@RequestMapping(value = "/user/qna-delete.do", method = RequestMethod.POST)
-	public String delete(QnA qna){
+	public String delete(QnA qna,HttpServletRequest req){
 		
 		qna=qnaService.selectOne(qna);
 			qnaService.delete(qna);
@@ -169,8 +160,8 @@ public class UserQnAController {
 					fileService.delete(FileDto);
 				}
 		
-		
-		return "redirect:/user/qna-list.do";
+			String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/user/qna-list.do";
 	}
 	
 	@RequestMapping("/user/qnaSearch.do")

@@ -100,18 +100,16 @@ public class QnAController {
 	}
 	
 	@RequestMapping(value = "/write.do" ,method =RequestMethod.POST)
-	public String write(QnA qna, Model model) {
+	public String write(QnA qna, Model model,HttpServletRequest req) {
 		
 		if(qna.getFile().getSize()!=0){
 			MultipartFile multpartfile = qna.getFile();
 			qna.setFileName(multpartfile.getOriginalFilename());
 			qna.setFile_id(fileService.save(multpartfile));
-		
 		}
-		
 		qnaService.insert(qna);
-		
-		return "redirect:/qna/list.do";
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/qna/list.do";
 	}
 	
 	@RequestMapping(value="/view.do" )
@@ -153,8 +151,9 @@ public class QnAController {
 	}
 	
 	@RequestMapping("/delete.do")
-	public String delete(QnA qna,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
+	public String delete(QnA qna,HttpServletRequest req,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		//QnA=qnaService.selectOne(QnA);
+		String host = req.getHeader("HOST");
 		qnaService.delete(qna);
 		if(qna.getFile_id().length()!=0){
 			//파일 삭제 
@@ -162,7 +161,7 @@ public class QnAController {
 			fileService.delete(FileDto);
 		}
 		
-		return "redirect:/qna/list.do?nowPage="+nowPage;
+		return "redirect:http://"+host+req.getContextPath()+"/qna/list.do?nowPage="+nowPage;
 	}
 
 	@RequestMapping("/search.do")
@@ -237,10 +236,11 @@ public class QnAController {
 	}
 	
 	@RequestMapping(value = "/ansWrite.do" ,method =RequestMethod.POST)
-	public String answer(Answer ans) {
+	public String answer(Answer ans,HttpServletRequest req) {
 		qnaService.anschk_update(ans);
 		qnaService.ans_insert(ans);
-		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/qna/view.do?qnaNo="+ans.getQnaNo();
 	}
 	
 	@RequestMapping("/ans_editForm.do")
@@ -263,12 +263,11 @@ public class QnAController {
 	
 	
 	@RequestMapping("/ans_delete.do")
-	public String ans_delete(Answer ans){
+	public String ans_delete(Answer ans,HttpServletRequest req){
 		//QnA=qnaService.selectOne(QnA);
 		qnaService.ans_delete(ans);
-		
-		
-		return "redirect:/qna/view.do?qnaNo="+ans.getQnaNo();
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/qna/view.do?qnaNo="+ans.getQnaNo();
 	}
 	
 

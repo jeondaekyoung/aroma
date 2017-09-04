@@ -72,7 +72,8 @@ public class ProgramController {
 		return "/admin/programWrite";
 	}
 	@RequestMapping(value = "/write.do")
-	public String write( Model model,Program program,MultipartRequest mhsq) {
+	public String write( Model model,HttpServletRequest req
+			,Program program,MultipartRequest mhsq) {
 		
 		List<MultipartFile> mf =mhsq.getFiles("file");
 		
@@ -93,7 +94,8 @@ public class ProgramController {
 	                 
 	        }
 		proService.insert(program);
-		return "redirect:list.do";
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"list.do";
 	}
 	@RequestMapping("/editForm.do")
 	public String updateForm(Program program,Model model){
@@ -104,7 +106,8 @@ public class ProgramController {
 	}
 	
 	@RequestMapping(value = "/edit.do")
-	public String edit( Model model,Program program,MultipartRequest mhsq,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
+	public String edit( Model model,HttpServletRequest req
+			,Program program,MultipartRequest mhsq,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage) {
 		//수정한 제목,내용,시간
 		program=proService.selectOne(program);
 		
@@ -127,17 +130,15 @@ public class ProgramController {
         	program.setFile_id2(program.file_id.get(1));
         	program.setFile_id3(program.file_id.get(2));
         	program.setFile_id4(program.file_id.get(3));
-        	
-        	
 		}
 		proService.update(program);
-        
-		
-		return "redirect:/pro/list.do?nowPage="+nowPage;
+		String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/pro/list.do?nowPage="+nowPage;
 	}
 	
 	@RequestMapping("/delete.do")
-	public String delete(Program program,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
+	public String delete(Program program,HttpServletRequest req
+			,@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage){
 		program=proService.selectOne(program);
 		proService.delete(program);
 		
@@ -151,8 +152,8 @@ public class ProgramController {
 				}
 	
 		}
-			
-		return "redirect:/pro/list.do?nowPage="+nowPage;
+			String host = req.getHeader("HOST");
+		return "redirect:http://"+host+req.getContextPath()+"/pro/list.do?nowPage="+nowPage;
 	}
 	
 	@RequestMapping("/search.do")
