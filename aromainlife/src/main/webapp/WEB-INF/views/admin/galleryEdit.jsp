@@ -9,12 +9,7 @@
 
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<c:url value='/resources/js/gallery.js'/>"></script>
-<script>
-  /* addClass : .active */
-  $(document).ready(function(){
-    $("li.menu-1").addClass("active");
-  });
-  
+<jsp:include page="include/active-1.jsp" flush="false" />
  
 </script>
 <!-- //head -->

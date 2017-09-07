@@ -8,11 +8,8 @@
 <jsp:include page="include/include-head.jsp" flush="false" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<jsp:include page="include/active-1.jsp" flush="false" />
 <script>
-    /* addClass : .active */
-    $(document).ready(function(){
-        $("li.menu-1").addClass("active");
-	});
     function del_click(ans) {
     	var f =document.delForm;
     	var ans_f = document.ans_delForm;

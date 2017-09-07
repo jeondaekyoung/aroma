@@ -8,12 +8,8 @@
 <jsp:include page="include/include-head.jsp" flush="false" />
 
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<jsp:include page="include/active-2.jsp" flush="false" />
 <script>
-    /* addClass : .active */
-    $(document).ready(function(){
-        $("li.menu-2").addClass("active");
-     
-	});
 	function del() {
 		if (confirm("이 프로그램을 정말로 삭제하시겠습니까?")!=1) {
 			event.preventDefault();
