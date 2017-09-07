@@ -8,45 +8,14 @@
 <jsp:include page="include/include-head.jsp" flush="false" />
 
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<c:url value='/resources/js/gallery.js'/>"></script>
 <script>
   /* addClass : .active */
   $(document).ready(function(){
     $("li.menu-1").addClass("active");
   });
   
-  function eclick(pstr,No){
-    var f=document.adForm;
-    switch (pstr){  
-      
-      case 'mod':
-    	  if(!f.title.value){
-              alert("제목을 입력하세요");
-              return false;
-          }
-    	  if(!f.file.value){
-              alert("다운로드파일을 입력하세요");
-              return false;
-           }
-           var ext = f.file.value.slice(f.file.value.lastIndexOf(".") + 1).toLowerCase();
-           if(!(ext == "gif" || ext == "jpg" || ext == "png")){
-                alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
-                return false;
-             }
-      
-        f.action="<c:url value='/gal/update.do'/>";      
-        f.submit();  
-        break;
-      case 'del':
-        if (confirm("정말로 삭제하시겠습니까?")!=1) {return false;}
-        f.action="<c:url value='/gal/delete.do?galNo="+No+"'/>";
-        f.submit();
-        break;
-        
-      case 'cancel':
-    	  history.back();
-    	  break;
-    }
-  }
+ 
 </script>
 <!-- //head -->
 </head>
@@ -71,6 +40,7 @@
 				<form action="<c:url value='/pro/edit.do'/>" method="post" id="adForm" name="adForm" class="form-horizontal" enctype="multipart/form-data">
 
 					<!-- 작성자 -->
+					<input type="hidden" name="contextPath" value='<c:url value="/gal"/>' class="form-control" >
 					<input type="hidden" name="writer"	value="${sessionScope.USERID}" class="form-control">
 					<input type="hidden" name="division" value="${gal.division}" class="form-control">  
 					<input type="hidden" name="galNo" value="${gal.galNo}" class="form-control"> 
@@ -115,10 +85,10 @@
 					<div class="line line-dashed line-lg pull-in"></div>
 					<div class="form-group">
 						<div class="col-sm-4 col-sm-offset-2">
-							<button type="button" onclick="eclick('cancel')" class="btn btn-default">
+							<button type="button" onclick="eclick_edit('cancel')" class="btn btn-default">
 								<i class="fa fa-times"></i> 취소
 							</button>
-							<button type="button" onclick="eclick('mod')" class="btn btn-primary">
+							<button type="button" onclick="eclick_edit('mod')" class="btn btn-primary">
 								<i class="fa fa-pencil"></i> 등록
 							</button>
 						</div>

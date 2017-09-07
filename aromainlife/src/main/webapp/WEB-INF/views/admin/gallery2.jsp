@@ -8,46 +8,12 @@
 <jsp:include page="include/include-head.jsp" flush="false" />
 
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<c:url value='/resources/js/gallery.js'/>"></script>
 <script>
   /* addClass : .active */
   $(document).ready(function(){
     $("li.menu-1").addClass("active");
   });
-  
-  function eclick(pstr,No){
-    var f=document.adForm;
-    switch (pstr){  
-      case 'new':
-        
-    	 if(!f.title.value){
-    		 alert("제목을 입력하세요");
-             return false;
-    	 } 
-    	  
-        if(!f.file.value){
-           alert("다운로드파일을 입력하세요");
-           return false;
-        }
-        var ext = f.file.value.slice(f.file.value.lastIndexOf(".") + 1).toLowerCase();
-        if(!(ext == "gif" || ext == "jpg" || ext == "png")){
-             alert("이미지파일 (.jpg, .png, .gif ) 만 업로드 가능합니다.");
-             return false;
-          }
-      
-        f.action="<c:url value='/gal/write.do?divNum=2'/>";
-        f.submit();  
-        break;
-      case 'mod':
-        f.action="<c:url value='/gal/editForm.do?galNo="+No+"'/>";      
-        f.submit();  
-        break;
-      case 'del':
-        if (confirm("정말로 삭제하시겠습니까?")!=1) {return false;}
-        f.action="<c:url value='/gal/delete.do?galNo="+No+"'/>";
-        f.submit();
-        break;
-    }
-  }
 </script>
 <!-- //head -->
 </head>
@@ -71,6 +37,7 @@
           <section class="scrollable wrapper w-f">
             <form action="" method="post" name="adForm" enctype="multipart/form-data">
             <input type="hidden" name="division" value="2" class="form-control" >
+            <input type="hidden" name="contextPath" value='<c:url value="/gal"/>' class="form-control" >
               <table class="admin">
                 <colgroup>
                   <col style="width: 5%">
@@ -99,7 +66,7 @@
                 </td>
                 <td></td><!-- 파일이름 -->
                 <td></td><!-- 작성일 -->
-                <td><button type="button" onclick="eclick('new','')"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
+                <td><button type="button" onclick="eclick('new','',2)"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
               </tr>
               <c:choose>
                   <c:when test="${empty lists}">
@@ -114,20 +81,18 @@
                       
                       <tr>
                         <td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-                        <td>${list.title}</td>
+                        <%-- <td>${list.title}</td> --%>
                         <td>
                         <div>
                         <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" >
-                        
-                        
                         </div>
                         </td>
                         <td>${list.fileName}</td>
                         
                         <td>${list.createDate}</td>
                         <td>
-	                        <button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>
-	                        <button type="button" onclick="eclick('del','${list.galNo}')" class="btn btn-danger"><i class="fa fa-minus-circle"></i> 삭제</button>
+	                        <button type="button" onclick="eclick('mod','${list.galNo}',2)" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>
+	                        <button type="button" onclick="eclick('del','${list.galNo}',2)" class="btn btn-danger"><i class="fa fa-minus-circle"></i> 삭제</button>
                         </td>
                       </tr>                             
                     </c:forEach>
