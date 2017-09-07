@@ -577,7 +577,10 @@
 	.col-sm-16 {width: 98.21428571428571%!important;}
 	.wd100 {width:100%!important}
 	.wd33 {width:33.33%!important}
+	.w33 {width:33.33%!important}
 	
+	.ml0 {margin-left: 0}
+	.mr0 {margin-right: 0}
 	.push-sm-0  {left: 0!important;}
 	.push-sm-1  {left: 6.25%!important;}
 	.push-sm-2  {left: 12.5%!important;}

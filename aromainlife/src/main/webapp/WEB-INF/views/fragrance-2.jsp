@@ -31,7 +31,7 @@
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab active">허브 먹거리</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비&amp;실버 테라피</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
@@ -171,7 +171,7 @@
                 스프를 끓여 보기 좋게 담은 후 바질, 애플민트, 페퍼민트 잎 하나를 띄우면 맛과 영양을 더해준다. </p>
             </div>
             
-            <div class="col-13 col-sm-16 prefix-3">
+            <div class="col-13 col-sm-16 prefix-3 prefix-sm-0">
                 <h4 class="nanumpen">허브쿠키 & 허브빵</h4>
                 <p>엄마가 정성스럽게 만들어주시는 쿠키 간식과 빵에 허브 향으로 사랑을 더하세요~<br>
                 반죽할 때 1티스푼 정도의 허브(로즈마리, 시나몬, 라벤더 등)를 넣어준다.</p>

@@ -27,7 +27,7 @@
         
       <!-- 시작: 인트로-->
       <div class="row intro">
-          <div class="col-9 prefix-2 col-m-10 prefix-m-1">
+          <div class="col-9 prefix-2 col-m-10 prefix-m-1 col-sm-16 prefix-sm-0">
             <h3>인사말</h3>
             <h3 class="nanumpen">허브와 향기치유를 전파하는<br>향기전도사, 윤정식 교수</h3>
             <p>식물은 저마다의 이름을 갖고 있고 생명력 또한 가지고 있습니다.<br>
@@ -36,7 +36,7 @@
 		                저희 ‘생활의향기’는 허브와 ‘향기요법’을 접하면서 얻어진 경험과 지식을 토대로 실생활에 꼭 필요한 부분에 ‘향기요법’을 적용하는 데 중점을 둘 것이며, 국내외 ‘향기’를 사랑하는 모든 이들과 ‘향기’의 올바른 사용과 보급에 최선을 다할 것입니다.<br>
 		                또한, 전문가 뿐만 아니라 일반인도 쉽게 허브의 ‘향기’를 즐길 수 있도록 노력할 것입니다.</p>
           </div>
-          <div class="col-3 suffix-2 col-m-4 suffix-m-1 ceo-img"><img src="<c:url value='/resources/images/intro/ceo.png'/>" width="100%" alt="윤정식 교수"></div>
+          <div class="col-3 suffix-2 col-m-4 suffix-m-1 col-sm-16 suffix-sm-0 ceo-img"><img src="<c:url value='/resources/images/intro/ceo.png'/>" width="100%" alt="윤정식 교수"></div>
 
           <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 line"></div>
 

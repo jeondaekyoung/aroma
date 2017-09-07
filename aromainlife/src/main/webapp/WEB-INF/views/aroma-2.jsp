@@ -42,8 +42,8 @@
       <!-- 시작: row-->
       <div class="row">
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
-          <div class="col-3 prefix-3 col-m-5 prefix-m-1"><img src="<c:url value='/resources/images/aroma/img1.gif'/>" width="100%" alt="식물의 에너지"></div>
-          <div class="col-7 suffix-3 col-m-9 suffix-m-1">
+          <div class="col-3 prefix-3 col-m-5 prefix-m-1 col-sm-16 prefix-0"><img src="<c:url value='/resources/images/aroma/img1.gif'/>" width="100%" alt="식물의 에너지"></div>
+          <div class="col-7 suffix-3 col-m-9 suffix-m-1 col-sm-16 suffix-0">
             <h3 class="nanumpen">1. 에센셜 오일(Essential Oil)이란?</h3>
             <p>에센셜 오일은 아로마테라피의 근본이 되는 물질로 향기나는 식물(Herb)의 꽃잎 줄기, 뿌리, 열매, 껍질, 수지 등에서 추출한 휘발성 정유(Volatile Oil)를 뜻한다.<br><br>달리 표현하면 에센셜 오일은 식물이 가지고 있는 <span class="cn">生命力(=氣)</span>를 그대로 간직한 살아있는 움직이는 생명력이 있는 물질이라고 할 수 있겠다.</p>
           </div>            
@@ -76,7 +76,7 @@
                 ④ 아로마 오일 성분과 증기는 냉각이 되면서 액화 현상으로 인해 액체로 변하면서 용기에 모아지게 된다.<br>
                 ⑤ 밀도 차이로 인해 가벼운 아로마 오일 성분은 위로(에센셜오일), 무거운 물 성분은 아래 부위(플로럴워터, 하이드로솔)로 분리가 된다.</p>
           </div>            
-          <div class="col-5"><img src="<c:url value='/resources/images/aroma/img04.gif'/>" width="100%" alt="수증기 증류법"></div>
+          <div class="col-5 col-sm-16"><img src="<c:url value='/resources/images/aroma/img04.gif'/>" width="100%" alt="수증기 증류법"></div>
             
           <div class="col-16">
             <h4 class="nanumpen">2) 압착법(Expression)</h4>
@@ -92,7 +92,7 @@
                 ③ 콘크리트에 에틸알코올을 가하면 왁스는 그대로 남아있고 방향성 물질이 알코올에 용해된다.<br>
                 ④ 알코올을 완전히 날려 보내면 오일이 얻어지는데 이를 엡솔루트(Absolute)라고 한다.</p>
           </div>            
-          <div class="col-6"><img src="<c:url value='/resources/images/aroma/img05.gif'/>" width="100%" alt="용매추출법"></div>
+          <div class="col-6 col-sm-16"><img src="<c:url value='/resources/images/aroma/img05.gif'/>" width="100%" alt="용매추출법"></div>
             
           <div class="col-16">
             <h4 class="nanumpen">4) 이산화탄소(초임계) 추출법</h4>
@@ -108,12 +108,12 @@
                 ② 시들은 꽃잎은 떨어내고 다시 신선한 꽃잎으로 대치한다.<br>
                 ③ 지방유에 에센스가 포화될 정도로 얻어지면(포마드라고 부름) 알코올을 이용하여 지방유와 에센셜오일을 분리한 후, 다시 알코올을 완전히 날려 보내면 에센셜 오일을 얻을 수 있다.</p>
           </div>            
-          <div class="col-4"><img src="<c:url value='/resources/images/aroma/img06.gif'/>" width="100%" alt="냉침법"></div>
+          <div class="col-4 col-sm-16"><img src="<c:url value='/resources/images/aroma/img06.gif'/>" width="100%" alt="냉침법"></div>
 	    </div>
           
         <div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 aroma">
           <h3 class="nanumpen">3. 작용원리 (에센셜 오일의 인체 메커니즘)</h3>
-          <div class="col-6"><img src="<c:url value='/resources/images/aroma/img07.gif'/>" width="100%" alt="후각을 통한 흡수"></div>
+          <div class="col-6 col-sm-16"><img src="<c:url value='/resources/images/aroma/img07.gif'/>" width="100%" alt="후각을 통한 흡수"></div>
           <div class="col-10 col-sm-16">
             <h4 class="nanumpen">1) 후각을 통한 흡수</h4>
             <p class="nose">향기분자 흡입 → 점액(mucus)에 닿아 용해됨 → 섬모(Cilia)에 향기분자가 결합 → 후각세포(Olfactory cells)에 전달 → 엑손 신경돌기(Axon) → 향기분자가 전기적 신호로 바뀜 → 후구(Olfactory bulb)에 전달 → 후삭(Olfactory tract) → 변연계(Limbic system): 감정, 성욕, 식욕, 기억, 학습기능<br><br>
@@ -123,7 +123,7 @@
                 <span>시상하부(Hypothalamus)</span>: 내분비계(호르몬), 자율신경계(호흡, 혈관운동), 면역계, 성적 행동</p>
           </div>            
             
-          <div class="col-4 prefix-1 suffix-1" style="margin-top: 3em"><img src="<c:url value='/resources/images/aroma/img08.gif'/>" width="100%" style="padding: 1em 3em" alt="폐를 통한 흡수"></div>
+          <div class="col-4 prefix-1 suffix-1 col-sm-16 prefix-sm-0 suffix-sm-0" style="margin-top: 3em"><img src="<c:url value='/resources/images/aroma/img08.gif'/>" width="100%" style="padding: 1em 3em" alt="폐를 통한 흡수"></div>
           <div class="col-10 col-sm-16" style="margin-top: 3em">
             <h4 class="nanumpen">2) 폐를 통한 흡수</h4>
             <p class="nose">향기 분자 → 코 → 인두(Pharynx) → 후두(Larynx) → 기관(Trachea) → 기관지(Bronchi) → 세기관지(Bronchioles) → 폐포: 가스교환(산소 흡수, 이산화탄소 방출)<br><br>
@@ -134,7 +134,7 @@
                 버가못 → 비뇨기계</p>
           </div>
             
-          <div class="col-4 prefix-1 suffix-1"><img src="<c:url value='/resources/images/aroma/img09.gif'/>" width="100%" alt="피부를 통한 흡수"></div>
+          <div class="col-4 prefix-1 suffix-1 col-sm-16 prefix-sm-0 suffix-sm-0"><img src="<c:url value='/resources/images/aroma/img09.gif'/>" width="100%" alt="피부를 통한 흡수"></div>
           <div class="col-10 col-sm-16"><br><br><br>
             <h4 class="nanumpen">3) 피부를 통한 흡수</h4>
             <p>① 향기 분자 → 모공, 땀샘 → 혈관 → 전신<br><br>

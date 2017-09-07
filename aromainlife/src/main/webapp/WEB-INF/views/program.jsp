@@ -19,7 +19,7 @@
       <div class="top">
       	<div class="row">
 	      	<div class="col-12 prefix-2 col-m-14 prefix-m-1">
-	      		<h4>향기체험학습</h4>
+	      		<h3>향기체험학습</h3>
 	      		<h4>허브와 향기로 힐링하세요.</h4>
 	      	</div>
       	</div>

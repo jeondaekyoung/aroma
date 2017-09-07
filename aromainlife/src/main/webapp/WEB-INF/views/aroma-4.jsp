@@ -50,7 +50,7 @@
           </div>
             
           <div class="col-16">
-            <table>
+            <table class="aroma-4">
               <colgroup>
                   <col style="width: 15%;"/><col style="width: 20%;"/><col style="width: 15%;"/><col style="width: 50%;"/>
               </colgroup>

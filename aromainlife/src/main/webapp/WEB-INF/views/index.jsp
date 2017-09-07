@@ -18,7 +18,7 @@
     <!-- 시작: content-1 -->
     <div class="content-1">
       <div class="row main">
-        <div class="col-8 col-m-14 prefix-7 prefix-m-1 suffix-1 wd100 prefix-sm-0 suffix-sm-0">
+        <div class="col-8 prefix-7 suffix-1 col-m-14 prefix-m-1 wd100 ml0 mr0">
      	  <h3>국내 최초 허브&amp;천연향기<br>교육체험센터<br>생활의 향기입니다.</h3>
         </div>        
       </div>

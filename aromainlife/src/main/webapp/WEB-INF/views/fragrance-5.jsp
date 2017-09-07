@@ -31,7 +31,7 @@
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비&amp;실버 테라피</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab active">아로마 마사지</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
@@ -94,7 +94,7 @@
               </p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+          <div class="col-3 suffix-1 prefix-1 col-m-6 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage06.gif'/>" alt="사진" width="100%" style="padding: 0;">
           </div>
           <div class="col-11 col-sm-16">
@@ -106,7 +106,7 @@
             </p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+          <div class="col-3 suffix-1 prefix-1 col-m-6 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage02.gif'/>" alt="사진" width="100%" style="padding: 0 2em;">
           </div>
           <div class="col-11 col-sm-16">
@@ -120,7 +120,7 @@
 		                두통,불면,혈압이 오를 때 빠른 효과를 볼 수 있는 신체부위 - 목을 돌렸을때 보이는 근육 흉쇄유돌근과 어깨근육 승모근만 기억하세요.</p>
           </div>
             
-          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+          <div class="col-3 suffix-1 prefix-1 col-m-6 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage03.gif'/>" alt="팔: 손목에서 팔뚝까지, 다리: 발목에서 허벅지까지" width="100%" style="padding: 0 1em;">
           </div>
           <div class="col-11 col-sm-16">
@@ -131,10 +131,10 @@
             </p>
           </div>
           
-          <div class="col-5">
+          <div class="col-5 col-sm-10">
             <img src="<c:url value='/resources/images/fragra/massage09.gif'/>" alt="사진" width="100%" style="padding: 0 1em;">
           </div>
-          <div class="col-9">
+          <div class="col-9 col-sm-16">
               <h3 class="nanumpen">손, 발</h3>
               <p>등과 귀 그리고 손과 발에는 우리 신체 전신에 영향을 마치는 반사구(Reflex zone)가 있습니다. 그 중 손과 발은 우리신체를 빠르고 진단하고 순환에 영향을 주는 부위입니다. 쉽게 이용하실 수 있겠죠?<br>
              		아로마 오일 브랜딩시 각 부위를 연결 진단한다면 좀더 정확한 오일을 선택하실 수 있습니다. <br><br>
@@ -144,7 +144,7 @@
               </p>
           </div>
           
-          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+          <div class="col-3 suffix-1 prefix-1 col-m-6 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/beauty08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11 col-sm-16">
@@ -158,7 +158,7 @@
               </p>
           </div>
           
-          <div class="col-3 suffix-1 prefix-1 col-m-5 prefix-m-0 suffix-m-0">
+          <div class="col-3 suffix-1 prefix-1 col-m-6 prefix-m-0 suffix-m-0">
             <img src="<c:url value='/resources/images/fragra/massage08.gif'/>" alt="사진" width="100%">
           </div>
           <div class="col-11 col-sm-16">

@@ -10,7 +10,7 @@
      <div class="col-5 col-m-6 col-sm-14 prefix-sm-1 suffix-sm-1">
        <p>주소 : 경기도 포천시 소흘읍 죽엽산로 493 (고모리 183)<br>전화 : 031) 544-7084<br>팩스 : 031) 544-7089<br>메일 : aromainlife@aromainlife.com</p>
      </div>
-     <div class="col-5 col-sm-16 suffix-2 prefix-sm-1 suffix-m-1 fr">
+     <div class="col-5 col-sm-14 suffix-2 suffix-m-1 prefix-sm-1 suffix-sm-1 fr">
        <div class="btn-group row">
            <a href="http://www.kas.or.kr" target="_blank" class="btn fr">
                <span class="footer-icon kas"><img src="<c:url value='/resources/images/kas.svg'/>" width="28" alt="아로마테라피학회 아이콘"></span>

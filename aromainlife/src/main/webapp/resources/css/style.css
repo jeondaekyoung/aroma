@@ -1005,7 +1005,7 @@ table.qna td a:hover {
 /* Modal Content/Box */
 .popup .popup-content {
     background-color: #fff;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 8% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -1219,7 +1219,7 @@ table.qna td a:hover {
 
 @media (max-width: 768px) {
 	.page-header {
-		padding-top: 14px 0 10px!important;
+		padding: 14px 0 10px!important;
 	}
 	.c-header-burger {
 	  font-size: 0;
@@ -1312,10 +1312,14 @@ table.qna td a:hover {
 		right: -29px
 	}
 	.tab-menu .tab {
-		font-size: 0.875rem
+		font-size: 0.75rem
 	}
 	.aroma .compare>.col-16 {
 		height: 300px
+	}
+	.qna_write button,
+	.qna_write a.btn {
+    	width: 100%;
 	}
 }
 
@@ -1370,10 +1374,27 @@ table.qna td a:hover {
 	.frag-1 .col-3{
 		display: none;	
 	}
+	.detail-01 .top>.row {
+		padding: 0
+	}
+	table.aroma-3 th:nth-child(2),
+	table.aroma-3 td:nth-child(2) {
+		display: none
+	}
+	table.aroma-4 th:nth-child(2),
+	table.aroma-4 td:nth-child(2),
+	table.aroma-4 th:nth-child(3),
+	table.aroma-4 td:nth-child(3) {
+		display: none
+	}
+	table.aroma-4 td img {
+		max-width:50px;
+	}
 	.aroma-5 img {
 		width: 100%!important;
 		height: auto!important
 	}
+	
 	table.qna thead th:first-child,
 	table.qna thead th:last-child,
 	table.qna tbody td:first-child
@@ -1381,10 +1402,24 @@ table.qna td a:hover {
 		display: none
 	}
 	.popup .popup-content {
-		width: 80%
+		width: 80vw;
+		height: 90vh
 	}
 	.popup .popup-content p {
-		height: auto
+		height: 70vh
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	table.aroma-3 th:nth-child(2),
+	table.aroma-3 td:nth-child(2),
+	table.aroma-3 th:nth-child(3),
+	table.aroma-3 td:nth-child(3) {
+		display: none
+	}	
+	.content-1 .main .col-8 h3 {
+	    padding: 0em;
 	}
 }
 

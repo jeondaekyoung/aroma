@@ -31,7 +31,7 @@
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab">생활속 아로마</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab active">아로마 코스메틱</a></div>
-          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비&amp;실버 테라피</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            
@@ -210,7 +210,7 @@
                 (마사지) 로즈힙, 윗점, 이브닝프림로즈, 호호바 등의 캐리어 오일 10ml에 에센셜 오일 2방울을 희석하여 아침, 저녁으로 소량 떨어뜨려 얼굴에 마사지 하듯 바른다.</p>
             </div>
             
-            <div class="col-13 col-sm-16 prefix-3 preifx-sm-0">
+            <div class="col-13 col-sm-16 prefix-3 prefix-sm-0">
                 <h3 class="nanumpen">늘어나는 나의 체중~</h3>
                 <p>나도 모르게 체중이 늘어난다구요? 바로 지금부터 관리하셔야죠! 에센셜 오일을 흡수, 체내 노폐물을 배출시켜 슬림한 라인으로 가꿔보세요.<br><br>
                 (사용 에센셜 오일) 쥬니퍼베리, 사이프레스, 로즈마리, 펜넬, 그레이프후룻, 오렌지 스윗, 패촐리, 라벤더, 제라늄<br><br>

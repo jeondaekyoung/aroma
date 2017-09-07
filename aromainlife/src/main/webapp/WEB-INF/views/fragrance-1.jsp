@@ -31,7 +31,7 @@
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-1.do'/>" class="tab active">생활속 아로마</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-2.do'/>" class="tab">허브 먹거리</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-3.do'/>" class="tab">아로마 코스메틱</a></div>
-          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비 &amp; 실버 테라피</a></div>
+          <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-4.do'/>" class="tab">베이비&amp;실버 테라피</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-5.do'/>" class="tab">아로마 마사지</a></div>
           <div class="fl w16 w33"><a href="<c:url value='/user/fragrance-6.do'/>" class="tab">119 아로마</a></div>
            

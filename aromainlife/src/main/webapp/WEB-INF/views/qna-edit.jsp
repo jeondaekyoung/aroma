@@ -18,7 +18,7 @@
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      <div class="col-12 prefix-2">
+	      <div class="col-12 prefix-2 col-m-14 prefix-m-1">
       		<h3>커뮤니티</h3>
       		<h4>항상 고객님의 소중한 글에 귀 기울이겠습니다.</h4>
 	      </div>

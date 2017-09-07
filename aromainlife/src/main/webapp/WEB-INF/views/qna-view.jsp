@@ -84,7 +84,7 @@ function modal_button(mod){
     <div class="detail-01">
       <div class="top">
       	<div class="row">
-	      <div class="col-12 prefix-2">
+	      <div class="col-12 prefix-2 col-m-14 prefix-m-1">
       		<h3>커뮤니티</h3>
       		<h4>항상 고객님의 소중한 글에 귀 기울이겠습니다.</h4>
 	      </div>
@@ -93,7 +93,7 @@ function modal_button(mod){
               
       <!-- 시작: qna_view -->
       <div class="row qna_view">
-          <ul class="col-12 prefix-2 suffix-2">
+          <ul class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1">
             <li class="header">
               <p class="title">${qna.title}</p>
               <p class="date">${qna.createDate}</p>

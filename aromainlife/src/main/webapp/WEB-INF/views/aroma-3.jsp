@@ -48,7 +48,7 @@
                 캐리어 오일은 에센셜 오일을 고르게 분산시켜서 약리성분 들을 피부에 효과적으로 침투하게 하고, 에센셜 오일의 증발을 억제하며 피부에 고루 퍼지게 한다. 또한 많은 불포화지방산의 함유로 피부에 풍부한 영양을 공급한다. 모든 캐리어 오일은 가공하지 않은 식물성 재료(씨, 견과, 속)를 냉압착시켜 오일을 추출한다. 그러므로 식물의 열매가 가지고 있는 천연 성분들을 그대로 함유하고 있다. 반면에 슈퍼마켓에서 판매하는 식물성 오일은 식용으로 이용하기 위해 정제되는 과정에서 발생하는 열로 인해 영양소가 파괴되어 있기 때문에 아로마테라피용으로는 적합하지 않다.<br>
                 아로마테라피 초보 단계에서는 거의 하나의 오일만 사용하지만, 시간이 지날수록 식물성 오일의 특성을 손으로 체험하고 나의 피부에 맞게 2~3가지를 브랜딩 하여 사용하면 피부에 더욱 효과적이다.</p>
           </div>
-          <div class="col-4 col-sm-8"><img src="<c:url value='/resources/images/aroma/img10.gif'/>" width="100%" alt="오일 마사지"></div>
+          <div class="col-4 col-sm-16"><img src="<c:url value='/resources/images/aroma/img10.gif'/>" width="100%" alt="오일 마사지"></div>
             
           <div class="col-16">
             <ul class="legend">
@@ -57,7 +57,7 @@
               <li><span class="pink">3</span>점도가 높아 보습, 재생 기능은 뛰어나나 단독사용하기엔 피부내 흡수가 매우 느리다. 보습이 많이 필요한 피부나 겨울철에 많이 사용. </li>
             </ul>
               
-            <table>
+            <table class="aroma-3">
               <colgroup>
                   <col style="width: 10%;"/><col style="width: 20%;"/><col style="width: 30%;"/><col style="width: 40%;"/>
               </colgroup>
