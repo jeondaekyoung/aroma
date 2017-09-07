@@ -39,22 +39,22 @@
             <h4 class="nanumpen">${list.title}</h4>
 	        <div class="row">
 	          <p>${list.content }<br>시간:${list.proTime} </p>
-	          <div class="col-4">
+	          <div class="col-4 col-sm-8">
 	          <c:if test="${not empty list.file_id1}">
 	          <img src="<c:url value='/file/down/image/${list.file_id1}'/>" alt="사진"  >
 	          </c:if>
 	          </div>
-	          <div class="col-4">
+	          <div class="col-4 col-sm-8">
 	          <c:if test="${not empty list.file_id2}">
 	          <img src="<c:url value='/file/down/image/${list.file_id2}'/>" alt="사진"  >
 	          </c:if>
 	          </div>
-	          <div class="col-4">
+	          <div class="col-4 col-sm-8">
 	          <c:if test="${not empty list.file_id3}">
 	          <img src="<c:url value='/file/down/image/${list.file_id3}'/>" alt="사진"  >
 	          </c:if>
 	          </div>
-	          <div class="col-4">
+	          <div class="col-4 col-sm-8">
 	          <c:if test="${not empty list.file_id4}">
 	          <img src="<c:url value='/file/down/image/${list.file_id4}'/>" alt="사진"  >
 	          </c:if>

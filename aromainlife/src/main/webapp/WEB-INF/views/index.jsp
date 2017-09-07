@@ -95,7 +95,7 @@
           <a href="<c:url value='/user/aroma-1.do'/>">자세히 보기 ></a>
         </div>        
         <div class="content-wrap col-9 col-m-10 suffix-2 suffix-m-1 col-sm-16 prefix-sm-0">
-          <div class="col-4 suffix-1 wd33 suffix-sm-0 product-item">
+          <div class="col-4 suffix-1 col-sm-8 suffix-sm-0 product-item">
             <img src="<c:url value='/resources/images/theraphy-01.png'/>" alt="사진" class="img-responsive img-circle">
             <div class="hover-focus-view">
               <a href="<c:url value='/user/aroma-1.do'/>">허브&amp;아로마테라피</a>

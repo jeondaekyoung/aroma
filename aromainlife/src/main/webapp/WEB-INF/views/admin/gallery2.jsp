@@ -74,16 +74,15 @@
               <table class="admin">
                 <colgroup>
                   <col style="width: 5%">
-                  <col style="width: 30%">
+                  <col style="width: 35%">
                   <col style="width: 20%">
                   <col style="width: 20%">
-                  <col style="width: 15%">
-                  <col style="width: 10%">
+                  <col style="width: 20%">
                 </colgroup>
                 <thead>
                   <tr>
                     <th>No.</th>
-                    <th>제목</th>
+                    <!-- <th>제목</th> -->
                     <th>사진</th>
                     <th>파일이름</th>
                     <th>작성일</th>
@@ -94,7 +93,7 @@
                   <!-- 디폴트 (데이터 유무 상관없이): 이미지 등록은 한 페이지 내에서 한다. -->
               <tr>
                 <td></td><!-- No. -->
-                <td><input type="text" name="title" class="form-control" ></td>
+                <!-- <td><input type="text" name="title" class="form-control" ></td> -->
                 <td>
                   <input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
                 </td>

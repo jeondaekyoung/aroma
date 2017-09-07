@@ -74,16 +74,19 @@
               <table class="admin">
                 <colgroup>
                   <col style="width: 5%">
-                  <col style="width: 30%">
+                  <col style="width: 35%">
                   <col style="width: 20%">
                   <col style="width: 20%">
-                  <col style="width: 15%">
-                  <col style="width: 10%">
+                  <col style="width: 20%">
                 </colgroup>
                 <thead>
+                
+                
+                
+                
                   <tr>
                     <th>No.</th>
-                    <th>제목</th>
+                    <!-- <th>제목</th> -->
                     <th>사진</th>
                     <th>파일이름</th>
                     <th>작성일</th>
@@ -95,9 +98,9 @@
               <tr>
                 <td></td><!-- No. -->
                 <td><input type="text" name="title" class="form-control" ></td>
-                <td>
+                <!-- <td>
                   <input type="file" class="filestyle" name="file" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline input-s">
-                </td>
+                </td> -->
                 <td></td><!-- 파일이름 -->
                 <td></td><!-- 작성일 -->
                 <td><button type="button" onclick="eclick('new','')"  class="btn btn-info"><i class="fa fa-pencil"></i>등록</button></td>
@@ -115,7 +118,7 @@
                       
                       <tr>
                         <td>${totalRecordCount - (((nowPage - 1) * pageSize) + status.index)}</td>
-                        <td>${list.title}</td>
+                        <%-- <td>${list.title}</td> --%>
                         <td>
                         <div>
                         <img src="<c:url value='/file/down/image/${list.file_id}'/>" alt="사진" width="100px" >
@@ -127,7 +130,7 @@
                         
                         <td>${list.createDate}</td>
                         <td>
-	                        <button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info m-r-xs"><i class="fa fa-edit"></i> 수정</button>
+	                        <button type="button" onclick="eclick('mod','${list.galNo}')" class="btn btn-info"><i class="fa fa-edit"></i> 수정</button>
 	                        <button type="button" onclick="eclick('del','${list.galNo}')" class="btn btn-danger"><i class="fa fa-minus-circle"></i> 삭제</button>
                         </td>
                       </tr>                             

@@ -77,12 +77,12 @@
 					<input type="hidden" name="file_id" value="${gal.file_id}" class="form-control">
 					<input type="hidden" name="content" id="editorContent"class="form-control" />
 					<!--제목-->
-					<div class="form-group">
+					<%-- <div class="form-group">
 						<label class="col-sm-2 control-label">제목</label>
 						<div class="col-sm-9">
 							<input type="text" value="${gal.title}" name="title" class="form-control">
 						</div>
-					</div>
+					</div> --%>
 					<!--제목 끝-->
 					
 					<!--  ㅇ사이미지 -->
