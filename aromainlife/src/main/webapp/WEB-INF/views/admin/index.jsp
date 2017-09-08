@@ -157,7 +157,7 @@
 									</tbody>
 								</table>
 							<table class="admin" style="margin-bottom:20px">
-									<caption>동영상</caption>
+									<caption>갤러리</caption>
 									<colgroup>
 										<col style="width: 10%">
 										<col style="width: 20%">
@@ -180,7 +180,7 @@
 										<c:choose>
 											<c:when test="${empty galLists }">
 												<tr bgcolor="white" align="center">
-													<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+													<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 												</tr>
 											</c:when>
 											<c:otherwise>

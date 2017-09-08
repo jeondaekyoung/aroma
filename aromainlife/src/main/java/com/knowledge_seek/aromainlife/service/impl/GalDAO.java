@@ -23,9 +23,14 @@ public class GalDAO implements GalleryService {
 	public List<Gallery> selectList(Map map) {
 		
 		if(map.get("division")!=null){
-			return sqlTemplate.selectList("GalSelectList2",map);	
+			
+			if(map.get("division").equals("1")){
+				return sqlTemplate.selectList("GalSelectList1",map);
+			}
+			return sqlTemplate.selectList("GalSelectList2",map);
+			
 		}
-		return sqlTemplate.selectList("GalSelectList",map);
+		return sqlTemplate.selectList("GalSelectList_all",map);
 	}
 
 	@Override

@@ -18,17 +18,17 @@
                 <i class="fa fa-angle-up text-active"></i><span>커뮤니티</span>
               </a>
               <ul class="nav bg">
-                <li >
+                <li id="menu_qna">
                   <a href="<c:url value='/qna/list.do'/>" >
                     <i class="fa fa-angle-right"></i><span>QnA</span>
                   </a>
                 </li>
-                <li >
+                <li id="menu_gal1">
                   <a href="<c:url value='/gal/list.do?division=1'/>" >
                     <i class="fa fa-angle-right"></i><span>기업체험 갤러리</span>
                   </a>
                 </li>
-                <li >
+                <li id="menu_gal2">
                   <a href="<c:url value='/gal/list.do?division=2'/>" >
                     <i class="fa fa-angle-right"></i><span>체험교육 갤러리</span>
                   </a>

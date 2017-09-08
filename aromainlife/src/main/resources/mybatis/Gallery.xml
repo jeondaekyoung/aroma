@@ -4,7 +4,16 @@
 			PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mybatis.Gallery">
-	<select id="GalSelectList" parameterType="java.util.Map" resultType="Gallery">
+	<select id="GalSelectList_all" parameterType="java.util.Map" resultType="Gallery">
+	
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
+			<choose>
+				<when test="start != -1 and end != -1">
+				where r between  #{start} and #{end}  
+				</when>
+			</choose>
+	</select>
+	<select id="GalSelectList1" parameterType="java.util.Map" resultType="Gallery">
 	
 			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r  where division =#{division} order by GalNo desc) a 
 			<choose>

@@ -44,7 +44,6 @@ public class GalleryController {
 			@RequestParam(defaultValue="1",required=false,value="division") int division,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
 		
-		
 		//시작 및 끝 ROWNUM구하기]
 		int start= (nowPage-1)*pageSize+1;
 		int end = nowPage*pageSize;		
@@ -54,8 +53,6 @@ public class GalleryController {
 		map.put("division", division);
 		int totalRecordCount =galService.getTotalRecordCount(map);
 		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
-		System.out.println(totalRecordCount);
-		System.out.println(totalPage);
 		List<Gallery> lists=galService.selectList(map);
 		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/gal/list.do?");
 		

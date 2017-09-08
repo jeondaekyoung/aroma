@@ -77,15 +77,12 @@ public class LoginController {
 		map.put("end",10);
 		
 		//공지사항
-		
 			List<QnA> notiLists =qnaService.select_notiList(map);
 			model.addAttribute("notiLists",notiLists);
-		
 		//문의 사항
-			
 			List<QnA> qnaLists=qnaService.selectList(map);
 			model.addAttribute("qnaLists",qnaLists);
-		
+		// 갤러리
 			List<Gallery> galLists=galService.selectList(map);
 			model.addAttribute("galLists",galLists);
 		
