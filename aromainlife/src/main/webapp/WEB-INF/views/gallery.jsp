@@ -8,19 +8,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-    	if("${param.divNum}" == "1"){
-    		$("#divNum option:eq(0)").attr("selected","selected");
+    	if("${param.division}" == "1"){
+    		$("#division option:eq(0)").attr("selected","selected");
     	}
-    	if("${param.divNum}" == "2"){
-    		$("#divNum option:eq(1)").attr("selected","selected");
+    	if("${param.division}" == "2"){
+    		$("#division option:eq(1)").attr("selected","selected");
     	}
-  		
-
       $(".popup button").click(function(){
         $(".popup").hide();
       });
-      
-      
       /* 
       $("#pic").click(function(){
         $("#pic-view").show();
@@ -61,9 +57,9 @@
       <!-- 끝: tab-menu-->
       
      	<div class="col-12 prefix-2 suffix-2 col-m-14 prefix-m-1 suffix-m-1 search-form">      		
-        	<select id="divNum" class="input-sm fr" onchange="location.href=this.value" >
-               <option value='<c:url value="/user/gallery.do?divNum=1"/>'>기업 체험</option>
-               <option value='<c:url value="/user/gallery.do?divNum=2"/>'>체험 교육</option>
+        	<select id="division" class="input-sm fr" onchange="location.href=this.value" >
+               <option value='<c:url value="/user/gallery.do?division=1"/>'>기업 체험</option>
+               <option value='<c:url value="/user/gallery.do?division=2"/>'>체험 교육</option>
            </select>
      	</div>
      	

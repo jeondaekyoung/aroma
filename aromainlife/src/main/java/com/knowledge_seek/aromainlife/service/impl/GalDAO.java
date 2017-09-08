@@ -22,7 +22,7 @@ public class GalDAO implements GalleryService {
 	@Override
 	public List<Gallery> selectList(Map map) {
 		
-		if(map.get("divNum")!=null){
+		if(map.get("division")!=null){
 			return sqlTemplate.selectList("GalSelectList2",map);	
 		}
 		return sqlTemplate.selectList("GalSelectList",map);

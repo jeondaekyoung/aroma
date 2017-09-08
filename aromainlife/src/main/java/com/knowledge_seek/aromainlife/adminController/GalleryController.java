@@ -41,10 +41,9 @@ public class GalleryController {
 	
 	@RequestMapping(value = "/list.do")
 	public String list(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
-			@RequestParam(defaultValue="1",required=false,value="divNum") int divNum,
+			@RequestParam(defaultValue="1",required=false,value="division") int division,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
-		int totalRecordCount =galService.getTotalRecordCount(map);
-		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+		
 		
 		//시작 및 끝 ROWNUM구하기]
 		int start= (nowPage-1)*pageSize+1;
@@ -52,10 +51,13 @@ public class GalleryController {
 		map.put("start", start);
 		map.put("end",end);
 		//갤러리 카테고리별 체크
-		map.put("divNum", divNum);
-		
+		map.put("division", division);
+		int totalRecordCount =galService.getTotalRecordCount(map);
+		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
+		System.out.println(totalRecordCount);
+		System.out.println(totalPage);
 		List<Gallery> lists=galService.selectList(map);
-		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/pro/list.do?");
+		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/gal/list.do?");
 		
 		model.addAttribute("lists",lists);
 		model.addAttribute("pagingString",pagingString);
@@ -64,7 +66,7 @@ public class GalleryController {
 		model.addAttribute("totalRecordCount",totalRecordCount);
 		model.addAttribute("pageSize",pageSize);
 		
-		if(divNum == 2){
+		if(division == 2){
 			
 			return "/admin/gallery2";
 		}
@@ -82,9 +84,9 @@ public class GalleryController {
 		String host = req.getHeader("HOST");
 		galService.insert(gal);
 		if(gal.getDivision().equals("2")){
-			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2";
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?division=2";
 		}
-		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=1";
+		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?division=1";
 	}
 	
 	@RequestMapping(value = "/editForm.do")
@@ -112,7 +114,7 @@ public class GalleryController {
 		galService.update(gal);
 		String host = req.getHeader("HOST");
 		if(gal.getDivision().equals("2")){
-			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2&nowPage="+nowPage;
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?division=2&nowPage="+nowPage;
 		}
 		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?nowPage="+nowPage;
 	}
@@ -128,7 +130,7 @@ public class GalleryController {
 		}
 		String host = req.getHeader("HOST");
 		if(gal.getDivision().equals("2")){
-			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?divNum=2&nowPage="+nowPage;
+			return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?division=2&nowPage="+nowPage;
 		}
 		return "redirect:http://"+host+req.getContextPath()+"/gal/list.do?nowPage="+nowPage;
 	}

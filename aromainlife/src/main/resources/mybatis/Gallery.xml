@@ -6,7 +6,7 @@
 <mapper namespace="mybatis.Gallery">
 	<select id="GalSelectList" parameterType="java.util.Map" resultType="Gallery">
 	
-			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r  where division =#{division} order by GalNo desc) a 
 			<choose>
 				<when test="start != -1 and end != -1">
 				where r between  #{start} and #{end}  
@@ -16,10 +16,10 @@
 	
 	<select id="GalSelectList2" parameterType="java.util.Map" resultType="Gallery">
 	
-			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r order by GalNo desc) a 
+			select * from (select Gallery.*,@rownum:=@rownum+1 as r from Gallery, (SELECT @rownum:=0) r where division =#{division} order by GalNo desc) a 
 			<choose>
 				<when test="start != -1 and end != -1">
-				where r between  #{start} and #{end} and division = #{divNum}  
+				where r between  #{start} and #{end}  
 				</when>
 			
 			</choose>
@@ -48,7 +48,7 @@
 	</delete>
 		
 	<select id="GalTotalCount" resultType="int" parameterType="java.util.Map">
-	SELECT COUNT(*) FROM Gallery
+	SELECT COUNT(*) FROM Gallery where division =#{division}
 	</select>	
 	
 	<select id="GalSearch" parameterType="java.util.Map" resultType="Gallery">

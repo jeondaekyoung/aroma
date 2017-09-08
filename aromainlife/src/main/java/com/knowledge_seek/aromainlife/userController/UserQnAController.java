@@ -195,7 +195,7 @@ public class UserQnAController {
 	
 	@RequestMapping(value = "/user/gallery.do", method = RequestMethod.GET)
 	public String gallery(@RequestParam(defaultValue="1",required=false,value="nowPage") int nowPage,
-			@RequestParam(defaultValue="1",required=false,value="divNum") int divNum,
+			@RequestParam(defaultValue="1",required=false,value="division") int division,
 			@RequestParam Map map,Model model,HttpServletRequest req) {
 		int totalRecordCount =galService.getTotalRecordCount(map);
 		int totalPage= (int)(Math.ceil(((double)totalRecordCount/pageSize)));
@@ -206,7 +206,7 @@ public class UserQnAController {
 		map.put("start", start);
 		map.put("end",end);
 		//갤러리 카테고리별 체크
-		map.put("divNum", divNum);
+		map.put("division", division);
 				
 		List<Gallery> lists=galService.selectList(map);
 		String pagingString = PagingUtil.pagingText(totalRecordCount, pageSize, blockPage, nowPage, req.getContextPath()+"/user/gallery.do?");

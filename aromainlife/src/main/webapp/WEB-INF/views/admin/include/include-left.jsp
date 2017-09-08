@@ -24,12 +24,12 @@
                   </a>
                 </li>
                 <li >
-                  <a href="<c:url value='/gal/list.do?divNum=1'/>" >
+                  <a href="<c:url value='/gal/list.do?division=1'/>" >
                     <i class="fa fa-angle-right"></i><span>기업체험 갤러리</span>
                   </a>
                 </li>
                 <li >
-                  <a href="<c:url value='/gal/list.do?divNum=2'/>" >
+                  <a href="<c:url value='/gal/list.do?division=2'/>" >
                     <i class="fa fa-angle-right"></i><span>체험교육 갤러리</span>
                   </a>
                 </li>

@@ -2,7 +2,7 @@
  * 
  */
 
-  function eclick(pstr,No,divNum){
+  function eclick(pstr,No,division){
 	  var f=document.adForm;
 	  var path =f.contextPath.value;
     switch (pstr){  
@@ -17,7 +17,7 @@
              return false;
           }
       
-        f.action=path+"/write.do?divNum='"+divNum;
+        f.action=path+"/write.do?division="+division;
         f.submit();  
         break;
       case 'mod':
