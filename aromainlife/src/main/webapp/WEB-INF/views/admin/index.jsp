@@ -160,16 +160,16 @@
 									<caption>갤러리</caption>
 									<colgroup>
 										<col style="width: 10%">
-										<col style="width: 20%">
-										<col style="width: 20%">
-										<col style="width: 20%">
+										<%-- <col style="width: 20%"> --%>
+										<col style="width: 30%">
+										<col style="width: 30%">
 										<col style="width: 30%">
 										
 									</colgroup>
 									<thead>
 										<tr>
 											<th>No.</th>
-											<th>제목</th>
+											<!-- <th>제목</th> -->
 											<th>작성일</th>
 											<th>구분</th>
 											<th>사진</th>
@@ -180,14 +180,14 @@
 										<c:choose>
 											<c:when test="${empty galLists }">
 												<tr bgcolor="white" align="center">
-													<td colspan="5">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
+													<td colspan="4">등록된 게시물이 없거나 검색한 결과가 없습니다.</td>
 												</tr>
 											</c:when>
 											<c:otherwise>
 												<c:forEach items="${galLists}" begin="0" end="9" var="list" varStatus="status">
 													<tr>
 														<td>${status.index+1}</td>
-														<td>${list.title}</td>
+														<%-- <td>${list.title}</td> --%>
 														<td>${list.createDate}</td>
 														<td>
 															<c:choose>
